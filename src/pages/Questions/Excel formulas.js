@@ -1,1 +1,6 @@
-export const EF = [`generate a list of dates within a given period`];
+export const EF = [
+  {
+    que: `generate a list of dates within a given period`,
+    ans: null,
+  },
+];

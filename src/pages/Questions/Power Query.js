@@ -99,10 +99,22 @@ export const PQ = [
   },
   {
     que: `add or subtract days/weeks/months/quarter/years from a date column using function`,
-    ans: `Date.Add...`,
+    ans: `eg. Date.Add...`,
   },
   {
     que: `extract the day/week/month/year number or name of a date column using function`,
-    ans: `Date.Day...`,
+    ans: `eg. Date.Day...`,
+  },
+  {
+    que: `convert text column to upper/lower/proper using function`,
+    ans: `eg. Text.Upper`,
+  },
+  {
+    que: `extract text before/after a delimeter using function`,
+    ans: `eg. Text.BeforeDelimeter`,
+  },
+  {
+    que: `produce the list of M functions`,
+    ans: `blank query -> = #shared -> convert to table`,
   },
 ];

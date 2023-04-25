@@ -1,7 +1,7 @@
 //https://github.com/craig1123/react-recipes/blob/master/docs/useSpeechSynthesis.md
 import { useSpeechSynthesis } from "react-speech-kit";
-import { BAQ, PQ, EI, EF } from "../Questions";
-import { useState, useRef, useEffect } from "react";
+import { BAQ, PQ, EI, EF, CC } from "../Questions";
+import { useState } from "react";
 import LayoutCSS from "./layout.module.css";
 
 function Layout() {
@@ -44,6 +44,10 @@ function Layout() {
     {
       title: "Excel Formulas",
       content: EF,
+    },
+    {
+      title: "Choosing Charts",
+      content: CC,
     },
   ];
 
