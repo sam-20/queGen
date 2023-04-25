@@ -1,7 +1,7 @@
 .queTxt {
   /**https://www.w3schools.com/css/css3_animations.asp*/
   animation-name: animateText;
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: normal;

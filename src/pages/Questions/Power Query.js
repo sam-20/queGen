@@ -51,5 +51,7 @@ export const PQ = [
   `choose only the columns you want to keep`,
   `what are the total number of rows in the dataset`,
   `go to a specific column without scrolling`,
-  `check if a date is in the current year, previous or next year using function`,
+  `check if a date is in the previous/current/next day/week/month/quarter/year using function`,
+  `add or subtract days/weeks/months/quarter/years from a date column using function`,
+  `extract the day/week/month/year number or name of a date column using function`,
 ];
