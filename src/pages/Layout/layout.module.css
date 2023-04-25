@@ -1,0 +1,26 @@
+.queTxt {
+  /**https://www.w3schools.com/css/css3_animations.asp*/
+  animation-name: animateText;
+  animation-duration: 0.3s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+@keyframes animateText {
+  0% {
+    /* font-size: smaller; */
+    transform: scale(0.5);
+  }
+  25% {
+    /* font-size: small; */
+  }
+  50% {
+    /* font-size: medium; */
+  }
+  100% {
+    /* font-size: large; */
+    transform: scale(1);
+  }
+}
