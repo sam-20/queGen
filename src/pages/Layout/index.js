@@ -46,7 +46,7 @@ function Layout() {
       content: EF,
     },
     {
-      title: "Choosing Charts",
+      title: "Excel Choosing and Designing Charts",
       content: CC,
     },
   ];
