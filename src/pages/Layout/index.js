@@ -7,9 +7,15 @@ import LayoutCSS from "./layout.module.css";
 function Layout() {
   const [queTyp, setQueTyp] = useState(null); //stores the question type the user selected from the dropdown list
   const [queTxt, setQueTxt] = useState(""); //stores the question text of the randomly generated question number
+  const [ansTxt, setAnsTxt] = useState(""); //if a generated question has an answer attached to it, this variable stores the answer
+
+  const [dispAnsBtn, setDispAnsBtn] = useState(null); //the view answer button is displayed or hidden based on if a generated question has an answer attached to it in the object array
+  const [dispAnsTxt, setDispAnsTxt] = useState(false); //we should the answer only if the user clicks the View Answer button
 
   const { speak, voices } = useSpeechSynthesis();
   const [speechEnabled, setSpeechEnabled] = useState(); //stores the radio button value of speech enabled
+
+  const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
 
   //generate random question number from the given questions array
   function genRanQueNum(max) {
@@ -25,19 +31,19 @@ function Layout() {
   const Questions = [
     {
       title: "Business Analyst",
-      questions: BAQ,
+      content: BAQ,
     },
     {
       title: "Power Query",
-      questions: PQ,
+      content: PQ,
     },
     {
       title: "Excel Interview",
-      questions: EI,
+      content: EI,
     },
     {
       title: "Excel Formulas",
-      questions: EF,
+      content: EF,
     },
   ];
 
@@ -48,31 +54,46 @@ function Layout() {
       return;
     }
 
+    //clear variables
+    setQueTxt("");
+    setAnsTxt("");
+    setDispAnsBtn(false);
+    setDispAnsTxt(false);
+
     //before we generate question we find index of that question type in the questions array
     var queTypIdx = Questions.findIndex((item) => item.title === queTyp);
 
     //if all questions of that type have been generated we prompt user
-    if (Questions[queTypIdx].questions.length == 0) {
+    if (Questions[queTypIdx].content.length == 0) {
       alert("No more questions");
       return;
     }
 
     //after knowing which question type we want to generate questions from, we calc the length of that questions array to generate a random number
-    var queNumGen = genRanQueNum(Questions[queTypIdx].questions.length);
+    var _queNumGen = genRanQueNum(Questions[queTypIdx].content.length); //this new variable was created to be used as the original generated question number else the default of 0 in the state would be used when the user generates question for the first time. The state version of this variable was created to hold as the key property for the queTxt variable
+    setQueNumGen(_queNumGen);
 
     //set the question of the generated question number
-    setQueTxt(Questions[queTypIdx].questions[queNumGen]);
+    setQueTxt(Questions[queTypIdx].content[_queNumGen].que);
+
+    //set the answer of the generated question number
+    setAnsTxt(Questions[queTypIdx].content[_queNumGen].ans);
+
+    //if the question has an answer included we display the View Answer button
+    if (Questions[queTypIdx].content[_queNumGen].ans != null) {
+      setDispAnsBtn(true);
+    }
 
     //if the enable speech option is on, we play the question
     if (speechEnabled) {
       speak({
-        text: Questions[queTypIdx].questions[queNumGen],
+        text: Questions[queTypIdx].content[_queNumGen].que,
         voice: voices[3],
       });
     }
 
     //finally remove that question from the questions array to avoid being asked again
-    Questions[queTypIdx].questions.splice(queNumGen, 1);
+    Questions[queTypIdx].content.splice(_queNumGen, 1);
   };
 
   //fetches the index of the selected question type from the dropdown
@@ -149,12 +170,31 @@ function Layout() {
           </button>
         </div>
 
-        <p
-          key={genRanQueNum(100)}
-          className={queTxt == "" ? null : LayoutCSS.queTxt}
-        >
+        <p key={queNumGen} className={queTxt == "" ? null : LayoutCSS.queTxt}>
           {queTxt}
         </p>
+
+        <div style={{ display: "flex", marginTop: 10 }}>
+          {dispAnsBtn ? (
+            <button
+              style={{ display: "flex", padding: 5 }}
+              onClick={() => {
+                setDispAnsTxt(true);
+              }}
+            >
+              View Answer
+            </button>
+          ) : null}
+        </div>
+
+        {dispAnsTxt ? (
+          <p
+            key={genRanQueNum(100)}
+            className={ansTxt == "" ? null : LayoutCSS.queTxt}
+          >
+            {ansTxt}
+          </p>
+        ) : null}
       </div>
     </>
   );
