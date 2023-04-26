@@ -38,11 +38,11 @@ function Layout() {
       content: PQ,
     },
     {
-      title: "Excel Interview",
+      title: "Excel Interview Questions",
       content: EI,
     },
     {
-      title: "Excel Formulas",
+      title: "Excel Formulas and Common Practices",
       content: EF,
     },
     {
@@ -194,7 +194,7 @@ function Layout() {
         {dispAnsTxt ? (
           <p
             key={genRanQueNum(100)}
-            className={ansTxt == "" ? null : LayoutCSS.queTxt}
+            className={ansTxt == "" ? null : LayoutCSS.ansTxt}
           >
             {ansTxt}
           </p>

@@ -1,5 +1,4 @@
 export const CC = [
-  { que: `what chart would you use to visualize ...`, ans: null },
   { que: `design a pie chart from a normal excel table`, ans: null },
   { que: `design a pie chart from a pivot table`, ans: null },
   { que: `design a treemap from a normal excel table`, ans: null },
@@ -20,4 +19,5 @@ export const CC = [
   { que: `design a boxplot from a normal excel table`, ans: null },
   { que: `design a scatterplot from a normal excel table`, ans: null },
   { que: `design a spark line chart from a normal excel table`, ans: null },
+  { que: `what chart would you use to visualize ...`, ans: null },
 ];

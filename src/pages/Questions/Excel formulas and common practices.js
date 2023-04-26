@@ -210,8 +210,46 @@ export const EF = [
     que: `generate random decimals within a range`,
     ans: `RAND()*[diff btn lower and upper bound value]+[lowerboundvalue]`,
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `Undo a cell range formatted as table`,
+    ans: `Right click any cell -> Table -> Convert to Range`,
+  },
+  {
+    que: `Add filter options to a cell range not formatted as table`,
+    ans: `Data tab -> Sort & Filter group -> Filter`,
+  },
+  {
+    que: `Add custom lists for autofill in excel`,
+    ans: `File menu -> Options -> Advanced menu -> General menu -> Edit Custom Lists`,
+  },
+  {
+    que: `Freeze pane`,
+    ans: `Click row underneath column headers -> View tab -> Window group -> Freeze Panes -> Freeze Panes`,
+  },
+  {
+    que: `Make same change across worksheets containing same data`,
+    ans: `Hold Ctrl and select worksheet tabs below -> make change to one cell -> check to ensure it’s applied across other worksheets.`,
+  },
+  {
+    que: `sort a table by multiple criteria`,
+    ans: `Select table -> Data tab -> Sort & Filter group -> Sort`,
+  },
+  {
+    que: `add a table to the data model`,
+    ans: `select cell in the table -> Power Pivot tab -> Tables group -> Add to Data Model`,
+  },
+  {
+    que: `import pivot table from the data model`,
+    ans: `Insert tab -> Tables group -> Pivot Table -> From Data Model`,
+  },
+  {
+    que: `create, update or delete relationships between tables in a data model`,
+    ans: `Data tab -> Data Tools group -> Relationships OR 	Power Pivot tab -> Data Model group -> Manage`,
+  },
+  {
+    que: `search for an item corresponding value in another column B using vlookup`,
+    ans: `vlookup([whose value are we searching for ie. lookup value], [in which table are we searching], [the item we want to pull out, what is its column number starting from 1?], [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },

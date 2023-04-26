@@ -8,6 +8,16 @@
   animation-timing-function: linear;
 }
 
+.ansTxt {
+  color: rgb(24, 218, 24);
+  animation-name: animateText;
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
 @keyframes animateText {
   0% {
     /* font-size: smaller; */
