@@ -43,10 +43,7 @@ export const EF = [
   { que: `find the modulo of a number`, ans: `MOD` },
   { que: `give an example of IF function`, ans: `IF` },
   { que: `give an example of nested IF function`, ans: `IF` },
-  { que: `generate a list of dates within a given period`, ans: null },
-  { que: `display today's date`, ans: `TODAY or Ctrl+;` },
-  { que: `display the date in the next n days`, ans: `TODAY()+n` },
-  { que: `display the date in the previous n days`, ans: `TODAY()-n` },
+
   { que: `display the opposite of TRUE or FALSE outputs`, ans: `NOT` },
   {
     que: `catch an error that could be thrown by a condition not met`,
@@ -54,93 +51,142 @@ export const EF = [
   },
   {
     que: `calculate the sum of values in a range A which meet a certain condition in that same range A`,
-    ans: `SUMIF with 2 args`,
+    ans: `(1 col under consideration): SUMIF with 2 args`,
   },
   {
     que: `calculate the sum of values in a range A which meet a certain condition in another range B`,
-    ans: `SUMIF with 3 args`,
+    ans: `(2 cols under consideration): SUMIF with 3 args`,
   },
   {
     que: `calculate the sum of values in a range A which meet a certain condition in multiple ranges B, C, D, etc.`,
-    ans: `SUMIFS`,
+    ans: `(3+ cols under consideration): SUMIFS`,
   },
   {
     que: `find the sum of values in range/column A where range/column A satisfies a condition`,
-    ans: `SUMIF with 2 args`,
+    ans: `(1 col under consideration): SUMIF with 2 args`,
   },
   {
     que: `find the sum of values in range/column A where range/column B satisfies a condition`,
-    ans: `SUMIF with 3 args`,
+    ans: `(2 cols under consideration): SUMIF with 3 args`,
   },
   {
     que: `find the sum of values in range/column A where range/column B, C and D etc. satisifies a condition`,
-    ans: `SUMIFS`,
+    ans: `(3+ cols under consideration): SUMIFS`,
   },
-  { que: `find the total x in column Z where x=abc`, ans: `SUMIF with 2 args` },
+  {
+    que: `find the total x in column Z where x=abc`,
+    ans: `(1 col under consideration): SUMIF with 2 args`,
+  },
   {
     que: `find the total x in column Z where column A=abc`,
-    ans: `SUMIF with 3 args`,
+    ans: `(2 cols under consideration): SUMIF with 3 args`,
   },
   {
     que: `find the total x in column Z where column A=abc and column B=def`,
-    ans: `SUMIFS`,
+    ans: `(3+ cols under consideration): SUMIFS`,
   },
   {
     que: `how many cells in range A meet a certain condition in that range A`,
-    ans: `COUNTIF`,
+    ans: `(1 col under consideration): COUNTIF`,
   },
   {
     que: `find the total number of x in column Z where column A=abc and column B=def`,
-    ans: `COUNTIFS`,
+    ans: `(2+ cols under consideration): COUNTIFS`,
   },
   {
     que: `find the number of x in column Z where x=abc`,
-    ans: `COUNTIF`,
+    ans: `(1 col under consideration): COUNTIF`,
   },
   {
     que: `calculate the average of values in a range A which meet a certain condition in that same range A`,
-    ans: `AVERGEIF with 2 args`,
+    ans: `(1 col under consideration): AVERGEIF with 2 args`,
   },
   {
     que: `calculate the average of values in a range A which meet a certain condition in another range B`,
-    ans: `AVERGEIF with 3 args`,
+    ans: `(2 cols under consideration): AVERGEIF with 3 args`,
   },
   {
     que: `calculate the average value in a range A which meet a certain condition in multiple ranges B, C, D, etc.`,
-    ans: `AVERAGEIFS`,
+    ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
   {
     que: `find the average value in range/column A where range/column A satisfies a condition`,
-    ans: `AVERAGEIF with 2 args`,
+    ans: `(1 col under consideration): AVERAGEIF with 2 args`,
   },
   {
     que: `find the average value in range/column A where range/column B satisfies a condition`,
-    ans: `AVERAGEIF with 3 args`,
+    ans: `(2 cols under consideration): AVERAGEIF with 3 args`,
   },
   {
     que: `find the average value in range/column A where range/column B, C and D etc. satisifies a condition`,
-    ans: `AVERAGEIFS`,
+    ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
   {
     que: `find the average x in column Z where x=abc`,
-    ans: `AVERAGEIF with 2 args`,
+    ans: `(1 col under consideration): AVERAGEIF with 2 args`,
   },
   {
     que: `find the average x in column Z where column A=abc`,
-    ans: `AVERAGEIF with 3 args`,
+    ans: `(2 cols under consideration): AVERAGEIF with 3 args`,
   },
   {
     que: `find the average x in column Z where column A=abc and column B=def`,
-    ans: `AVERAGEIFS`,
+    ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  { que: `display today's date`, ans: `TODAY or Ctrl+;` },
+  { que: `display the date in the next n days`, ans: `TODAY()+n` },
+  { que: `display the date in the previous n days`, ans: `TODAY()-n` },
+  { que: `display today's date and current time`, ans: `NOW` },
+  { que: `extract the day number from a given date`, ans: `DAY` },
+  { que: `extract the month number from a given date`, ans: `MONTH` },
+  { que: `extract the year from a given date`, ans: `YEAR` },
+  { que: `create a date using a formula`, ans: `DATE` },
+  { que: `add n days to today's date`, ans: `TODAY()+n` },
+  { que: `subtract n days from today's date`, ans: `TODAY()-n` },
+  { que: `add n days to a date`, ans: `date + n` },
+  { que: `subtract n days from a date`, ans: `date - n` },
+  { que: `add n months to a date`, ans: `EDATE(date,no of months)` },
+  {
+    que: `subtract n months from a date`,
+    ans: `EDATE(date,negative value of the no of months)`,
+  },
+  {
+    que: `add n years to a date`,
+    ans: `EDATE(date, no of years*12)`,
+  },
+  {
+    que: `subtract n years from a date`,
+    ans: `negative value of the no of years*12`,
+  },
+  {
+    que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates not considering holidays`,
+    ans: `NETWORKDAYS with 2 args ie. NETWORKDAYS(start_date, end_date)`,
+  },
+  {
+    que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates and considering holidays`,
+    ans: `NETWORKDAYS with 3 args ie. NETWORKDAYS(start_date, end_date, range containing holiday dates). NB: use the range of holiday dates not the number of holidays because we dont know if the holiday might fall on a Sat or Sun`,
+  },
+  {
+    que: `what is the number of working days when we have our own defined weekend/off-days instead of the regular Sat and Sun`,
+    ans: `NETWORKDAYS.INTL`,
+  },
+  {
+    que: `change the format for a given date to your own custom format. eg. Monday or Mon-23, 23 Mon 2023, etc`,
+    ans: `Right click date cell -> Format cells -> Number tab -> select Custom from Category list -> enter your custom format in the Type input`,
+  },
+  {
+    que: `calculate someone's age (in years) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "Y")`,
+  },
+  {
+    que: `calculate someone's age (in months) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "M")`,
+  },
+  {
+    que: `calculate someone's age (in days) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "D")`,
+  },
+  { que: `generate a list of random dates within a given period`, ans: null },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
 ];
