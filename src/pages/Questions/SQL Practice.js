@@ -350,7 +350,15 @@ export const SQLP = [
   },
   {
     que: `select text where any character can appear between h and t except o and a`,
-    ans: ``,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'h[^oa]t';</p>
+        <p>or</p>
+        <p>WHERE City LIKE 'h[!oa]t';</p>
+      </>
+    ),
   },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
