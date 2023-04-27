@@ -247,7 +247,7 @@ export const EF = [
     ans: `Data tab -> Data Tools group -> Relationships OR 	Power Pivot tab -> Data Model group -> Manage`,
   },
   {
-    que: `search for an item corresponding value in another column B using vlookup`,
+    que: `search for an item corresponding value in another column B using vlookup exact match`,
     ans: `vlookup([whose value are we searching for ie. lookup value], [in which table are we searching], [the item we want to pull out, what is its column number starting from 1?], [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
   },
   { que: ``, ans: `` },
@@ -259,5 +259,8 @@ export const EF = [
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `remove duplicates in a column`,
+    ans: `select table -> Table Design tab -> Tools group -> Remove Duplicates`,
+  },
 ];
