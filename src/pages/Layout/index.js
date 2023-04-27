@@ -196,12 +196,12 @@ function Layout() {
         </div>
 
         {dispAnsTxt ? (
-          <p
+          <div
             key={genRanQueNum(100)}
-            className={ansTxt === "" ? null : LayoutCSS.ansTxt}
+            className={ansTxt === "" ? null : LayoutCSS.ansDiv}
           >
             {ansTxt}
-          </p>
+          </div>
         ) : null}
       </div>
     </>

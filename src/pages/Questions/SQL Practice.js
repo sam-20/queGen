@@ -12,7 +12,14 @@ export const SQLP = [
   },
   {
     que: `select only one column data from a table`,
-    ans: `SELECT [columnName] from [tableName] or SELECT [tableName].[columnName] from [tableName] eg. SELECT customers.address FROM customers; SELECT sellers.address FROM sellers`,
+    ans: (
+      <>
+        <p>SELECT [columnName] from [tableName]</p> or
+        <p>SELECT [tableName].[columnName] from [tableName]</p> eg.
+        <p>SELECT customers.address FROM customers;</p>
+        <p>SELECT sellers.address FROM sellers</p>
+      </>
+    ),
   },
   {
     que: `select multiple columns data from a table`,
@@ -26,11 +33,18 @@ export const SQLP = [
     que: `show only the first n results from the query`,
     ans: `SELECT * from [tableName] LIMIT n`,
   },
+
   {
     que: `show only n results starting from position/row number x`,
-    ans: `SELECT * from [tableName] LIMIT n,x NB: position count starts from 0`,
+    ans: (
+      <>
+        <p>SELECT * from [tableName] LIMIT n,x</p>
+        <p>
+          <b>NB:</b> position count starts from 0
+        </p>
+      </>
+    ),
   },
-  { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
