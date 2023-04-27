@@ -118,7 +118,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `filter data which begins with a portion of text/letters. Eg. select countries which begin with Ma`,
+    que: `filter data which begins with a given set of characters and can have any number of characters after it. Eg. select countries which begin with Ma`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -127,7 +127,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `filter data which ends with a portion of text/letters. Eg. select countries which end with na`,
+    que: `filter data which ends with a given set of characters and can have any number of characters before it. Eg. select countries which end with na`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -136,7 +136,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `filter data which begins with a portion of text/letters and ends with a portion of text/letters. Eg. select countries which begin with C and end with A`,
+    que: `filter data which begins with a given set of characters, can have any number of characters in between and then ends with a given set of characters. Eg. select countries which begin with C and end with A`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -145,7 +145,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `filter data which contains a portion of text/letters. Eg. select countries which contain an`,
+    que: `filter data which contains a given set of characters anywhere. Eg. select countries which contain an`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -153,7 +153,7 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
+  { que: `filter data which begins with a specific character`, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
