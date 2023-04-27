@@ -57,7 +57,7 @@ function Layout() {
 
   //generate a question from the question type selected in the dropdown
   const generateQuestion = () => {
-    if (queTyp == null || queTyp == "") {
+    if (queTyp === null || queTyp === "") {
       alert("Select Question Type");
       return;
     }
@@ -72,7 +72,7 @@ function Layout() {
     var queTypIdx = Questions.findIndex((item) => item.title === queTyp);
 
     //if all questions of that type have been generated we prompt user
-    if (Questions[queTypIdx].content.length == 0) {
+    if (Questions[queTypIdx].content.length === 0) {
       alert("No more questions");
       return;
     }
@@ -178,7 +178,7 @@ function Layout() {
           </button>
         </div>
 
-        <p key={queNumGen} className={queTxt == "" ? null : LayoutCSS.queTxt}>
+        <p key={queNumGen} className={queTxt === "" ? null : LayoutCSS.queTxt}>
           {queTxt}
         </p>
 
@@ -198,7 +198,7 @@ function Layout() {
         {dispAnsTxt ? (
           <p
             key={genRanQueNum(100)}
-            className={ansTxt == "" ? null : LayoutCSS.ansTxt}
+            className={ansTxt === "" ? null : LayoutCSS.ansTxt}
           >
             {ansTxt}
           </p>
