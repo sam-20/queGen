@@ -117,6 +117,42 @@ export const SQLP = [
       </>
     ),
   },
+  {
+    que: `filter data which begins with a portion of text/letters. Eg. select countries which begin with Ma`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country LIKE 'Ma%'</p>
+      </>
+    ),
+  },
+  {
+    que: `filter data which ends with a portion of text/letters. Eg. select countries which end with na`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country LIKE '%na'</p>
+      </>
+    ),
+  },
+  {
+    que: `filter data which begins with a portion of text/letters and ends with a portion of text/letters. Eg. select countries which begin with C and end with A`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country LIKE 'C%a'</p>
+      </>
+    ),
+  },
+  {
+    que: `filter data which contains a portion of text/letters. Eg. select countries which contain an`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country LIKE '%ama%'</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
@@ -151,22 +187,20 @@ export const SQLP = [
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  { que: `create a database`, ans: `` },
+  { que: `update the database's name`, ans: `` },
+  { que: `delete a database`, ans: `` },
+  { que: `create a table`, ans: `` },
+  { que: `update a table's name`, ans: `` },
+  { que: `delete a table`, ans: `DROP TABLE new_sms_download` },
+  { que: `insert a record into a table`, ans: `` },
+  { que: `update a record in a table`, ans: `` },
+  { que: `delete a record from a table`, ans: `` },
+  { que: `add a new column to a table`, ans: `` },
+  { que: `update the column name of a table`, ans: `` },
+  { que: `delete a column from a table`, ans: `` },
+  { que: `view the properties/constraints of all columns in a table`, ans: `` },
+  { que: `add properties/constraints to a column`, ans: `` },
+  { que: `update the properties/constraints of a column`, ans: `` },
+  { que: `remove the properties/constraints of a column`, ans: `` },
 ];
