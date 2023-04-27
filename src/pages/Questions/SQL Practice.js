@@ -153,27 +153,205 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `filter data which begins with a specific character`, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `Select all records where the second letter of the text is an specific letter eg. A`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '_a%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Select all records where the first letter of the text starts with anything from an "a" to an "f"`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[a-f]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Select all records where the first letter of the text is NOT an "a", "c" or "f".`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[^acf]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Finds any text that starts with "a"`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'a%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Finds any values that have "or" in any position`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '%or%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Finds any text that have "r" in the second position`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '_r%';</p>
+      </>
+    ),
+  },
+  {
+    que: `Finds any text that starts with "a" and are at least 3 characters in length`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'a___%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select all text starting with "ber"`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'ber%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select all text containing the pattern "es"`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '%es%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text starting with any character, followed by "ondon"`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '_ondon';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":`,
+    ans: (
+      <>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'L_n_on';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text starting with "b", "s", or "p"`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[bsp]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text starting with "a","b","c","d" or "e"`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[a-c]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text NOT starting with "b", "s", or "p"`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[^bsp]%';</p>
+        <p>or</p>
+        <p>WHERE City LIKE '[!bsp]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text NOT starting with a to k`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[^a-k]%';</p>
+        <p>or</p>
+        <p>WHERE City LIKE '[!a-k]%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where either b, d or g should first appear before ent then followed by any number of characters`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[bdg]ent%';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where any number of characters should first appear before ent, then the last character following ent should be either b, d or g`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '%ent[bdg]';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where either b,d or g should first appear followed by e, then lastly followed by either b, d or g`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE '[bdg]e[bdg]';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where e should first appear followed by either b, d or g then lastly followed by ar`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'e[bdg]ar';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where either 'o' or 'a' appears between h and t`,
+    ans: (
+      <>
+        <b>**SQL only**</b>
+        <p>SELECT * FROM Customers</p>
+        <p>WHERE City LIKE 'h[oa]t';</p>
+      </>
+    ),
+  },
+  {
+    que: `select text where any character can appear between h and t except o and a`,
+    ans: ``,
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
