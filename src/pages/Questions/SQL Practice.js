@@ -371,6 +371,28 @@ export const SQLP = [
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
+  {
+    que: `use regular expressions to select data that contains a certain text`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country REGEXP 'ana'</p>
+      </>
+    ),
+  },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: `create a database`, ans: `` },
