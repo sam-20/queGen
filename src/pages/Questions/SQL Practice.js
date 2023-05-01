@@ -126,6 +126,16 @@ export const SQLP = [
     ),
   },
   {
+    que: `get a random record from the table`,
+    ans: (
+      <>
+        <p>SELECT * FROM country</p>
+        <p>ORDER BY RAND()</p>
+        <p>LIMIT 1</p>
+      </>
+    ),
+  },
+  {
     que: `filter data where you have to use a bunch of OR statements`,
     ans: (
       <>
@@ -586,6 +596,26 @@ export const SQLP = [
       </>
     ),
   },
+  {
+    que: `A table called country has 2 columns: name, population. How would you write a query to select the country with the least population`,
+    ans: (
+      <>
+        <p>SELECT country FROM countries</p>
+        <p>WHERE population = </p>
+        <p>{"("}</p>
+        <p>SELECT MIN(population) FROM countries</p>
+        <p>{")"}</p>
+      </>
+    ),
+  },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
