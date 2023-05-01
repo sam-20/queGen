@@ -510,14 +510,28 @@ export const SQLP = [
     que: `find the total number of rows in a table`,
     ans: (
       <>
-        <p>SELECT COUNT(*) from new_sms_download</p>
+        <p>SELECT COUNT(*) AS totalRows from new_sms_download</p>
         <p>can be used with other functions as well eg. </p>
         <p>SELECT COUNT(DISTINCT(country)) FROM new_sms_download</p>
       </>
     ),
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `select the highest value in a column`,
+    ans: (
+      <>
+        <p>SELECT MAX(id) from new_sms_download</p>
+      </>
+    ),
+  },
+  {
+    que: `select the lowest value in a column`,
+    ans: (
+      <>
+        <p>SELECT MIN(id) from new_sms_download</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
