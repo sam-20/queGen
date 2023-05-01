@@ -499,14 +499,23 @@ export const SQLP = [
     ),
   },
   {
-    que: `select the total of a column's data`,
+    que: `select the total value of a column's data`,
     ans: (
       <>
         <p>SELECT SUM(room_beds_vacant) FROM room</p>
       </>
     ),
   },
-  { que: ``, ans: `` },
+  {
+    que: `find the total number of rows in a table`,
+    ans: (
+      <>
+        <p>SELECT COUNT(*) from new_sms_download</p>
+        <p>can be used with other functions as well eg. </p>
+        <p>SELECT COUNT(DISTINCT(country)) FROM new_sms_download</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
