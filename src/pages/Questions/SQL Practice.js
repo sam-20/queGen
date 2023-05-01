@@ -561,7 +561,7 @@ export const SQLP = [
         <p>WHERE country REGEXP '[a-m]%'</p>
         <p>GROUP BY country </p>
         <p>HAVING population {"<"} 100</p>
-        <p>ORDER BY population DESC</p>
+        <p>ORDER BY population DESC, country ASC</p>
       </>
     ),
   },
