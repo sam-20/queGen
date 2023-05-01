@@ -624,6 +624,10 @@ export const SQLP = [
         <p>SELECT * FROM country WHERE continent = "Africa"</p>
         <p>UNION</p>
         <p>SELECT * FROM country WHERE continent = "Asia"</p>
+        <p>
+          NB: whenever you use unions, your columns returned in each query has
+          to be the same. Use UNION ALL to return duplicates in both queries
+        </p>
       </>
     ),
   },
