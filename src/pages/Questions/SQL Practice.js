@@ -617,7 +617,16 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
+  {
+    que: `combine different sql queries into a single result table rather than as separate table results`,
+    ans: (
+      <>
+        <p>SELECT * FROM country WHERE continent = "Africa"</p>
+        <p>UNION</p>
+        <p>SELECT * FROM country WHERE continent = "Asia"</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
