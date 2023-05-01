@@ -379,6 +379,24 @@ export const SQLP = [
     ),
   },
   {
+    que: `use regular expressions to select data where any number of characters should appear before,after or middle of a pattern. Eg. select countries which contains na and any number of characters should appear before it`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country FROM new_sms_download </p>
+        <p>WHERE country REGEXP '.na'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to select data where a fixed number of characters should appear before,after or middle of a pattern. Eg. select countries where exactly two characters should appear before na`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country FROM new_sms_download</p>
+        <p>WHERE country REGEXP '^..na'</p>
+      </>
+    ),
+  },
+  {
     que: `use regular expressions to select data that contains a certain text`,
     ans: (
       <>
@@ -415,6 +433,15 @@ export const SQLP = [
     ),
   },
   {
+    que: `use regular expressions to select data not containing a range of characters. eg. find messages not containing numbers ie. not numbers`,
+    ans: (
+      <>
+        <p>SELECT content FROM new_sms_download </p>
+        <p>WHERE content REGEXP '[^0-9]'</p>
+      </>
+    ),
+  },
+  {
     que: `use regular expressions to select data which contains only non-alphanumeric characters`,
     ans: (
       <>
@@ -423,15 +450,7 @@ export const SQLP = [
       </>
     ),
   },
-  {
-    que: `use regular expressions to select text where a fixed number of characters should appear before,after or middle of a pattern. Eg. select countries where the two characters should appear before na`,
-    ans: (
-      <>
-        <p>SELECT DISTINCT country FROM new_sms_download</p>
-        <p>WHERE country REGEXP '^..na'</p>
-      </>
-    ),
-  },
+
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
