@@ -1,4 +1,14 @@
 export const SQLP = [
+  {
+    que: `comment statements in sql`,
+    ans: (
+      <>
+        <p>-- FROM new_sms_download</p>
+        <p>or</p>
+        <p>/** FROM new_sms_download */</p>
+      </>
+    ),
+  },
   { que: `retrieve the list of databases`, ans: `SHOW DATABASES;` },
   { que: `move into a database`, ans: `USE [databasename];` },
   { que: `display tables in the database`, ans: `SHOW TABLES;` },
@@ -532,7 +542,16 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
+  {
+    que: `find the total number of/sum/avg/min/max of a column A for each distinct value of column B. Eg. find the total number of people in each country`,
+    ans: (
+      <>
+        <p>SELECT country, COUNT(gender) AS population, AVG(id)</p>
+        <p>FROM new_sms_download</p>
+        <p>GROUP BY country</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
@@ -557,4 +576,13 @@ export const SQLP = [
   { que: `add properties/constraints to a column`, ans: `` },
   { que: `update the properties/constraints of a column`, ans: `` },
   { que: `remove the properties/constraints of a column`, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: `events`, ans: `` },
+  { que: `triggers`, ans: `` },
+  { que: `stored procedures`, ans: `` },
 ];
