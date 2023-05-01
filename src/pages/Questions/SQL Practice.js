@@ -6,6 +6,13 @@ export const SQLP = [
         <p>-- FROM new_sms_download</p>
         <p>or</p>
         <p>/** FROM new_sms_download */</p>
+        <p>
+          the second example is more efficient because it also allows you to add
+          comments to the end of statements as shown below
+        </p>
+        <p>
+          SELECT AVG(id) FROM new_sms_download /**run innermost query first*/
+        </p>
       </>
     ),
   },
@@ -565,6 +572,26 @@ export const SQLP = [
       </>
     ),
   },
+  {
+    que: `write an sql statement that uses a subquery`,
+    ans: (
+      <>
+        <p>SELECT country, AVG(id) as AvgID FROM new_sms_download </p>
+        <p>GROUP BY country</p>
+        <p> HAVING AvgID {">"}</p>
+        <p>
+          (SELECT AVG(id) FROM new_sms_download) /**run innermost query first*/{" "}
+        </p>
+        <p> ORDER BY AvgID ASC, country ASC</p>
+      </>
+    ),
+  },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
+  { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
