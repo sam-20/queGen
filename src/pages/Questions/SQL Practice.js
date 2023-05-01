@@ -40,7 +40,7 @@ export const SQLP = [
       <>
         <p>SELECT * from [tableName] LIMIT n,x</p>
         <p>
-          <b>NB:</b> position count starts from 0
+          <b>NB:</b> position/row count starts from 0
         </p>
       </>
     ),
@@ -450,7 +450,63 @@ export const SQLP = [
       </>
     ),
   },
-
+  {
+    que: `select data which is as a result of the combination of multiple columns into a single one. Eg. select date from the database`,
+    ans: (
+      <>
+        <p>SELECT CONCAT(day," ",month," ",yr) AS fullDate FROM buyers</p>
+      </>
+    ),
+  },
+  {
+    que: `select data which is as a result of a mathemical computation. Eg. select student's ages in the next 5 years`,
+    ans: (
+      <>
+        <p>SELECT age+5 AS futureAge FROM Students</p>
+      </>
+    ),
+  },
+  {
+    que: `produce data results in capitalized form`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT UPPER(country) FROM new_sms_download</p>
+      </>
+    ),
+  },
+  {
+    que: `produce data results in small letters form`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT LOWER(country) FROM new_sms_download</p>
+      </>
+    ),
+  },
+  {
+    que: `produce the square root of a data column`,
+    ans: (
+      <>
+        <p>SELECT SQRT(id) FROM new_sms_download</p>
+      </>
+    ),
+  },
+  {
+    que: `select the average value of a column data`,
+    ans: (
+      <>
+        <p>SELECT AVG(room_total_beds) FROM room</p>
+      </>
+    ),
+  },
+  {
+    que: `select the total of a column's data`,
+    ans: (
+      <>
+        <p>SELECT SUM(room_beds_vacant) FROM room</p>
+      </>
+    ),
+  },
+  { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
