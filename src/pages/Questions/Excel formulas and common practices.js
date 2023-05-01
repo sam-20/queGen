@@ -223,6 +223,10 @@ export const EF = [
     ans: `Data tab -> Sort & Filter group -> Filter`,
   },
   {
+    que: `resize a table`,
+    ans: `select table -> Table Design tab -> Properties group -> Resize Table`,
+  },
+  {
     que: `Add custom lists for autofill in excel`,
     ans: `File menu -> Options -> Advanced menu -> General menu -> Edit Custom Lists`,
   },
