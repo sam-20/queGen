@@ -650,7 +650,7 @@ export const SQLP = [
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  { que: `views`, ans: `` },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
   { que: `stored procedures`, ans: `` },
