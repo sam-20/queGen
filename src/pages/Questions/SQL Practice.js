@@ -360,17 +360,24 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `use regular expressions to select data beginning with a particular patter. Eg. find countries beginning with united`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country REGEXP '^united'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to select data which ends with a particular pattern. Eg. find countries ending with ma`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country REGEXP 'na$'</p>
+      </>
+    ),
+  },
   {
     que: `use regular expressions to select data that contains a certain text`,
     ans: (
@@ -380,10 +387,51 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
+  {
+    que: `find data which contains one of a given set of patterns. Eg. find countries which contain united,republic or northern`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country REGEXP 'ana|uni|ma'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to filter data which contains one of a given set of characters. Eg. countries that contain x,y or z`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country from new_sms_download</p>
+        <p>WHERE country REGEXP '[xyz]'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to select data containing a range of characters. Eg. find messages containing numbers`,
+    ans: (
+      <>
+        <p>SELECT content FROM new_sms_download </p>
+        <p>WHERE content REGEXP '[0-9]'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to select data which contains only non-alphanumeric characters`,
+    ans: (
+      <>
+        <p>SELECT content FROM new_sms_download</p>
+        <p>WHERE content NOT REGEXP '[a-z0-9]'</p>
+      </>
+    ),
+  },
+  {
+    que: `use regular expressions to select text where a fixed number of characters should appear before,after or middle of a pattern. Eg. select countries where the two characters should appear before na`,
+    ans: (
+      <>
+        <p>SELECT DISTINCT country FROM new_sms_download</p>
+        <p>WHERE country REGEXP '^..na'</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },

@@ -50,6 +50,10 @@ export const EF = [
     ans: `IFERROR`,
   },
   {
+    que: "generate an auto increment of numbers",
+    ans: "sequence",
+  },
+  {
     que: `calculate the sum of values in a range A which meet a certain condition in that same range A`,
     ans: `(1 col under consideration): SUMIF with 2 args`,
   },
