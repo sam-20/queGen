@@ -608,7 +608,15 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
+  {
+    que: `alias a column and table in a single query`,
+    ans: (
+      <>
+        <p>SELECT name AS countryName FROM country AS C</p>
+        <p>WHERE c.continent = "Africa"</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
