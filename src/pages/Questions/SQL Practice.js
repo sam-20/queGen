@@ -552,7 +552,19 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
+  {
+    que: `write an sql statement to combine, aggregate functions, group by, where, having, order`,
+    ans: (
+      <>
+        <p>SELECT country, COUNT(gender) AS population, AVG(id) </p>
+        <p>FROM new_sms_download</p>
+        <p>WHERE country REGEXP '[a-m]%'</p>
+        <p>GROUP BY country </p>
+        <p>HAVING population {"<"} 100</p>
+        <p>ORDER BY population DESC</p>
+      </>
+    ),
+  },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },
