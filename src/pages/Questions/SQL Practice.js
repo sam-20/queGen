@@ -702,7 +702,10 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `delete a record from a table`, ans: `` },
+  {
+    que: `delete a record from a table`,
+    ans: `DELETE FROM state WHERE name="Cape Coast"`,
+  },
   { que: `add a new column to a table`, ans: `` },
   { que: `update the column name of a table`, ans: `` },
   { que: `delete a column from a table`, ans: `` },
