@@ -631,32 +631,43 @@ export const SQLP = [
       </>
     ),
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
   { que: `create a database`, ans: `` },
   { que: `update the database's name`, ans: `` },
   { que: `delete a database`, ans: `` },
   { que: `create a table`, ans: `` },
   { que: `update a table's name`, ans: `` },
   { que: `delete a table`, ans: `DROP TABLE new_sms_download` },
-  { que: `insert a record into a table`, ans: `` },
+  {
+    que: `insert a record into a table`,
+    ans: (
+      <>
+        <p>INSERT INTO state</p>
+        <p>VALUES</p>
+        <p>("6","3","Leeds","400"),</p>
+        <p>("7","2","Abuja","600")</p>
+      </>
+    ),
+  },
+  {
+    que: `insert a record into a table given only a few columns data`,
+    ans: (
+      <>
+        <p>INSERT INTO state(stateCountryID,name)</p>
+        <p>VALUES</p>
+        <p>("3","Coventry"),</p>
+        <p>("1","Cape Coast")</p>
+      </>
+    ),
+  },
+  {
+    que: `insert records from one table A into another table B`,
+    ans: (
+      <>
+        <p>INSERT INTO tableB(id,name,continent,population)</p>
+        <p>SELECT id,name,continent,population FROM tableA</p>
+      </>
+    ),
+  },
   { que: `update a record in a table`, ans: `` },
   { que: `delete a record from a table`, ans: `` },
   { que: `add a new column to a table`, ans: `` },
