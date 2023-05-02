@@ -665,6 +665,9 @@ export const SQLP = [
       <>
         <p>INSERT INTO tableB(id,name,continent,population)</p>
         <p>SELECT id,name,continent,population FROM tableA</p>
+        <p>
+          NB: this practice is not recommended as it only creates redundant data
+        </p>
       </>
     ),
   },
