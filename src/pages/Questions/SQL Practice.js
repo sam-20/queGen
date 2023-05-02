@@ -666,12 +666,42 @@ export const SQLP = [
         <p>INSERT INTO tableB(id,name,continent,population)</p>
         <p>SELECT id,name,continent,population FROM tableA</p>
         <p>
-          NB: this practice is not recommended as it only creates redundant data
+          You can include an optional WHERE clause and all the others in the
+          SELECT statement. However, NB: this practice is not recommended as it
+          only creates redundant data
         </p>
       </>
     ),
   },
-  { que: `update a record in a table`, ans: `` },
+  {
+    que: `update a single record in a table`,
+    ans: (
+      <>
+        <p>UPDATE state</p>
+        <p>SET population=100</p>
+        <p>WHERE name = "Coventry"</p>
+      </>
+    ),
+  },
+  {
+    que: `update multiple values of a single record. eg. change the name, age and address at the same time`,
+    ans: (
+      <>
+        <p>UPDATE student</p>
+        <p>SET name="Jane Doe-Carter", age=14, address="California"</p>
+        <p>WHERE name = "Jane Doe Carter"</p>
+      </>
+    ),
+  },
+  {
+    que: `change the entire column values of a table into the same value. eg. change all students' genders to unknown`,
+    ans: (
+      <>
+        <p>UPDATE student</p>
+        <p>SET gender="unknown"</p>
+      </>
+    ),
+  },
   { que: `delete a record from a table`, ans: `` },
   { que: `add a new column to a table`, ans: `` },
   { que: `update the column name of a table`, ans: `` },
