@@ -176,6 +176,7 @@ export const SQLP = [
     que: `insert a record into a table`,
     ans: (
       <>
+        <p>**SQL & MySQL**</p>
         <p>INSERT INTO state</p>
         <p>VALUES</p>
         <p>("6","3","Leeds","400"),</p>
@@ -187,6 +188,7 @@ export const SQLP = [
     que: `insert a record into a table given only a few columns data`,
     ans: (
       <>
+        <p>**SQL & MySQL**</p>
         <p>INSERT INTO state(stateCountryID,name)</p>
         <p>VALUES</p>
         <p>("3","Coventry"),</p>
