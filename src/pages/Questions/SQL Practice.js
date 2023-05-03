@@ -1,5 +1,110 @@
 export const SQLP = [
   {
+    que: `retrieve the list of databases`,
+    ans: (
+      <>
+        <p>SQL</p>
+        <p>SELECT name FROM master.sys.databases</p>
+        <p>WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb');</p>
+        <p>--------------</p>
+        <p>MySQL</p>
+        <p>SHOW DATABASES;</p>
+      </>
+    ),
+  },
+  { que: `create a database`, ans: `Create Database worldbank` },
+  { que: `move into a database`, ans: `USE [databasename];` },
+  { que: `update the database's name`, ans: `` },
+  { que: `delete a database`, ans: `` },
+  { que: `display tables in the database`, ans: `SHOW TABLES;` },
+  { que: `create a table`, ans: `` },
+  {
+    que: `display columns names in a table`,
+    ans: `SHOW COLUMNS FROM [tableName];`,
+  },
+  {
+    que: `display all the data in a table`,
+    ans: `SELECT * from [tableName]`,
+  },
+  { que: `update a table's name`, ans: `` },
+  { que: `delete a table`, ans: `DROP TABLE new_sms_download` },
+  {
+    que: `insert a record into a table`,
+    ans: (
+      <>
+        <p>INSERT INTO state</p>
+        <p>VALUES</p>
+        <p>("6","3","Leeds","400"),</p>
+        <p>("7","2","Abuja","600")</p>
+      </>
+    ),
+  },
+  {
+    que: `insert a record into a table given only a few columns data`,
+    ans: (
+      <>
+        <p>INSERT INTO state(stateCountryID,name)</p>
+        <p>VALUES</p>
+        <p>("3","Coventry"),</p>
+        <p>("1","Cape Coast")</p>
+      </>
+    ),
+  },
+  {
+    que: `insert records from one table A into another table B`,
+    ans: (
+      <>
+        <p>INSERT INTO tableB(id,name,continent,population)</p>
+        <p>SELECT id,name,continent,population FROM tableA</p>
+        <p>
+          You can include an optional WHERE clause and all the others in the
+          SELECT statement. However, NB: this practice is not recommended as it
+          only creates redundant data
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `update a single record in a table`,
+    ans: (
+      <>
+        <p>UPDATE state</p>
+        <p>SET population=100</p>
+        <p>WHERE name = "Coventry"</p>
+      </>
+    ),
+  },
+  {
+    que: `update multiple values of a single record. eg. change the name, age and address at the same time`,
+    ans: (
+      <>
+        <p>UPDATE student</p>
+        <p>SET name="Jane Doe-Carter", age=14, address="California"</p>
+        <p>WHERE name = "Jane Doe Carter"</p>
+      </>
+    ),
+  },
+  {
+    que: `change the entire column values of a table into the same value. eg. change all students' genders to unknown`,
+    ans: (
+      <>
+        <p>UPDATE student</p>
+        <p>SET gender="unknown"</p>
+      </>
+    ),
+  },
+  {
+    que: `delete a record from a table`,
+    ans: `DELETE FROM state WHERE name="Cape Coast"`,
+  },
+  { que: `add a new column to a table`, ans: `` },
+  { que: `update the column name of a table`, ans: `` },
+  { que: `delete a column from a table`, ans: `` },
+  { que: `view the properties/constraints of all columns in a table`, ans: `` },
+  { que: `add properties/constraints to a column`, ans: `` },
+  { que: `update the properties/constraints of a column`, ans: `` },
+  { que: `remove the properties/constraints of a column`, ans: `` },
+  {
     que: `comment statements in sql`,
     ans: (
       <>
@@ -15,17 +120,6 @@ export const SQLP = [
         </p>
       </>
     ),
-  },
-  { que: `retrieve the list of databases`, ans: `SHOW DATABASES;` },
-  { que: `move into a database`, ans: `USE [databasename];` },
-  { que: `display tables in the database`, ans: `SHOW TABLES;` },
-  {
-    que: `display columns names in a table`,
-    ans: `SHOW COLUMNS FROM [tableName];`,
-  },
-  {
-    que: `display all the data in a table`,
-    ans: `SELECT * from [tableName]`,
   },
   {
     que: `select only one column data from a table`,
@@ -50,7 +144,6 @@ export const SQLP = [
     que: `show only the first n results from the query`,
     ans: `SELECT * from [tableName] LIMIT n`,
   },
-
   {
     que: `show only n results starting from position/row number x`,
     ans: (
@@ -631,88 +724,7 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `create a database`, ans: `` },
-  { que: `update the database's name`, ans: `` },
-  { que: `delete a database`, ans: `` },
-  { que: `create a table`, ans: `` },
-  { que: `update a table's name`, ans: `` },
-  { que: `delete a table`, ans: `DROP TABLE new_sms_download` },
-  {
-    que: `insert a record into a table`,
-    ans: (
-      <>
-        <p>INSERT INTO state</p>
-        <p>VALUES</p>
-        <p>("6","3","Leeds","400"),</p>
-        <p>("7","2","Abuja","600")</p>
-      </>
-    ),
-  },
-  {
-    que: `insert a record into a table given only a few columns data`,
-    ans: (
-      <>
-        <p>INSERT INTO state(stateCountryID,name)</p>
-        <p>VALUES</p>
-        <p>("3","Coventry"),</p>
-        <p>("1","Cape Coast")</p>
-      </>
-    ),
-  },
-  {
-    que: `insert records from one table A into another table B`,
-    ans: (
-      <>
-        <p>INSERT INTO tableB(id,name,continent,population)</p>
-        <p>SELECT id,name,continent,population FROM tableA</p>
-        <p>
-          You can include an optional WHERE clause and all the others in the
-          SELECT statement. However, NB: this practice is not recommended as it
-          only creates redundant data
-        </p>
-      </>
-    ),
-  },
-  {
-    que: `update a single record in a table`,
-    ans: (
-      <>
-        <p>UPDATE state</p>
-        <p>SET population=100</p>
-        <p>WHERE name = "Coventry"</p>
-      </>
-    ),
-  },
-  {
-    que: `update multiple values of a single record. eg. change the name, age and address at the same time`,
-    ans: (
-      <>
-        <p>UPDATE student</p>
-        <p>SET name="Jane Doe-Carter", age=14, address="California"</p>
-        <p>WHERE name = "Jane Doe Carter"</p>
-      </>
-    ),
-  },
-  {
-    que: `change the entire column values of a table into the same value. eg. change all students' genders to unknown`,
-    ans: (
-      <>
-        <p>UPDATE student</p>
-        <p>SET gender="unknown"</p>
-      </>
-    ),
-  },
-  {
-    que: `delete a record from a table`,
-    ans: `DELETE FROM state WHERE name="Cape Coast"`,
-  },
-  { que: `add a new column to a table`, ans: `` },
-  { que: `update the column name of a table`, ans: `` },
-  { que: `delete a column from a table`, ans: `` },
-  { que: `view the properties/constraints of all columns in a table`, ans: `` },
-  { que: `add properties/constraints to a column`, ans: `` },
-  { que: `update the properties/constraints of a column`, ans: `` },
-  { que: `remove the properties/constraints of a column`, ans: `` },
+
   { que: ``, ans: `` },
   { que: ``, ans: `` },
   { que: ``, ans: `` },

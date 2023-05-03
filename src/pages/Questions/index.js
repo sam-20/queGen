@@ -4,4 +4,7 @@ import { EI } from "./Excel Interview";
 import { EF } from "./Excel formulas and common practices";
 import { CC } from "./ExcelChooseDesignCharts";
 import { SQLP } from "./SQL Practice";
-export { BAQ, PQ, EI, EF, CC, SQLP };
+import { DA } from "./Data Analyst interview";
+import { GI } from "./General interview incl Company questions";
+import { SQLI } from "./SQL Interview";
+export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI };

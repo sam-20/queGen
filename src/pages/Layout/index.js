@@ -1,6 +1,6 @@
 //https://github.com/craig1123/react-recipes/blob/master/docs/useSpeechSynthesis.md
 import { useSpeechSynthesis } from "react-speech-kit";
-import { BAQ, PQ, EI, EF, CC, SQLP } from "../Questions";
+import { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI } from "../Questions";
 import { useState } from "react";
 import LayoutCSS from "./layout.module.css";
 
@@ -30,16 +30,24 @@ function Layout() {
   //array of the question types and their questions
   const Questions = [
     {
-      title: "Business Analyst",
-      content: BAQ,
+      title: "Personal and Company Interview Questions",
+      content: GI,
     },
     {
-      title: "Power Query",
-      content: PQ,
+      title: "Data Analyst Interview Questions",
+      content: DA,
     },
     {
       title: "Excel Interview Questions",
       content: EI,
+    },
+    {
+      title: "SQL Interview Questions",
+      content: SQLI,
+    },
+    {
+      title: "Business Analyst Interview Questions",
+      content: BAQ,
     },
     {
       title: "Excel Formulas and Common Practices",
@@ -48,6 +56,10 @@ function Layout() {
     {
       title: "Excel Choosing and Designing Charts",
       content: CC,
+    },
+    {
+      title: "Power Query Practice",
+      content: PQ,
     },
     {
       title: "SQL Practice",

@@ -1,6 +1,6 @@
 export const EI = [
   {
-    que: `generate a list of dates within a given period`,
+    que: `hello world`,
     ans: null,
   },
 ];
