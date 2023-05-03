@@ -3,7 +3,7 @@ export const SQLP = [
     que: `retrieve the list of databases`,
     ans: (
       <>
-        <p>SQL</p>
+        <p>**SQL**</p>
         <p>SELECT name FROM master.sys.databases</p>
         <p>WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb');</p>
         <p>--------------</p>
@@ -12,22 +12,166 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `create a database`, ans: `Create Database worldbank` },
-  { que: `move into a database`, ans: `USE [databasename];` },
-  { que: `update the database's name`, ans: `` },
-  { que: `delete a database`, ans: `` },
-  { que: `display tables in the database`, ans: `SHOW TABLES;` },
-  { que: `create a table`, ans: `` },
+  {
+    que: `create a database`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>Create Database worldbank</p>
+      </>
+    ),
+  },
+  {
+    que: `move into a database`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>USE worldbank;</p>
+      </>
+    ),
+  },
+  {
+    que: `update the database's name`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>ALTER DATABASE [oldDbName]</p>
+        <p>MODIFY NAME = [newDbName];</p>
+      </>
+    ),
+  },
+  {
+    que: `delete a database`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>DROP DATABASE databasename;</p>
+      </>
+    ),
+  },
+  {
+    que: `backup a database`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>BACKUP DATABASE databasename</p>
+        <p>TO DISK = 'C:\Users\samuel\Desktop\bikestoresBackup.bak'</p>
+      </>
+    ),
+  },
+  {
+    que: `display tables in the database`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>SELECT name FROM sys.tables</p>
+        <p>or</p>
+        <p>SELECT table_schema, table_name, table_type</p>
+        <p>FROM information_schema.tables</p>
+        <p>=============</p>
+        <p>**MySQL**</p>
+        <p>SHOW TABLES;</p>
+      </>
+    ),
+  },
+  {
+    que: `display tables from another database`,
+    ans: (
+      <>
+        <p>**MySQL**</p>
+        <p>SHOW TABLES FROM database_name;</p>
+      </>
+    ),
+  },
+  {
+    que: `create a table`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>CREATE TABLE myTable ( </p>
+        <p>
+          id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY, --IDENTITY is used for
+          auto-increment ie. IDENTITY(startValue,increment)
+        </p>
+        <p>username VARCHAR (255) UNIQUE,</p>
+        <p>age TINYINT NOT NULL, </p>
+        <p>dob DATE,</p>
+        <p>netWorth DECIMAL (10, 2), </p>
+        <p>
+          employerID INT FOREIGN KEY (employerID) REFERENCES employers(id) ON
+          DELETE CASCADE ON UPDATE CASCADE
+        </p>
+        );
+        <p>============</p>
+        <p>**MySQL**</p>
+        <p>create table myTable(</p>
+        <p>id INT NOT NULL AUTO_INCREMENT,</p>
+        <p>username VARCHAR(255) UNIQUE,</p>
+        <p>content TEXT NOT NULL,</p>
+        <p>age TINYINT NOT NULL,</p>
+        <p>dob DATE,</p>
+        <p>netWorth DECIMAL(10,2),</p>
+        <p>
+          experience varchar(50) DEFAULT 'unknown' COMMENT 'Years of using sms',
+        </p>
+        <p>employerID INT(10),</p>
+        <p>commentmsg_id bigint(20) DEFAULT NULL,</p>
+        <p>iso3 char(3) DEFAULT NULL,</p>
+        <p>numcode smallint(6) DEFAULT NULL,</p>
+        <p>PRIMARY KEY (`id`),</p>
+        <p>
+          FOREIGN KEY (`user_id`) REFERENCES `useraccount` (`user_id`) ON DELETE
+          CASCADE ON UPDATE CASCADE
+        </p>
+        )
+      </>
+    ),
+  },
+  {
+    que: `update a table's name`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>sp_rename [old_table_name],[new_table_name];</p>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE old_table_name RENAME new_table_name;</p>
+        <p>or</p>
+        <p>RENAME TABLE old_table_name TO new_table_name;</p>
+      </>
+    ),
+  },
+  {
+    que: `delete a table`,
+    ans: (
+      <>
+        <p>**SQL & MySQL**</p>
+        <p>DROP TABLE new_sms_download</p>
+      </>
+    ),
+  },
   {
     que: `display columns names in a table`,
-    ans: `SHOW COLUMNS FROM [tableName];`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>SELECT COLUMN_NAME</p>
+        <p>FROM INFORMATION_SCHEMA.COLUMNS</p>
+        <p>WHERE TABLE_NAME = 'orders'</p>
+        <p>========</p>
+        <p>**MySQL**</p>
+        <p>SHOW COLUMNS FROM [tableName];</p>
+      </>
+    ),
   },
   {
     que: `display all the data in a table`,
-    ans: `SELECT * from [tableName]`,
+    ans: (
+      <>
+        <p>**SQL & MySQL**</p>
+        <p>SELECT * from [tableName]</p>
+      </>
+    ),
   },
-  { que: `update a table's name`, ans: `` },
-  { que: `delete a table`, ans: `DROP TABLE new_sms_download` },
   {
     que: `insert a record into a table`,
     ans: (
