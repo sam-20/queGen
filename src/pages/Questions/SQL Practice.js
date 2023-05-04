@@ -3,7 +3,7 @@ export const SQLP = [
     que: `retrieve the list of databases`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>SELECT name FROM master.sys.databases</p>
         <p>WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb');</p>
         <p>--------------</p>
@@ -16,7 +16,7 @@ export const SQLP = [
     que: `create a database`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>Create Database worldbank</p>
       </>
     ),
@@ -25,7 +25,7 @@ export const SQLP = [
     que: `move into a database`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>USE worldbank;</p>
       </>
     ),
@@ -34,7 +34,7 @@ export const SQLP = [
     que: `update the database's name`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>ALTER DATABASE [oldDbName]</p>
         <p>MODIFY NAME = [newDbName];</p>
       </>
@@ -44,7 +44,7 @@ export const SQLP = [
     que: `delete a database`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>DROP DATABASE databasename;</p>
       </>
     ),
@@ -53,7 +53,7 @@ export const SQLP = [
     que: `backup a database`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>BACKUP DATABASE databasename</p>
         <p>TO DISK = 'C:\Users\samuel\Desktop\bikestoresBackup.bak'</p>
       </>
@@ -63,7 +63,7 @@ export const SQLP = [
     que: `display tables in the database`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>SELECT name FROM sys.tables</p>
         <p>or</p>
         <p>SELECT table_schema, table_name, table_type</p>
@@ -78,7 +78,7 @@ export const SQLP = [
     que: `display tables from another database`,
     ans: (
       <>
-        <p>**MySQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>SHOW TABLES FROM database_name;</p>
       </>
     ),
@@ -87,7 +87,7 @@ export const SQLP = [
     que: `create a table`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>CREATE TABLE myTable ( </p>
         <p>
           id INT NOT NULL IDENTITY(1, 1) PRIMARY KEY, --IDENTITY is used for
@@ -131,7 +131,7 @@ export const SQLP = [
     que: `update a table's name`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>sp_rename [old_table_name],[new_table_name];</p>
         <p>**MySQL**</p>
         <p>ALTER TABLE old_table_name RENAME new_table_name;</p>
@@ -144,7 +144,7 @@ export const SQLP = [
     que: `delete a table`,
     ans: (
       <>
-        <p>**SQL & MySQL**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>DROP TABLE new_sms_download</p>
       </>
     ),
@@ -153,7 +153,7 @@ export const SQLP = [
     que: `display columns names in a table`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>SELECT COLUMN_NAME</p>
         <p>FROM INFORMATION_SCHEMA.COLUMNS</p>
         <p>WHERE TABLE_NAME = 'orders'</p>
@@ -167,7 +167,7 @@ export const SQLP = [
     que: `display all the data in a table`,
     ans: (
       <>
-        <p>**SQL & MySQL**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>SELECT * from [tableName]</p>
       </>
     ),
@@ -176,11 +176,14 @@ export const SQLP = [
     que: `insert a record into a table`,
     ans: (
       <>
-        <p>**SQL & MySQL**</p>
-        <p>INSERT INTO state</p>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>INSERT INTO student</p>
         <p>VALUES</p>
-        <p>("6","3","Leeds","400"),</p>
-        <p>("7","2","Abuja","600")</p>
+        <p>
+          ('Joe', 'O''Brien') --how to escape apostrophe in some words ie.
+          double-up the apostrophe character
+        </p>
+        <p>('Jen','Thomspson')</p>
       </>
     ),
   },
@@ -188,7 +191,7 @@ export const SQLP = [
     que: `insert a record into a table given only a few columns data`,
     ans: (
       <>
-        <p>**SQL & MySQL**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>INSERT INTO state(stateCountryID,name)</p>
         <p>VALUES</p>
         <p>("3","Coventry"),</p>
@@ -200,6 +203,7 @@ export const SQLP = [
     que: `insert records from one table A into another table B`,
     ans: (
       <>
+        <p>**MySQL**</p>
         <p>INSERT INTO tableB(id,name,continent,population)</p>
         <p>SELECT id,name,continent,population FROM tableA</p>
         <p>
@@ -211,12 +215,16 @@ export const SQLP = [
     ),
   },
   {
-    que: `update a single record in a table`,
+    que: `update a single record in a table where the new data is a text containing an apostrophe`,
     ans: (
       <>
-        <p>UPDATE state</p>
-        <p>SET population=100</p>
-        <p>WHERE name = "Coventry"</p>
+        <p>**MS SQL Server & MySQL</p>
+        <p>UPDATE student</p>
+        <p>
+          SET last_name='O''Brien' --how to escape apostrophe in some words
+          ie.double-up the apostrophe character
+        </p>
+        <p>WHERE first_name = "Joe"</p>
       </>
     ),
   },
@@ -224,9 +232,10 @@ export const SQLP = [
     que: `update multiple values of a single record. eg. change the name, age and address at the same time`,
     ans: (
       <>
+        <p>**MS SQL Server & MySQL</p>
         <p>UPDATE student</p>
-        <p>SET name="Jane Doe-Carter", age=14, address="California"</p>
-        <p>WHERE name = "Jane Doe Carter"</p>
+        <p>SET name='Jane Doe-Carter', age=14, address='California'</p>
+        <p>WHERE name = 'Jane Doe Carter'</p>
       </>
     ),
   },
@@ -234,8 +243,9 @@ export const SQLP = [
     que: `change the entire column values of a table into the same value. eg. change all students' genders to unknown`,
     ans: (
       <>
+        <p>**MS SQL Server & MySQL</p>
         <p>UPDATE student</p>
-        <p>SET gender="unknown"</p>
+        <p>SET gender='unknown'</p>
       </>
     ),
   },
@@ -243,7 +253,7 @@ export const SQLP = [
     que: `delete a record from a table`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>DELETE FROM state WHERE name="Cape Coast"</p>
         <p>
           NB: if the table id col was generated using the IDENTITY property,
@@ -262,10 +272,45 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `add a new column to a table`, ans: `` },
-  { que: `update the column name of a table`, ans: `` },
-  { que: `delete a column from a table`, ans: `` },
-  { que: `view the properties/constraints of all columns in a table`, ans: `` },
+  {
+    que: `add a new column to a table`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>ALTER TABLE country</p>
+        <p>ADD ethincity varchar(20);</p>
+      </>
+    ),
+  },
+  {
+    que: `rename column`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>sp_rename 'TableName.OldColumnName', 'New ColumnName', 'COLUMN';</p>
+        <p>sp_rename 'country.contenent', 'continent', 'COLUMN'</p>
+      </>
+    ),
+  },
+  {
+    que: `delete a column from a table`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>ALTER TABLE country</p>
+        <p>DROP COLUMN ethnic;</p>
+      </>
+    ),
+  },
+  {
+    que: `view the properties/constraints of all columns in a table`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>sp_help 'table_name'</p>
+      </>
+    ),
+  },
   { que: `add properties/constraints to a column`, ans: `` },
   { que: `update the properties/constraints of a column`, ans: `` },
   { que: `remove the properties/constraints of a column`, ans: `` },
@@ -273,6 +318,7 @@ export const SQLP = [
     que: `comment statements in sql`,
     ans: (
       <>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>-- FROM new_sms_download</p>
         <p>or</p>
         <p>/** FROM new_sms_download */</p>
