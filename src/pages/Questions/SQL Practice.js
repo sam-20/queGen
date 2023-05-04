@@ -318,7 +318,7 @@ export const SQLP = [
       <>
         <p>**MySQL**</p>
         <p>ALTER TABLE new_sms_download</p>
-        <p>ADD age INT FIRST</p>
+        <p>ADD age INT(20) FIRST</p>
       </>
     ),
   },
@@ -407,8 +407,8 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER**</p>
         <p>
-          NB:first use: sp_help 'table_name' to view the constraints and
-          properties of all the columns. From there you can take note of the
+          NB:first use the syntax sp_help 'table_name' to view the constraints
+          and properties of all the columns. From there you can take note of the
           constraint names
         </p>
         <p>ALTER TABLE 'table_name'</p>
