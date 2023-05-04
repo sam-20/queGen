@@ -110,6 +110,7 @@ export const SQLP = [
         <p>content TEXT NOT NULL,</p>
         <p>age TINYINT NOT NULL,</p>
         <p>dob DATE,</p>
+        <p>dob_year YEAR,</p>
         <p>netWorth DECIMAL(10,2),</p>
         <p>
           experience varchar(50) DEFAULT 'unknown' COMMENT 'Years of using sms',
@@ -298,7 +299,7 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER & MySQL**</p>
         <p>ALTER TABLE country</p>
-        <p>DROP COLUMN ethnic;</p>
+        <p>DROP COLUMN continent;</p>
       </>
     ),
   },
@@ -311,8 +312,30 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `add properties/constraints to a column`, ans: `` },
-  { que: `update the properties/constraints of a column`, ans: `` },
+  {
+    que: `add properties/constraints to a column`,
+    ans: (
+      <>
+        <p>**MS SQL Server**</p>
+      </>
+    ),
+  },
+  {
+    que: `update the properties/constraints/datatype of a column`,
+    ans: (
+      <>
+        <p>**MS SQL Server</p>
+        <p>--updating the datatype of a column</p>
+        <p>ALTER TABLE country</p>
+        <p>ALTER COLUMN continent text;</p>
+        <p>==============</p>
+        <p>**MySQL**</p>
+        <p>--updating the datatype of a column</p>
+        <p>ALTER TABLE country</p>
+        <p>MODIFY COLUMN continent text;</p>
+      </>
+    ),
+  },
   { que: `remove the properties/constraints of a column`, ans: `` },
   {
     que: `comment statements in sql`,
