@@ -289,9 +289,24 @@ export const SQLP = [
   },
   {
     que: `add new column as the first column in the table`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE new_sms_download</p>
+        <p>ADD age INT FIRST</p>
+      </>
+    ),
   },
-  { que: `add a new column after a specific column`, ans: <></> },
+  {
+    que: `add a new column after a specific column`,
+    ans: (
+      <>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE new_sms_download</p>
+        <p>ADD age INT AFTER gender</p>
+      </>
+    ),
+  },
   {
     que: `rename column`,
     ans: (
