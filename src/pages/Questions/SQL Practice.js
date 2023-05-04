@@ -428,6 +428,27 @@ export const SQLP = [
   },
   {
     que: `update the existing DEFAULT constraint of column. Eg. change the default value of the gender column from heterosexual to unselected`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
+  },
+  {
+    que: `drop a DEFAULT constraint on a column. eg. remove the default value of heterosexual set for the gender column`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>ALTER TABLE students</p>
+        <p>DROP CONSTRAINT constraint_name;</p>
+        <p>eg.</p>
+        <p>DROP CONSTRAINT DF__state__design__4F7CD00D;</p>
+        <p>================</p>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE students</p>
+        <p>ALTER gender DROP DEFAULT;</p>
+      </>
+    ),
   },
   {
     que: `remove the constraints of a column`,
