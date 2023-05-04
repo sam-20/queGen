@@ -359,14 +359,25 @@ export const SQLP = [
     ),
   },
   {
-    que: `view the properties/constraints of all columns in a table`,
+    que: `view the properties(data type, length, nullable, etc.) and constraints(primary key, foreign key, unique, check) of all columns in a table`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
         <p>sp_help 'table_name'</p>
         <p>=============</p>
         <p>**MySQL**</p>
-        <p>DESCRIBE table_name</p>
+        <p>DESCRIBE table_name --displays only properties</p>
+      </>
+    ),
+  },
+  {
+    que: `view only the constraints of a table's columns`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>SELECT TABLE_NAME, CONSTRAINT_TYPE, CONSTRAINT_NAME</p>
+        <p>FROM information_schema.table_constraints</p>
+        <p>WHERE table_name='student';</p>
       </>
     ),
   },
@@ -477,6 +488,13 @@ export const SQLP = [
         </p>
         <p>=========</p>
         <p>**MySQL**</p>
+        <p>ALTER TABLE state</p>
+        <p>DROP UNIQUE/FOREIGN KEY/PRIMARY KEY constraint_name</p>
+        <p>DROP FOREIGN KEY `state_ibfk_1`</p>
+        <p>
+          DROP INDEX `state_ibfk_1` --You might have to drop the index too
+          because simply removing foreign key doesn’t remove the index.
+        </p>
       </>
     ),
   },
