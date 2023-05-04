@@ -304,13 +304,17 @@ export const SQLP = [
     que: `add a new column to a table`,
     ans: (
       <>
-        <p>**MS SQL SERVER & MySQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>ALTER TABLE country</p>
         <p>ADD</p>
         <p>ethincity varchar(20);</p>
         <p>Addres varchar(500) NULL,</p>
-        <p>Designation varchar(50) NULL,</p>
-        <p>Qualification varchar(100);</p>
+        <p>City varchar(255) DEFAULT 'California'</p>
+        <p>============</p>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE state</p>
+        <p>ADD COLUMN city2 TEXT,</p>
+        <p>ADD COLUMN city3 VARCHAR(20) DEFAULT 'california'</p>
       </>
     ),
   },
@@ -400,8 +404,30 @@ export const SQLP = [
         <p>--updating the datatype of a column</p>
         <p>ALTER TABLE country</p>
         <p>MODIFY col1 BIGINT UNSIGNED DEFAULT 1 COMMENT 'my column'</p>
+        <p>To alter an existing constraint, first drop it then reassign it</p>
       </>
     ),
+  },
+  {
+    que: `add a DEFAULT constraint on an existing column with no DEFAULT constraint set. Eg. add a default value of heterosexual to the gender column`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>
+          NB: column shouldnt have any DEFAULT constraint set for it already.
+        </p>
+        <p>ALTER TABLE Persons</p>
+        <p>ADD CONSTRAINT df_Qualification</p>
+        <p>DEFAULT 'Dr.' FOR Qualification;</p>
+        <p>================</p>
+        <p>**MySQL**</p>
+        <p>ALTER TABLE Persons</p>
+        <p>ALTER City SET DEFAULT 'Sandnes';</p>
+      </>
+    ),
+  },
+  {
+    que: `update the existing DEFAULT constraint of column. Eg. change the default value of the gender column from heterosexual to unselected`,
   },
   {
     que: `remove the constraints of a column`,
