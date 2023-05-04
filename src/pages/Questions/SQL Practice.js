@@ -333,6 +333,9 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER**</p>
         <p>sp_help 'table_name'</p>
+        <p>=============</p>
+        <p>**MySQL**</p>
+        <p>DESCRIBE table_name</p>
       </>
     ),
   },
