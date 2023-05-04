@@ -220,6 +220,16 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>option 1</p>
+        <p>
+          ALTER TABLE student ADD username AS CONCAT(name,age); --joining mixed
+          columns
+        </p>
+        <p>
+          ALTER TABLE student ADD balance AS (fees-paid); --creating columns
+          from computations
+        </p>
+        <p>option 2</p>
         <p>--first create the column</p>
         <p>ALTER TABLE students</p>
         <p>ADD username text;</p>
