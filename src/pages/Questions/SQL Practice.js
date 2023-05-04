@@ -351,6 +351,8 @@ export const SQLP = [
           ON UPDATE CASCADE --adding a FK constraint
         </p>
         <p>ADD UNIQUE(population) --adding a unique constraint</p>
+        <p>=================</p>
+        <p>**MySQL**</p>
       </>
     ),
   },
@@ -968,6 +970,34 @@ export const SQLP = [
         <p>GROUP BY country </p>
         <p>HAVING population {"<"} 100</p>
         <p>ORDER BY population DESC, country ASC</p>
+      </>
+    ),
+  },
+  {
+    que: `display the count of duplicates in a column`,
+    ans: (
+      <>
+        <p>SELECT username, COUNT(*) AS Duplicates</p>
+        <p>FROM students</p>
+        <p>GROUP BY username</p>
+        <p>HAVING Duplicates {">"} 1</p>
+        <p>ORDER BY Duplicates DESC</p>
+      </>
+    ),
+  },
+  {
+    que: `display the duplicate values in a table`,
+    ans: (
+      <>
+        <p>SELECT * FROM students AS A</p>
+        <p>JOIN (</p>
+        <p>SELECT username, COUNT(*) AS Duplicates</p>
+        <p>FROM students</p>
+        <p>GROUP BY username</p>
+        <p>HAVING Duplicates {">"} 1 </p>
+        <p>) AS B</p>
+        <p>on A.username = B.username</p>
+        <p>ORDER BY A.username</p>
       </>
     ),
   },
