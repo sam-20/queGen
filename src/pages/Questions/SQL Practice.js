@@ -94,6 +94,7 @@ export const SQLP = [
           auto-increment ie. IDENTITY(startValue,increment)
         </p>
         <p>username VARCHAR (255) UNIQUE,</p>
+        <p>City varchar(255) DEFAULT 'California',</p>
         <p>age TINYINT NOT NULL, </p>
         <p>dob DATE,</p>
         <p>netWorth DECIMAL (10, 2), </p>
@@ -109,6 +110,7 @@ export const SQLP = [
         <p>username VARCHAR(255) UNIQUE,</p>
         <p>content TEXT NOT NULL,</p>
         <p>age TINYINT NOT NULL,</p>
+        <p>age2 BIGINT UNSIGNED DEFAULT 1, </p>
         <p>dob DATE,</p>
         <p>dob_year YEAR,</p>
         <p>netWorth DECIMAL(10,2),</p>
@@ -348,7 +350,7 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER & MySQL**</p>
         <p>ALTER TABLE country</p>
-        <p>DROP COLUMN continent;</p>
+        <p>DROP COLUMN continent, postcode, population</p>
       </>
     ),
   },
@@ -397,7 +399,7 @@ export const SQLP = [
         <p>**MySQL**</p>
         <p>--updating the datatype of a column</p>
         <p>ALTER TABLE country</p>
-        <p>MODIFY COLUMN continent text;</p>
+        <p>MODIFY col1 BIGINT UNSIGNED DEFAULT 1 COMMENT 'my column'</p>
       </>
     ),
   },
@@ -425,6 +427,8 @@ export const SQLP = [
           DROP CONSTRAINT UQ__state__8BE3E9176B1184AD --dropping a unique
           constraint
         </p>
+        <p>=========</p>
+        <p>**MySQL**</p>
       </>
     ),
   },
