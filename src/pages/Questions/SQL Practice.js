@@ -225,10 +225,8 @@ export const SQLP = [
         <p>ADD username text;</p>
         <p>--then fill it with the values</p>
         <p>UPDATE students SET username = CONCAT(name,age)</p>
-        <p>
-          UPDATE students SET username = age*2+ age --for mathematical
-          computations
-        </p>
+        <p>or</p>
+        <p>UPDATE students SET balance = fees-paid</p>
       </>
     ),
   },
