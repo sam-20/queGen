@@ -986,7 +986,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `display the duplicate values in a table`,
+    que: `display the duplicate rows/column values in a table`,
     ans: (
       <>
         <p>SELECT * FROM students AS A</p>
