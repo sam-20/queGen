@@ -505,7 +505,9 @@ export const SQLP = [
         <p>**MS SQL SERVER & MySQL**</p>
         <p>-- FROM new_sms_download</p>
         <p>or</p>
-        <p>/** FROM new_sms_download */</p>
+        <p>
+          {"/**"} FROM new_sms_download {"*/"}
+        </p>
         <p>
           the second example is more efficient because it also allows you to add
           comments to the end of statements as shown below
