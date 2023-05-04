@@ -216,6 +216,23 @@ export const SQLP = [
     ),
   },
   {
+    que: `create a new column which is the result of multiple columns. Eg. create a new column in the students table which combines the student's name and age as the username`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>--first create the column</p>
+        <p>ALTER TABLE students</p>
+        <p>ADD username text;</p>
+        <p>--then fill it with the values</p>
+        <p>UPDATE students SET username = CONCAT(name,age)</p>
+        <p>
+          UPDATE students SET username = age*2+ age --for mathematical
+          computations
+        </p>
+      </>
+    ),
+  },
+  {
     que: `update a single record in a table where the new data is a text containing an apostrophe`,
     ans: (
       <>
@@ -353,6 +370,8 @@ export const SQLP = [
         <p>ADD UNIQUE(population) --adding a unique constraint</p>
         <p>=================</p>
         <p>**MySQL**</p>
+        <p>ALTER TABLE new_sms_download </p>
+        <p>ADD CONSTRAINT UNIQUE(id); --adding a unique constraint</p>
       </>
     ),
   },
