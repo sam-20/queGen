@@ -98,8 +98,8 @@ export const SQLP = [
         <p>dob DATE,</p>
         <p>netWorth DECIMAL (10, 2), </p>
         <p>
-          employerID INT FOREIGN KEY (employerID) REFERENCES employers(id) ON
-          DELETE CASCADE ON UPDATE CASCADE
+          employerID INT FOREIGN KEY REFERENCES employers(id) ON DELETE CASCADE
+          ON UPDATE CASCADE
         </p>
         );
         <p>============</p>
@@ -241,7 +241,26 @@ export const SQLP = [
   },
   {
     que: `delete a record from a table`,
-    ans: `DELETE FROM state WHERE name="Cape Coast"`,
+    ans: (
+      <>
+        <p>**SQL**</p>
+        <p>DELETE FROM state WHERE name="Cape Coast"</p>
+        <p>
+          NB: if the table id col was generated using the IDENTITY property,
+          then deleting a row removes that particular row ID. However, inserting
+          a new row later doesnt use the deleted the row IDs. Meaning the rows
+          IDs would not be in order with some numbers missing. This is not an
+          issue but if you want to update the row ids automatically, then you
+          should reset the IDENTITY seed after deleting the row. Therefore it
+          becomes
+        </p>
+        <p>DELETE FROM state WHERE name="Cape Coast"</p>
+        <p>DBCC CHECKIDENT ('state', RESEED, 1)</p>
+        <p>======</p>
+        <p>**MySQL**</p>
+        <p>DELETE FROM state WHERE name="Cape Coast"</p>
+      </>
+    ),
   },
   { que: `add a new column to a table`, ans: `` },
   { que: `update the column name of a table`, ans: `` },
