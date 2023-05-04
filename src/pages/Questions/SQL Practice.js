@@ -279,10 +279,19 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER & MySQL**</p>
         <p>ALTER TABLE country</p>
-        <p>ADD ethincity varchar(20);</p>
+        <p>ADD</p>
+        <p>ethincity varchar(20);</p>
+        <p>Addres varchar(500) NULL,</p>
+        <p>Designation varchar(50) NULL,</p>
+        <p>Qualification varchar(100);</p>
       </>
     ),
   },
+  {
+    que: `add new column as the first column in the table`,
+    ans: <></>,
+  },
+  { que: `add a new column after a specific column`, ans: <></> },
   {
     que: `rename column`,
     ans: (
@@ -307,7 +316,7 @@ export const SQLP = [
     que: `view the properties/constraints of all columns in a table`,
     ans: (
       <>
-        <p>**SQL**</p>
+        <p>**MS SQL SERVER**</p>
         <p>sp_help 'table_name'</p>
       </>
     ),
@@ -317,6 +326,13 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL Server**</p>
+        <p>ALTER TABLE state</p>
+        <p>ADD PRIMARY KEY(id) --adding a PK constraint</p>
+        <p>
+          ADD FOREIGN KEY(country_id) REFERENCES country(id) ON DELETE CASCADE
+          ON UPDATE CASCADE --adding a FK constraint
+        </p>
+        <p>ADD UNIQUE(population) --adding a unique constraint</p>
       </>
     ),
   },
@@ -325,9 +341,11 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL Server</p>
-        <p>--updating the datatype of a column</p>
         <p>ALTER TABLE country</p>
-        <p>ALTER COLUMN continent text;</p>
+        <p>
+          ALTER COLUMN continent text NULL; --updating the datatype of a column
+        </p>
+        <p>To alter an existing constraint, first drop it then reassign it</p>
         <p>==============</p>
         <p>**MySQL**</p>
         <p>--updating the datatype of a column</p>
@@ -336,7 +354,33 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `remove the properties/constraints of a column`, ans: `` },
+  {
+    que: `remove the constraints of a column`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>
+          NB:first use: sp_help 'table_name' to view the constraints and
+          properties of all the columns. From there you can take note of the
+          constraint names
+        </p>
+        <p>ALTER TABLE 'table_name'</p>
+        <p>DROP CONSTRAINT constraint_name;</p>
+        <p>eg. </p>
+        <p>
+          DROP CONSTRAINT PK__state__3213E83F614ADC28 --dropping a PK constraint
+        </p>
+        <p>
+          DROP CONSTRAINT FK__state__country_i__4BAC3F29 --dropping a FK
+          constraint
+        </p>
+        <p>
+          DROP CONSTRAINT UQ__state__8BE3E9176B1184AD --dropping a unique
+          constraint
+        </p>
+      </>
+    ),
+  },
   {
     que: `comment statements in sql`,
     ans: (
