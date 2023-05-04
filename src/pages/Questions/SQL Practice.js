@@ -430,7 +430,8 @@ export const SQLP = [
     que: `update the existing DEFAULT constraint of column. Eg. change the default value of the gender column from heterosexual to unselected`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>first drop constraint then reassign it</p>
       </>
     ),
   },
