@@ -39,6 +39,53 @@ export const GI = [
     `,
   },
   {
+    que: `what are the duties of the job you are applying for?`,
+    ans: (
+      <>
+        <p>
+          Use MS Excel and complex data protocols to cleanse data, blend
+          datasets, create lists, and perform data cleaning tasks
+        </p>
+        <p>
+          Support and assist internal teams in learning, understanding, and
+          using new data processes
+        </p>
+        <p>Ensure data is handled in compliance with GDPR</p>
+        <p>
+          Manage client data by managing client files, identifying limitation
+          dates, and inputting data received on questionaries
+        </p>
+        <p>Communicate with clients and monitor case progression</p>
+        <p>Open new files and close old ones as required</p>
+      </>
+    ),
+  },
+  {
+    que: `Tell us about a project that you worked on and felt proud of it`,
+    ans: `first time tutoring people in web dev and helping them secure jobs`,
+  },
+  {
+    que: `What are you looking for in your next job/journey?`,
+    ans: `I am looking for a job which is going to provide opportunities for training
+    and progression within the role. This would help to assess whether i can pursue a long-term
+    career with the company`,
+  },
+  {
+    que: `What is your current salary & what are your salary expectations?`,
+    ans: `My work is a parttime role and i earn close to £1700 a year but I am looking
+    for a full time role which would earn me somewhere between 30-35,000 per year`,
+  },
+  {
+    que: `How do you see yourself fit for the role of data analyst in our company?`,
+    ans: `I believe an analyst should possess the technical skills to be able
+    to draw insights from data to make good decisions. And from my past experience,
+     I have developed strong analytical and problem solving skills 
+     from the use of big data and analytical tools to develop a business solution.
+     Also, a good analyst should possess strong communication and teamwork skills.
+     These are qulaities i have gained from working as a tutor and analyst in the past
+    `,
+  },
+  {
     que: `What qualities do you have that make you a good analyst?`,
     ans: `I believe an analyst should possess the technical skills to be able
     to draw insights from data to make good decisions. And from my past experience,
@@ -49,22 +96,19 @@ export const GI = [
     `,
   },
   {
-    que: `Tell us about a project that you worked on and felt proud of it`,
-    ans: `first time tutoring people in web dev and helping them secure jobs`,
+    que: `why should we hire you?`,
+    ans: `I have strong technical skills from the field data analytics 
+  and software programming. Combining these with the excellent communication and
+  teamwork skills I have acquired from past experience 
+  gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
   {
-    que: `What are you looking for in your next job/journey?`,
-    ans: ``,
+    que: `What change would you bring to this organisation?`,
+    ans: `I have strong technical skills from the field data analytics 
+  and software programming. Combining these with the excellent communication and
+  teamwork skills I have acquired from past experience 
+  gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
-  {
-    que: `Wat is your current salary & what are your salary expectations?`,
-    ans: ``,
-  },
-  {
-    que: `How do you see yourself fit for the role of business analyst in our company?`,
-    ans: null,
-  },
-  { que: `What change would you bring to this organisation?`, ans: null },
   {
     que: `What makes you unique from others?`,
     ans: `I have strong technical skills from the field data analytics 
@@ -72,7 +116,6 @@ export const GI = [
   teamwork skills I have acquired from past experience 
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
-  { que: `why should we hire you?`, ans: null },
   {
     que: `Do you have any technical skills? In other words, what are your technical skills?`,
     ans: `I have analytical skills from the use of tools 
@@ -82,7 +125,18 @@ export const GI = [
     which I gained from my undergraduate studies and previous work experience 
     as an applications developer`,
   },
-  { que: `What is xyz as a company?`, ans: null },
+  {
+    que: `What is Leigh as a company? In other words, what do you know about Leigh Day`,
+    ans: `Leigh day is a law firm that works in the UK and across the globe to 
+  support people who suffer injury, discrimination and human rights abuse. The 
+  company supports their clients by providing them with experienced legal teams to advise
+  them with their injury and rights claim. Leigh day has helped to recover
+  over £1bn in compensation on behalf of their clients and they have a Band 1 ranking in
+  8 categories of the Chambers and Partners legal directory. Leigh day 
+  is also represented in the top tier in the legal 500 for person injury, human and employment
+  rights
+  `,
+  },
   { que: `What are the goals of the company?`, ans: null },
   { que: `What are the core values of the company?`, ans: null },
   {
@@ -116,10 +170,8 @@ export const GI = [
   },
   {
     que: `what are your salary expectations?`,
-    ans: `
-  I would say I am pleased with the salary range given in the job description. Although 
-  i'd hope to see an increase in future.
-  `,
+    ans: `I would say I am pleased with the salary range given in the job description. Although 
+  i'd hope to see an increase in future. `,
   },
   {
     que: `what do you like to do outside of work?`,
