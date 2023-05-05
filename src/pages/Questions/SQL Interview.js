@@ -8,7 +8,14 @@ export const SQLI = [
     ans: ``,
   },
   {
+    que: `what are events, triggers, views and stored procedures`,
+    ans: ``,
+  },
+  {
     que: `what is the difference between views and stored procedures in sql? When should you use either?`,
     ans: ``,
+  },
+  {
+    que: `what is the difference between SQL and Transact-SQL `,
   },
 ];
