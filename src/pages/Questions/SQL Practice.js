@@ -1213,7 +1213,11 @@ export const SQLP = [
     ),
   },
   {
-    que: `create a stored procedure`,
+    que: `create a stored procedure that takes no parameters`,
+    ans: <></>,
+  },
+  {
+    que: `create a stored procedure that takes multiple parameters`,
     ans: <></>,
   },
   {
@@ -1225,11 +1229,15 @@ export const SQLP = [
     ans: <></>,
   },
   {
-    que: `execute a stored procedure you have created`,
+    que: `execute a stored procedure you have created that takes no parameter`,
     ans: <></>,
   },
   {
-    que: `update the syntax of your stored procedure`,
+    que: `execute a stored procedure you have created that takes multiple parameters`,
+    ans: <></>,
+  },
+  {
+    que: `update the syntax of your stored procedure to include, modify and delete a parameter`,
     ans: <></>,
   },
   {
