@@ -1153,19 +1153,12 @@ export const SQLP = [
     que: `create a view`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
-        <p>CREATE VIEW [view_name] AS sql_statement</p>
-        <p>eg. </p>
-        <p>CREATE VIEW [list state data] </p>
-        <p>AS </p>
-        <p>(SELECT * FROM state)</p>
-        <p>-------------</p>
-        <p>**MySQL**</p>
-        <p>CREATE VIEW `view_name` AS sql_statement</p>
-        <p>eg. </p>
-        <p>CREATE VIEW `list state data` </p>
-        <p>AS </p>
-        <p>(SELECT * FROM state)</p>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>CREATE VIEW myCustomView</p>
+        <p>AS</p>
+        <p>{"("}</p>
+        <p>SELECT * FROM country</p>
+        <p>{")"}</p>
       </>
     ),
   },
@@ -1173,14 +1166,14 @@ export const SQLP = [
     que: `view list of created views`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
-        <p> SELECT * FROM sys.views</p>
-        <p>------------</p>
-        <p>**MySQL**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>
           SELECT TABLE_SCHEMA,TABLE_NAME -- the keyword is literally TABLE_NAME
         </p>
-        <p>FROM information_schema.VIEWS </p>
+        <p>FROM information_schema.VIEWS</p>
+        <p>or</p>
+        <p>**MS SQL SERVER**</p>
+        <p> SELECT * FROM sys.views</p>
       </>
     ),
   },
@@ -1188,14 +1181,10 @@ export const SQLP = [
     que: `query a view / display the contents of a view`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
-        <p>SELECT * FROM [view_name];</p>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>SELECT * FROM view_name;</p>
         <p>eg. </p>
-        <p>SELECT * FROM [list state data];</p>
-        <p>**MySQL**</p>
-        <p>SELECT * FROM `view_name`;</p>
-        <p>eg. </p>
-        <p>SELECT * FROM `list state data`;</p>
+        <p>SELECT * FROM myCustomView;</p>
       </>
     ),
   },
