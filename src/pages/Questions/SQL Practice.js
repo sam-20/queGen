@@ -1212,7 +1212,30 @@ export const SQLP = [
       </>
     ),
   },
+  {
+    que: `create a stored procedure`,
+    ans: <></>,
+  },
+  {
+    que: `view list of stored procedures`,
+    ans: <></>,
+  },
+  {
+    que: `display the syntax of a your created stored procedure`,
+    ans: <></>,
+  },
+  {
+    que: `execute a stored procedure you have created`,
+    ans: <></>,
+  },
+  {
+    que: `update the syntax of your stored procedure`,
+    ans: <></>,
+  },
+  {
+    que: `delete a user made stored procedure`,
+    ans: <></>,
+  },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
-  { que: `stored procedures`, ans: `` },
 ];
