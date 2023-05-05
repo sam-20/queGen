@@ -1170,6 +1170,21 @@ export const SQLP = [
     ),
   },
   {
+    que: `view list of created views`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p> SELECT * FROM sys.views</p>
+        <p>------------</p>
+        <p>**MySQL**</p>
+        <p>
+          SELECT TABLE_SCHEMA,TABLE_NAME -- the keyword is literally TABLE_NAME
+        </p>
+        <p>FROM information_schema.VIEWS </p>
+      </>
+    ),
+  },
+  {
     que: `query a view / display the contents of a view`,
     ans: (
       <>
