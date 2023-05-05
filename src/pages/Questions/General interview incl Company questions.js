@@ -97,7 +97,7 @@ export const GI = [
   },
   {
     que: `why should we hire you?`,
-    ans: `I have strong technical skills from the field data analytics 
+    ans: `1. Goals align with the company's own. 2.Skills that match job description. 3. I have strong technical skills from the field data analytics 
   and software programming. Combining these with the excellent communication and
   teamwork skills I have acquired from past experience 
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
@@ -137,8 +137,8 @@ export const GI = [
   rights
   `,
   },
-  { que: `What are the goals of the company?`, ans: null },
-  { que: `What are the core values of the company?`, ans: null },
+  // { que: `What are the goals of the company?`, ans: null },
+  // { que: `What are the core values of the company?`, ans: null },
   {
     que: `Tell me about yourself`,
     ans: `My name is Samuel and I am from Ghana. I arrived in the UK in 2021 to
@@ -206,7 +206,7 @@ export const GI = [
          change that improves everyone's standard of living.
     `,
   },
-  { que: `describe your leadership style`, ans: null },
+  // { que: `describe your leadership style`, ans: null },
   {
     que: `do you have any questions for me?`,
     ans: (
