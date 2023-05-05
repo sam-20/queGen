@@ -159,31 +159,53 @@ function Layout() {
         </div>
 
         {/* enable speech */}
-        <div style={{ display: "flex", flexDirection: "row", marginTop: 10 }}>
-          <label style={{ paddingRight: 10 }}>
-            Enable Speech {"Recommended for interview questions"}:
-          </label>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: 10,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <label style={{ paddingRight: 10 }}>Enable Speech:</label>
 
-          <div onChange={enableSpeech} style={{ display: "flex" }}>
-            <div style={{ marginRight: 10 }}>
-              <label>Yes</label>
-              <input type="radio" name="speech" id="yes" value={true} />
-            </div>
+            <div onChange={enableSpeech} style={{ display: "flex" }}>
+              <div style={{ marginRight: 10 }}>
+                <label>Yes</label>
+                <input type="radio" name="speech" id="yes" value={true} />
+              </div>
 
-            <div>
-              <label>No</label>
-              <input
-                type="radio"
-                name="speech"
-                id="no"
-                value={false}
-                defaultChecked
-              />
+              <div>
+                <label>No</label>
+                <input
+                  type="radio"
+                  name="speech"
+                  id="no"
+                  value={false}
+                  defaultChecked
+                />
+              </div>
             </div>
           </div>
+          <span
+            style={{
+              fontSize: 12,
+              fontWeight: "bold",
+              fontStyle: "italic",
+              color: "grey",
+              paddingTop: 5,
+            }}
+          >
+            {"("}Recommended for interview questions{")"}
+          </span>
         </div>
 
-        <div style={{ display: "flex", marginTop: 10 }}>
+        <div style={{ display: "flex", marginTop: 40 }}>
           <button
             style={{ display: "flex", padding: 5 }}
             onClick={generateQuestion}
