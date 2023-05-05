@@ -1192,11 +1192,16 @@ export const SQLP = [
     que: `update the query statement of a view`,
     ans: (
       <>
-        <p>**MS SQL Server**</p>
+        <p>**MS SQL Server && MySQL**</p>
+        <p>ALTER VIEW myCustomView</p>
+        <p>AS</p>
+        <p>{"("}</p>
+        <p>SELECT continent FROM country</p>
+        <p>{")"}</p>
       </>
     ),
   },
-  { que: ``, ans: <></> },
+  { que: `delete a view`, ans: <></> },
   { que: ``, ans: <></> },
 
   { que: `events`, ans: `` },
