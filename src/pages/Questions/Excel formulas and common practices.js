@@ -256,7 +256,10 @@ export const EF = [
   },
   {
     que: `search for an item corresponding value in another column B using vlookup exact match`,
-    ans: `vlookup([whose value are we searching for ie. lookup value], [in which table are we searching], [the item we want to pull out, what is its column number starting from 1?], [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
+    ans: `vlookup([whose value are we searching for ie. lookup value], 
+      [in which table are we searching], 
+      [the item we want to pull out, what is its column number starting from 1?],
+       [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
   },
   { que: ``, ans: `` },
   { que: ``, ans: `` },

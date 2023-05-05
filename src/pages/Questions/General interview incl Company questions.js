@@ -97,22 +97,29 @@ export const GI = [
   },
   {
     que: `why should we hire you?`,
-    ans: `1. Goals align with the company's own. 2.Skills that match job description. 3. I have strong technical skills from the field data analytics 
-  and software programming. Combining these with the excellent communication and
+    ans: `I believe you should hire me for 3 reasons
+    1. Goals 2. Hard skills 3. Soft skills.
+    Goals align with the company's own. 
+    Hard/ technical skills match job description. I have strong technical skills from the field data analytics 
+  and software programming. 
+  3.Combining these with the excellent communication and
   teamwork skills I have acquired from past experience 
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
   {
     que: `What change would you bring to this organisation?`,
     ans: `I have strong technical skills from the field data analytics 
-  and software programming. Combining these with the excellent communication and
+  and software programming.  This helps me to easily grasp and
+  adapt to new technologies which in turn allows me to deliver project solutions
+  with efficiency. Combining these with the excellent communication and
   teamwork skills I have acquired from past experience 
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
   {
     que: `What makes you unique from others?`,
     ans: `I have strong technical skills from the field data analytics 
-  and software programming. Combining these with the excellent communication and
+  and software programming. This helps me to easily grasp and
+  adapt to new technologies. Combining these with the excellent communication and
   teamwork skills I have acquired from past experience 
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
@@ -143,8 +150,8 @@ export const GI = [
     que: `Tell me about yourself`,
     ans: `My name is Samuel and I am from Ghana. I arrived in the UK in 2021 to
     study a postgraduate course in Data Science and Analytics which I completed last year.
-    I am very passionate about exploring new technologies so 
-    back in Ghana, I worked as an applications developer for close to 3 years before moving 
+    I am very passionate about exploring new technologies and using data to 
+    solve problems so back in Ghana, I worked as an applications developer for close to 3 years before moving 
     into the UK here I worked primarily as a data analyst for close to a year.
     I often appear to be very calm and I value the relationships I have with friends
     and family a lot because I believe its through these relationships and
@@ -157,8 +164,8 @@ export const GI = [
   who is passionate about technology, I often come across some concepts which appear to 
   be complex to grasp or understand. But these are the challenges which motivate me
   to know more because I am always willing to overcome the hurdle in order to progress
-  onto the next stage of my life. Another strength I'd say I possess is how well i handle
-  my relationship with the people around me because I am very humble and respectful. 
+  onto the next stage of my life. Another strength I'd say I possess is my humility and respect. 
+  It allows me to establish good relations with people.
   My weakness would probably be my cooking. It's terrible.
   `,
   },
@@ -183,20 +190,19 @@ export const GI = [
   {
     que: `where do you see yourself in 5 years?`,
     ans: `My ambition is to work as a Data Analyst or Business Intelligence Analyst 
-    in any industry where my expertise is required. I am very passionate about use
+    in any industry where my expertise is required. I am very passionate about using
       data to solve problems and increase business values and in the next 1-2 years, I 
       want to acquire new knowledge, skills and work experience as well as
        improving my existing ones. I am looking forward to becoming the Senior 
        Data Analyst of a large organisation in the next 3-5 years 
        so that I can use my knowledge and wealth
-         of experience to solve very challenging issues and have a significant influence on 
-         change that improves everyone's standard of living.
+         of experience to solve very challenging issues and improves everyone's standard of living.
     `,
   },
   {
     que: `what are you goals or ambitions? In other words what are your career aspirations for the future`,
     ans: `My ambition is to work as a Data Analyst or Business Intelligence Analyst 
-    in any industry where my expertise is required. I am very passionate about use
+    in any industry where my expertise is required. I am very passionate about using
       data to solve problems and increase business values and in the next 1-2 years, I 
       want to acquire new knowledge, skills and work experience as well as
        improving my existing ones. I am looking forward to becoming the Senior 
@@ -213,7 +219,8 @@ export const GI = [
       <>
         <p>
           Can you please tell me more about the day-to-day responsibilities of
-          the role?
+          the role? Are there any other duties which are not included in the
+          description
         </p>
         <p>Can you please tell me more about the team I would be working in?</p>
         <p>Can you please describe the working culture of the organisation?</p>
