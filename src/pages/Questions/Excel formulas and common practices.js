@@ -274,4 +274,8 @@ export const EF = [
     que: `remove duplicates in a column`,
     ans: `select table -> Table Design tab -> Tools group -> Remove Duplicates`,
   },
+  {
+    que: `count number of duplicates in a column`,
+    ans: null,
+  },
 ];

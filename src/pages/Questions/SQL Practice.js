@@ -1154,7 +1154,7 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER & MySQL**</p>
-        <p>CREATE VIEW myCustomView</p>
+        <p>CREATE VIEW myCustomView -- CREATE VIEW view_name</p>
         <p>AS</p>
         <p>{"("}</p>
         <p>SELECT * FROM country</p>
@@ -1217,9 +1217,27 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>CREATE PROCEDURE viewStates</p>
+        <p>CREATE PROCEDURE viewStates -- CREATE PROCEDURE procedure_name</p>
         <p>AS</p>
         <p>SELECT * FROM state</p>
+        <p>==================</p>
+        <p>**MySQL**</p>
+        <p>DELIMITER // -- DELIMITER // is required</p>
+        <p>CREATE PROCEDURE viewStates()</p> -- CREATE PROCEDURE
+        procedure_name()
+        <p>BEGIN -- BEGIN is required</p>
+        <p>SELECT * FROM state; -- ; is required</p>
+        <p>END // -- END // is required</p>
+        <p>DELIMITER ; -- DELIMITER ; is required</p>
+      </>
+    ),
+  },
+  {
+    que: `execute a user-defined stored procedure that takes no parameter`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>EXEC viewStates;</p>
       </>
     ),
   },
@@ -1232,42 +1250,37 @@ export const SQLP = [
     ),
   },
   {
-    que: `create a stored procedure whose parameter is a list. eg. a stored procedure to display the countries in a given list of continents`,
+    que: `execute a user-defined stored procedure that takes multiple parameters`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
+  },
+  {
+    que: `create a stored procedure that takes a parameter variable as a list/array. eg. a stored procedure where the parameter is a given list of continents and displays countries in those continents`,
+    ans: ``,
+  },
+  {
+    que: `execute a user-defined stored procedure that takes a parameter as a list/array`,
     ans: ``,
   },
   {
     que: `view list of stored procedures`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
-        <p>SELECT * FROM sys.procedures;</p>
-        <p>or</p>
-
+        <p>**MS SQL SERVER && MySQL**</p>
         <p>SELECT ROUTINE_TYPE, ROUTINE_NAME</p>
         <p>FROM INFORMATION_SCHEMA.ROUTINES</p>
         <p>WHERE ROUTINE_TYPE = 'PROCEDURE';</p>
+        <p>or</p>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT * FROM sys.procedures;</p>
       </>
     ),
   },
   {
     que: `display the syntax of a your created stored procedure`,
-    ans: (
-      <>
-        <p>**MS SQL SERVER**</p>
-      </>
-    ),
-  },
-  {
-    que: `execute a stored procedure you have created that takes no parameter`,
-    ans: (
-      <>
-        <p>**MS SQL SERVER**</p>
-        <p>EXEC viewStates;</p>
-      </>
-    ),
-  },
-  {
-    que: `execute a stored procedure you have created that takes multiple parameters`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
