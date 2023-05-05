@@ -18,4 +18,7 @@ export const SQLI = [
   {
     que: `what is the difference between SQL and Transact-SQL `,
   },
+  {
+    que: `what is the use of Begin/End Blocks and the Go keyword in SQL?`,
+  },
 ];
