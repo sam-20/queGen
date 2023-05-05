@@ -1201,9 +1201,17 @@ export const SQLP = [
       </>
     ),
   },
-  { que: `delete a view`, ans: <></> },
-  { que: ``, ans: <></> },
-
+  {
+    que: `delete a view`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>DROP VIEW view_name</p>
+        <p>eg. </p>
+        <p>DROP VIEW myCustomView</p>
+      </>
+    ),
+  },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
   { que: `stored procedures`, ans: `` },
