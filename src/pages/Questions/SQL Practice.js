@@ -1149,13 +1149,52 @@ export const SQLP = [
       </>
     ),
   },
+  {
+    que: `create a view`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>CREATE VIEW [view_name] AS sql_statement</p>
+        <p>eg. </p>
+        <p>CREATE VIEW [list state data] </p>
+        <p>AS </p>
+        <p>(SELECT * FROM state)</p>
+        <p>-------------</p>
+        <p>**MySQL**</p>
+        <p>CREATE VIEW `view_name` AS sql_statement</p>
+        <p>eg. </p>
+        <p>CREATE VIEW `list state data` </p>
+        <p>AS </p>
+        <p>(SELECT * FROM state)</p>
+      </>
+    ),
+  },
+  {
+    que: `query a view / display the contents of a view`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT * FROM [view_name];</p>
+        <p>eg. </p>
+        <p>SELECT * FROM [list state data];</p>
+        <p>**MySQL**</p>
+        <p>SELECT * FROM `view_name`;</p>
+        <p>eg. </p>
+        <p>SELECT * FROM `list state data`;</p>
+      </>
+    ),
+  },
+  {
+    que: `update the query statement of a view`,
+    ans: (
+      <>
+        <p>**MS SQL Server**</p>
+      </>
+    ),
+  },
+  { que: ``, ans: <></> },
+  { que: ``, ans: <></> },
 
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: `views`, ans: `` },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
   { que: `stored procedures`, ans: `` },
