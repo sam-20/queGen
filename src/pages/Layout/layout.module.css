@@ -9,6 +9,9 @@
 }
 
 .ansDiv {
+  margin-top: 20px;
+  width: 60%;
+  font-size: medium;
   animation-name: animateText;
   animation-duration: 0.4s;
   animation-delay: 0s;
