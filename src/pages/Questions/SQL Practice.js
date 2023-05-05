@@ -1214,35 +1214,67 @@ export const SQLP = [
   },
   {
     que: `create a stored procedure that takes no parameters`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `create a stored procedure that takes multiple parameters`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `view list of stored procedures`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `display the syntax of a your created stored procedure`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `execute a stored procedure you have created that takes no parameter`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `execute a stored procedure you have created that takes multiple parameters`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `update the syntax of your stored procedure to include, modify and delete a parameter`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   {
     que: `delete a user made stored procedure`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+      </>
+    ),
   },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
