@@ -1217,6 +1217,9 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>CREATE PROCEDURE viewStates</p>
+        <p>AS</p>
+        <p>SELECT * FROM state</p>
       </>
     ),
   },
@@ -1229,10 +1232,20 @@ export const SQLP = [
     ),
   },
   {
+    que: `create a stored procedure whose parameter is a list. eg. a stored procedure to display the countries in a given list of continents`,
+    ans: ``,
+  },
+  {
     que: `view list of stored procedures`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>SELECT * FROM sys.procedures;</p>
+        <p>or</p>
+
+        <p>SELECT ROUTINE_TYPE, ROUTINE_NAME</p>
+        <p>FROM INFORMATION_SCHEMA.ROUTINES</p>
+        <p>WHERE ROUTINE_TYPE = 'PROCEDURE';</p>
       </>
     ),
   },
@@ -1249,6 +1262,7 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>EXEC viewStates;</p>
       </>
     ),
   },
