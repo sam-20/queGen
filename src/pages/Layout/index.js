@@ -160,7 +160,9 @@ function Layout() {
 
         {/* enable speech */}
         <div style={{ display: "flex", flexDirection: "row", marginTop: 10 }}>
-          <label style={{ paddingRight: 10 }}>Enable Speech:</label>
+          <label style={{ paddingRight: 10 }}>
+            Enable Speech {"Recommended for interview questions"}:
+          </label>
 
           <div onChange={enableSpeech} style={{ display: "flex" }}>
             <div style={{ marginRight: 10 }}>
