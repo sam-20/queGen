@@ -1237,7 +1237,9 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>EXEC viewStates;</p>
+        <p>EXEC viewStates --EXEC procedure_name;</p>
+        <p>**MySQL**</p>
+        <p>call viewStates() -- call procedure_name()</p>
       </>
     ),
   },

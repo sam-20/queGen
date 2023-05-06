@@ -1,5 +1,9 @@
 export const SQLI = [
   {
+    que: `What are some of the challenges you experienced using SQL?`,
+    ans: null,
+  },
+  {
     que: `What is Schema in SQL?`,
     ans: `A database schema defines how data is organized within a relational database; this is inclusive of logical constraints such as, table names, fields, data types, and the relationships between these entities`,
   },
