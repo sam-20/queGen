@@ -60,6 +60,14 @@ export const SQLP = [
     ),
   },
   {
+    que: `schedule a database backup`,
+    ans: null,
+  },
+  {
+    que: `restore a database backup`,
+    ans: null,
+  },
+  {
     que: `display tables in the database`,
     ans: (
       <>
@@ -1307,4 +1315,6 @@ export const SQLP = [
   },
   { que: `events`, ans: `` },
   { que: `triggers`, ans: `` },
+  { que: `cursors`, ans: `` },
+  { que: `user defined functions(UDF)`, ans: `` },
 ];

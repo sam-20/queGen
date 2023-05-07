@@ -25,4 +25,16 @@ export const SQLI = [
   {
     que: `what is the use of Begin/End Blocks and the Go keyword in SQL?`,
   },
+  {
+    que: `what are some ways to recover data accidentally deleted from the database`,
+    ans: ``,
+  },
+  {
+    que: `how would you migrate data from one sql server version to another`,
+    ans: ``,
+  },
+  {
+    que: `how would you handle redundant data in your database`,
+    ans: ``,
+  },
 ];

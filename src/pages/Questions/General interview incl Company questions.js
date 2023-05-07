@@ -176,6 +176,19 @@ export const GI = [
   `,
   },
   {
+    que: `could you please walk us through some of the activities you undertook in your previous jobs`,
+    ans: `In 2019 i worked as a junior data analyst with Kstu which is a university, I worked closely with the database
+    team in the IT department. Since it was a university, we worked primarily with students records and 
+    we managed their information in Postgres SQL. So sometimes you'd have students coming in who want to 
+    update their records, like their names for instance if there was a spelling mistake. There wasnt
+    a fully functional and well equipped portal where students could request for changes or
+    even for lecturers. So sometimes you'd also have lecturers send request to update or retrieve exams scores of 
+    students. Then we also had these questionnaires handed to students to review their
+   lecturers and how they found the course. We'd gather that information into excel, analyse then
+    produce reports on the performance of lecturers and which courses students are finding difficulties in.
+     ...Then at Edorer, I ..., Recently at Brunel University London, I...`,
+  },
+  {
     que: `what are your salary expectations?`,
     ans: `I would say I am pleased with the salary range given in the job description. Although 
   i'd hope to see an increase in future. `,
