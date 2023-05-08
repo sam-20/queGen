@@ -1256,6 +1256,12 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>CREATE PROCEDURE filterStates --procedure_name</p>
+        <p>@minID int, @maxID int, @cityName nvarchar(10) --parameters</p>
+        <p>AS</p>
+        <p>SELECT * FROM state</p>
+        <p>WHERE id BETWEEN @minID AND @maxID --using parameters</p>
+        <p>AND name LIKE @cityName</p>
       </>
     ),
   },
@@ -1264,12 +1270,14 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>EXEC filterStates</p>
+        <p>@minID = 2, @maxID = 10, @cityName = '[a-c]%'</p>
       </>
     ),
   },
   {
     que: `create a stored procedure that takes a parameter variable as a list/array. eg. a stored procedure where the parameter is a given list of continents and displays countries in those continents`,
-    ans: ``,
+    ans: <></>,
   },
   {
     que: `execute a user-defined stored procedure that takes a parameter as a list/array`,
@@ -1290,18 +1298,36 @@ export const SQLP = [
     ),
   },
   {
-    que: `display the syntax of a your created stored procedure`,
+    que: `display the syntax of a user-defined stored procedure`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>sp_helptext 'filterStates' --stored procedure name</p>
       </>
     ),
   },
   {
-    que: `update the syntax of your stored procedure to include, modify and delete a parameter`,
+    que: `rename a user-defined stored procedure`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>
+          sp_rename 'filterStates','viewStates' --oldProcedure_name,
+          newProcedure_name
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `update the syntax of a user-defined stored procedure`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>ALTER PROCEDURE viewStates --procedure_name</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SELECT * FROM state</p>
+        <p>END</p>
       </>
     ),
   },
@@ -1310,6 +1336,7 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
+        <p>DROP PROCEDURE viewStates --procedure_name</p>
       </>
     ),
   },
