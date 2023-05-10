@@ -7,7 +7,7 @@ export const EF = [
   { que: `extract the first n characters of a cell value`, ans: `LEFT` },
   { que: `extract the last n characters of a cell value`, ans: `RIGHT` },
   { que: `extract the n characters inside a cell content`, ans: `MID` },
-  { que: `join multiple cell values`, ans: `CONCATENATE or &` },
+  { que: `join multiple cell values`, ans: `CONCAT or &` },
   {
     que: `split a column data into separate cell values. eg. split the customer name column into first name and last name colums`,
     ans: `First insert the empty columns to store the splitted values.Lets assume
