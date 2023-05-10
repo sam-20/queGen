@@ -9,6 +9,18 @@ export const EF = [
   { que: `extract the n characters inside a cell content`, ans: `MID` },
   { que: `join multiple cell values`, ans: `CONCATENATE or &` },
   {
+    que: `split a column data into separate cell values. eg. split the customer name column into first name and last name colums`,
+    ans: `First insert the empty columns to store the splitted values.Lets assume
+    you want to split the fullName column into firstName and lastName columns.
+    If at the end you want to have something like fullName, firstName, lastName without
+    overwriting the fullName data, then insert 2 cols after the fullName col to hold firstName
+    and lastName. However, if you want to have overwrite the fullName col and only 
+    have firstName and lastName, then you insert only 1 col after fullName to hold the
+    lastName since firstName will overwrite the fullName col. After inserting, 
+    highlight col to split -> Data tab -> Data Tools group -> Text to Columns
+    `,
+  },
+  {
     que: `display the position number of a case-sensitive character in a cell`,
     ans: `FIND`,
   },
@@ -223,8 +235,13 @@ export const EF = [
     ans: `RAND()*[diff btn lower and upper bound value]+[lowerboundvalue]`,
   },
   {
-    que: `Undo a cell range formatted as table`,
+    que: `Undo a cell range formatted as table. In other words, convert a table into an array/range`,
     ans: `Right click any cell -> Table -> Convert to Range`,
+  },
+  {
+    que: `While in the current workbook, load its current table/range data directly into power query without using 'Get Data'
+    and having to go browse and select the excel file`,
+    ans: `select any data cell/highlight entire data -> right click -> Get Data from Table/Range`,
   },
   {
     que: `Add filter options to a cell range not formatted as table`,
@@ -358,7 +375,28 @@ export const EF = [
     ),
   },
 
-  /**VBA */
+  /*****macros */
+  {
+    que: `enable macros in excel`,
+    ans: ``,
+  },
+  {
+    que: `create and run a simple macro. Eg. automate splitting of a column into 2`,
+    ans: ``,
+  },
+  {
+    que: `assign a macro function to a button`,
+    ans: ``,
+  },
+  {
+    que: `create and run a macro that works correctly 
+    even if the cell position of the data is changed the next time the macro is run.
+    eg. a macro was created for a table starting at A1. Now the table is placed at J2 and you
+    want to perform the macro on it`,
+    ans: ``,
+  },
+
+  /*********VBA */
   {
     que: `let each data entered be automatically fitted to the cell width`,
     ans: (

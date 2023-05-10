@@ -7,4 +7,5 @@ import { SQLP } from "./SQL Practice";
 import { DA } from "./Data Analyst interview";
 import { GI } from "./General interview incl Company questions";
 import { SQLI } from "./SQL Interview";
-export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI };
+import { OP } from "./Outlook common practices";
+export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP };
