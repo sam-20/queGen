@@ -50,8 +50,16 @@ export const EF = [
     ans: `IFERROR`,
   },
   {
-    que: "generate an auto increment of numbers",
+    que: "generate an auto increment of numbers using a function",
     ans: "sequence",
+  },
+  {
+    que: `generate an auto increment of numbers in a column/row using shortcut`,
+    ans: `select that cell of the first value / the current value where you want to continue from -> ALT + H, F, I, S`,
+  },
+  {
+    que: `generate an auto increment of dates given start and end dates`,
+    ans: `Excel Dictionary - How to create a date series with a start and end date`,
   },
   {
     que: `calculate the sum of values in a range A which meet a certain condition in that same range A`,
@@ -255,27 +263,253 @@ export const EF = [
     ans: `Data tab -> Data Tools group -> Relationships OR 	Power Pivot tab -> Data Model group -> Manage`,
   },
   {
-    que: `search for an item corresponding value in another column B using vlookup exact match`,
+    que: `how would you differentiate two columns with numbers but one formatted as a number and the other formatted as a text`,
+    ans: `text formatted values would appear on the left, number formmated values would appear on the right`,
+  },
+  {
+    que: `search for an item's corresponding value in another column B using vlookup exact match`,
     ans: `vlookup([whose value are we searching for ie. lookup value], 
       [in which table are we searching], 
       [the item we want to pull out, what is its column number starting from 1?],
        [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
   },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
-  { que: ``, ans: `` },
   {
-    que: `remove duplicates in a column`,
-    ans: `select table -> Table Design tab -> Tools group -> Remove Duplicates`,
+    que: `a col A has corresponding values in col B. what will be the col B value of an item which is not in col A but falls inside the range of values in A`,
+    ans: `vlookup with approximate match.`,
   },
+  {
+    que: `search for an item's match using hlookup`,
+    ans: `Same syntax as vlookup. However, we used vlookup because 
+    we were searching for a result which was 
+    inside a range laid out vertically. 
+    We use hlookup when the value we want to return is 
+    inside a range laid out horizontally
+  `,
+  },
+  {
+    que: `search for an item's value using the lookup function. Note. Func is Lookup`,
+    ans: ``,
+  },
+  {
+    que: `search for an item's value using the lookup full record function`,
+    ans: ``,
+  },
+  {
+    que: `find which item is inside a given position in a column of values (1 dimensional array). 
+    eg. What value is inside the 20th position of the name column`,
+    ans: `INDEX(
+      column range excl. header, 
+      position number where we want to pull out the value ie. starting from 1)`,
+  },
+  {
+    que: `find which item is inside a given position in a table of values (2 dimensional array). 
+    eg. What value is inside row 10, col 5 of the students table`,
+    ans: `INDEX(
+      table range excl. headers, 
+      row number where we want to pull out the value ie. starting from 1, 
+      col number where we want to pull out the value ie. starting from 1 
+      )`,
+  },
+  {
+    que: `find the position of a given item in a column (1 dimensional array). eg. whats the index of Ghana in the country column`,
+    ans: `MATCH(lookup value, lookup array excl. header). NB: the position returned numbering starts from 1`,
+  },
+  ///////////////////////////////////
   {
     que: `count number of duplicates in a column`,
     ans: null,
+  },
+  {
+    que: `remove duplicates in a column`,
+    ans: (
+      <>
+        <p>
+          select table {"->"} Table Design tab {"->"} Tools group {"->"} Remove
+          Duplicates
+        </p>
+        <p>or</p>
+        <p>select a cell {"-> "} ALT + A, M</p>
+      </>
+    ),
+  },
+  {
+    que: `filter out the distinct values in a column`,
+    ans: `UNIQUE(range excl. header)`,
+  },
+  {
+    que: `count the number of distinct values in a column`,
+    ans: `first filter out the distinct values, then use countif to count their totals`,
+  },
+  {
+    que: `calculate the period between 2 times in hours. eg. hours worked between 8:30 and 4:45`,
+    ans: (
+      <>
+        <p>`MOD(timeOut-timeIn, 1)*24`</p>
+        <p>The above formula gives the hours in decimals.</p>
+        <p>How to convert decimal hours to time format</p>
+        <p>Convert 2.88 hours to hh:mm:ss</p>
+        <p>
+          2.88 hours can be broken down to 2 hours plus 0.88 hours - 2 hours
+        </p>
+        <p>0.88 hours * 60 minutes/hour = 52.8 minutes - 52 minutes</p>
+        <p>0.8 minutes * 60 seconds/minute = 48 seconds - 48 seconds</p>
+        <p>02:52:48</p>
+      </>
+    ),
+  },
+
+  /**VBA */
+  {
+    que: `let each data entered be automatically fitted to the cell width`,
+    ans: (
+      <>
+        <p>
+          right click sheet name at bottom {"->"} select "View Code" {"->"}
+          change sheet type dropdown to "Worksheet" {"->"} Add the following
+          between the Private Sub and End Sub
+        </p>
+        <p>Cells.EntireColumn.AutoFit</p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
   },
 ];
