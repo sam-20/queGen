@@ -312,17 +312,12 @@ export const SQLP = [
     que: `add a new column to a table`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>ALTER TABLE country</p>
         <p>ADD</p>
         <p>ethincity varchar(20);</p>
         <p>Addres varchar(500) NULL,</p>
         <p>City varchar(255) DEFAULT 'California'</p>
-        <p>============</p>
-        <p>**MySQL**</p>
-        <p>ALTER TABLE state</p>
-        <p>ADD COLUMN city2 TEXT,</p>
-        <p>ADD COLUMN city3 VARCHAR(20) DEFAULT 'california'</p>
       </>
     ),
   },
