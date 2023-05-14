@@ -1266,7 +1266,10 @@ export const SQLP = [
         <p>**MySQL**</p>
         <p>DELIMITER //</p>
         <p>CREATE PROCEDURE filterStates(</p>
-        <p>IN minID int,IN maxID int,IN cityName varchar(50)</p>
+        <p>
+          IN minID int,IN maxID int,IN cityName varchar(50) -- IN rep input, OUT
+          rep output
+        </p>
         <p>)</p>
         <p>BEGIN</p>
         <p>SELECT * FROM state</p>
