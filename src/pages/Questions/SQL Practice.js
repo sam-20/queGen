@@ -1359,9 +1359,11 @@ export const SQLP = [
         <p>('Africa'), ('Asia')</p>
         <p>--c. call your stored procedure</p>
         <p>EXEC filterCountries @continentArr, @minPopulation=500</p>
-
         <p>-- NB: to drop a defined type</p>
         <p>DROP TYPE continentListType</p>
+
+        <p>**MySQL**</p>
+        <p>CALL filterCountries('Africa,Asia',500)</p>
       </>
     ),
   },
