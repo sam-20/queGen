@@ -367,7 +367,7 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER**</p>
         <p>sp_help 'table_name'</p>
-        <p>=============</p>
+
         <p>**MySQL**</p>
         <p>DESCRIBE table_name --displays only properties</p>
       </>
@@ -1306,7 +1306,6 @@ export const SQLP = [
           from the table
         </p>
         <p>)</p>
-
         <p>--2. use the data type in your stored procedure code</p>
         <p>CREATE PROCEDURE filterCountries</p>
         <p>
@@ -1323,6 +1322,8 @@ export const SQLP = [
         </p>
         <p>AND</p>
         <p>population {">"} @minPopulation</p>
+
+        <p>**MySQL**</p>
       </>
     ),
   },
