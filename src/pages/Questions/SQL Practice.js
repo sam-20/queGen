@@ -37,6 +37,27 @@ export const SQLP = [
         <p>**MS SQL SERVER**</p>
         <p>ALTER DATABASE [oldDbName]</p>
         <p>MODIFY NAME = [newDbName];</p>
+
+        <p>**MySQL**</p>
+        <p>
+          You cannot rename a database in MySQL using Query. Either use the
+          phpmyadmin interface or command line. Below is how to use the command
+          line
+        </p>
+        <p>
+          -- First, dump the old database. The -R flag is to make sure stored
+          procedures and functions are included in the dump file.
+        </p>
+        <p>
+          $ mysqldump -u username -p password -R old_db_name {">"}{" "}
+          db_dumpfile.sql
+        </p>
+        <p>-- Then create a new database:</p>
+        <p>$ mysqladmin -u username -p password create new_db_name</p>
+        <p>-- Then, import the dump file to the new database:</p>
+        <p>$ mysql -u username -p password new_db_name {"<"} db_dumpfile.sql</p>
+        <p>Lastly, drop the old database</p>
+        <p>$ mysql -u username -p password drop olddbname</p>
       </>
     ),
   },
