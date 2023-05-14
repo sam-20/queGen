@@ -71,7 +71,7 @@ export const SQLP = [
     ),
   },
   {
-    que: `backup a database`,
+    que: `backup a single database`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
@@ -79,6 +79,10 @@ export const SQLP = [
         <p>TO DISK = 'C:\Users\samuel\Desktop\bikestoresBackup.bak'</p>
       </>
     ),
+  },
+  {
+    que: `backup multiple databases at a time`,
+    ans: ``,
   },
   {
     que: `schedule a database backup`,
