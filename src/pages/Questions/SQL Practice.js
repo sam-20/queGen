@@ -1317,13 +1317,28 @@ export const SQLP = [
         <p>WHERE</p>
         <p>
           continent IN ( SELECT continentName FROM @continents) --we retrieve
-          the values stored inside the parameter list and pass it to the IN
-          statement
+          the values stored inside the parameter list table and pass it to the
+          IN statement
         </p>
         <p>AND</p>
         <p>population {">"} @minPopulation</p>
 
         <p>**MySQL**</p>
+        <p>DELIMITER //</p>
+        <p>CREATE PROCEDURE filterCountries </p>
+        <p>(</p>
+        <p>IN continentList TEXT, -- parameter to store list of values</p>
+        <p>IN minPopulation int</p>
+        <p>)</p>
+        <p>BEGIN</p>
+        <p>SELECT * FROM country</p>
+        <p>
+          WHERE FIND_IN_SET(continent, continentList) -- {"=>"} WHERE continent
+          in continentList
+        </p>
+        <p>AND population {">"} minPopulation;</p>
+        <p>END //</p>
+        <p>DELIMITER ;</p>
       </>
     ),
   },
