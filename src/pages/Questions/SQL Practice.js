@@ -6,8 +6,8 @@ export const SQLP = [
         <p>**MS SQL SERVER**</p>
         <p>SELECT name FROM master.sys.databases</p>
         <p>WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb');</p>
-        <p>--------------</p>
-        <p>MySQL</p>
+
+        <p>**MySQL**</p>
         <p>SHOW DATABASES;</p>
       </>
     ),
@@ -16,8 +16,8 @@ export const SQLP = [
     que: `create a database`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
-        <p>Create Database worldbank</p>
+        <p>**MS SQL SERVER & MySQL**</p>
+        <p>CREATE Database worldbank</p>
       </>
     ),
   },
@@ -25,13 +25,13 @@ export const SQLP = [
     que: `move into a database`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>USE worldbank;</p>
       </>
     ),
   },
   {
-    que: `update the database's name`,
+    que: `rename a database`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
