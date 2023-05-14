@@ -1228,7 +1228,6 @@ export const SQLP = [
         <p>CREATE PROCEDURE viewStates -- CREATE PROCEDURE procedure_name</p>
         <p>AS</p>
         <p>SELECT * FROM state</p>
-        <p>==================</p>
         <p>**MySQL**</p>
         <p>DELIMITER // -- DELIMITER // is required</p>
         <p>CREATE PROCEDURE viewStates()</p> -- CREATE PROCEDURE
@@ -1246,6 +1245,7 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER**</p>
         <p>EXEC viewStates --EXEC procedure_name;</p>
+
         <p>**MySQL**</p>
         <p>call viewStates() -- call procedure_name()</p>
       </>
