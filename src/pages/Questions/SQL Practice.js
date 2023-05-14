@@ -418,7 +418,7 @@ export const SQLP = [
           ALTER COLUMN continent text NULL; --updating the datatype of a column
         </p>
         <p>To alter an existing constraint, first drop it then reassign it</p>
-        <p>==============</p>
+
         <p>**MySQL**</p>
         <p>--updating the datatype of a column</p>
         <p>ALTER TABLE country</p>
