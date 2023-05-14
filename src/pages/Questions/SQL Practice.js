@@ -53,11 +53,11 @@ export const SQLP = [
           db_dumpfile.sql
         </p>
         <p>-- Then create a new database:</p>
-        <p>$ mysqladmin -u username -p password create new_db_name</p>
+        <p>$ mysqladmin -u username -p password CREATE DATABASE new_db_name</p>
         <p>-- Then, import the dump file to the new database:</p>
         <p>$ mysql -u username -p password new_db_name {"<"} db_dumpfile.sql</p>
-        <p>Lastly, drop the old database</p>
-        <p>$ mysql -u username -p password drop olddbname</p>
+        <p>-- Lastly, drop the old database</p>
+        <p>$ mysql -u username -p password DROP DATABASE olddbname</p>
       </>
     ),
   },
@@ -65,7 +65,7 @@ export const SQLP = [
     que: `delete a database`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>DROP DATABASE databasename;</p>
       </>
     ),
