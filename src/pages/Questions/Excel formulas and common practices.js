@@ -7,6 +7,7 @@ export const EF = [
   { que: `extract the first n characters of a cell value`, ans: `LEFT` },
   { que: `extract the last n characters of a cell value`, ans: `RIGHT` },
   { que: `extract the n characters inside a cell content`, ans: `MID` },
+  { que: `extract text from the end of a text string`, ans: `TEXTAFTER` },
   { que: `join multiple cell values`, ans: `CONCAT or &` },
   {
     que: `split a column data into separate cell values. eg. split the customer name column into first name and last name colums`,
@@ -28,8 +29,14 @@ export const EF = [
     que: `display the position number of a case-insensitive character in a cell`,
     ans: `SEARCH`,
   },
-  { que: `add prefix to cell`, ans: null },
-  { que: `add suffix to cell`, ans: null },
+  {
+    que: `add prefix to cell`,
+    ans: `eg. adding Mr. to all names becomes =('Mr' & ' ' & B2)`,
+  },
+  {
+    que: `add suffix to cell eg. adding domain to all usernames`,
+    ans: `'B2' & '@gmail.com'`,
+  },
   { que: `replace a number of characters in a cell`, ans: `REPLACE` },
   {
     que: `replace a portion of existing text or character in a cell`,
@@ -250,6 +257,10 @@ export const EF = [
   {
     que: `resize a table`,
     ans: `select table -> Table Design tab -> Properties group -> Resize Table`,
+  },
+  {
+    que: `retrieve the column position/number of a column`,
+    ans: `COLUMN(selected column eg. B:B)`,
   },
   {
     que: `Add custom lists for autofill in excel`,
