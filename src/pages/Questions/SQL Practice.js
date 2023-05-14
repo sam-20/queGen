@@ -1262,6 +1262,18 @@ export const SQLP = [
         <p>SELECT * FROM state</p>
         <p>WHERE id BETWEEN @minID AND @maxID --using parameters</p>
         <p>AND name LIKE @cityName</p>
+
+        <p>**MySQL**</p>
+        <p>DELIMITER //</p>
+        <p>CREATE PROCEDURE filterStates(</p>
+        <p>IN minID int,IN maxID int,IN cityName varchar(50)</p>
+        <p>)</p>
+        <p>BEGIN</p>
+        <p>SELECT * FROM state</p>
+        <p>WHERE (id BETWEEN minID AND maxID)</p>
+        <p>AND name LIKE cityName;</p>
+        <p>END //</p>
+        <p>DELIMITER ;</p>
       </>
     ),
   },
@@ -1272,6 +1284,9 @@ export const SQLP = [
         <p>**MS SQL SERVER**</p>
         <p>EXEC filterStates</p>
         <p>@minID = 2, @maxID = 10, @cityName = '[a-c]%'</p>
+
+        <p>**MySQL**</p>
+        <p>CALL filterStates(2,10,'a%')</p>
       </>
     ),
   },
