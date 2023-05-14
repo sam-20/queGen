@@ -37,4 +37,8 @@ export const SQLI = [
     que: `how would you handle redundant data in your database`,
     ans: ``,
   },
+  {
+    que: `what is SQL injection`,
+    ans: ``,
+  },
 ];

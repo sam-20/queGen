@@ -1292,11 +1292,64 @@ export const SQLP = [
   },
   {
     que: `create a stored procedure that takes a parameter variable as a list/array. eg. a stored procedure where the parameter is a given list of continents and displays countries in those continents`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER** </p>
+        <p>
+          --1. define the data type for the parameter in the stored procedure
+          which would store the list of values.
+        </p>
+        <p>-- AS TABLE means the variable would be a list/table/array</p>
+        <p>CREATE TYPE continentListType AS TABLE</p>
+        <p>(</p>
+        <p>
+          continentName varchar(max) -- the data type for the parameter list
+          values should be the same as the data type of the values you'd fetch
+          from the table
+        </p>
+        <p>)</p>
+
+        <p>--2. use the data type in your stored procedure code</p>
+        <p>CREATE PROCEDURE filterCountries</p>
+        <p>
+          @continents continentListType READONLY, --parameter which is a list
+        </p>
+        <p>@minPopulation int --single value parameter</p>
+        <p>AS</p>
+        <p>SELECT * FROM country </p>
+        <p>WHERE</p>
+        <p>
+          continent IN ( SELECT continentName FROM @continents) --we retrieve
+          the values stored inside the parameter list and pass it to the IN
+          statement
+        </p>
+        <p>AND</p>
+        <p>population {">"} @minPopulation</p>
+      </>
+    ),
   },
   {
     que: `execute a user-defined stored procedure that takes a parameter as a list/array`,
-    ans: ``,
+    ans: (
+      <>
+        <p>**MS SQL SERVER</p>
+        <p>
+          --Before you call a stored procedure which takes a parameter as a
+          list, you must perform all these 3 actions at the same time in one
+          query
+        </p>
+        <p>--a. declare a variable to save the the list of values</p>
+        <p>DECLARE @continentArr continentListType</p>
+        <p>--b. insert the values into the declared variable</p>
+        <p>INSERT into @continentArr VALUES</p>
+        <p>('Africa'), ('Asia')</p>
+        <p>--c. call your stored procedure</p>
+        <p>EXEC filterCountries @continentArr, @minPopulation=500</p>
+
+        <p>-- NB: to drop a data type</p>
+        <p>DROP TYPE continentListType</p>
+      </>
+    ),
   },
   {
     que: `view list of stored procedures`,
