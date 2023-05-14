@@ -1346,7 +1346,7 @@ export const SQLP = [
         <p>--c. call your stored procedure</p>
         <p>EXEC filterCountries @continentArr, @minPopulation=500</p>
 
-        <p>-- NB: to drop a data type</p>
+        <p>-- NB: to drop a defined type</p>
         <p>DROP TYPE continentListType</p>
       </>
     ),
