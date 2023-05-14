@@ -1360,6 +1360,13 @@ export const SQLP = [
         <p>BEGIN</p>
         <p>SELECT * FROM state</p>
         <p>END</p>
+
+        <p>**MySQL**</p>
+        <p>
+          There is no statement in MySQL for modifying the parameters or the
+          body of a stored procedure. To change parameters or the body, drop the
+          stored procedure and create a new one.
+        </p>
       </>
     ),
   },
