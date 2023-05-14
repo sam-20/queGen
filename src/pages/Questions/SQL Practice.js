@@ -1306,9 +1306,12 @@ export const SQLP = [
         <p>SELECT ROUTINE_TYPE, ROUTINE_NAME</p>
         <p>FROM INFORMATION_SCHEMA.ROUTINES</p>
         <p>WHERE ROUTINE_TYPE = 'PROCEDURE';</p>
-        <p>or</p>
+
         <p>**MS SQL SERVER**</p>
         <p>SELECT * FROM sys.procedures;</p>
+
+        <p>**MySQL**</p>
+        <p>SHOW PROCEDURE STATUS</p>
       </>
     ),
   },
@@ -1350,7 +1353,7 @@ export const SQLP = [
     que: `delete a user made stored procedure`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>DROP PROCEDURE viewStates --procedure_name</p>
       </>
     ),
