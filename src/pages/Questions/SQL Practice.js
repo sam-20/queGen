@@ -1321,6 +1321,13 @@ export const SQLP = [
       <>
         <p>**MS SQL SERVER**</p>
         <p>sp_helptext 'filterStates' --stored procedure name</p>
+
+        <p>**MySQL**</p>
+        <p>SHOW CREATE PROCEDURE filterStates -- stored procedure name</p>
+        <p>
+          -- click 'Extra Options' button in query results section and check
+          'Full texts' to see the truncated procedure definition in full
+        </p>
       </>
     ),
   },
@@ -1333,6 +1340,13 @@ export const SQLP = [
           sp_rename 'filterStates','viewStates' --oldProcedure_name,
           newProcedure_name
         </p>
+
+        <p>**MySQL**</p>
+        <p>UPDATE `mysql`.`proc`</p>
+        <p>SET name = 'viewStates', -- newProcedure_name</p>
+        <p>specific_name = 'viewStates' -- newProcedure_name</p>
+        <p>WHERE db = 'practicejoins' AND</p>
+        <p>name = 'filterStates'; -- oldProcedure_name</p>
       </>
     ),
   },
