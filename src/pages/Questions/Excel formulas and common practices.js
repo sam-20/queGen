@@ -164,7 +164,21 @@ export const EF = [
     que: `find the average x in column Z where column A=abc and column B=def`,
     ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
+  {
+    que: `utilise any formula that takes a parameter as a single value located in another worksheet`,
+    ans: null,
+  },
+  {
+    que: `utilise any formula that takes a parameter as a range of values/column located in another worksheet`,
+    ans: null,
+  },
+  {
+    que: `utilise any formula that should take an entire column data in worksheet A and produce an entire column result in worksheet B.
+    eg. extract all the days from a date column in worksheet A to worksheet B`,
+    ans: null,
+  },
   { que: `display today's date`, ans: `TODAY or Ctrl+;` },
+  { que: `display the current time`, ans: `Ctrl+Shift+;` },
   { que: `display the date in the next n days`, ans: `TODAY()+n` },
   { que: `display the date in the previous n days`, ans: `TODAY()-n` },
   { que: `display today's date and current time`, ans: `NOW` },
