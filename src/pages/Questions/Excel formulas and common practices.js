@@ -43,6 +43,10 @@ export const EF = [
     ans: `SUBSTITUTE`,
   },
   {
+    que: `repeat a character(s) a given number of times in a cell. eg. replace ab in the cell with ababab`,
+    ans: `REPT`,
+  },
+  {
     que: `how many cells contain only numbers`,
     ans: `COUNT: used to count number of cells in a range that contain numbers ie. (date numbers, integers, double)`,
   },
