@@ -1,6 +1,6 @@
 //https://github.com/craig1123/react-recipes/blob/master/docs/useSpeechSynthesis.md
 import { useSpeechSynthesis } from "react-speech-kit";
-import { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP } from "../Questions";
+import { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP } from "../Questions";
 import { useState } from "react";
 import LayoutCSS from "./layout.module.css";
 
@@ -68,6 +68,10 @@ function Layout() {
     {
       title: "Outlook Common Practices",
       content: OP,
+    },
+    {
+      title: "Nato Phonetic Alphabet Practice",
+      content: NP,
     },
   ];
 

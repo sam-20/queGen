@@ -47,6 +47,10 @@ export const EF = [
     ans: `REPT`,
   },
   {
+    que: `generate a list of random values from a given set of texts`,
+    ans: null,
+  },
+  {
     que: `how many cells contain only numbers`,
     ans: `COUNT: used to count number of cells in a range that contain numbers ie. (date numbers, integers, double)`,
   },
@@ -360,10 +364,21 @@ export const EF = [
     que: `find the position of a given item in a column (1 dimensional array). eg. whats the index of Ghana in the country column`,
     ans: `MATCH(lookup value, lookup array excl. header). NB: the position returned numbering starts from 1`,
   },
-  ///////////////////////////////////
   {
-    que: `count number of duplicates in a column`,
-    ans: null,
+    que: `filter out the duplicate values in a column`,
+    ans: `https://www.excel-easy.com/examples/find-duplicates.html`,
+  },
+  {
+    que: `count the number of duplicates in a column`,
+    ans: `https://www.excel-easy.com/examples/find-duplicates.html`,
+  },
+  {
+    que: `filter out the duplicate rows in table`,
+    ans: `https://www.excel-easy.com/examples/find-duplicates.html`,
+  },
+  {
+    que: `count the number of duplicate rows in a table`,
+    ans: `https://www.excel-easy.com/examples/find-duplicates.html`,
   },
   {
     que: `remove duplicates in a column`,

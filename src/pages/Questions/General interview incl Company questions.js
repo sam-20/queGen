@@ -39,6 +39,10 @@ export const GI = [
     `,
   },
   {
+    que: `what interests you about this field or industry and why have you decided to apply for a job in this industry`,
+    ans: null,
+  },
+  {
     que: `what are the duties of the job you are applying for?`,
     ans: (
       <>
@@ -62,7 +66,12 @@ export const GI = [
   },
   {
     que: `Tell us about a project that you worked on and felt proud of it`,
-    ans: `first time tutoring people in web dev and helping them secure jobs`,
+    ans: `The project I worked on with Brunel University London 
+    that involved the analysis of GDELT timeseries news data 
+    is what I am most proud of. 
+    I successfully used Google Big Query to access the GDELT 
+    database to retrieve curated news articles that were more 
+    accurate and relevant than the GDELT default news search API service.`,
   },
   {
     que: `What are you looking for in your next job/journey?`,
@@ -160,7 +169,7 @@ export const GI = [
   },
   {
     que: `what is your greatest strength and weakness?`,
-    ans: `I believe my greates strength would be my determination to succeed. For someone
+    ans: `I believe my greatest strength would be my determination to succeed. For someone
   who is passionate about technology, I often come across some concepts which appear to 
   be complex to grasp or understand. But these are the challenges which motivate me
   to know more because I am always willing to overcome the hurdle in order to progress
