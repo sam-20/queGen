@@ -97,9 +97,17 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>BACKUP DATABASE databasename</p>
-        <p>TO DISK = 'C:\Users\samuel\Desktop\bikestoresBackup.bak'</p>
-        <p>or</p>
+        <p>BACKUP DATABASE databaseName</p>
+        <p>
+          TO DISK = 'C:\Program Files\Microsoft SQL
+          Server\MSSQL16.SQLEXPRESS\MSSQL\Backup\mystudents.bak'
+        </p>
+        <p>-- the lines below are optional</p>
+        <p>WITH FORMAT,</p>
+        <p>NAME='Students database',</p>
+        <p>MEDIANAME = 'StudDB',</p>
+        <p>DESCRIPTION = 'This is a full backup of the students database'</p>
+        <p>-- or -- </p>
         <p>
           right click database name from Object Explorer pane {"->"} Tasks{" "}
           {"->"} Back Up...
@@ -131,7 +139,17 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `restore a database which hasnt been dropped but rather a table/record/constraint etc has been accidentally changed or deleted`,
-    ans: null,
+    ans: (
+      <>
+        <p>1. switch the database to offline</p>
+        <p>ALTER DATABASE databaseName SET OFFLINE WITH NO_WAIT</p>
+        <p>
+          2. right click databasename in object explorer {"->"} Tasks {"->"}{" "}
+          Restore {"->"} Database {"->"} either select from device or existing
+          database backup list shown
+        </p>
+      </>
+    ),
   },
   {
     que: `display tables in the database`,
