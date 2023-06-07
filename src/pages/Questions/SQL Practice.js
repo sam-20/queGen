@@ -432,8 +432,13 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `delete all the records from an existing table`,
-    ans: <></>,
+    que: `delete all the records from an existing table without deleting the table itself`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>TRUNCATE TABLE tablename</p>
+      </>
+    ),
   },
   {
     que: `add a new column to a table`,
@@ -668,13 +673,75 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: `SELECT DISTINCT [columnName] from [tableName]`,
   },
   {
-    que: `show only the first n results from the query`,
-    ans: `SELECT * from [tableName] LIMIT n`,
+    que: `show only the first n results from the table`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT TOP 3 * FROM Customers ORDER BY customer_id ASC;</p>
+        <p>----</p>
+        <p>**MySQL**</p>
+        <p>SELECT * from Customers LIMIT 3</p>
+      </>
+    ),
+  },
+  {
+    que: `show only the last n results from the table`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT TOP 3 * FROM Customers ORDER BY customer_id DESC</p>
+      </>
+    ),
+  },
+  {
+    que: `show only the first x% of records in the table. Eg. display top half(50%), quarter(25%), 60% of the recrods`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT TOP 50 PERCENT * FROM Customers ORDER BY customer_id ASC;</p>
+      </>
+    ),
+  },
+  {
+    que: `show only the last x% of records in the table. Eg. display bottom half(50%), quarter(25%), 60% of the recrods`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT TOP 50 PERCENT * FROM Customers ORDER BY customer_id DESC</p>
+      </>
+    ),
+  },
+  {
+    que: `delete the first n records`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DELETE FROM Customers</p>
+        <p>
+          WHERE customer_id IN (SELECT TOP 3 customer_id FROM Customers ORDER BY
+          customer_id ASC)
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `delete the last n records`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DELETE FROM Customers</p>
+        <p>
+          WHERE customer_id IN (SELECT TOP 3 customer_id FROM Customers ORDER BY
+          customer_id DESC)
+        </p>
+      </>
+    ),
   },
   {
     que: `show only n results starting from position/row number x`,
     ans: (
       <>
+        <p>**MySQL**</p>
         <p>SELECT * from [tableName] LIMIT n,x</p>
         <p>
           <b>NB:</b> position/row count starts from 0

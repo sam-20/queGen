@@ -64,6 +64,21 @@ export const SQLI = [
     ans: ``,
   },
   {
+    que: `what are the different types/categories of SQL commands`,
+    ans: (
+      <>
+        <p>DCL - Data Control Language</p>
+        <p>DDL - Data Definition Language</p>
+        <p>DML - Data Manipulation Language</p>
+        <p>DQL - Data Query Language</p>
+        <p>TCL - Transaction Control Language</p>
+        <p>
+          ref: https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/
+        </p>
+      </>
+    ),
+  },
+  {
     que: `What is the difference between DELETE FROM tableName, TRUNCATE TABLE, and DROP TABLE in SQL?`,
     ans: `The DELETE command in SQL 
     removes one or more rows from a table 
