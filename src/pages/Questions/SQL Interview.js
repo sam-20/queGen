@@ -64,7 +64,36 @@ export const SQLI = [
     ans: ``,
   },
   {
-    que: `What is the difference between DELETE and truncate in SQL?`,
-    ans: `The DELETE command in SQL removes one or more rows from a table based on the conditions specified in those rows. SQL's TRUNCATE command is used to purge a table of all of its rows, regardless of whether or not any conditions are met`,
+    que: `What is the difference between DELETE FROM tableName, TRUNCATE TABLE, and DROP TABLE in SQL?`,
+    ans: `The DELETE command in SQL 
+    removes one or more rows from a table 
+    based on the conditions specified in those rows. 
+    SQL's TRUNCATE command is used to purge a table of 
+    all of its rows, regardless of whether or not any conditions are met`,
+    ans: (
+      <>
+        <p>
+          1. with the DELETE command you can use it to remove rows by setting a
+          condition ie. (using WHERE) to remove specific rows or without setting
+          any condition ie (not including WHERE) to remove all rows.
+        </p>
+        <p>
+          2. with the TRUNCATE TABLE command, it purges the table of all its
+          rows regardless of whether or not any conditions are met. Ideal for
+          clearing all data from a table because it is much faster than DELETE
+          and unlike DROP TABLE, it deletes the data inside the table but not
+          the table itself.
+        </p>
+        <p>
+          3. with the DROP TABLE, it deletes the table along with all its data
+          and structure meaning you would need to re-create the table again if
+          you wish to store data
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `why is TRUNCATE not a data manipulation language (DML) like DELETE when it also deletes records from the table`,
+    ans: `TRUNCATE removes all the records and then reinitializes the table structure (like doing a CREATE). Hence making it a DDL command`,
   },
 ];

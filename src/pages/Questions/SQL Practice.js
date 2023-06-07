@@ -432,6 +432,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `delete all the records from an existing table`,
+    ans: <></>,
+  },
+  {
     que: `add a new column to a table`,
     ans: (
       <>
