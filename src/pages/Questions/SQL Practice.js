@@ -71,12 +71,39 @@ export const SQLP = [
     ),
   },
   {
+    que: `set a database to offline mode. NB:This stops all connections to the database and cannot be accessed 
+until you set it back online. Even the command 'USE databaseName' wouldnt work unless switched back online.
+Useful when database cannot be for eg. dropped due to active connections using it`,
+    ans: (
+      <>
+        <p>ALTER DATABASE databaseName SET OFFLINE</p>
+        <p>
+          WITH NO_WAIT --option is used if users or processes are connected, but
+          you do not wish the command to be blocked
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `set a database to be online`,
+    ans: (
+      <>
+        <p>ALTER DATABASE databaseName SET ONLINE</p>
+      </>
+    ),
+  },
+  {
     que: `backup a single database`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
         <p>BACKUP DATABASE databasename</p>
         <p>TO DISK = 'C:\Users\samuel\Desktop\bikestoresBackup.bak'</p>
+        <p>or</p>
+        <p>
+          right click database name from Object Explorer pane {"->"} Tasks{" "}
+          {"->"} Back Up...
+        </p>
       </>
     ),
   },
@@ -89,7 +116,21 @@ export const SQLP = [
     ans: null,
   },
   {
-    que: `restore a database backup`,
+    que: `restore a database which has been completely dropped`,
+    ans: (
+      <>
+        <p>
+          right click Databases from Object Explorer pane {"->"} Restore
+          Database {"->"}
+          choose Device as the Source {"->"} click ... button next to it {"->"}{" "}
+          select Add {"->"}
+          select database file
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `restore a database which hasnt been dropped but rather a table/record/constraint etc has been accidentally changed or deleted`,
     ans: null,
   },
   {
