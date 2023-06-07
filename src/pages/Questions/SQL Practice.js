@@ -1642,8 +1642,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
-  // { que: `events (MySQL)`, ans: `` },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF)`, ans: `` },
+  { que: `events (MySQL)`, ans: `` },
 ];

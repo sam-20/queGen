@@ -16,6 +16,10 @@ export const SQLI = [
     ans: ``,
   },
   {
+    que: `why do we need triggers. What are the advantages and disadvantages`,
+    ans: ``,
+  },
+  {
     que: `what is the difference between views and stored procedures in sql? When should you use either?`,
     ans: ``,
   },
