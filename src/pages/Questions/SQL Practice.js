@@ -127,6 +127,27 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: `restore a database which has been completely dropped`,
     ans: (
       <>
+        <p>**MS SQL SERVER**</p>
+        <p>RESTORE DATABASE sampleDB</p>
+        <p>
+          FROM DISK = 'C:\Program Files\Microsoft SQL
+          Server\MSSQL16.SQLEXPRESS\MSSQL\Backup\mystudents2.bak'
+        </p>
+        <p>
+          -- NB: the command may throw an error and suggest using WITH REPLACE
+          OPTION.
+        </p>
+        <p>
+          -- 1. Simply go to C:\Program Files\Microsoft SQL
+          Server\MSSQL16.SQLEXPRESS\MSSQL\DATA
+        </p>
+        <p>
+          -- 2. delete the .mdf and log.ldf of the database which you want to
+          restore
+        </p>
+        <p>-- 3. then execute restore command again</p>
+
+        <p>-- or --</p>
         <p>
           right click Databases from Object Explorer pane {"->"} Restore
           Database {"->"}
@@ -141,8 +162,17 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: `restore a database which hasnt been dropped but rather a table/record/constraint etc has been accidentally changed or deleted`,
     ans: (
       <>
+        <p>**MS SQL SERVER**</p>
         <p>1. switch the database to offline</p>
         <p>ALTER DATABASE databaseName SET OFFLINE WITH NO_WAIT</p>
+
+        <p>2. restore with command</p>
+        <p>RESTORE DATABASE databaseName</p>
+        <p>
+          FROM DISK = 'C:\Program Files\Microsoft SQL
+          Server\MSSQL16.SQLEXPRESS\MSSQL\Backup\mystudents2.bak'
+        </p>
+        <p> -- or --</p>
         <p>
           2. right click databasename in object explorer {"->"} Tasks {"->"}{" "}
           Restore {"->"} Database {"->"} either select from device or existing
