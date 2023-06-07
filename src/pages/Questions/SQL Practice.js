@@ -121,7 +121,16 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `schedule a database backup`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>
+          uncollapse Management from object explorer pane {"->"} right click
+          Maintenance Plans {"->"}
+          Maintenance Plan Wizard {"->"}
+        </p>
+      </>
+    ),
   },
   {
     que: `restore a database which has been completely dropped`,
@@ -1562,7 +1571,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
-  { que: `events`, ans: `` },
+  // { que: `events (MySQL)`, ans: `` },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF)`, ans: `` },

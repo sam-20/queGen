@@ -63,4 +63,8 @@ export const SQLI = [
     que: `what is SQL injection`,
     ans: ``,
   },
+  {
+    que: `What is the difference between DELETE and truncate in SQL?`,
+    ans: `The DELETE command in SQL removes one or more rows from a table based on the conditions specified in those rows. SQL's TRUNCATE command is used to purge a table of all of its rows, regardless of whether or not any conditions are met`,
+  },
 ];
