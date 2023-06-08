@@ -1681,7 +1681,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
           used in place of SET and unlike SET, it allows you to assign multiple
           variables in one go
         </p>
-        <p>PRINT @firstName</p>
+        <p>
+          PRINT @fiRstName -- like SQL keywords, variables are case-insensitive
+        </p>
         <p>PRINT @lastName</p>
       </>
     ),
@@ -1698,6 +1700,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>WHERE marks = (</p>
         <p>SELECT MAX(marks) FROM student</p>
         <p>)</p>
+        <p>
+          -- NB:Assume that, we assigned a value from table to a variable and
+          the result set of the SELECT statement returns more than one row. The
+          last row of the resultset will be assigned to the variable
+        </p>
 
         <p>--print variables</p>
         <p>PRINT @stdname</p>
@@ -1707,6 +1714,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
-  { que: `user defined functions(UDF)`, ans: `` },
+  { que: `user defined functions(UDF), if and else statement`, ans: `` },
+  { que: `data modelling in sql`, ans: `` },
   { que: `events (MySQL)`, ans: `` },
 ];
