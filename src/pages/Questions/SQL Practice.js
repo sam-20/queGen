@@ -1766,5 +1766,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
   { que: `user defined functions(UDF), if and else statement`, ans: `` },
   { que: `data modelling in sql`, ans: `` },
   { que: `creating, calling, using, deleting schemas`, ans: `` },
+  {
+    que: `creating, importing and exporting an sql script file that loads database and schema into ssms`,
+    ans: ``,
+  },
   { que: `events (MySQL)`, ans: `` },
 ];
