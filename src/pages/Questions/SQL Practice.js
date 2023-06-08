@@ -1780,5 +1780,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: `import an sql script file containing database data`,
     ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
   },
+  {
+    que: `import a csv/txt file of data into sql`,
+    ans: ``,
+  },
   { que: `events (MySQL)`, ans: `` },
 ];
