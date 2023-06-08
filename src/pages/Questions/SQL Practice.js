@@ -1712,7 +1712,26 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
-  { que: `triggers`, ans: `` },
+  {
+    que: (
+      <>
+        <p>
+          create a trigger that should add 1 to the age of any student being
+          newly added to the students table
+        </p>
+        <p>
+          <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
+          data from the 'triggers test' excel file
+        </p>
+      </>
+    ),
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>-- Trigger used is INSERT BEFORE</p>
+      </>
+    ),
+  },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF), if and else statement`, ans: `` },
   { que: `data modelling in sql`, ans: `` },
