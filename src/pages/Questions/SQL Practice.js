@@ -1639,6 +1639,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
+  { que: `variables`, asn: `` },
   { que: `user defined functions(UDF)`, ans: `` },
   { que: `events (MySQL)`, ans: `` },
 ];
