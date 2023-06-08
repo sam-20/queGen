@@ -1716,10 +1716,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: (
       <>
         <p>
-          create a trigger that should add 1 to the age of any student being
-          newly added to the students table
-        </p>
-        <p>
+          A newly registered student's data is being added to the 'Students'
+          table in the 'school' database. Create a trigger that should add 1 to
+          the student's age being entered into the 'Students' table
           <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
           data from the 'triggers test' excel file
         </p>
@@ -1729,6 +1728,27 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <p>**MS SQL SERVER**</p>
         <p>-- Trigger used is INSERT BEFORE</p>
+      </>
+    ),
+  },
+  {
+    que: (
+      <>
+        <p>
+          Once a newly registered student's data has been added to the
+          'students' table in the 'school' database, create a trigger that
+          should go to the 'StudentsAdmissionYears' table and add a new record
+          containing that student's index number and current year as the
+          admssion year
+          <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
+          data from the 'triggers test' excel file
+        </p>
+      </>
+    ),
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>-- Trigger used is INSERT AFTER</p>
       </>
     ),
   },
