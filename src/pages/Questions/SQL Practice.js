@@ -1767,7 +1767,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
   { que: `data modelling in sql`, ans: `` },
   { que: `creating, calling, using, deleting schemas`, ans: `` },
   {
-    que: `create/generate/export an sql script file from your database which contains data with or without schema objects`,
+    que: `create/generate/export an sql script file from your database which contains data with or without objects and schema`,
     ans: `NB: This approach creates a script in which the database is being created as well
     Right click your database -> Tasks -> Generate Scripts -> 
     Click 'Next' on the Generate and Publish Scripts Wizard Introduction screen ->
@@ -1775,6 +1775,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     Click on the 'Advanced' button ->
     Scroll down and select 'Schema and Data' from the 'Types of data to script' dropdown. Update the name and location you want the script saved too ->
     Review your choices and then click 'Next'`,
+  },
+  {
+    que: `import an sql script file containing database data`,
+    ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
   },
   { que: `events (MySQL)`, ans: `` },
 ];
