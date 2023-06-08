@@ -1672,8 +1672,16 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>DECLARE @lastName varchar(50) = 'Botwe'</p>
-        <p>SET @lastName = 'Asare-Botwe'</p>
+        <p>
+          DECLARE @firstName varchar(50) ='Samuel Asare', @lastName varchar(50)
+          = 'Botwe'
+        </p>
+        <p>
+          SELECT @firstName='Samuel', @lastName = 'Asare-Botwe' --SELECT can be
+          used in place of SET and unlike SET, it allows you to assign multiple
+          variables in one go
+        </p>
+        <p>PRINT @firstName</p>
         <p>PRINT @lastName</p>
       </>
     ),
@@ -1683,8 +1691,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: (
       <>
         <p>-- variables to store results</p>
-        <p>DECLARE @stdname varchar(20)</p>
-        <p>DECLARE @score int</p>
+        <p>DECLARE @stdname varchar(20), @score int</p>
 
         <p>-- query to save into variables</p>
         <p>SELECT @stdname=name, @score=marks FROM student</p>
