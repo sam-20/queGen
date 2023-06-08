@@ -337,18 +337,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: `insert records from one table A into another table B`,
     ans: (
       <>
-        <p>**MS SQL SERVER**</p>
+        <p>**MS SQL SERVER & MySQL**</p>
         <p>INSERT INTO student_males</p>
         <p>SELECT * FROM student WHERE gender = 'M'</p>
-        <p>----</p>
-        <p>**MySQL**</p>
-        <p>INSERT INTO tableB(id,name,continent,population)</p>
-        <p>SELECT id,name,continent,population FROM tableA</p>
-        <p>
-          You can include an optional WHERE clause and all the others in the
-          SELECT statement. However, NB: this practice is not recommended as it
-          only creates redundant data
-        </p>
       </>
     ),
   },
