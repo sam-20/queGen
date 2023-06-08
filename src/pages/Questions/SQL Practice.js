@@ -1678,6 +1678,26 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
+  {
+    que: `save the result of an sql query into a variable(s). Eg. store the name and score of the studen who scored the highest marks`,
+    ans: (
+      <>
+        <p>-- variables to store results</p>
+        <p>DECLARE @stdname varchar(20)</p>
+        <p>DECLARE @score int</p>
+
+        <p>-- query to save into variables</p>
+        <p>SELECT @stdname=name, @score=marks FROM student</p>
+        <p>WHERE marks = (</p>
+        <p>SELECT MAX(marks) FROM student</p>
+        <p>)</p>
+
+        <p>--print variables</p>
+        <p>PRINT @stdname</p>
+        <p>PRINT @score</p>
+      </>
+    ),
+  },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF)`, ans: `` },
