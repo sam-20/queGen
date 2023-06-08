@@ -1726,8 +1726,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
     ans: (
       <>
+        <p>
+          Whole reasoning behind task: Before you insert into this table, do
+          something with the data {"=>"} BEFORE INSERT trigger
+        </p>
         <p>**MS SQL SERVER**</p>
-        <p>-- Trigger used is INSERT BEFORE</p>
       </>
     ),
   },
@@ -1747,13 +1750,21 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
     ans: (
       <>
+        <p>
+          Whole reasoning behind task: After you insert into this table, do
+          something with the data {"=>"} AFTER INSERT trigger
+        </p>
         <p>**MS SQL SERVER**</p>
-        <p>-- Trigger used is INSERT AFTER</p>
       </>
     ),
+  },
+  {
+    que: ``,
+    ans: ``,
   },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF), if and else statement`, ans: `` },
   { que: `data modelling in sql`, ans: `` },
+  { que: `creating, calling, using, deleting schemas`, ans: `` },
   { que: `events (MySQL)`, ans: `` },
 ];
