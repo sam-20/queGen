@@ -1637,9 +1637,49 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
+  {
+    que: `declare an empty variable and print it`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DECLARE @localVariable datatype [ = value ] </p>
+        <p>eg.</p>
+        <p>DECLARE @age int</p>
+        <p>
+          PRINT @age --the query you execute to print the variable must also
+          contain the variable declaration
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `declare a variable with an initial value and print it`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DECLARE @localVariable datatype [ = value ] </p>
+        <p>eg.</p>
+        <p>DECLARE @gender varchar (10) = 'male'</p>
+        <p>
+          PRINT @gender --the query you execute to print the variable must also
+          contain the variable declaration
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `declare a variable with/without an initial value, then reassign the variable before printing it`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DECLARE @lastName varchar(50) = 'Botwe'</p>
+        <p>SET @lastName = 'Asare-Botwe'</p>
+        <p>PRINT @lastName</p>
+      </>
+    ),
+  },
   { que: `triggers`, ans: `` },
   { que: `cursors`, ans: `` },
-  { que: `variables`, asn: `` },
   { que: `user defined functions(UDF)`, ans: `` },
   { que: `events (MySQL)`, ans: `` },
 ];
