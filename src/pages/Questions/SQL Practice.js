@@ -1768,7 +1768,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
   { que: `creating, calling, using, deleting schemas`, ans: `` },
   {
     que: `create/generate/export an sql script file from your database which contains data with or without schema objects`,
-    ans: `right click your database -> Tasks -> Generate Scripts -> 
+    ans: `NB: This approach creates a script in which the database is being created as well
+    Right click your database -> Tasks -> Generate Scripts -> 
     Click 'Next' on the Generate and Publish Scripts Wizard Introduction screen ->
     Click 'Next' to select all the objects in the database to be scripted or select the specific ones you need and then click 'Next' ->
     Click on the 'Advanced' button ->
