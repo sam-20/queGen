@@ -1835,6 +1835,37 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `write a statement that should trigger an action before/after an update on a table. Eg. when a student's index no in the students table is updated, we want it to reflect in the admissionstable too`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>CREATE TRIGGER updateAdmissionTableIdxNum ON Students</p>
+        <p>AFTER UPDATE</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SET NOCOUNT ON</p>
+
+        <p>
+          --variable to store studentidxnumber and row ID from the user's update
+          query
+        </p>
+        <p>DECLARE @idxNoRetrieved INT, @IDRetrieved INT </p>
+
+        <p>-- copy the user query data to our variables</p>
+        <p>SELECT @idxNoRetrieved=IndexNo, @IDRetrieved=ID </p>
+        <p>
+          FROM INSERTED -- also in the UPDATE TRIGGER, our data is stored in the
+          INSERTED table
+        </p>
+
+        <p>-- then we update the idxNumber in the admissionsTable elsewhere</p>
+        <p>UPDATE StudentAdmissionYears</p>
+        <p>SET StdIdxNum= @idxNoRetrieved WHERE ID=@IDRetrieved</p>
+        <p>END</p>
+      </>
+    ),
+  },
+  {
     que: `delete a trigger`,
     ans: (
       <>
