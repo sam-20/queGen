@@ -1861,7 +1861,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
           SELECT @idxNoRetrieved=IndexNo FROM INSERTED -- we fetch it from the
           INSERTED table and save the index number
         </p>
-        <p>-- then we insert our stored index number to our new table</p>
+        <p>-- then we insert our stored index number to our other table</p>
         <p>INSERT INTO StudentAdmissionYears(StdIdxNum, AdmissionYear)</p>
         <p>VALUES</p>
         <p>(@idxNoRetrieved, 2022)</p>
@@ -1877,6 +1877,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>**MS SQL SERVER**</p>
         <p>CREATE TRIGGER updateAdmissionTableIdxNum ON Students</p>
         <p>AFTER UPDATE</p>
+        <p>
+          -- NB: INSTEAD OF UPDATE does not go on to update the user's query
+          record after the trigger has fired. AFTER UPDATE goes on to delete the
+          user's query record after trigger
+        </p>
         <p>AS</p>
         <p>BEGIN</p>
         <p>SET NOCOUNT ON</p>
