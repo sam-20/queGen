@@ -1835,7 +1835,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `write a statement that should trigger an action before/after an update on a table. Eg. when a student's index no in the students table is updated, we want it to reflect in the admissionstable too`,
+    que: `write a statement that should trigger an action before/after a record is updated in a table. 
+    Eg. when a student's index no in the students table is updated, we want it to reflect in the admissionstable too`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
@@ -1864,6 +1865,23 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>END</p>
       </>
     ),
+  },
+  {
+    que: `write a statement that should trigger an action before/after a record is deleted in a table. 
+    Eg. before/after a student's record is deleted from the students table, we want to save their data in the alumni table`,
+    ans: <></>,
+  },
+  {
+    que: `view the list of created triggers`,
+    ans: null,
+  },
+  {
+    que: `modify the syntax of a created trigger`,
+    ans: null,
+  },
+  {
+    que: `rename a trigger`,
+    ans: null,
   },
   {
     que: `delete a trigger`,
