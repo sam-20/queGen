@@ -1869,7 +1869,35 @@ Useful when database cannot be for eg. dropped due to active connections using i
   {
     que: `write a statement that should trigger an action before/after a record is deleted in a table. 
     Eg. before/after a student's record is deleted from the students table, we want to save their data in the alumni table`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>CREATE TRIGGER saveStdIntoAlumniTable ON Students</p>
+        <p>INSTEAD OF DELETE --before delete</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SET NOCOUNT ON</p>
+
+        <p>
+          --variable to store studentidxnumber and studentname from the user's
+          delete query
+        </p>
+        <p>DECLARE @idxNoRetrieved INT, @nameRetrieved INT</p>
+
+        <p>-- copy the user query data to our variables</p>
+        <p>SELECT @idxNoRetrieved=IndexNo, @nameRetrieved=FullName</p>
+        <p>
+          FROM DELETED -- unlike INSERT and UPDATE triggers, our data is stored
+          in the DELETED table
+        </p>
+
+        <p>-- then we insert the student's data into alumni table</p>
+        <p>INSERT INTO Alumni VALUES</p>
+        <p>(@idxNoRetrieved,@nameRetrieved)</p>
+
+        <p>END</p>
+      </>
+    ),
   },
   {
     que: `view the list of created triggers`,
