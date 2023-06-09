@@ -1875,9 +1875,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>CREATE TRIGGER saveStdIntoAlumniTable ON Students</p>
         <p>INSTEAD OF DELETE --before delete</p>
         <p>
-          -- INSTEAD OF DELETE does not go on to delete the user's query record
-          after the trigger has fired. AFTER DELETE goes on to delete the user's
-          query record after trigger
+          -- NB: INSTEAD OF DELETE does not go on to delete the user's query
+          record after the trigger has fired. AFTER DELETE goes on to delete the
+          user's query record after trigger
         </p>
         <p>AS</p>
         <p>BEGIN</p>
