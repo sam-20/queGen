@@ -1946,7 +1946,12 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `view the list of created triggers`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT * FROM sys.triggers</p>
+      </>
+    ),
   },
   {
     que: `modify the syntax of a created trigger`,
@@ -1954,7 +1959,15 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `rename a trigger`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>
+          sp_rename 'students_table_insert', 'studentsTrigger' --oldname,
+          newname
+        </p>
+      </>
+    ),
   },
   {
     que: `delete a trigger`,
