@@ -1733,7 +1733,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
           MySQL and the use of 'INSTEAD OF' trigger in MS SQL SERVER.
         </p>
         <p>
-          --NB: With MySQL's 'BEFORE' trigger option, it triggers an action
+          --NB: 1. With MySQL's 'BEFORE' trigger option, it triggers an action
           before we insert/update/delete on table. Eg. Here, it would delete the
           student's record in the alumni table before it inserts new record into
           the students table. With MS SQL SERVER's 'INSTEAD OF' trigger option,
@@ -1741,7 +1741,12 @@ Useful when database cannot be for eg. dropped due to active connections using i
           table. Eg. So here it would delete the student's record in the alumni
           table alright. But it would skip, thus it wouldnt go on to insert the
           new record into the student's table. Hence, the name INSTEAD OF. ie.
-          instead of insert/update/delete, fire this action instead
+          instead of insert/update/delete, fire this action instead.
+        </p>
+        <p>
+          NB:2. With the 'AFTER' trigger option, it works the same way in both
+          MS SQL and MySQL ie. it fires the action after the
+          insert/update/delete command has completed.
         </p>
         <p>**MS SQL SERVER**</p>
         <p>CREATE TRIGGER students_table_insert -- define a new trigger</p>
