@@ -1813,6 +1813,24 @@ Useful when database cannot be for eg. dropped due to active connections using i
           something with the data {"=>"} AFTER INSERT trigger
         </p>
         <p>**MS SQL SERVER**</p>
+        <p>CREATE TRIGGER addToAdmissionTable ON Students</p>
+        <p>AFTER INSERT</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SET NOCOUNT ON</p>
+        <p>
+          DECLARE @idxNoRetrieved INT --variable to store idx number that user
+          inserted into the students table
+        </p>
+        <p>
+          SELECT @idxNoRetrieved=IndexNo FROM INSERTED -- we fetch it from the
+          INSERTED table and save the index number
+        </p>
+        <p>-- then we insert our stored index number to our new table</p>
+        <p>INSERT INTO StudentAdmissionYears(StdIdxNum, AdmissionYear)</p>
+        <p>VALUES</p>
+        <p>(@idxNoRetrieved, 2022)</p>
+        <p>END</p>
       </>
     ),
   },
