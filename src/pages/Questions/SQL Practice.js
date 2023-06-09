@@ -1955,7 +1955,19 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `modify the syntax of a created trigger`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>ALTER TRIGGER studentsTrigger</p>
+        <p>ON Students</p>
+        <p>AFTER INSERT</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SET NOCOUNT ON</p>
+        <p>SELECT age FROM INSERTED</p>
+        <p>END</p>
+      </>
+    ),
   },
   {
     que: `rename a trigger`,
