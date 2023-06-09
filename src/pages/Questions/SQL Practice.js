@@ -1874,6 +1874,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>**MS SQL SERVER**</p>
         <p>CREATE TRIGGER saveStdIntoAlumniTable ON Students</p>
         <p>INSTEAD OF DELETE --before delete</p>
+        <p>
+          -- INSTEAD OF DELETE does not go on to delete the user's query record
+          after the trigger has fired. AFTER DELETE goes on to delete the user's
+          query record after trigger
+        </p>
         <p>AS</p>
         <p>BEGIN</p>
         <p>SET NOCOUNT ON</p>
@@ -1882,7 +1887,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
           --variable to store studentidxnumber and studentname from the user's
           delete query
         </p>
-        <p>DECLARE @idxNoRetrieved INT, @nameRetrieved INT</p>
+        <p>DECLARE @idxNoRetrieved INT, @nameRetrieved varchar(50)</p>
 
         <p>-- copy the user query data to our variables</p>
         <p>SELECT @idxNoRetrieved=IndexNo, @nameRetrieved=FullName</p>
