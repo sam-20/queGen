@@ -1717,8 +1717,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <p>
           A newly registered student's data is being added to the 'Students'
-          table in the 'school' database. Create a trigger that should add 1 to
-          the student's age being entered into the 'Students' table
+          table in the 'school' database. Create a trigger that should delete
+          the record of that student from the alumni table before
+          entering/registering the student in the Students table.
           <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
           data from the 'triggers test' excel file
         </p>
@@ -1728,8 +1729,19 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <p>
           Whole reasoning behind task: Before you insert into this table, do
-          something with the data {"=>"} BEFORE INSERT trigger(MySQL) {"=>"}
-          INSTEAD OF trigger(MS SQL SERVER)
+          something with the data {"=>"} the use of 'BEFORE INSERT' trigger in
+          MySQL and the use of 'INSTEAD OF' trigger in MS SQL SERVER.
+        </p>
+        <p>
+          --NB: With MySQL's 'BEFORE' trigger option, it triggers an action
+          before we insert/update/delete on table. Eg. Here, it would delete the
+          student's record in the alumni table before it inserts new record into
+          the students table. With MS SQL SERVER's 'INSTEAD OF' trigger option,
+          it triggers an action and then skips the insert/update/delete on the
+          table. Eg. So here it would delete the student's record in the alumni
+          table alright. But it would skip, thus it wouldnt go on to insert the
+          new record into the student's table. Hence, the name INSTEAD OF. ie.
+          instead of insert/update/delete, fire this action instead
         </p>
         <p>**MS SQL SERVER**</p>
         <p>CREATE TRIGGER students_table_insert -- define a new trigger</p>
@@ -1738,8 +1750,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
           this table
         </p>
         <p>
-          INSTEAD OF INSERT -- when should the trigger fire ie. before(instead
-          of) or after
+          INSTEAD OF INSERT -- what is the trigger option and command(ie.
+          INSTEAD OF/BEFORE/AFTER insert/update/delete)
         </p>
         <p>AS</p>
         <p>BEGIN -- what should the trigger do</p>
@@ -1749,20 +1761,38 @@ Useful when database cannot be for eg. dropped due to active connections using i
           silently
         </p>
         <p>
-          /** before inserting, we want to do something with the data being
-          inserted. Now how do we get access to that data which used for the
-          insert? It is stored by SQL in a table called INSERTED. We can verify
-          and see what's in the table by doing SELECT * FROM INSERTED. So for
-          instance, if we inserted values for IndexNo, FullName and Age into the
-          Students table, then knowing this data is stored in INSERTED, we can
+          /** instead of/before inserting, we want to do something with the data
+          being inserted. Now how do we get access to that data which used for
+          the insert? It is stored by SQL in a table called INSERTED. We can
+          verify and see what's in the table by doing SELECT * FROM INSERTED. So
+          for instance, if are inserting values for IndexNo, FullName, Age into
+          the Students table and knowing this data is stored in INSERTED, we can
           access the data in the trigger with [tablename].[columnName], ie. if
           we want the student FullName, we have it in INSERTED.FullName */
         </p>
-        -- before we insert, we want to do something with the data, ie. in this
-        example, we want to increase the age by 1 DECLARE @insertedAge int --
-        create variable to store the age which we'd increase by 1 SELECT age
-        FROM INSERTED -- fetch the value of Age from the INSERTED table into our
-        variable
+        <p>
+          -- instead of/before we insert, we want to do something with the data
+          thus delete that student's record in the alumni table and we need the
+          student's index number for that
+        </p>
+
+        <p>
+          -- create variable to store student's index number from the user's
+          insert query
+        </p>
+        <p>DECLARE @insertedStdIdxNumber int</p>
+
+        <p>
+          --we fetch the indexnumber inside the INSERTED table and copy to our
+          variable
+        </p>
+        <p>SELECT @insertedStdIdxNumber=IndexNo FROM INSERTED</p>
+
+        <p>
+          --now we go to our alumni table and use the retrieved index number to
+          delete the record
+        </p>
+        <p>DELETE FROM Alumni WHERE StdIdxNum = @insertedStdIdxNumber</p>
         <p>END</p>
       </>
     ),
@@ -1873,7 +1903,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <p>**MS SQL SERVER**</p>
         <p>CREATE TRIGGER saveStdIntoAlumniTable ON Students</p>
-        <p>INSTEAD OF DELETE --before delete</p>
+        <p>INSTEAD OF DELETE</p>
         <p>
           -- NB: INSTEAD OF DELETE does not go on to delete the user's query
           record after the trigger has fired. AFTER DELETE goes on to delete the
