@@ -1728,9 +1728,67 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <p>
           Whole reasoning behind task: Before you insert into this table, do
-          something with the data {"=>"} BEFORE INSERT trigger
+          something with the data {"=>"} BEFORE INSERT trigger(MySQL) {"=>"}
+          INSTEAD OF trigger(MS SQL SERVER)
         </p>
         <p>**MS SQL SERVER**</p>
+        <p>CREATE TRIGGER students_table_insert -- define a new trigger</p>
+        <p>
+          ON Students -- trigger should fire when something is being done to
+          this table
+        </p>
+        <p>
+          INSTEAD OF INSERT -- when should the trigger fire ie. before(instead
+          of) or after
+        </p>
+        <p>AS</p>
+        <p>BEGIN -- what should the trigger do</p>
+        <p>
+          SET NOCOUNT ON; -- Optional: this will prevent us from being noted
+          that a trigger query has executed. We wwant the trigger to run
+          silently
+        </p>
+        <p>
+          /** before inserting, we want to do something with the data being
+          inserted. Now how do we get access to that data which used for the
+          insert? It is stored by SQL in a table called INSERTED. We can verify
+          and see what's in the table by doing SELECT * FROM INSERTED. So for
+          instance, if we inserted values for IndexNo, FullName and Age into the
+          Students table, then knowing this data is stored in INSERTED, we can
+          access the data in the trigger with [tablename].[columnName], ie. if
+          we want the student FullName, we have it in INSERTED.FullName */
+        </p>
+        -- before we insert, we want to do something with the data, ie. in this
+        example, we want to increase the age by 1 DECLARE @insertedAge int --
+        create variable to store the age which we'd increase by 1 SELECT age
+        FROM INSERTED -- fetch the value of Age from the INSERTED table into our
+        variable
+        <p>END</p>
+      </>
+    ),
+  },
+  {
+    que: `When you manipulate your database, you can fire a trigger action that
+    should do something with the data you used or a trigger action that should just go 
+    and perform some other query or function elsewhere.
+    Create a simple trigger which should display the data that was being used incase you wanted to do 
+    something with that data`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>CREATE TRIGGER trigger1 ON Students</p>
+        <p>AFTER INSERT</p>
+        <p>AS</p>
+        <p>BEGIN</p>
+        <p>SELECT * FROM INSERTED</p>
+        <p>END</p>
+
+        <p>GO</p>
+
+        <p>--Testing trigger</p>
+        <p>INSERT INTO students (indexNo,fullname,age)</p>
+        <p>VALUES</p>
+        <p>(192,'Sam',13)</p>
       </>
     ),
   },
@@ -1759,8 +1817,13 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: ``,
-    ans: ``,
+    que: `delete a trigger`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>DROP TRIGGER trigger_name</p>
+      </>
+    ),
   },
   { que: `cursors`, ans: `` },
   { que: `user defined functions(UDF), if and else statement`, ans: `` },
@@ -1786,3 +1849,23 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   { que: `events (MySQL)`, ans: `` },
 ];
+
+/**
+ https://www.youtube.com/watch?v=m4RtVdluNPM
+ https://www.simplilearn.com/tutorials/sql-tutorial/schema-in-sql#:~:text=DevelopmentExplore%20Program-,What%20is%20Schema%20in%20SQL%3F,user%20who%20constructs%20the%20object.
+ https://learn.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16
+ https://www.youtube.com/watch?v=xmfyzqfvLCs
+ https://www.youtube.com/watch?v=clK8kPZi_4w
+ https://www.youtube.com/watch?v=YlBL1hNR8Pg
+ https://www.youtube.com/watch?v=i-a4bQoAg8E&list=PLIAyxElqji2SiORUKAhcs17ejUup7zgiJ&index=1
+ https://www.youtube.com/playlist?list=PLIAyxElqji2TQ1yXj4RxwdpE7B1KfGc9i
+ https://www.youtube.com/watch?v=t2R0-xcKw44
+ https://www.youtube.com/watch?v=ABwD8IYByfk
+ https://www.youtube.com/watch?v=Il6m6vuMZXs
+ https://www.w3schools.com/sql/sql_injection.asp
+ https://www.youtube.com/watch?v=wcaiKgQU6VE
+ https://www.youtube.com/watch?v=gm_FH8YNHtc
+ https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-cursor/
+ https://www.nuttyabouthosting.co.uk/knowledgebase/article/how-to-generate-database-scripts-with-data-in-sql-server
+ https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16s
+ */

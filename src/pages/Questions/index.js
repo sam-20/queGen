@@ -9,4 +9,5 @@ import { GI } from "./General interview incl Company questions";
 import { SQLI } from "./SQL Interview";
 import { OP } from "./Outlook common practices";
 import { NP } from "./NATO Phonetic Alphabet";
-export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP };
+import { PBI } from "./PowerBI Practice";
+export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP, PBI };
