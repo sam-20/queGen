@@ -13,6 +13,7 @@ import {
   OP,
   NP,
   PBI,
+  VBA,
 } from "../Questions";
 import { useState } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -69,6 +70,10 @@ function Layout() {
     {
       title: "Excel Choosing and Designing Charts",
       content: CC,
+    },
+    {
+      title: "Excel Macros",
+      content: VBA,
     },
     {
       title: "Power Query Practice",

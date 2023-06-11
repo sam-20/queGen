@@ -10,4 +10,5 @@ import { SQLI } from "./SQL Interview";
 import { OP } from "./Outlook common practices";
 import { NP } from "./NATO Phonetic Alphabet";
 import { PBI } from "./PowerBI Practice";
-export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP, PBI };
+import { VBA } from "./Excel VBA Macros";
+export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP, PBI, VBA };
