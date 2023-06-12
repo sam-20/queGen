@@ -48,7 +48,6 @@ export const VBA = [
     que: `access or perform an action on the currently selected cell`,
     ans: (
       <>
-        <p>using ActiveCell.Value. eg.</p>
         <p>
           MsgBox ActiveCell.Value 'access content of currently selected cell
         </p>
@@ -56,8 +55,24 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `access or perform an action on a non-selected or inactive cell`,
+    ans: (
+      <>
+        <p>[c7].Value = "this is cell c7"</p>
+        <p>MsgBox [j5].Value</p>
+      </>
+    ),
+  },
+  {
+    que: `access or perform an action on a non-selected or inactive cell range`,
+    ans: (
+      <>
+        <p>[e2:e6] = "row headers"</p>
+        <p>NB: you cannot msgbox a cell range</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
