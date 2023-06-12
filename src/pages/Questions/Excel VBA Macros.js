@@ -59,17 +59,35 @@ export const VBA = [
     que: `access or perform an action on a non-selected or inactive cell`,
     ans: (
       <>
+        <p>Cells(7, 3).Value = "this is cell c7" 'using [colIdx][rowIdx]</p>
         <p>[c7].Value = "this is cell c7"</p>
+        <p>Range("c7").Value = "this is cell c7" 'widely used</p>
         <p>MsgBox [j5].Value</p>
       </>
     ),
   },
   {
-    que: `access or perform an action on a non-selected or inactive cell range`,
+    que: `access or perform an action on any cell range. eg. g2 -> g30`,
     ans: (
       <>
-        <p>[e2:e6] = "row headers"</p>
+        <p>[c2:c7] = "row headers"</p>
+        <p>Range("c2:c7").Value = "row headers" 'widely used</p>
         <p>NB: you cannot msgbox a cell range</p>
+      </>
+    ),
+  },
+  {
+    que: `access or perform an action on an entire row/column`,
+    ans: null,
+  },
+  {
+    que: `copy content of one cell into another`,
+    ans: (
+      <>
+        <p>Range("d2").Value = 5</p>
+        <p>Range("c5").Value = Range("d2").Value </p>
+        <p>Range("f1:f5").Value = "male"</p>
+        <p>Range("g3:g4").Value = Range("f1:f5").Value</p>
       </>
     ),
   },
@@ -143,8 +161,7 @@ export const VBA = [
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  { que: `clear the worksheet`, ans: null },
   {
     que: `assign a macro function to a button`,
     ans: ``,
