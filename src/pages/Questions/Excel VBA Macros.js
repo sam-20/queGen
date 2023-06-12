@@ -1,8 +1,17 @@
 export const VBA = [
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  { que: `add new module for VBAProject`, ans: `menu bar -> Insert -> Module` },
+  {
+    que: `add new userform for VBAProject`,
+    ans: `menu bar -> Insert -> UserForm`,
+  },
+  {
+    que: `display the Immediate Window form`,
+    ans: `menu bar -> View -> Immediate Window`,
+  },
+  {
+    que: `display the list of available object properties and methods`,
+    ans: `menu bar -> View -> Object Browser`,
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
