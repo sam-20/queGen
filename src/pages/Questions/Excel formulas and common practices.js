@@ -418,42 +418,6 @@ export const EF = [
       </>
     ),
   },
-
-  /*****macros */
-  {
-    que: `enable macros in excel`,
-    ans: ``,
-  },
-  {
-    que: `create and run a simple macro. Eg. automate splitting of a column into 2`,
-    ans: ``,
-  },
-  {
-    que: `assign a macro function to a button`,
-    ans: ``,
-  },
-  {
-    que: `create and run a macro that works correctly 
-    even if the cell position of the data is changed the next time the macro is run.
-    eg. a macro was created for a table starting at A1. Now the table is placed at J2 and you
-    want to perform the macro on it`,
-    ans: ``,
-  },
-
-  /*********VBA */
-  {
-    que: `let each data entered be automatically fitted to the cell width`,
-    ans: (
-      <>
-        <p>
-          right click sheet name at bottom {"->"} select "View Code" {"->"}
-          change sheet type dropdown to "Worksheet" {"->"} Add the following
-          between the Private Sub and End Sub
-        </p>
-        <p>Cells.EntireColumn.AutoFit</p>
-      </>
-    ),
-  },
   {
     que: ``,
     ans: ``,
