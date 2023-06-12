@@ -81,7 +81,7 @@ export const VBA = [
     ans: null,
   },
   {
-    que: `copy content of one cell into another`,
+    que: `copy content of one cell/range into another cell/range`,
     ans: (
       <>
         <p>Range("d2").Value = 5</p>
@@ -91,7 +91,18 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `modify the font of your cell content`,
+    ans: (
+      <>
+        <p>syntax: cellReference.Font.[font_property] = [value/boolean]</p>
+        <p>eg</p>
+        <p>Range("b2:b5").Font.Name = "Arial"</p>
+        <p>Range("b2:b5").Font.Color = 65535</p>
+        <p>Range("b2:b5").Font.Bold = True</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
