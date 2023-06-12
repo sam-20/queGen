@@ -45,10 +45,14 @@ export const VBA = [
     ),
   },
   {
-    que: `perform an action on the currently selected cell`,
+    que: `access or perform an action on the currently selected cell`,
     ans: (
       <>
-        <p>ActiveCell.Value = 60</p>
+        <p>using ActiveCell.Value. eg.</p>
+        <p>
+          MsgBox ActiveCell.Value 'access content of currently selected cell
+        </p>
+        <p>ActiveCell.Value = 50 'assign value to currently selected cell</p>
       </>
     ),
   },
