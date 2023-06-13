@@ -537,6 +537,22 @@ export const VBA = [
     ),
   },
   {
+    que: `change the tab color of a worksheet`,
+    ans: (
+      <>
+        <p>'using one of the 12 standard colors</p>
+        <p>ActiveSheet.Tab.Color = vbRed</p>
+        <p>Sheets(3).Tab.Color = vbCyan</p>
+
+        <p>'using one of the 56 color indices</p>
+        <p>Sheets("first sheet").Tab.ColorIndex = 27</p>
+
+        <p>'resetting to default color</p>
+        <p>Sheets(3).Tab.Color = False</p>
+      </>
+    ),
+  },
+  {
     que: `delete a worksheet`,
     ans: (
       <>
@@ -546,7 +562,7 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  { que: `hide and unhide a worksheet`, ans: <></> },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
