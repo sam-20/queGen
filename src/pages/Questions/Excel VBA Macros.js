@@ -1,3 +1,4 @@
+//videos skipped: 11-Borders -> 18. merge unmerge
 export const VBA = [
   {
     que: `enable macros in excel`,
@@ -125,6 +126,38 @@ export const VBA = [
       </>
     ),
   },
+  {
+    que: `clear the contents of a cell/range`,
+    ans: (
+      <>
+        <p>Range("d3:d7").Clear</p>
+      </>
+    ),
+  },
+  {
+    que: `clear the formatting of a cell/range`,
+    ans: (
+      <>
+        <p>Range("d3:d7").ClearFormats</p>
+      </>
+    ),
+  },
+  {
+    que: `remove the comments from a cell/range`,
+    ans: (
+      <>
+        <p>Range("d3:d7").ClearComments</p>
+      </>
+    ),
+  },
+  {
+    que: `remove the hyperlinks of a cell/range`,
+    ans: (
+      <>
+        <p>Range("d3:d7").ClearHyperlinks</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
@@ -188,11 +221,7 @@ export const VBA = [
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  { que: `create a table with headers from a given range`, ans: null },
   { que: `clear the worksheet`, ans: null },
   {
     que: `assign a macro function to a button`,
