@@ -312,7 +312,20 @@ export const VBA = [
       </>
     ),
   },
-  { que: `hide and unhide multiple rows/cols`, ans: null },
+  {
+    que: `hide and unhide multiple rows/cols`,
+    ans: (
+      <>
+        <p>'hiding and unhiding multiple columns</p>
+        <p>Range("c:e").Columns.Hidden = True</p>
+        <p>Range("c:e").Columns.Hidden = False</p>
+
+        <p>'hiding and unhiding multiple rows</p>
+        <p>Range("4:6").Rows.Hidden = True</p>
+        <p>Range("4:6").Rows.Hidden = False</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
