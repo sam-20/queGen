@@ -220,9 +220,15 @@ export const VBA = [
     que: `delete an entire column/row`,
     ans: (
       <>
-        <p>eg.</p>
+        <p>'deleting column B'</p>
         <p>Range("b:b").Delete</p>
-        <p>Range("b5").EntireRow.Delete</p>
+        <p>'or</p>
+        <p>Range("b3").EntireColumn.Delete</p>
+
+        <p>'deleting row 4</p>
+        <p>Range("4:4").Delete</p>
+        <p>'or</p>
+        <p>Range("e4").EntireRow.Delete</p>
       </>
     ),
   },
@@ -231,14 +237,14 @@ export const VBA = [
     ans: (
       <>
         <p>'inserting a new column at B</p>
-        <p>Range("b3").EntireColumn.Insert</p>
-        <p>'or</p>
         <p>Range("b:b").Insert</p>
+        <p>'or</p>
+        <p>Range("b3").EntireColumn.Insert</p>
 
         <p>'inserting a new role at 4</p>
-        <p>Range("e4").EntireRow.Insert</p>
-        <p>'or</p>
         <p>Range("4:4").Insert</p>
+        <p>'or</p>
+        <p>Range("e4").EntireRow.Insert</p>
       </>
     ),
   },
