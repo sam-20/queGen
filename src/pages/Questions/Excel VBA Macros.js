@@ -361,19 +361,23 @@ export const VBA = [
       <>
         <p>'adding sheets before and after a specific worksheet</p>
 
-        <p>Sheets.Add before:=Sheets(2) 'adding before/after a sheet number</p>
+        <p>
+          Sheets.Add before:=Sheets(2) 'adding before/after a sheet position
+          number
+        </p>
         <p>
           Sheets.Add after:=Sheets("students_data") 'adding before/after a sheet
           name
         </p>
         <p>
           Sheets.Add(after:=Sheets(2)).Name = "students_data" 'adding new sheet
-          with name at a specific position
+          with name before/after a sheet position number
         </p>
 
         <p>'or</p>
         <p>
-          Worksheets.Add before:=Sheets(2) 'adding before/after a sheet number
+          Worksheets.Add before:=Sheets(2) 'adding before/after a sheet position
+          number
         </p>
         <p>
           Worksheets.Add after:=Sheets("students_data") 'adding before/after a
@@ -381,8 +385,21 @@ export const VBA = [
         </p>
         <p>
           Worksheets.Add(after:=Sheets("students_data")).Name = "students_data2"
-          'adding new sheet with name at a specific position
+          'adding new sheet with name before/after a sheet position number
         </p>
+      </>
+    ),
+  },
+  {
+    que: `rename a worksheet`,
+    ans: (
+      <>
+        <p>Sheets(2).Name = "studentsA" 'using sheet position number</p>
+        <p>Sheets("students_data2").Name = "studentsB" 'using sheet name</p>
+
+        <p>'or</p>
+        <p>Worksheets(2).Name = "studentsA" 'using sheet position number</p>
+        <p>Worksheets("students_data2").Name = "studentsB" 'using sheet name</p>
       </>
     ),
   },
