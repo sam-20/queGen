@@ -46,6 +46,24 @@ export const VBA = [
     ),
   },
   {
+    que: `make any cell/range the focus/active/selected cell/range`,
+    ans: (
+      <>
+        <p>'using Select method</p>
+        <p>Range("c3").Select 'cell</p>
+        <p>Range("c3:d5").Select 'range/table</p>
+        <p>Range("c:c").Select 'entire column</p>
+        <p>Range("3:3").Select 'entire row</p>
+
+        <p>'using Activate methodRange("c3").Select 'cell</p>
+        <p>Range("c3").Activate 'cell</p>
+        <p>Range("c3:d5").Activate 'range/table</p>
+        <p>Range("c:c").Activate 'entire column</p>
+        <p>Range("3:3").Activate 'entire row</p>
+      </>
+    ),
+  },
+  {
     que: `access or perform an action on the currently selected cell`,
     ans: (
       <>
@@ -280,8 +298,21 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `hide and unhide a row/col`,
+    ans: (
+      <>
+        <p>'hiding and unhiding a column</p>
+        <p>Range("c:c").Columns.Hidden = True</p>
+        <p>Range("c:c").Columns.Hidden = False</p>
+
+        <p>'hiding and unhiding a row</p>
+        <p>Range("4:4").Rows.Hidden = True</p>
+        <p>Range("4:4").Rows.Hidden = False</p>
+      </>
+    ),
+  },
+  { que: `hide and unhide multiple rows/cols`, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
