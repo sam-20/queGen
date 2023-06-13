@@ -433,7 +433,19 @@ export const VBA = [
   },
   {
     que: `create a worksheet at the beginning of all of the worksheets and at the end of all the worksheets`,
-    ans: null,
+    ans: (
+      <>
+        <p>'creating sheet at first position</p>
+        <p>Sheets.Add(before:=Sheets(1)).Name = "first sheet"</p>
+
+        <p>'creating sheet at last position</p>
+        <p>
+          Dim totalSheets As Integer 'variable to store total number of sheets
+        </p>
+        <p>totalSheets = ThisWorkbook.Sheets.Count</p>
+        <p>Sheets.Add(after:=Sheets(totalSheets)).Name = "last sheet"</p>
+      </>
+    ),
   },
   {
     que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
