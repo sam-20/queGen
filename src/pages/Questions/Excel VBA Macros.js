@@ -391,9 +391,14 @@ export const VBA = [
     ),
   },
   {
+    que: `retrieve the position of a worksheet whose name is given`,
+    ans: null,
+  },
+  {
     que: `rename a worksheet`,
     ans: (
       <>
+        <p>ActiveSheet.Name = "Sales report" 'using the current sheet</p>
         <p>Sheets(2).Name = "studentsA" 'using sheet position number</p>
         <p>Sheets("students_data2").Name = "studentsB" 'using sheet name</p>
         <p>'or</p>
@@ -449,14 +454,27 @@ export const VBA = [
   },
   {
     que: `make a copy or duplicate of a worksheet`,
-    ans: <></>,
+    ans: <> </>,
   },
   {
     que: `copy one sheet's content into another sheet ie. copy sheet A data into sheet B`,
     ans: null,
   },
   {
-    que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
+    que: `reference or perform an action on the active worksheet`,
+    ans: (
+      <>
+        <p>ActiveSheet.Name = "pivot table" 'renaming active sheet</p>
+        <p>ActiveSheet.Delete 'deleting the active/selected sheet</p>
+        <p>
+          Sheets.Add after:=ActiveSheet 'adding new sheet before/after active
+          sheet
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `set another sheet to be the active worksheet`,
     ans: null,
   },
   {
@@ -476,7 +494,16 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `delete a worksheet`,
+    ans: (
+      <>
+        <p>Sheets(2).Delete 'deleting a sheet at a position number</p>
+        <p>Sheets("studentsA").Delete 'deleting a sheet with a name</p>
+        <p>ActiveSheet.Delete 'deleting the active/selected sheet</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
