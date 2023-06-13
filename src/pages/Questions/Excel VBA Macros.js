@@ -103,7 +103,28 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `customize multiple properties of the same item/object. eg. add customizations to a cell's font`,
+    ans: (
+      <>
+        <p>
+          'With block is used when you want to assign multiple methods for the
+          same object. Saving you lines of code
+        </p>
+        <p>'Assuming we wanted to make changes to our font, we would do</p>
+        <p>Range("d3").Font.Name = "Arial"</p>
+        <p>Range("d3").Font.Color = 65535</p>
+        <p>Range("d3").Font.Bold = True</p>
+
+        <p>'Simplifying with the With block becomes</p>
+        <p>With Range("d3").Font</p>
+        <p>.Name = "Calibri"</p>
+        <p>.Color = 43254</p>
+        <p>.Bold = False</p>
+        <p>End With</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
