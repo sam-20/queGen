@@ -217,7 +217,7 @@ export const VBA = [
     ),
   },
   {
-    que: `delete an entire column/row`,
+    que: `delete a single entire column/row Eg. delete column B or row 4`,
     ans: (
       <>
         <p>'deleting column B'</p>
@@ -229,6 +229,22 @@ export const VBA = [
         <p>Range("4:4").Delete</p>
         <p>'or</p>
         <p>Range("e4").EntireRow.Delete</p>
+      </>
+    ),
+  },
+  {
+    que: `delete multiple entire columns/rows eg. delete column B to D or row 4 to 6`,
+    ans: (
+      <>
+        <p>'deleting column B to D</p>
+        <p>Range("b:d").Delete</p>
+        <p>'or</p>
+        <p>Range("b3:d2").EntireColumn.Delete</p>
+
+        <p>'deleting row 4 to 6</p>
+        <p>Range("4:6").Delete</p>
+        <p>'or</p>
+        <p>Range("c4:d6").EntireRow.Delete</p>
       </>
     ),
   },
