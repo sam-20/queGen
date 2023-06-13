@@ -408,6 +408,25 @@ export const VBA = [
     ),
   },
   {
+    que: `move sheet from one position to another`,
+    ans: (
+      <>
+        <p>
+          Sheets(2).Move before:=Sheets("first sheet") 'move sheet at position
+          number 2 to before sheet with name "first sheet"
+        </p>
+        <p>
+          Sheets("studentsB").Move after:=ActiveSheet 'move sheet with name
+          "studentsB" to after the active worksheet
+        </p>
+        <p>
+          ActiveSheet.Move before:=Sheets(1) 'move the active sheet to before
+          the sheet at position number 1
+        </p>
+      </>
+    ),
+  },
+  {
     que: `what is the total number of worksheets`,
     ans: (
       <>
