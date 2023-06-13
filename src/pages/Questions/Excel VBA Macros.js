@@ -79,7 +79,21 @@ export const VBA = [
   },
   {
     que: `access or perform an action on an entire row/column`,
-    ans: null,
+    ans: (
+      <>
+        <p>syntax: [cellReference].EntireColumn/EntireRow</p>
+        <p>eg</p>
+        <p>Range("e1").EntireColumn = 5 'assign 5 to the entire column</p>
+        <p>
+          Range("e1").EntireColumn.Clear 'clear content of the entire column
+        </p>
+        <p>Range("e1").EntireColumn.Delete 'delete the entire column</p>
+
+        <p>Range("b2").EntireRow = 5</p>
+        <p>Range("b2").EntireRow.Clear</p>
+        <p>Range("b2").EntireRow.Delete</p>
+      </>
+    ),
   },
   {
     que: `copy content of one cell/range into another cell/range`,
@@ -96,7 +110,7 @@ export const VBA = [
     que: `modify the font of your cell content`,
     ans: (
       <>
-        <p>syntax: cellReference.Font.[font_property] = [value/boolean]</p>
+        <p>syntax: [cellReference].Font.[font_property] = [value/boolean]</p>
         <p>eg</p>
         <p>Range("b2:b5").Font.Name = "Arial"</p>
         <p>Range("b2:b5").Font.Color = 65535</p>
@@ -220,7 +234,7 @@ export const VBA = [
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
+  { que: `clear everything not inside given range/cell`, ans: null },
   { que: `create a table with headers from a given range`, ans: null },
   { que: `clear the worksheet`, ans: null },
   {
