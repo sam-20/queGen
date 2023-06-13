@@ -264,7 +264,22 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `insert multiple new rows/columns at any position eg. insert 2 new columns at B or 2 news rows at 4 `,
+    ans: (
+      <>
+        <p>'inserting 2 new columns at column B</p>
+        <p>Range("b:c").Insert 'NB: counting from b to c is 2 cols</p>
+        <p>'or</p>
+        <p>Range("b3:c2").EntireColumn.Insert</p>
+
+        <p>'inserting 2 new rows at 4</p>
+        <p>Range("4:5").Insert 'NB: counting from 4 to 5 is 2 rows</p>
+        <p>'or</p>
+        <p>Range("c4:d5").EntireRow.Insert</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
