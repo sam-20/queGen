@@ -448,6 +448,14 @@ export const VBA = [
     ),
   },
   {
+    que: `make a copy or duplicate of a worksheet`,
+    ans: <></>,
+  },
+  {
+    que: `copy one sheet's content into another sheet ie. copy sheet A data into sheet B`,
+    ans: null,
+  },
+  {
     que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
     ans: null,
   },
