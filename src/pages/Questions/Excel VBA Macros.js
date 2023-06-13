@@ -454,7 +454,30 @@ export const VBA = [
   },
   {
     que: `make a copy or duplicate of a worksheet`,
-    ans: <> </>,
+    ans: (
+      <>
+        <p>Sheets(2).Copy 'make duplicate of sheet at position number</p>
+        <p>Sheets("studentsB").Copy 'make duplicate of sheet with name</p>
+        <p>
+          'NB: the commands above dont specify whether the copy should be
+          created before or after another sheet. Therefore it creates the copy
+          in a new workbook
+        </p>
+
+        <p>
+          'The commands below create copy in the same workbook since we
+          specified which place to create it
+        </p>
+        <p>
+          Sheets(2).Copy after:=ActiveSheet 'make duplicate and place after
+          active sheet
+        </p>
+        <p>
+          Sheets("studentsB").Copy before:=Sheets("first sheet") 'make duplicate
+          and place before sheet with name
+        </p>
+      </>
+    ),
   },
   {
     que: `copy one sheet's content into another sheet ie. copy sheet A data into sheet B`,
