@@ -328,13 +328,16 @@ export const VBA = [
   },
   {
     que: `by default, if you run a macro code, it executes the instructions in the current active worksheet. 
-  How would you reference an inactive worksheet or rxecute a code in an inactive worksheet. Eg. create a date column in sheet 2`,
+  How would you reference an inactive or other specific worksheet and execute a code in that inactive/specific worksheet. Eg. create a date column in sheet 2 or the tutorials sheet`,
     ans: (
       <>
-        <p>'syntax: prefix the command with Sheets[sheet_number]</p>
+        <p>'syntax: prefix the command with Sheets[sheet_number/sheet_name]</p>
         <p>'eg</p>
         <p>Sheets(2).Range("a:a").Value = "13/06/2023"</p>
         <p>Sheets(2).Range("a1").Value = "Date"</p>
+        <p>'or</p>
+        <p>Sheets("students_data").Range("a:a").Value = "13/06/2023"</p>
+        <p>Sheets("students_data").Range("a1").Value = "Date"</p>
       </>
     ),
   },
