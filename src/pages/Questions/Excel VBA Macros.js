@@ -328,11 +328,58 @@ export const VBA = [
   },
   {
     que: `create a new worksheet`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>Sheets.Add</p>
+        <p>'or</p>
+        <p>Worksheets.Add</p>
+        <p>
+          'NB: Both methods add a sheet before the currently selected/active
+          worksheet
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `create a new worksheet with a name`,
+    ans: (
+      <>
+        <p>Sheets.Add.Name = "students_data"</p>
+        <p>'or</p>
+        <p>Worksheets.Add.Name = "students_data"</p>
+        <p>
+          'NB: Both methods add a sheet before the currently selected/active
+          worksheet
+        </p>
+        <p>'NB: every worksheet is allowed to have a unique name</p>
+      </>
+    ),
+  },
+  {
+    que: `create a new worksheet at a specific position. ie. before or after another worksheet`,
+    ans: (
+      <>
+        <p>'adding sheets before and after a specific worksheet</p>
+        <p>Sheets.Add before:=Sheets(2) 'adding before/after a sheet number</p>
+        <p>
+          Sheets.Add after:=Sheets("students_data") 'adding before/after a sheet
+          name
+        </p>
+
+        <p>'or</p>
+        <p>
+          Worksheets.Add before:=Sheets(2) 'adding before/after a sheet number
+        </p>
+        <p>
+          Worksheets.Add after:=Sheets("students_data") 'adding before/after a
+          sheet name
+        </p>
+      </>
+    ),
   },
   {
     que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
-    ans: <></>,
+    ans: null,
   },
   {
     que: `by default, if you run a macro code, it executes the instructions in the current active worksheet. 
