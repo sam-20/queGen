@@ -396,10 +396,38 @@ export const VBA = [
       <>
         <p>Sheets(2).Name = "studentsA" 'using sheet position number</p>
         <p>Sheets("students_data2").Name = "studentsB" 'using sheet name</p>
-
         <p>'or</p>
         <p>Worksheets(2).Name = "studentsA" 'using sheet position number</p>
         <p>Worksheets("students_data2").Name = "studentsB" 'using sheet name</p>
+      </>
+    ),
+  },
+  {
+    que: `what is the total number of worksheets`,
+    ans: (
+      <>
+        <p>Range("a1").Value = "Total worksheets"</p>
+
+        <p>Range("b1").Value = ThisWorkbook.Sheets.Count</p>
+        <p>'or</p>
+        <p>Range("c1").Value = ThisWorkbook.Worksheets.Count</p>
+        <p>'or</p>
+        <p>
+          Range("d1").Value = Workbooks("Book1.xlsm").Sheets.Count 'using the
+          workbook's name. NB: you can only use the name for the active workbook
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `retrieve all the worksheet names`,
+    ans: (
+      <>
+        <p>'this is an example using a for loop</p>
+        <p>Dim i As Integer</p>
+        <p>For i = 1 To ThisWorkbook.Sheets.Count</p>
+        <p>MsgBox Sheets(i).Name</p>
+        <p>Next</p>
       </>
     ),
   },
