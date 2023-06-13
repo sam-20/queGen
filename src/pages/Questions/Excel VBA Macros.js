@@ -327,8 +327,18 @@ export const VBA = [
     ),
   },
   {
+    que: `create a new worksheet`,
+    ans: <></>,
+  },
+  {
+    que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
+    ans: <></>,
+  },
+  {
     que: `by default, if you run a macro code, it executes the instructions in the current active worksheet. 
-  How would you reference an inactive or other specific worksheet and execute a code in that inactive/specific worksheet. Eg. create a date column in sheet 2 or the tutorials sheet`,
+  How would you reference an inactive/specific worksheet and execute a code in that inactive/specific worksheet
+  without switching to the worksheet to make it selected or active. 
+  Eg. create a date column in sheet 2 or the tutorials sheet witthout selecting it as the active sheet`,
     ans: (
       <>
         <p>'syntax: prefix the command with Sheets[sheet_number/sheet_name]</p>
