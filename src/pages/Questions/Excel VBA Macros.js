@@ -360,10 +360,15 @@ export const VBA = [
     ans: (
       <>
         <p>'adding sheets before and after a specific worksheet</p>
+
         <p>Sheets.Add before:=Sheets(2) 'adding before/after a sheet number</p>
         <p>
           Sheets.Add after:=Sheets("students_data") 'adding before/after a sheet
           name
+        </p>
+        <p>
+          Sheets.Add(after:=Sheets(2)).Name = "students_data" 'adding new sheet
+          with name at a specific position
         </p>
 
         <p>'or</p>
@@ -374,8 +379,16 @@ export const VBA = [
           Worksheets.Add after:=Sheets("students_data") 'adding before/after a
           sheet name
         </p>
+        <p>
+          Worksheets.Add(after:=Sheets("students_data")).Name = "students_data2"
+          'adding new sheet with name at a specific position
+        </p>
       </>
     ),
+  },
+  {
+    que: `create a worksheet at the beginning of all of the worksheets and at the end of all the worksheets`,
+    ans: null,
   },
   {
     que: `switch focus to a specific worksheet. ie. make another the currently active/selected worksheet`,
