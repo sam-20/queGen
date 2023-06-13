@@ -220,16 +220,28 @@ export const VBA = [
     que: `delete an entire column/row`,
     ans: (
       <>
-        <p>
-          syntax [reference to any cell in the
-          row/column].[EntireColumn/EntireRow].Delete
-        </p>
         <p>eg.</p>
-        <p>Range("e1").EntireColumn.Delete</p>
+        <p>Range("b:b").Delete</p>
+        <p>Range("b5").EntireRow.Delete</p>
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `insert a new row/column at any position`,
+    ans: (
+      <>
+        <p>'inserting a new column at B</p>
+        <p>Range("b3").EntireColumn.Insert</p>
+        <p>'or</p>
+        <p>Range("b:b").Insert</p>
+
+        <p>'inserting a new role at 4</p>
+        <p>Range("e4").EntireRow.Insert</p>
+        <p>'or</p>
+        <p>Range("4:4").Insert</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
