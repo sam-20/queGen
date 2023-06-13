@@ -81,23 +81,49 @@ export const VBA = [
     que: `access or perform an action on an entire row/column`,
     ans: (
       <>
-        <p>
-          syntax: [reference to any cell in the
-          row/column].[EntireColumn/EntireRow]
-        </p>
-        <p>eg</p>
-        <p>Range("e1").EntireColumn = 5 'assign 5 to the entire column</p>
-        <p>
-          Range("e1").EntireColumn.Clear 'clear content of the entire column
-        </p>
-        <p>Range("e1").EntireColumn.Delete 'delete the entire column</p>
+        <p>'you can refer to an entire column either of the following</p>
+        <p>' 1. Range(columnLetter:columnLetter) eg.</p>
+        <p>' Range("b:b")</p>
+        <p>'2.[reference to any cell in the column].EntireColumn eg.</p>
+        <p>' Range("b2").EntireColumn</p>
 
+        <p>'eg.</p>
+        <p>Range("b:b") = 5</p>
+        <p>Range("b:b").Font.Color = 45244</p>
+        <p>Range("b:b").ClearFormats</p>
+        <p>Range("b:b").ClearHyperlinks</p>
+        <p>Range("b:b").Clear</p>
+        <p>Range("b:b").Delete</p>
+
+        <p>'or</p>
+        <p>Range("b2").EntireColumn = 5</p>
+        <p>Range("b3").EntireColumn.Font.Color = 45244</p>
+        <p>Range("b3").EntireColumn.ClearFormats</p>
+        <p>Range("b3").EntireColumn.ClearHyperlinks</p>
+        <p>Range("b7").EntireColumn.Clear</p>
+        <p>Range("b5").EntireColumn.Delete</p>
+
+        <p>'you can refer to an entire row either of the following</p>
+        <p>' 1. Range(rowNumber:rowNumber) eg.</p>
+        <p>' Range("2:2")</p>
+        <p>'2.[reference to any cell in the row].EntireRow eg.</p>
+        <p>' Range("b2").EntireRow</p>
+
+        <p>'eg.</p>
+        <p>Range("2:2") = 5</p>
+        <p>Range("2:2").Font.Color = 45244</p>
+        <p>Range("2:2").ClearFormats</p>
+        <p>Range("2:2").ClearHyperlinks</p>
+        <p>Range("2:2").Clear</p>
+        <p>Range("2:2").Delete</p>
+
+        <p>'or</p>
         <p>Range("b2").EntireRow = 5</p>
-        <p>Range("b2").EntireRow.Clear</p>
-        <p>Range("b2").EntireRow.ClearFormats</p>
-        <p>Range("b2").EntireRow.ClearComments</p>
-        <p>Range("b2").EntireRow.ClearHyperlinks</p>
-        <p>Range("b2").EntireRow.Delete</p>
+        <p>Range("b3").EntireRow.Font.Color = 45244</p>
+        <p>Range("b3").EntireRow.ClearFormats</p>
+        <p>Range("b3").EntireRow.ClearHyperlinks</p>
+        <p>Range("b7").EntireRow.Clear</p>
+        <p>Range("b5").EntireRow.Delete</p>
       </>
     ),
   },
