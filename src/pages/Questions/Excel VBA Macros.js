@@ -81,7 +81,10 @@ export const VBA = [
     que: `access or perform an action on an entire row/column`,
     ans: (
       <>
-        <p>syntax: [cellReference].EntireColumn/EntireRow</p>
+        <p>
+          syntax: [reference to any cell in the
+          row/column].[EntireColumn/EntireRow]
+        </p>
         <p>eg</p>
         <p>Range("e1").EntireColumn = 5 'assign 5 to the entire column</p>
         <p>
@@ -91,6 +94,9 @@ export const VBA = [
 
         <p>Range("b2").EntireRow = 5</p>
         <p>Range("b2").EntireRow.Clear</p>
+        <p>Range("b2").EntireRow.ClearFormats</p>
+        <p>Range("b2").EntireRow.ClearComments</p>
+        <p>Range("b2").EntireRow.ClearHyperlinks</p>
         <p>Range("b2").EntireRow.Delete</p>
       </>
     ),
@@ -172,8 +178,31 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `delete a cell/range`,
+    ans: (
+      <>
+        <p>'deleting one cell shifts cells up</p>
+        <p>Range("a4").Delete</p>
+
+        <p>'deleting a range shifts cells to the left</p>
+        <p>Range("a3:a4").Delete</p>
+      </>
+    ),
+  },
+  {
+    que: `delete an entire column/row`,
+    ans: (
+      <>
+        <p>
+          syntax [reference to any cell in the
+          row/column].[EntireColumn/EntireRow].Delete
+        </p>
+        <p>eg.</p>
+        <p>Range("e1").EntireColumn.Delete</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
