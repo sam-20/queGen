@@ -1,4 +1,4 @@
-//videos skipped: 11-Borders -> 18. merge unmerge
+//videos skipped: 11-18, 23-24
 export const VBA = [
   {
     que: `enable macros in excel`,
