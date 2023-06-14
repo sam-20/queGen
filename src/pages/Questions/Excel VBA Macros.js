@@ -517,7 +517,13 @@ export const VBA = [
   },
   {
     que: `set another sheet to be the active worksheet`,
-    ans: null,
+    ans: (
+      <>
+        <p>'using activate or select</p>
+        <p>Sheets("students_data").Activate</p>
+        <p>Sheets(1).Select</p>
+      </>
+    ),
   },
   {
     que: `by default, if you run a macro code, it executes the instructions in the current active worksheet. 
@@ -583,7 +589,7 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  { que: `create a workbook`, ans: <></> },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
