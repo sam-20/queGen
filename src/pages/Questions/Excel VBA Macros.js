@@ -609,8 +609,8 @@ export const VBA = [
           active/ has the cell selected inside
         </p>
         <p>
-          MsgBox (ThisWorkbook.Name) 'thisworkbook is the workbook ie. project
-          to which your code is being written for
+          MsgBox (ThisWorkbook.Name) 'thisworkbook is the workbook/project in
+          which the macro code is being written insidde
         </p>
       </>
     ),
