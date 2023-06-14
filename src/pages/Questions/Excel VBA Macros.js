@@ -562,7 +562,16 @@ export const VBA = [
       </>
     ),
   },
-  { que: `hide and unhide a worksheet`, ans: <></> },
+  {
+    que: `hide and unhide a worksheet`,
+    ans: (
+      <>
+        <p>Sheets("students_data").Visible = False</p>
+        <p>Sheets(2).Visible = True</p>
+        <p>ActiveSheet.Visible = False</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
