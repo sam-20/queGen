@@ -600,7 +600,21 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `retrieve the names of the open workbooks`,
+    ans: (
+      <>
+        <p>
+          MsgBox (ActiveWorkbook.Name) 'activeworkbook is the workbook which is
+          active/ has the cell selected inside
+        </p>
+        <p>
+          MsgBox (ThisWorkbook.Name) 'thisworkbook is the workbook ie. project
+          to which your code is being written for
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
