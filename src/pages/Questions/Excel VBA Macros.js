@@ -589,7 +589,17 @@ export const VBA = [
       </>
     ),
   },
-  { que: `create a workbook`, ans: <></> },
+  {
+    que: `create a workbook with and without naming the file`,
+    ans: (
+      <>
+        <p>Workbooks.Add 'without naming file</p>
+        <p>
+          Workbooks.Add.SaveAs Filename:="C:\Users\Samuel\Desktop\test 1.xlsx"
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
