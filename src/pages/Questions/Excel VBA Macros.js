@@ -572,7 +572,17 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `password protect and unprotect worksheet`,
+    ans: (
+      <>
+        <p>Sheets("students_data").Protect Password:=123</p>
+        <p>ActiveSheet.Protect Password:="alaska"</p>
+        <p>Sheets("students_data").Unprotect Password:=123</p>
+        <p>ActiveSheet.Unprotect Password:="alaska"</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },

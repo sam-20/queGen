@@ -419,12 +419,12 @@ export const EF = [
     ),
   },
   {
-    que: ``,
-    ans: ``,
+    que: `hide and unhide worksheet`,
+    ans: `right click sheet tab at bottom -> Hide/Unhide`,
   },
   {
-    que: ``,
-    ans: ``,
+    que: `password protect worksheet`,
+    ans: `right click sheet tab at bottom -> Protect Sheet`,
   },
   {
     que: ``,
