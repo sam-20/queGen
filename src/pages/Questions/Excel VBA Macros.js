@@ -616,24 +616,22 @@ export const VBA = [
     ),
   },
   {
-    que: `reference or perform an action in the sheet of an opened workbook which is currently not the active one`,
-    ans: (
-      <>
-        <p>
-          Workbooks("sales_report2.xlsx").Sheets(1).Range("a2:c5") = "music"
-        </p>
-        <p>
-          Workbooks("test 1.xlsx").Sheets("classA").Range("a2:c5") = "music"
-        </p>
-      </>
-    ),
-  },
-  {
     que: `open a closed workbook`,
     ans: (
       <>
         <p>
           Workbooks.Open Filename:="C:\Users\Samuel\Desktop\sales data.xlsx"
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `reference or perform an action in the sheet of an opened workbook which is currently not the active one`,
+    ans: (
+      <>
+        <p>Workbooks("sales data.xlsx").Sheets(1).Range("a2:c5") = "music"</p>
+        <p>
+          Workbooks("sales data.xlsx").Sheets("classA").Range("a2:c5") = "genre"
         </p>
       </>
     ),
@@ -665,7 +663,14 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `delete a workbook`,
+    ans: (
+      <>
+        <p>Kill ("C:\Users\Samuel\Desktop\sales_report2.xlsx")</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
