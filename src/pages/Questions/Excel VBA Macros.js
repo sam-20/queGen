@@ -13,20 +13,50 @@ export const VBA = [
     ans: `Developer tab -> Code group -> Visual Basic -> add new module -> enter vba code`,
   },
   {
+    que: `comment a line in macro`,
+    ans: (
+      <>
+        <p>'this is a comment</p>
+        <p>Rem this is a comment</p>
+      </>
+    ),
+  },
+  {
+    que: `comment a block in macro`,
+    ans: (
+      <>
+        <p>
+          1. add 'Comment Block' and 'Uncomment Block' features to the Edit menu
+        </p>
+        <p>
+          VBA menu bar {"->"} View {"->"} Toolbars {"->"} Customize {"->"}
+          Commands tab {"->"} select Edit inside Categories list {"->"} inside
+          Commands list, drag both 'Comment Block' and 'Uncomment Block' into
+          Edit of the the VBA menu bar
+        </p>
+        <p>2. comment and uncomment block</p>
+        <p>
+          highlight code to comment/uncomment {"->"} VBA menu bar {"->"} Comment
+          Block / Uncomment Block
+        </p>
+      </>
+    ),
+  },
+  {
     que: `add new module for an opened VBAProject`,
-    ans: `menu bar -> Insert -> Module`,
+    ans: `VBA menu bar -> Insert -> Module`,
   },
   {
     que: `add new userform for an opened VBAProject`,
-    ans: `menu bar -> Insert -> UserForm`,
+    ans: `VBA menu bar -> Insert -> UserForm`,
   },
   {
     que: `display the Immediate Window form`,
-    ans: `menu bar -> View -> Immediate Window`,
+    ans: `VBA menu bar -> View -> Immediate Window`,
   },
   {
     que: `display the list of available object properties and methods`,
-    ans: `menu bar -> View -> Object Browser`,
+    ans: `VBA menu bar -> View -> Object Browser`,
   },
   {
     que: `rename a module`,
@@ -34,7 +64,7 @@ export const VBA = [
   },
   {
     que: `view step by step execution of your code`,
-    ans: `menu bar -> Debug -> Step Into OR f8`,
+    ans: `VBA menu bar -> Debug -> Step Into OR f8`,
   },
   {
     que: `print a message`,
