@@ -615,6 +615,19 @@ export const VBA = [
       </>
     ),
   },
+  {
+    que: `reference or perform an action in the sheet of an opened workbook which is currently not the active one`,
+    ans: (
+      <>
+        <p>
+          Workbooks("sales_report2.xlsx").Sheets(1).Range("a2:c5") = "music"
+        </p>
+        <p>
+          Workbooks("test 1.xlsx").Sheets("classA").Range("a2:c5") = "music"
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
@@ -663,8 +676,10 @@ export const VBA = [
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `perform an action on the entire data in the worksheet. eg. change the font of the worksheet data`,
+    ans: null,
+  },
   { que: `clear everything not inside given range/cell`, ans: null },
   { que: `create a table with headers from a given range`, ans: null },
   { que: `clear the worksheet`, ans: null },
