@@ -628,7 +628,25 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `save workbook using save and saveAs`,
+    ans: (
+      <>
+        <p>Workbooks("sales_report.xlsx").Save</p>
+        <p>
+          Workbooks("test1.xlsx").SaveAs
+          Filename:="C:\Users\Samuel\Desktop\test2.xlsx"
+        </p>
+        <p>
+          'NB: when a file called eg. test1.xlsx is savedAs test2.xlsx, the
+          opened workbook which was called test1.xlsx changes name to test2.xlsx
+          and therefore when you later close the file you need to close
+          test2.xlsx. The old test1.xlsx is closed but still exists as a file on
+          the pc.
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
