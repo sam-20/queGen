@@ -671,7 +671,14 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `create a new directory/folder`,
+    ans: (
+      <>
+        <p>MkDir ("C:\Users\Samuel\Desktop\my new folder")</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
