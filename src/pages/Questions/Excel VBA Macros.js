@@ -629,26 +629,42 @@ export const VBA = [
     ),
   },
   {
-    que: `save workbook using save and saveAs`,
+    que: `open a closed workbook`,
     ans: (
       <>
-        <p>Workbooks("sales_report.xlsx").Save</p>
         <p>
-          Workbooks("test1.xlsx").SaveAs
-          Filename:="C:\Users\Samuel\Desktop\test2.xlsx"
+          Workbooks.Open Filename:="C:\Users\Samuel\Desktop\sales data.xlsx"
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `save a workbook using save and saveAs`,
+    ans: (
+      <>
+        <p>Workbooks("sales data.xlsx").Save</p>
+        <p>
+          Workbooks("sales data.xlsx").SaveAs
+          Filename:="C:\Users\Samuel\Desktop\sales data cleaned.xlsx"
         </p>
         <p>
-          'NB: when a file called eg. test1.xlsx is savedAs test2.xlsx, the
-          opened workbook which was called test1.xlsx changes name to test2.xlsx
+          'NB: when a file called eg. fileA.xlsx is savedAs fileB.xlsx, the
+          opened workbook which was called fileA.xlsx changes name to fileB.xlsx
           and therefore when you later close the file you need to close
-          test2.xlsx. The old test1.xlsx is closed but still exists as a file on
+          fileB.xlsx. The old fileA.xlsx is closed but still exists as a file on
           the pc.
         </p>
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `close a workbook`,
+    ans: (
+      <>
+        <p>Workbooks("sales data cleaned.xlsx").Close</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
