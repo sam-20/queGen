@@ -679,7 +679,20 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `declare a variable`,
+    ans: (
+      <>
+        <p>fname = "Sam"</p>
+        <p>age = 14</p>
+        <p>Height = 1.73</p>
+
+        <p>Range("b3") = fname</p>
+        <p>Range("b4") = fname & " " & age</p>
+        <p>MsgBox Height</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
