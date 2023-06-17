@@ -720,10 +720,33 @@ export const VBA = [
         <p>Range("b3") = fname</p>
         <p>Range("b4") = fname & " " & age</p>
         <p>MsgBox Height</p>
+
+        <p>'Datatypes</p>
+        <p>
+          '1. Byte 0-255 ..ideal for smaller numbers. eg. known page numbers
+        </p>
+        <p>'2. Integer -32k - 32k</p>
+        <p>
+          '3. Long -2bn - 2bn ..ideal for large counts of data eg looping
+          through rows
+        </p>
+        <p>'4. Boolean true/false</p>
+        <p>'5. double ...ideal for high precision calculations eg. %</p>
+        <p>'6. string</p>
+        <p>
+          '7. object.. ideal for declaring variables to store ranges, sheets,
+          workbooks
+        </p>
+        <p>'8. date</p>
+        <p>'9. currency</p>
+        <p>
+          '10. variant ..ideal for variables whose type can change and variales
+          which can be null
+        </p>
       </>
     ),
   },
-  { que: ``, ans: null },
+  { que: `for loop, do loop, do while, do until`, ans: <></> },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
