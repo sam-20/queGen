@@ -713,36 +713,75 @@ export const VBA = [
     que: `declare a variable`,
     ans: (
       <>
-        <p>fname = "Sam"</p>
-        <p>age = 14</p>
-        <p>Height = 1.73</p>
+        <p>'declaring variables without assigning values</p>
+        <p>Dim age As Byte</p>
+        <p>
+          'byte range: 0 to 255 (takes up 1 byte). Ideal for smaller numbers
+          which you know cannot exceed 255
+        </p>
 
-        <p>Range("b3") = fname</p>
-        <p>Range("b4") = fname & " " & age</p>
-        <p>MsgBox Height</p>
+        <p>Dim total3rdYrStuds As Integer</p>
+        <p>'integer range: -32,768 to 32,768 (takes up 2 bytes)</p>
 
-        <p>'Datatypes</p>
+        <p>Dim feesPaid As Boolean</p>
+        <p>'boolean range: true/false (takes up 2 bytes)</p>
+
+        <p>Dim lastRow As Long</p>
         <p>
-          '1. Byte 0-255 ..ideal for smaller numbers. eg. known page numbers
+          'long range: -2,147,483,648 to 2,147,483,647 (takes up 4 bytes). Ideal
+          for storing data such as the total number of rows excel can handle
         </p>
-        <p>'2. Integer -32k - 32k</p>
+
+        <p>Dim newBook As Workbook</p>
+        <p>Dim newsheet As Worksheet</p>
         <p>
-          '3. Long -2bn - 2bn ..ideal for large counts of data eg looping
-          through rows
+          'declaring object variable. Takes up 4 bytes. Ideal for storing
+          objects like ranges, sheets, workbooks
         </p>
-        <p>'4. Boolean true/false</p>
-        <p>'5. double ...ideal for high precision calculations eg. %</p>
-        <p>'6. string</p>
+
+        <p>Dim score As Double</p>
         <p>
-          '7. object.. ideal for declaring variables to store ranges, sheets,
-          workbooks
+          'takes up 8 bytes. Ideal for storing values with high precisions such
+          as %,heights
         </p>
-        <p>'8. date</p>
-        <p>'9. currency</p>
+
+        <p>Dim dob As Date</p>
+        <p>'takes up 8 bytes</p>
+
+        <p>Dim itemCost As Currency</p>
+        <p>'takes up 8 bytes. Holds values up to 4 decimal places</p>
+
+        <p>Dim fName As String</p>
+        <p>'takes up 1 byte per char</p>
+
+        <p>Dim totalFollowers As Variant</p>
         <p>
-          '10. variant ..ideal for variables whose type can change and variales
-          which can be null
+          'ideal for variables whose type can change and variales which can be
+          null
         </p>
+
+        <p>Dim id</p>
+        <p>
+          'no datatype specified automatically defines it as variant which takes
+          more space
+        </p>
+
+        <p>'assigning vlaues</p>
+        <p>age = 26</p>
+        <p>
+          Let lastRow = Rows.Count 'let can also be used to assign values but is
+          optional
+        </p>
+        <p>
+          Set newsheet = ActiveSheet 'to assign variables to objects you need
+          the Set statement
+        </p>
+        <p>Range("b3") = fName</p>
+        <p>Range("b4") = fName & " " & age</p>
+        <p>MsgBox feesPaid</p>
+
+        <p>'declaring and assigning</p>
+        <p>gender = "male"</p>
       </>
     ),
   },
