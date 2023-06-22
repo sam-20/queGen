@@ -427,7 +427,7 @@ export const EF = [
     ans: `right click sheet tab at bottom -> Protect Sheet`,
   },
   {
-    que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
+    que: `import data from the following formats csv, excel, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: null,
   },
   {
