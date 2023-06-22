@@ -836,8 +836,20 @@ export const VBA = [
       </>
     ),
   },
-  { que: `iterate with a do loop`, ans: null },
-  { que: `iterate with a do while loop`, ans: null },
+  {
+    que: `iterate with a do while loop`,
+    ans: (
+      <>
+        <p>Dim count As Integer</p>
+        <p>count = 1</p>
+
+        <p>Do While count {"<"} 5</p>
+        <p>Range("b5") = count</p>
+        <p>count = count + 1</p>
+        <p>Loop</p>
+      </>
+    ),
+  },
   { que: `iterate with a do until loop`, ans: null },
   { que: ``, ans: null },
   {
