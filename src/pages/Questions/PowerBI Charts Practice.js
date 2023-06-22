@@ -18,8 +18,19 @@ export const PBI = [
     que: `create a stacked column chart`,
     ans: (
       <>
-        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>2 or more Categorical variables + 1 Numerical variable</p>
         <p>Use stacked column chart: </p>
+        <p>Catg1 {"->"} X-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+        <p>Num1 {"->"} Y-axis</p>
+      </>
+    ),
+  },
+  {
+    que: `create a ribbon chart`,
+    ans: (
+      <>
+        <p>2 or more categorical variables + 1 numerical variable</p>
         <p>Catg1 {"->"} X-axis</p>
         <p>Catg2 {"->"} Legend</p>
         <p>Num1 {"->"} Y-axis</p>
@@ -67,9 +78,5 @@ export const PBI = [
         <p>Num1 {"->"} Values </p>
       </>
     ),
-  },
-  {
-    que: `create a ribbon chart`,
-    ans: null,
   },
 ];
