@@ -4,6 +4,10 @@ export const PBI = [
     ans: null,
   },
   {
+    que: `view chart in a zoomed presentation view`,
+    ans: `click chart to make it active -> select Focus Mode in the top right `,
+  },
+  {
     que: `create a bar/column chart`,
     ans: (
       <>
@@ -75,7 +79,7 @@ export const PBI = [
         </p>
         <p>
           NB: to revert back to original chart: Filters pane {"->"} Filters On
-          This Visual {"->"} remove filters
+          This Visual {"->"} remove filters OR Ctrl+Z to undo
         </p>
       </>
     ),
@@ -90,14 +94,10 @@ export const PBI = [
         </p>
         <p>
           NB: to revert back to original chart: Filters pane {"->"} Filters On
-          This Visual {"->"} remove filters
+          This Visual {"->"} remove filters OR Ctrl+Z to undo
         </p>
       </>
     ),
-  },
-  {
-    que: `view chart in a zoomed presentation view`,
-    ans: `click chart to make it active -> select Focus Mode in the top right `,
   },
   {
     que: `create a funnel chart`,
@@ -110,10 +110,10 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
+    que: `view the data records of a selected area in a chart`,
     ans: (
       <>
-        <p></p>
+        <p>select portion of chart {"->"} Show Data Point As A Table</p>
       </>
     ),
   },
