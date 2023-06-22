@@ -789,18 +789,16 @@ export const VBA = [
     que: `iterate with a for loop`,
     ans: (
       <>
-        <p>Dim count As Byte</p>
-        <p>Dim total As Byte</p>
-        <p>total = 0</p>
+        <p> Dim count As Byte</p>
 
         <p>
           For count = 1 To 10 Step 2 'Step X is optional and used to change
           increment value
         </p>
-        <p>total = total + 1</p>
+        <p>Cells(count, 2).Value = "row" & " " & count</p>
         <p>Next</p>
 
-        <p>Range("d5") = total</p>
+        <p>Range("d5") = "some random text"</p>
       </>
     ),
   },
