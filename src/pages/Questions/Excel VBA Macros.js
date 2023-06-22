@@ -783,6 +783,9 @@ export const VBA = [
 
         <p>'declaring and assigning</p>
         <p>gender = "male"</p>
+
+        <p>'declaring multiple variables</p>
+        <p>Dim a, b, i as Integer</p>
       </>
     ),
   },
