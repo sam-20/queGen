@@ -787,6 +787,15 @@ export const VBA = [
     ),
   },
   {
+    que: `write an example code utilizing comparison and logical operators`,
+    ans: (
+      <>
+        <p>Comparison: {"=, <>, <, >, <=, >="} </p>
+        <p>Logical operators: AND, OR, NOT, XOR(T if exactly A or B is T)</p>
+      </>
+    ),
+  },
+  {
     que: `iterate with a for loop`,
     ans: (
       <>
