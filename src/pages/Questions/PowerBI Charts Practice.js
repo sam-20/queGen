@@ -38,7 +38,7 @@ export const PBI = [
     ),
   },
   {
-    que: `add labels to bar/stacked bar chart`,
+    que: `add labels to column(Bar)/stacked/ribbon chart`,
     ans: `Visualizations pane -> Format Visual tab -> Data Labels`,
   },
   {
@@ -76,6 +76,68 @@ export const PBI = [
         <p>1 categorical variable + 1 numerical variable</p>
         <p>Catg1 {"->"} Category</p>
         <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `pick/filter out only 2 bars out of a column chart and compare them. Or only 2 slices out of a pie chart and compare them`,
+    ans: (
+      <>
+        <p>
+          hold ctrl and select the 2 or more bars/slices of the chart {"->"}{" "}
+          right click any {"->"} Include
+        </p>
+        <p>
+          NB: to revert back to original chart: Filters pane {"->"} Filters On
+          This Visual {"->"} remove filters
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `pick/filter one or more 2 bars out of a column chart and remove them from the main chart. Or only one or more slices out of a pie chart and remove them`,
+    ans: (
+      <>
+        <p>
+          hold ctrl and select the 1 or more bars/slices of the chart {"->"}{" "}
+          right click any {"->"} Exclude
+        </p>
+        <p>
+          NB: to revert back to original chart: Filters pane {"->"} Filters On
+          This Visual {"->"} remove filters
+        </p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
       </>
     ),
   },
