@@ -14,6 +14,7 @@ import {
   NP,
   PBI,
   VBA,
+  PDX,
 } from "../Questions";
 import { useState } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -80,8 +81,12 @@ function Layout() {
       content: PQ,
     },
     {
-      title: "Power BI Practice",
+      title: "Power BI Charts Practice",
       content: PBI,
+    },
+    {
+      title: "Power BI Dax Practice",
+      content: PDX,
     },
     {
       title: "SQL Practice",
