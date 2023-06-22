@@ -41,10 +41,6 @@ export const PBI = [
     ),
   },
   {
-    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
-    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
-  },
-  {
     que: `create a donut chart`,
     ans: (
       <>
@@ -55,12 +51,22 @@ export const PBI = [
     ),
   },
   {
+    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
+    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
+  },
+  {
     que: `view chart in a zoomed presentation view`,
     ans: `click chart to make it active -> select Focus Mode in the top right `,
   },
   {
     que: `create a funnel chart`,
-    ans: null,
+    ans: (
+      <>
+        <p>1 categorical variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Category</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
   },
   {
     que: `create a ribbon chart`,
