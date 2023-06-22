@@ -828,7 +828,7 @@ export const VBA = [
         <p>For Each count In ThisWorkbook.Sheets</p>
         <p>Cells(1, 1) = count.Name</p>
         <p>
-          'NB: We are looping through an ThisWorbook.Sheets which is an object
+          'NB: We are looping through ThisWorbook.Sheets which is an object
           array. The object has a key called Name, hence we call it like a
           key-pair value.
         </p>
