@@ -916,7 +916,7 @@ export const VBA = [
     que: `track the value of your local variables and iteration values in loops`,
     ans: (
       <>
-        <p>'Tracking value of local variables incl loop variables</p>
+        <p>'Tracking value of all local variables incl iteration variables</p>
         <p>
           click 'Locals Window' from the vba toolbar menu. If not present in
           toolbar menu: VBA menu bar {"->"} View {"->"} Toolbars {"->"}
