@@ -1,6 +1,6 @@
 export const PBI = [
   {
-    que: ``,
-    ans: ``,
+    que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
+    ans: null,
   },
 ];

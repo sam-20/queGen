@@ -2009,8 +2009,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
   },
   {
-    que: `import a csv/txt file of data into sql`,
-    ans: ``,
+    que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
+    ans: null,
   },
   { que: `events (MySQL)`, ans: `` },
 ];
