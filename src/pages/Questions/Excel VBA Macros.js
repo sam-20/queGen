@@ -913,8 +913,28 @@ export const VBA = [
     ),
   },
   {
-    que: `track the value of count/i in a loop`,
-    ans: `vba menubar -> Debug -> Add Watch -> enter iteration variable inside the Expression input field`,
+    que: `track the value of your local variables and iteration values in loops`,
+    ans: (
+      <>
+        <p>'Tracking value of local variables incl loop variables</p>
+        <p>
+          click 'Locals Window' from the vba toolbar menu. If not present in
+          toolbar menu: VBA menu bar {"->"} View {"->"} Toolbars {"->"}
+          Customize {"->"} Commands tab {"->"} select View inside Categories
+          list {"->"} inside Commands list, drag 'Locals Window' into toolbar
+          menu
+        </p>
+
+        <p>
+          'Tracking a specific local variable or iteration variable with the use
+          of Watch feature:
+        </p>
+        <p>
+          vba menu bar {"->"} Debug {"->"} Add Watch {"->"} enter variable
+          inside the Expression input field
+        </p>
+      </>
+    ),
   },
   { que: ``, ans: null },
   { que: ``, ans: null },
