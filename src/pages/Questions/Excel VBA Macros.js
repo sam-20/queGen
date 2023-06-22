@@ -789,7 +789,7 @@ export const VBA = [
     que: `iterate with a for loop`,
     ans: (
       <>
-        <p> Dim count As Byte</p>
+        <p> Dim count As Integer</p>
 
         <p>
           For count = 1 To 10 Step 2 'Step X is optional and used to change
@@ -799,6 +799,18 @@ export const VBA = [
         <p>Next</p>
 
         <p>Range("d5") = "some random text"</p>
+      </>
+    ),
+  },
+  {
+    que: `iterate with a for loop decreasing iteration value at each step`,
+    ans: (
+      <>
+        <p>Dim count As Integer</p>
+
+        <p>For count = 10 To 1 Step -1</p>
+        <p>Range("c5") = count</p>
+        <p>Next count 'adding iteration variable beside Next is optional</p>
       </>
     ),
   },
