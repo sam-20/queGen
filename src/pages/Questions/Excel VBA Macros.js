@@ -785,12 +785,33 @@ export const VBA = [
       </>
     ),
   },
-  { que: `for loop, do loop, do while, do until`, ans: <></> },
+  {
+    que: `iterate with a for loop`,
+    ans: (
+      <>
+        <p>Dim count As Byte</p>
+        <p>Dim total As Byte</p>
+        <p>total = 0</p>
+
+        <p>
+          For count = 1 To 10 Step 2 'Step X is optional and used to change
+          increment value
+        </p>
+        <p>total = total + 1</p>
+        <p>Next</p>
+
+        <p>Range("d5") = total</p>
+      </>
+    ),
+  },
+  { que: `iterate with a do loop`, ans: null },
+  { que: `iterate with a do while loop`, ans: null },
+  { que: `iterate with a do until loop`, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `track the value of count/i in a loop`,
+    ans: `vba menubar -> Debug -> Add Watch -> enter iteration variable inside the Expression input field`,
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
