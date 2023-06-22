@@ -734,6 +734,7 @@ export const VBA = [
 
         <p>Dim newBook As Workbook</p>
         <p>Dim newsheet As Worksheet</p>
+        <p>Dim newWorkSheet As Object</p>
         <p>
           'declaring object variable. Takes up 4 bytes. Ideal for storing
           objects like ranges, sheets, workbooks
@@ -811,6 +812,27 @@ export const VBA = [
         <p>For count = 10 To 1 Step -1</p>
         <p>Range("c5") = count</p>
         <p>Next count 'adding iteration variable beside Next is optional</p>
+      </>
+    ),
+  },
+  {
+    que: `loop through a collection of objects of similar type. NB: use For Each loop`,
+    ans: (
+      <>
+        <p>Dim count As Object </p>
+        <p>
+          'NB: we used an object/variant datatype because the variable is going
+          to store an object, ie. the worksheets
+        </p>
+
+        <p>For Each count In ThisWorkbook.Sheets</p>
+        <p>Cells(1, 1) = count.Name</p>
+        <p>
+          'NB: We are looping through an ThisWorbook.Sheets which is an object
+          array. The object has a key called Name, hence we call it like a
+          key-pair value.
+        </p>
+        <p>Next</p>
       </>
     ),
   },
