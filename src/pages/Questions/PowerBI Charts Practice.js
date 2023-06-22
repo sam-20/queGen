@@ -41,12 +41,18 @@ export const PBI = [
     ),
   },
   {
-    que: `update data labels of the pie chart slices ie. add or remove legend names, values`,
+    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
     ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
   },
   {
     que: `create a donut chart`,
-    ans: null,
+    ans: (
+      <>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
   },
   {
     que: `view chart in a zoomed presentation view`,
