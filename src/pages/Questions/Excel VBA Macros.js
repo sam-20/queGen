@@ -790,7 +790,7 @@ export const VBA = [
     que: `write an example code utilizing comparison and logical operators`,
     ans: (
       <>
-        <p>Comparison: {"=, <>, <, >, <=, >="} </p>
+        <p>Comparison: {"=, <>(not equal to), <, >, <=, >="} </p>
         <p>Logical operators: AND, OR, NOT, XOR(T if exactly A or B is T)</p>
       </>
     ),
@@ -859,8 +859,56 @@ export const VBA = [
       </>
     ),
   },
-  { que: `iterate with a do until loop`, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `iterate with a do until loop`,
+    ans: (
+      <>
+        <p>Dim count As Integer</p>
+        <p>count = 1</p>
+
+        <p>Do Until count {">"} 5</p>
+        <p>Range("b5") = count</p>
+        <p>count = count + 1</p>
+        <p>Loop</p>
+      </>
+    ),
+  },
+  {
+    que: `handle an error in your code by skipping the error line rather than aborting program`,
+    ans: (
+      <>
+        <p> On Error Resume Next 'this skips error lines</p>
+        <p>Range("a1") = "food"</p>
+        <p>MsgBox "a" + 10 'this is an error</p>
+        <p>Range("b1") = "item"</p>
+      </>
+    ),
+  },
+  {
+    que: `handle an error in your code by prompting user or performing a task if the error occurs`,
+    ans: (
+      <>
+        <p>Sub test()</p>
+
+        <p>
+          On Error GoTo myerrorlabel 'this goes to the abc label defined below
+          if there is an error
+        </p>
+        <p>Range("a1") = "food"</p>
+        <p>MsgBox "a" + 10 'this is an error</p>
+        <p>Range("b1") = "item"</p>
+
+        <p>'if code run without any errrors</p>
+        <p>Done:</p>
+        <p>Exit Sub</p>
+
+        <p>'if there was an error</p>
+        <p>myerrorlabel:</p>
+        <p>MsgBox "incorrect concatenation"</p>
+        <p>End Sub</p>
+      </>
+    ),
+  },
   {
     que: `track the value of count/i in a loop`,
     ans: `vba menubar -> Debug -> Add Watch -> enter iteration variable inside the Expression input field`,
