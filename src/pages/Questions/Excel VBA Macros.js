@@ -51,7 +51,7 @@ export const VBA = [
     ans: `VBA menu bar -> Insert -> UserForm`,
   },
   {
-    que: `display the Immediate Window form`,
+    que: `display the Immediate Window form. NB: this is used to execute codes without having to create Sub procedures`,
     ans: `VBA menu bar -> View -> Immediate Window`,
   },
   {
