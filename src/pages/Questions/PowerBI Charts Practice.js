@@ -118,10 +118,13 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
+    que: `you opened the data records of a selected area in a chart. Now export that data`,
     ans: (
       <>
-        <p></p>
+        <p>
+          select portion of chart {"->"} Show Data Point As A Table {"->"} click
+          ... at top right of the table records {"->"} Export Data
+        </p>
       </>
     ),
   },
