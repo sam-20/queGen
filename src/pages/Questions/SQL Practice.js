@@ -1265,7 +1265,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `display the count of duplicates in a column`,
+    que: `display the count of duplicates in a column. eg. FInd the number of duplicate usernames`,
     ans: (
       <>
         <p>SELECT username, COUNT(*) AS Duplicates</p>
