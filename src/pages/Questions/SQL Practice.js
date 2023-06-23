@@ -776,7 +776,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `filter data which satisfies a condition`,
+    que: `fetch data using all the comparison operators`,
     ans: (
       <>
         <p>
@@ -2007,6 +2007,14 @@ Useful when database cannot be for eg. dropped due to active connections using i
   {
     que: `import an sql script file containing database data`,
     ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
+  },
+  {
+    que: `Export the table from one database to another database`,
+    ans: null,
+  },
+  {
+    que: `Copy Database From One Server to Another Server in SQL`,
+    ans: null,
   },
   {
     que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
