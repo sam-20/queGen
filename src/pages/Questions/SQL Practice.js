@@ -979,7 +979,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
       <>
         <b>**SQL only**</b>
         <p>SELECT * FROM Customers</p>
-        <p>WHERE City LIKE '[a-c]%';</p>
+        <p>WHERE City LIKE '[a-e]%';</p>
       </>
     ),
   },
@@ -1070,7 +1070,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `use regular expressions to select data beginning with a particular patter. Eg. find countries beginning with united`,
+    que: `use regular expressions to select data beginning with a particular pattern. Eg. find countries beginning with united`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -1160,7 +1160,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `select data which is as a result of the combination of multiple columns into a single one. Eg. select date from the database`,
+    que: `select data which is as a result of the combination of multiple columns into a single one. Eg. select date from the database whose columns are day,mon,yr,`,
     ans: (
       <>
         <p>SELECT CONCAT(day," ",month," ",yr) AS fullDate FROM buyers</p>
@@ -2041,4 +2041,5 @@ Useful when database cannot be for eg. dropped due to active connections using i
  https://www.sqlservertutorial.net/sql-server-stored-procedures/sql-server-cursor/
  https://www.nuttyabouthosting.co.uk/knowledgebase/article/how-to-generate-database-scripts-with-data-in-sql-server
  https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16s
+ https://www.youtube.com/watch?v=6_95vbBrrXI
  */
