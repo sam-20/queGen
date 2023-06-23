@@ -129,9 +129,10 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
+    que: `create a basic map`,
     ans: (
       <>
+        <p>Use map</p>
         <p></p>
       </>
     ),
