@@ -2022,7 +2022,31 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>-- CSV</p>
+        <p>
+          BULK INSERT customerSales --exisiting empty table_name whose columns
+          have been designed to match incoming data
+        </p>
+        <p>FROM "C:\Users\Samuel\Documents\sales.csv"</p>
+        <p>WITH</p>
+        <p>(</p>
+        <p>FORMAT = 'CSV',</p>
+        <p>
+          FIRSTROW =2, --2 is for row where data begins. First row contains
+          column names
+        </p>
+        <p>FIELDTERMINATOR = ',',</p>
+        <p>ROWTERMINATOR = '\n'</p>
+        <p>
+          -- ROWTERMINATOR = '0x0a',--Files are generated with this row
+          terminator in Google Bigquery
+        </p>
+        )
+      </>
+    ),
   },
   { que: `events (MySQL)`, ans: `` },
 ];
@@ -2046,4 +2070,5 @@ Useful when database cannot be for eg. dropped due to active connections using i
  https://www.nuttyabouthosting.co.uk/knowledgebase/article/how-to-generate-database-scripts-with-data-in-sql-server
  https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16s
  https://www.youtube.com/watch?v=6_95vbBrrXI
+ https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
  */
