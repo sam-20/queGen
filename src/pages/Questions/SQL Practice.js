@@ -737,7 +737,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: (
       <>
         <p>**MySQL**</p>
-        <p>SELECT * from [tableName] LIMIT n,x</p>
+        <p>SELECT * from [tableName] LIMIT n,i</p>
         <p>
           <b>NB:</b> position/row count starts from 0
         </p>
