@@ -2005,6 +2005,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     Review your choices and then click 'Next'`,
   },
   {
+    que: `export a table data into excel,csv,txt,pdf format`,
+    ans: null,
+  },
+  {
     que: `import an sql script file containing database data`,
     ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
   },
