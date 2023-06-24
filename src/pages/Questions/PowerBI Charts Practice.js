@@ -212,6 +212,16 @@ export const PBI = [
     ),
   },
   {
+    que: `create a waterfall chart`,
+    ans: (
+      <>
+        <p>1 categorical variable + 1 numerical variable</p>
+        <p>Catg1(Date) {"->"} Category</p>
+        <p>Num1 {"->"} Y-axis </p>
+      </>
+    ),
+  },
+  {
     que: `create a funnel chart`,
     ans: (
       <>
