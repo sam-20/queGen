@@ -279,17 +279,13 @@ export const PBI = [
     ),
   },
   {
-    que: `Convert the units of numerical values in the a table chart or matrix chart. 
-    Eg. representing value as raw (49332.57), thousands(49.33K), millions(0.05M), billions(0.005bn)`,
+    que: `Change the unit representation of numerical column data in the table chart or matrix chart. 
+    Eg. representing column data as raw (49332.57), thousands(49.33K), millions(0.05M), billions(0.005bn)`,
     ans: `Visualizations pane-> Format Visual tab -> Visual -> Specific Column -> choose column to apply units to -> Display Units`,
   },
   {
-    que: ``,
-    ans: (
-      <>
-        <p></p>
-      </>
-    ),
+    que: `change the number of decimal places for a numerical column data in a table or matrix chart`,
+    ans: `Visualizations pane-> Format Visual tab -> Visual -> Specific Column -> choose column to apply units to -> Value Decimal Places`,
   },
   {
     que: ``,
