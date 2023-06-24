@@ -130,6 +130,22 @@ export const PBI = [
     ),
   },
   {
+    que: `create a line chart`,
+    ans: (
+      <>
+        <p>1 or more categorical variable + 1 or more numerical variables</p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Num2,3,4, etc {"->"} Secondary y-axis</p>
+
+        <p>or</p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+      </>
+    ),
+  },
+  {
     que: `create a funnel chart`,
     ans: (
       <>
