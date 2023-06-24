@@ -159,6 +159,7 @@ export const PBI = [
         <p>----------------</p>
         <p>Catg2</p>
         <p>Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>----------------</p>
         <p>Num1 eg. sales{"->"} Bubble Size</p>
         <p>
           NB: If you have the right data values for the map and for some reason
@@ -185,7 +186,11 @@ export const PBI = [
         OR
         <p>longitude {"->"} Longitude</p>
         <p>latitude {"->"} Latitude</p>
-        <p>Catg2 or Num1 {"->"} Legend</p>
+        <p>----------------</p>
+        <p>Catg2</p>
+        <p>Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>----------------</p>
+        <p>Num1 eg. sales{"->"} Tooltips</p>
       </>
     ),
   },
