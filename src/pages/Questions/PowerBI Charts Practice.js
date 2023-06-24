@@ -8,6 +8,18 @@ export const PBI = [
     ans: `click chart to make it active -> select Focus Mode in the top right `,
   },
   {
+    que: `show distinct values of a numerical value rather than as a sum when you plot them on the graph`,
+    ans: (
+      <>
+        <p>
+          select the variable(usually numerical) in the Data pane {"->"} Column
+          Tools menu of the power bi desktop {"->"} Properties tab {"->"}
+          Summarization{"->"} Don't summarize
+        </p>
+      </>
+    ),
+  },
+  {
     que: `create a bar/column chart`,
     ans: (
       <>
@@ -133,7 +145,21 @@ export const PBI = [
     ans: (
       <>
         <p>Use map</p>
-        <p></p>
+        <p>
+          NB: Data values used for map chart:
+          country,city,state,region,pincode,postal code,latitude, longitude.
+        </p>
+        <p>
+          If you have the right data values for the map and for some reason
+          they're not being recognized: select the column in the Data pane{" "}
+          {"->"} Column Tools menu of the power bi desktop {"->"} Properties tab{" "}
+          {"->"}
+          change Data Category to appropriate data type eg. address, place,
+          city, country, lon, lat, etc.
+        </p>
+        <p>State {"->"} Location</p>
+        <p>Catg1 eg. Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>Num {"->"} Bubble Size</p>
       </>
     ),
   },
