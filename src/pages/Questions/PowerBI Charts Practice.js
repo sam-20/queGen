@@ -252,18 +252,27 @@ export const PBI = [
     ans: (
       <>
         <p></p>
-        <p>NB:In a gauge chart, </p>
-        <p>Value at the lower left end of the gauge = 0</p>
+
         <p>
-          Value below gauge arc at the center = value currently attained (eg.
-          sum of sales,profit, etc)
+          The gauge chart is used to track progress of a single data quantity.
+          Eg. sales made, profit made
+        </p>
+        <p>NB: In a gauge chart, </p>
+        <p>
+          Value at the lower left end of the gauge = the smallest value the data
+          quantity should be
         </p>
         <p>
-          Value indicated by bar = target value (eg. expected sum of sales,
-          profit, etc)
+          Value at the lower right end of the gauge = the largest value the data
+          quantity should be
         </p>
         <p>
-          Value at the lower right end of the gauge = 2*value currently attained
+          Value below gauge arc at the center = value currently attained for the
+          data quantity (eg. sum of sales,profit, etc)
+        </p>
+        <p>
+          Value indicated by bar = target value for the data quantity (eg.
+          expected/targeted sum of sales, profit, etc)
         </p>
       </>
     ),
