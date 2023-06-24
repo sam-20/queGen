@@ -252,6 +252,19 @@ export const PBI = [
     ans: (
       <>
         <p></p>
+        <p>NB:In a gauge chart, </p>
+        <p>Value at the lower left end of the gauge = 0</p>
+        <p>
+          Value below gauge arc at the center = value currently attained (eg.
+          sum of sales,profit, etc)
+        </p>
+        <p>
+          Value indicated by bar = target value (eg. expected sum of sales,
+          profit, etc)
+        </p>
+        <p>
+          Value at the lower right end of the gauge = 2*value currently attained
+        </p>
       </>
     ),
   },
