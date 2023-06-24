@@ -251,13 +251,6 @@ export const PBI = [
     que: `create a gauge chart`,
     ans: (
       <>
-        <p>1 numerical variable</p>
-        <p>Num1 {"->"} Value </p>
-        <p>Measure1 {"->"} Minium value</p> -- value at left lower end of gauge
-        (optional)
-        <p>Measure2 {"->"} Maximum value</p> --value at right lower end of gauge
-        (optional)
-        <p>Measure3 {"->"} Target value</p>
         <p>
           The gauge chart is used to track progress of a single data quantity.
           Eg. sales made, profit made
@@ -279,6 +272,12 @@ export const PBI = [
           Value indicated by bar = target value for the data quantity (eg.
           expected/targeted sum of sales, profit, etc)
         </p>
+        <p>---------------</p>
+        <p>1 numerical variable</p>
+        <p>Num1 {"->"} Value </p> --currently attained value
+        <p>Measure3 {"->"} Target value</p>
+        <p>Measure1 {"->"} Minium value</p> -- optional
+        <p>Measure2 {"->"} Maximum value</p> -- optional
       </>
     ),
   },
