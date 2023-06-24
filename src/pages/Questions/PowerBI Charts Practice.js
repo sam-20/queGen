@@ -144,6 +144,11 @@ export const PBI = [
         <p>Catg1 {"->"} Category</p>
         <p>Catg2 {"->"} Details</p>
         <p>Num1 {"->"} Values</p>
+
+        <p>
+          NB: in a treemap the group at the top left corner has the largest
+          value and the right bottom corner has the lowest value
+        </p>
       </>
     ),
   },
@@ -239,6 +244,14 @@ export const PBI = [
         <p>1 categorical variable + 1 numerical variable</p>
         <p>Catg1 {"->"} Category</p>
         <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `create a gauge chart`,
+    ans: (
+      <>
+        <p></p>
       </>
     ),
   },
