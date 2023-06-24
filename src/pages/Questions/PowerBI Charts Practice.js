@@ -133,7 +133,7 @@ export const PBI = [
     que: `create a line chart`,
     ans: (
       <>
-        <p>1 or more categorical variable + 1 or more numerical variables</p>
+        <p>1 or 2 categorical variable + 1 or more numerical variables</p>
 
         <p>Catg1(date) {"->"} X-axis</p>
         <p>Num1 {"->"} Y-axis</p>
@@ -143,6 +143,55 @@ export const PBI = [
         <p>Catg1(date) {"->"} X-axis</p>
         <p>Num1 {"->"} Y-axis</p>
         <p>Catg2 {"->"} Legend</p>
+
+        <p>NB: to easily remember use: XYSecondaries, XYlegend</p>
+      </>
+    ),
+  },
+  {
+    que: `for graphs that involve trends over time ie. line,area,combo,etc. 
+    When visualizing the data, how can you cycle through the dates and show 
+    the graph as a trend over year or quarter or month or day`,
+    ans: (
+      <>
+        <p>
+          When the date field is added to the x-axis, it appears in multiple
+          hierachies (year,quarter,month,day) inside the X-axis of the
+          visualization pane. Now at the top right section of the graph where
+          you have multiple icons, you can cycle through each
+          Year,quarter,month,day by using the double-downward-arrow to go to the
+          next heiracchy ie. switch from year to quarter then quarter to month
+          then to day If you want to reverse or come up the hieracy, you use the
+          single-upward-arrow to drill up ie. switch from day to month then to
+          quarter then to year
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `create an area chart`,
+    ans: (
+      <>
+        <p>1 or 2 categorical variable + 1 or more numerical variables</p>
+
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Num2,3,4, etc {"->"} Secondary y-axis</p>
+
+        <p>or</p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+
+        <p>NB: to easily remember use: XYSecondaries, XYlegend</p>
+      </>
+    ),
+  },
+  {
+    que: `create a combo chart`,
+    ans: (
+      <>
+        <p>1 categorical variable (date) + 2 or more numerical variables</p>
       </>
     ),
   },
