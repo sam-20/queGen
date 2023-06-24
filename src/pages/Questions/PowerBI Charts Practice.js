@@ -5,18 +5,18 @@ export const PBI = [
   },
   {
     que: `customize the current theme. eg. change the font styles, size, colors, to affect all report pages and charts`,
-    ans: `View menu -> Themes tab -> click dropdown next to themes -> Customize Current Theme`,
+    ans: `View tab -> Themes group -> click dropdown next to themes -> Customize Current Theme`,
   },
   {
     que: `create a new data table in power bi without importing existing data (NB: table to be part of the datasets in the Data pane not table chart for the canvas)`,
-    ans: `Home menu -> Data tab-> Enter Data`,
+    ans: `Home tab -> Data group-> Enter Data`,
   },
   {
     que: `cut/copy and paste a chart in the same report or another report`,
     ans: (
       <>
         <p>
-          select chart{"->"} Home menu{"->"}Clipboard tab{"->"}Cut/Copy/Paste
+          select chart{"->"} Home tab{"->"}Clipboard group{"->"}Cut/Copy/Paste
         </p>
       </>
     ),
@@ -31,7 +31,7 @@ export const PBI = [
       <>
         <p>
           select the variable(usually numerical) in the Data pane {"->"} Column
-          Tools menu of the power bi desktop {"->"} Properties tab {"->"}
+          Tools tab of the power bi desktop {"->"} Properties group {"->"}
           Summarization{"->"} Don't summarize
         </p>
       </>
@@ -185,7 +185,8 @@ export const PBI = [
         <p>
           NB: If you have the right data values for the map and for some reason
           they're not being recognized: select the column in the Data pane{" "}
-          {"->"} Column Tools menu of the power bi desktop {"->"} Properties tab
+          {"->"} Column Tools tab of the power bi desktop {"->"} Properties
+          group
           {"->"}change Data Category to appropriate data type eg. address,
           place, city, country, lon, lat, etc.
         </p>
