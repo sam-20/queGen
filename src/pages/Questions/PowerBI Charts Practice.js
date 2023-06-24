@@ -4,7 +4,21 @@ export const PBI = [
     ans: null,
   },
   {
-    que: `view chart in a zoomed presentation view`,
+    que: `create a new data table in power bi without importing existing data (NB: table to be part of the datasets in the Data pane not table chart for the canvas)`,
+    ans: `Home menu -> Data tab-> Enter Data`,
+  },
+  {
+    que: `cut/copy and paste a chart in the same report or another report`,
+    ans: (
+      <>
+        <p>
+          select chart{"->"} Home menu{"->"}Clipboard tab{"->"}Cut/Copy/Paste
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `view any chart in a zoomed presentation view`,
     ans: `click chart to make it active -> select Focus Mode in the top right `,
   },
   {
@@ -201,6 +215,119 @@ export const PBI = [
     ),
   },
   {
+    que: `add zoom buttons to map chart`,
+    ans: (
+      <>
+        <p>
+          Visualizations pane{"->"}Visual tab{"->"}Map Settings{"->"}Controls
+          {"->"}Zoom Buttons
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `change the theme of map`,
+    ans: (
+      <>
+        <p>
+          Visualizations pane{"->"}Visual tab{"->"}Map Settings{"->"}Style
+          {"->"}Style
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `create a table chart`,
+    ans: (
+      <>
+        <p>X Categorical Variable + X numerical variable</p>
+        <p>Catg/Num {"->"} Columns</p>
+      </>
+    ),
+  },
+  {
+    que: `add conditional formatting to a table chart eg. data bars, color scales, icons,etc`,
+    ans: (
+      <>
+        <p>
+          Visualizations pane{"->"} Visual tab {"->"} Cell elements {"->"}{" "}
+          select series/column {"->"} toggle the kind of formatting you want to
+          do eg. data bars {"->"} click the 'fx' button under it to specific
+          which value ranges should satisfy the condition
+        </p>
+      </>
+    ),
+  },
+  {
     que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
   },
 ];
