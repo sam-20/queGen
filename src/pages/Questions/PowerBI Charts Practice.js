@@ -445,10 +445,11 @@ export const PBI = [
     ans: `Visualizations pane-> Format Visual tab -> Visual -> Specific Column -> choose column to apply units to -> Value Decimal Places`,
   },
   {
-    que: ``,
+    que: `create a card`,
     ans: (
       <>
-        <p></p>
+        <p>1 numerical variable or 1 categorical variable</p>
+        <p>Catg/Num {"->"} Fields</p>
       </>
     ),
   },
