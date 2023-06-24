@@ -4,6 +4,10 @@ export const PBI = [
     ans: null,
   },
   {
+    que: `customize the current theme. eg. change the font styles, size, colors, to affect all report pages and charts`,
+    ans: `View menu -> Themes tab -> click dropdown next to themes -> Customize Current Theme`,
+  },
+  {
     que: `create a new data table in power bi without importing existing data (NB: table to be part of the datasets in the Data pane not table chart for the canvas)`,
     ans: `Home menu -> Data tab-> Enter Data`,
   },
@@ -246,7 +250,22 @@ export const PBI = [
     ),
   },
   {
-    que: `add conditional formatting to a table chart eg. data bars, color scales, icons,etc`,
+    que: `create a matrix chart`,
+    ans: (
+      <>
+        <p>
+          NB: A matrix chart works similar to pivot tables ie. use the same ide
+          of pivot table row headers, column headers and values to generate
+          table data
+        </p>
+        <p>Catg (variable for column headers) {"->"} Columns</p>
+        <p>Catg (variable for row headers) {"->"} Rows </p>
+        <p>Num {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `add conditional formatting to a table chart or matrix chart eg. data bars, color scales, icons,etc`,
     ans: (
       <>
         <p>
@@ -255,14 +274,6 @@ export const PBI = [
           do eg. data bars {"->"} click the 'fx' button under it to specific
           which value ranges should satisfy the condition
         </p>
-      </>
-    ),
-  },
-  {
-    que: ``,
-    ans: (
-      <>
-        <p></p>
       </>
     ),
   },
