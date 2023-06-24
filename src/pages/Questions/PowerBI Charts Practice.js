@@ -157,13 +157,18 @@ export const PBI = [
         <p>
           When the date field is added to the x-axis, it appears in multiple
           hierachies (year,quarter,month,day) inside the X-axis of the
-          visualization pane. Now at the top right section of the graph where
-          you have multiple icons, you can cycle through each
-          Year,quarter,month,day by using the double-downward-arrow to go to the
-          next heiracchy ie. switch from year to quarter then quarter to month
-          then to day If you want to reverse or come up the hieracy, you use the
-          single-upward-arrow to drill up ie. switch from day to month then to
-          quarter then to year
+          visualization pane. Now you can cycle through each of these
+          hierachies: Year,quarter,month,day by going to the top right section
+          of the graph where you have multiple icons.
+        </p>
+        <p>
+          Use the double-downward-arrow icon to drill down the heirachy. ie.
+          switch from year to quarter then quarter to month then to day
+        </p>
+        <p>
+          To reverse or come up the hieracy, you use the single-upward-arrow
+          icon to drill up ie. switch from day to month then to quarter then to
+          year
         </p>
       </>
     ),
