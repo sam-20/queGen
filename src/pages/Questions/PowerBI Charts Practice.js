@@ -145,29 +145,47 @@ export const PBI = [
     ans: (
       <>
         <p>Use map</p>
+        <p>1 or more Categorical Variable + 0 or more numerical variable</p>
         <p>
-          NB: Data values used for map chart:
-          country,city,state,region,pincode,postal code,latitude, longitude.
+          NB: Kinds of variables you can use to show the geographical areas on
+          the map chart: country,city,state,region,pincode,postal code,latitude,
+          longitude.
         </p>
+        <p>Catg1</p>
+        <p>Country,City,State,Region,pincode, postalcode {"->"} Location</p>
+        OR
+        <p>longitude {"->"} Longitude</p>
+        <p>latitude {"->"} Latitude</p>
+        <p>----------------</p>
+        <p>Catg2</p>
+        <p>Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>Num1 eg. sales{"->"} Bubble Size</p>
         <p>
-          If you have the right data values for the map and for some reason
+          NB: If you have the right data values for the map and for some reason
           they're not being recognized: select the column in the Data pane{" "}
-          {"->"} Column Tools menu of the power bi desktop {"->"} Properties tab{" "}
-          {"->"}
-          change Data Category to appropriate data type eg. address, place,
-          city, country, lon, lat, etc.
+          {"->"} Column Tools menu of the power bi desktop {"->"} Properties tab
+          {"->"}change Data Category to appropriate data type eg. address,
+          place, city, country, lon, lat, etc.
         </p>
-        <p>State {"->"} Location</p>
-        <p>Catg1 eg. Region(N,S,E,W,C) {"->"} Legend</p>
-        <p>Num {"->"} Bubble Size</p>
       </>
     ),
   },
   {
-    que: ``,
+    que: `create a filled map. NB:filled map is used when you want to focus only a portion of the map like a country and visualize more info from the country`,
     ans: (
       <>
-        <p></p>
+        <p>1 or more Categorical Variable + 0 or more numerical variable</p>
+        <p>
+          NB: Kinds of variables you can use to show the geographical areas on
+          the map chart: country,city,state,region,pincode,postal code,latitude,
+          longitude.
+        </p>
+        <p>Catg1</p>
+        <p>Country,City,State,Region,pincode, postalcode {"->"} Location</p>
+        OR
+        <p>longitude {"->"} Longitude</p>
+        <p>latitude {"->"} Latitude</p>
+        <p>Catg2 or Num1 {"->"} Legend</p>
       </>
     ),
   },
