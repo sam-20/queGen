@@ -137,6 +137,17 @@ export const PBI = [
     ),
   },
   {
+    que: `create a treemap`,
+    ans: (
+      <>
+        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>Catg1 {"->"} Category</p>
+        <p>Catg2 {"->"} Details</p>
+        <p>Num1 {"->"} Values</p>
+      </>
+    ),
+  },
+  {
     que: `create a line chart`,
     ans: (
       <>
