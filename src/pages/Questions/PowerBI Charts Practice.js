@@ -158,7 +158,10 @@ export const PBI = [
         <p>latitude {"->"} Latitude</p>
         <p>----------------</p>
         <p>Catg2</p>
-        <p>Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>
+          Region(N,S,E,W,C) or other categorical variable which is not Catg1
+          {"->"} Legend
+        </p>
         <p>----------------</p>
         <p>Num1 eg. sales{"->"} Bubble Size</p>
         <p>
@@ -188,10 +191,16 @@ export const PBI = [
         <p>latitude {"->"} Latitude</p>
         <p>----------------</p>
         <p>Catg2</p>
-        <p>Region(N,S,E,W,C) {"->"} Legend</p>
+        <p>
+          Region(N,S,E,W,C) or other categorical variable which is not Catg1
+          {"->"} Legend
+        </p>
         <p>----------------</p>
         <p>Num1 eg. sales{"->"} Tooltips</p>
       </>
     ),
+  },
+  {
+    que: ``,
   },
 ];
