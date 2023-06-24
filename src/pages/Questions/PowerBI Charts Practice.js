@@ -53,7 +53,14 @@ export const PBI = [
     ans: (
       <>
         <p>2 or more Categorical variables + 1 Numerical variable</p>
-        <p>Use stacked column chart: </p>
+        <p>
+          Use stacked column chart if you want different categories to appear on
+          top of each other in one bar
+        </p>
+        <p>
+          Use clustered column chart if you want different categories to appear
+          as individual bars sided next to each other
+        </p>
         <p>Catg1 {"->"} X-axis</p>
         <p>Catg2 {"->"} Legend</p>
         <p>Num1 {"->"} Y-axis</p>
