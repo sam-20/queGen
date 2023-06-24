@@ -203,9 +203,7 @@ export const PBI = [
     que: `create a combo chart`,
     ans: (
       <>
-        <p>
-          1 or more categorical variable (date) + 2 or more numerical variables
-        </p>
+        <p>1 or 2 categorical variable + 2 or more numerical variables</p>
         <p>Catg1(date) {"->"} X-axis</p>
         <p>Num1 {"->"} Column y-axis</p> : for the bars in the combo chart
         <p>Num2 {"->"} Line y-axis</p> : for the lines in the combo chart
@@ -220,6 +218,21 @@ export const PBI = [
         <p>1 categorical variable + 1 numerical variable</p>
         <p>Catg1 {"->"} Category</p>
         <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `create a scatter plot`,
+    ans: (
+      <>
+        <p>2 numerical variables</p>
+        <p>Num1 {"->"} X-axis</p>
+        <p>Num2 {"->"} Y-axis </p>
+
+        <p>2 numerical + 1 categorical variable</p>
+        <p>Num1 {"->"} X-axis</p>
+        <p>Num2 {"->"} Y-axis </p>
+        <p>Catg1 {"->"} Legend</p>
       </>
     ),
   },
