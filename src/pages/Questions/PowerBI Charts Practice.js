@@ -196,7 +196,13 @@ export const PBI = [
     que: `create a combo chart`,
     ans: (
       <>
-        <p>1 categorical variable (date) + 2 or more numerical variables</p>
+        <p>
+          1 or more categorical variable (date) + 2 or more numerical variables
+        </p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Column y-axis</p> : for the bars in the combo chart
+        <p>Num2 {"->"} Line y-axis</p> : for the lines in the combo chart
+        <p>Catg2 {"->"} Column legend</p> : to make the bars into stacked bars
       </>
     ),
   },
