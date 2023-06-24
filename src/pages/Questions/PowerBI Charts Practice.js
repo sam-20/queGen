@@ -279,12 +279,9 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
-    ans: (
-      <>
-        <p></p>
-      </>
-    ),
+    que: `Convert the units of numerical values in the a table chart or matrix chart. 
+    Eg. representing value as raw (49332.57), thousands(49.33K), millions(0.05M), billions(0.005bn)`,
+    ans: `Visualizations pane-> Format Visual tab -> Visual -> Specific Column -> choose column to apply units to -> Display Units`,
   },
   {
     que: ``,
