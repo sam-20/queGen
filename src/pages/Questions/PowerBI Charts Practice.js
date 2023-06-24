@@ -454,10 +454,31 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
+    que: `add a filter option to a card's value. 
+    Eg. first create a simple card to show the total sales. 
+    Second create a dynamic card to show the state with the highest sales`,
     ans: (
       <>
-        <p></p>
+        <p>
+          To create a filter to answer the question, reframe the question to
+          "What is the state for the top 1 sales?". From the reframed question,
+          we take 3 keywords
+        </p>
+        <p>keyword1: state, keyword2: top 1, keyword3: sales</p>
+        <p>
+          Step 1: create card: the reframed question says "what is the state?".
+          Therefore the card should contain the name of the state. Hence we drag
+          the state onto the card. Catg(State) {"->"} Fields
+        </p>
+        <p>
+          Step 2: to create the dynamic filter: select card {"->"} Filters pane
+          {"->"} under Filters On This Visual, there is pane called Add Data
+          Fields Here {"->"} drag keyword1 onto the pane{"->"} this creates a
+          new set of options for keyword1 {"->"} under Filter Type select Top N{" "}
+          {"->"} under Show Items select Top and enter the value of keyword2
+          {"->"} under By Value section, drag keyword3 onto this pane{"->"}{" "}
+          Apply filter
+        </p>
       </>
     ),
   },
