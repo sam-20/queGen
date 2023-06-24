@@ -251,7 +251,11 @@ export const PBI = [
     que: `create a gauge chart`,
     ans: (
       <>
-        <p></p>
+        <p>1 numerical variable</p>
+        <p>Num1 {"->"} Value </p>
+        <p>Measure1 {"->"} Minium value</p>
+        <p>Measure2 {"->"} Maximum value</p>
+        <p>Measure3 {"->"} Target value</p>
 
         <p>
           The gauge chart is used to track progress of a single data quantity.
