@@ -474,9 +474,9 @@ export const PBI = [
           Step 2: to create the dynamic filter: select card {"->"} Filters pane
           {"->"} under Filters On This Visual, there is pane called Add Data
           Fields Here {"->"} drag keyword1 onto the pane{"->"} this creates a
-          new set of options for keyword1 {"->"} under Filter Type select Top N{" "}
+          new set of options for keyword1 {"->"} under Filter Type select Top N
           {"->"} under Show Items select Top and enter the value of keyword2
-          {"->"} under By Value section, drag keyword3 onto this pane{"->"}{" "}
+          {"->"} under By Value section, drag keyword3 onto this pane{"->"}
           Apply filter
         </p>
       </>
