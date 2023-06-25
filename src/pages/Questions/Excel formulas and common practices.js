@@ -486,7 +486,23 @@ export const EF = [
   },
   {
     que: `filter out the duplicate values in a column`,
-    ans: `https://www.excel-easy.com/examples/find-duplicates.html`,
+    ans: (
+      <>
+        <p>
+          Reference: https://www.excel-easy.com/examples/find-duplicates.html
+        </p>
+        <p>Assuming our data is in ColA</p>
+        <p>
+          Step1: retrieve unique values in ColA. The result is a range of
+          distinct values. This is ColB
+        </p>
+        <p>
+          Step 2: using countif: count number of times colB first item is in
+          colA. Then drag down to remaining unique values to find their counts
+          in ColA as well
+        </p>
+      </>
+    ),
   },
   {
     que: `count the number of duplicates in a column`,
