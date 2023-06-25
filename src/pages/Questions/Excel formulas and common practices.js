@@ -227,12 +227,29 @@ export const EF = [
   },
   {
     que: `utilise any formula that takes a parameter as a range of values/column located in another worksheet`,
-    ans: null,
+    ans: (
+      <>
+        <p>=UPPER('students data'!A1:B3)</p>
+      </>
+    ),
   },
   {
     que: `utilise any formula that should take an entire column data in worksheet A and produce an entire column result in worksheet B.
     eg. extract all the days from a date column in worksheet A to worksheet B`,
     ans: null,
+  },
+  {
+    que: `reference a cell/range/table that has a name`,
+    ans: (
+      <>
+        <p>
+          NB:referencing cell/range/table is the same regardless same workheet
+          or another worksheet.Because the name is always unique
+        </p>
+        <p>=2*taxRate --cell named as taxRate</p>
+        <p>=2*scores_table --table named as scores_table</p>
+      </>
+    ),
   },
   { que: `display today's date`, ans: `TODAY or Ctrl+;` },
   { que: `display the current time`, ans: `Ctrl+Shift+;` },
