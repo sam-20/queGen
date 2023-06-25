@@ -498,8 +498,8 @@ export const EF = [
         </p>
         <p>
           Step 2: using countif: count number of times colB first item is in
-          colA. Then drag down to remaining unique values to find their counts
-          in ColA as well
+          colA. Then drag down the countif result find the counts of the
+          remaining items
         </p>
       </>
     ),
@@ -535,7 +535,15 @@ export const EF = [
   },
   {
     que: `count the number of distinct values in a column`,
-    ans: `first filter out the distinct values, then use countif to count their totals`,
+    ans: (
+      <>
+        <p>
+          first filter out the distinct values, then use countA to count the
+          number of cells
+        </p>
+        <p>=COUNTA(UNIQUE(B10:B16))</p>
+      </>
+    ),
   },
   {
     que: `calculate the period between 2 times in hours. eg. hours worked between 8:30 and 4:45`,
