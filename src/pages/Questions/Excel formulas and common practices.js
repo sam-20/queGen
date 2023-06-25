@@ -23,11 +23,11 @@ export const EF = [
   },
   {
     que: `display the position number of a case-sensitive character in a cell`,
-    ans: `FIND`,
+    ans: `FIND(char_to_find, text_to_search_in)`,
   },
   {
     que: `display the position number of a case-insensitive character in a cell`,
-    ans: `SEARCH`,
+    ans: `SEARCH(char_to_find, text_to_search_in)`,
   },
   {
     que: `add prefix to cell`,
@@ -37,26 +37,28 @@ export const EF = [
     que: `add suffix to cell eg. adding domain to all usernames`,
     ans: `'B2' & '@gmail.com'`,
   },
-  { que: `replace a number of characters in a cell`, ans: `REPLACE` },
+  {
+    que: `replace a number of characters in a cell`,
+    ans: `REPLACE(text_to_replace,starting_postion_numbering_from_1,num_chars_to_replace,new_text)`,
+  },
   {
     que: `replace a portion of existing text or character in a cell`,
     ans: `SUBSTITUTE`,
   },
   {
     que: `repeat a character(s) a given number of times in a cell. eg. replace ab in the cell with ababab`,
-    ans: `REPT`,
+    ans: `REPT(text, num_times)`,
   },
   {
     que: `generate a list of random values from a given set of texts`,
     ans: null,
   },
+  { que: `count the number of non-empty cells`, ans: `COUNTA` },
+  { que: `what is the number of empty cells?`, ans: `COUNTBLANK` },
   {
     que: `how many cells contain only numbers`,
     ans: `COUNT: used to count number of cells in a range that contain numbers ie. (date numbers, integers, double)`,
   },
-  { que: `what is the number of non-empty cells`, ans: `COUNTA` },
-  { que: `what is the number of empty cells?`, ans: `COUNTBLANK` },
-  { que: `how many cells contain a particular text`, ans: `COUNTIF` },
   { que: `do cell A and B contain the same values?`, ans: `=` },
   { que: `do cell A and B contain different values?`, ans: `<>` },
   { que: `is cell A greater than B?`, ans: `>` },
@@ -67,9 +69,15 @@ export const EF = [
     que: `display a result based on the condition that cell A and B hold true`,
     ans: `AND`,
   },
-  { que: `find the modulo of a number`, ans: `MOD` },
-  { que: `give an example of IF function`, ans: `IF` },
-  { que: `give an example of nested IF function`, ans: `IF` },
+  { que: `find the modulo of a number`, ans: `eg. 2 mod 5 = MOD(2,5)` },
+  {
+    que: `give an example of IF function`,
+    ans: `IF(M6="shite","correct","false")`,
+  },
+  {
+    que: `give an example of nested IF function`,
+    ans: `IF(LEFT(M5,1)="E",IF(LEN(M5)=7,"ewallet","other"),"not E")`,
+  },
 
   { que: `display the opposite of TRUE or FALSE outputs`, ans: `NOT` },
   {
