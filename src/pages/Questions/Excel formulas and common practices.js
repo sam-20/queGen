@@ -395,14 +395,41 @@ export const EF = [
   },
   {
     que: `search for an item's corresponding value in another column B using vlookup exact match`,
-    ans: `vlookup([whose value are we searching for ie. lookup value], 
-      [in which table are we searching], 
-      [the item we want to pull out, what is its column number starting from 1?],
-       [do we want the exact match for that lookup value ie. 0 or we want an approximate match ie. 1])`,
+    ans: (
+      <>
+        <p>
+          vlookup([whose value are we searching for ie. lookup value], [in which
+          table are we searching], [the item we want to pull out, what is its
+          column number starting from 1?], [do we want the exact match for that
+          lookup value ie. FALSE or we want an approximate match ie. TRUE])
+        </p>
+        <p>Shortcut for vlookup parameters: ltcm</p>
+        <p>l - lookup value</p>
+        <p>t - table</p>
+        <p>c - column number starting from 1</p>
+        <p>m - match type ie. approx or exact</p>
+      </>
+    ),
   },
   {
     que: `a col A has corresponding values in col B. what will be the col B value of an item which is not in col A but falls inside the range of values in A`,
     ans: `vlookup with approximate match.`,
+  },
+  {
+    que: `search for an item's corresponding value using xloookup`,
+    ans: (
+      <>
+        <p>
+          xlookup([whose value are we searching for ie. lookup value], [in which
+          array is the lookup value located], [the item we want to pull out,
+          what is its array])
+        </p>
+        <p>Shortcut for xlookup parameters: l,la,ra</p>
+        <p>l - lookup value</p>
+        <p>la - lookup array</p>
+        <p>ia - result/item array</p>
+      </>
+    ),
   },
   {
     que: `search for an item's match using hlookup`,
@@ -424,22 +451,38 @@ export const EF = [
   {
     que: `find which item is inside a given position in a column of values (1 dimensional array). 
     eg. What value is inside the 20th position of the name column`,
-    ans: `INDEX(
-      column range excl. header, 
-      position number where we want to pull out the value ie. starting from 1)`,
+    ans: (
+      <>
+        <p>INDEX( column range, row number)</p>
+        <p>
+          NB: when specifying the column range, including or excluding the
+          column header produce the same results. Because at the end of the day,
+          the row number is always constant
+        </p>
+      </>
+    ),
   },
   {
     que: `find which item is inside a given position in a table of values (2 dimensional array). 
     eg. What value is inside row 10, col 5 of the students table`,
-    ans: `INDEX(
-      table range excl. headers, 
-      row number where we want to pull out the value ie. starting from 1, 
-      col number where we want to pull out the value ie. starting from 1 
-      )`,
+    ans: (
+      <>
+        <p>INDEX( table/range, row number, col number )</p>
+        <p>
+          table with or without headers dont affect results since row number and
+          col number are always constant
+        </p>
+      </>
+    ),
   },
   {
     que: `find the position of a given item in a column (1 dimensional array). eg. whats the index of Ghana in the country column`,
-    ans: `MATCH(lookup value, lookup array excl. header). NB: the position returned numbering starts from 1`,
+    ans: (
+      <>
+        <p>MATCH(lookup value, lookup column)</p>
+        <p>the position returned is the row number of the item</p>
+      </>
+    ),
   },
   {
     que: `filter out the duplicate values in a column`,
