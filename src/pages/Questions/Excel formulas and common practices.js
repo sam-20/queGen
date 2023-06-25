@@ -79,10 +79,10 @@ export const EF = [
     ans: `IF(LEFT(M5,1)="E",IF(LEN(M5)=7,"ewallet","other"),"not E")`,
   },
 
-  { que: `display the opposite of TRUE or FALSE outputs`, ans: `NOT` },
+  { que: `display the opposite of TRUE or FALSE outputs`, ans: `=NOT(N7=B7)` },
   {
     que: `catch an error that could be thrown by a condition not met`,
-    ans: `IFERROR`,
+    ans: `=IFERROR(E5+1,"cannot sum number and string")`,
   },
   {
     que: "generate an auto increment of numbers using a function",
@@ -181,8 +181,49 @@ export const EF = [
     ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
   {
+    que: `how do you reference an entire column/row without the header column/row`,
+    ans: (
+      <>
+        <p>eg. all column C data except header {"->"} C:C,C1</p>
+        <p>eg. all row 3 data except header {"->"} 3:3,A3</p>
+      </>
+    ),
+  },
+  {
+    que: `how do you reference multiple entire columns/rows without their header column/row`,
+    ans: (
+      <>
+        <p>eg. converting data in column A and B to upper</p>
+        <p>=UPPER(A:A,A1,B:B,B1)</p>
+      </>
+    ),
+  },
+  {
     que: `utilise any formula that takes a parameter as a single value located in another worksheet`,
-    ans: null,
+    ans: (
+      <>
+        <p>
+          To reference data in another worksheet, first take note of that
+          worksheet's name
+        </p>
+        <p>if name is default sheet name eg. Sheet1, Sheet2, Sheet7</p>
+        <p>Sheet2!A1 --reference cell</p>
+        <p>Sheet2!A1:D4 --reference range</p>
+        <p>Sheet2!C:C --reference column</p>
+        <p>Sheet1!C:C,Sheet1!C1 --reference column data except header</p>
+        <p>Sheet2!3:3 --reference row</p>
+
+        <p>if name is custom sheet name eg. "Students", "sales unclean"</p>
+        <p>'Students'!D2 --reference cell</p>
+        <p>'sales unclean'!A1:D4 --reference range</p>
+        <p>'sales unclean'!C:C --reference column</p>
+        <p>
+          'sales unclean'!C:C,'sales unclean'!C1 --reference column data except
+          header
+        </p>
+        <p>'sales unclean'!3:3 --reference row</p>
+      </>
+    ),
   },
   {
     que: `utilise any formula that takes a parameter as a range of values/column located in another worksheet`,
