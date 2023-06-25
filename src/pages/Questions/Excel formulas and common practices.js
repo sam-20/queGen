@@ -275,7 +275,7 @@ export const EF = [
   },
   {
     que: `subtract n years from a date`,
-    ans: `negative value of the no of years*12`,
+    ans: `EDATE(negative value of the no of years*12)`,
   },
   {
     que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates not considering holidays`,
@@ -373,6 +373,17 @@ export const EF = [
   {
     que: `import pivot table from the data model`,
     ans: `Insert tab -> Tables group -> Pivot Table -> From Data Model`,
+  },
+  {
+    que: `create a pivot chart from your pivot table`,
+    ans: (
+      <>
+        <p>
+          select created pivot table {"->"} PivotTable Analyze tab {"->"} Tools
+          group {"->"} Pivot Chart
+        </p>
+      </>
+    ),
   },
   {
     que: `create, update or delete relationships between tables in a data model`,
