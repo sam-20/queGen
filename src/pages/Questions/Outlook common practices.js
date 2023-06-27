@@ -4,7 +4,11 @@ export const OP = [
     ans: ``,
   },
   {
-    que: ``,
+    que: `sign into your outllok app`,
+    ans: ``,
+  },
+  {
+    que: `sign about your outllok app`,
     ans: ``,
   },
 ];

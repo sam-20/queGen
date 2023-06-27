@@ -42,27 +42,16 @@ export const GI = [
     que: `what interests you about this field or industry and why have you decided to apply for a job in this industry`,
     ans: null,
   },
+  { que: `•	` },
   {
-    que: `what are the duties of the job you are applying for?`,
-    ans: (
-      <>
-        <p>
-          Use MS Excel and complex data protocols to cleanse data, blend
-          datasets, create lists, and perform data cleaning tasks
-        </p>
-        <p>
-          Support and assist internal teams in learning, understanding, and
-          using new data processes
-        </p>
-        <p>Ensure data is handled in compliance with GDPR</p>
-        <p>
-          Manage client data by managing client files, identifying limitation
-          dates, and inputting data received on questionaries
-        </p>
-        <p>Communicate with clients and monitor case progression</p>
-        <p>Open new files and close old ones as required</p>
-      </>
-    ),
+    que: `Can you tell us what you know so far about the role.
+    In other words, what are the duties of the job you are applying for?`,
+    ans: `◦	So the successful candidate would work with the 
+    Supporting Families Team as a data analyst. 
+    They would collect, analyse and interpret data on 
+    families who are part of the programme. The role is under
+     the Business Intelligence Unit and the goal is to produce insights 
+     that would foster decision-making.`,
   },
   {
     que: `Tell us about a project that you worked on and felt proud of it`,
@@ -142,19 +131,29 @@ export const GI = [
     as an applications developer`,
   },
   {
-    que: `What is Leigh as a company? In other words, what do you know about Leigh Day`,
-    ans: `Leigh day is a law firm that works in the UK and across the globe to 
-  support people who suffer injury, discrimination and human rights abuse. The 
-  company supports their clients by providing them with experienced legal teams to advise
-  them with their injury and rights claim. Leigh day has helped to recover
-  over £1bn in compensation on behalf of their clients and they have a Band 1 ranking in
-  8 categories of the Chambers and Partners legal directory. Leigh day 
-  is also represented in the top tier in the legal 500 for person injury, human and employment
-  rights
+    que: `What is Harrow Council as a company? 
+    In other words, what do you know about Harrow Council. Or better still, 
+    can you tell me what you know about Harrow Council and what its all about?`,
+    ans: `◦	Harrow Council is the local authority for the London Borough of Harrow in Greater London
+    ◦	It is responsible for social services, libraries, waste collection and disposal,
+     traffic, and most roads and environmental health. It also sets council tax 
+     which is an annual fee your local council charges you for the services
+      it provides, like rubbish collection and libraries.  The harrow council
+      covers cities including Harrow, Pinner, Stanmore, and some western parts of Edgware
   `,
   },
-  // { que: `What are the goals of the company?`, ans: null },
-  // { que: `What are the core values of the company?`, ans: null },
+  {
+    que: `What are the core values of the company?`,
+    ans: `▪	Be Courageous
+  ▪	Make it happen
+  Do it together
+  `,
+  },
+  { que: `What are the goals of the company?`, ans: null },
+  {
+    que: `what is the company's vision`,
+    ans: `▪	To establish fairness and cohesion in Harrow making it a great place to live, work and visit`,
+  },
   {
     que: `Tell me about yourself`,
     ans: `My name is Samuel and I am from Ghana. I arrived in the UK in 2021 to
@@ -185,17 +184,12 @@ export const GI = [
   `,
   },
   {
-    que: `could you please walk us through some of the activities you undertook in your previous jobs`,
-    ans: `In 2019 i worked as a junior data analyst with Kstu which is a university, I worked closely with the database
-    team in the IT department. Since it was a university, we worked primarily with students records and 
-    we managed their information in Postgres SQL. So sometimes you'd have students coming in who want to 
-    update their records, like their names for instance if there was a spelling mistake. There wasnt
-    a fully functional and well equipped portal where students could request for changes or
-    even for lecturers. So sometimes you'd also have lecturers send request to update or retrieve exams scores of 
-    students. Then we also had these questionnaires handed to students to review their
-   lecturers and how they found the course. We'd gather that information into excel, analyse then
-    produce reports on the performance of lecturers and which courses students are finding difficulties in.
-     ...Then at Edorer, I ..., Recently at Brunel University London, I...`,
+    que: `•	Can you run us through your work history`,
+    ans: `◦	After completing my bachelors → worked as a data analyst for KsTU from September 2019 to August 2021. 
+    ◦	My work there began as a web app devloper. Designed a couple of management systems including the databases. Then role progressed supporting IT team with managing school databases. Then I was further given duties of gathering student data and analysing. And thats how it progressed into a data analyst role. I enjoyed the work I did as a data analyst so after 2 years I decided to pursue a Masters Programme in Brunel. 
+    ◦	Then in Brunel, before I began working on my thesis, my supervisor referred me to the ceo of Edorer whose project at the time aligned with my thesis. So I teamed up with them collected  student data through surveys and analysed to identify an effective adaptive learning approach. Then in September I was offered a data analyst role by the Brunel Talent Marketplace inside brunel for 3 months.
+    Then at the end of last year I started working with V-land
+    `,
   },
   {
     que: `what are your salary expectations?`,
@@ -250,6 +244,12 @@ export const GI = [
           Are there opportunities for training and progression within the
           role/company?
         </p>
+        <p>
+          ◦ If successful, what would you expect from your first month in the
+          role? And What do you think the biggest challenge will be for a new
+          employee in this position?
+        </p>
+        <p>◦ What will be the next stage in the process of my application?</p>
       </>
     ),
   },
