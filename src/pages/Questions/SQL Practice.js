@@ -1720,9 +1720,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
           table in the 'school' database. Create a trigger that should delete
           the record of that student from the alumni table before
           entering/registering the student in the Students table.
-          <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
-          data from the 'triggers test' excel file
         </p>
+        <span style={{ fontStyle: "italic" }}>P.S</span> Assuming you're using
+        data from the 'triggers test' excel file
       </>
     ),
     ans: (

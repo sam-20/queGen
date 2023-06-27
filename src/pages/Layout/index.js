@@ -33,11 +33,14 @@ function Layout() {
 
   const [questionDomainType, setQuesDomain] = useState(); //stores the radio button value of the question domain enabled
 
-  const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
+  // const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
 
   const [mixedDomainQuesArr, setMixQues] = useState([]); //if the user selects mixed question domain, this array stores the questions for the areas selected
-  let checkedQueTypesPos = []; //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
-  let checkedQueTypesPos2 = useRef([]);
+  let checkedQueTypesPos = useRef([]); //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
+
+  const prevSelQueTopic = useRef(""); //this variable will track the current specific question topic whenever a user generates a new question
+
+  const questionsBallot = useRef([]); //variable which will serve as a ballot containing the questions which we'd pick a random from
 
   //generate random question number from the given questions array
   function genRanQueNum(max) {
@@ -46,6 +49,7 @@ function Layout() {
     let rand = Math.random(); // generate random number
     rand = Math.floor(rand * difference); // multiply with difference
     rand = rand + min; // add with min value
+    console.log(rand);
     return rand;
   }
 
@@ -123,6 +127,7 @@ function Layout() {
     },
   ];
 
+  //we assign a new property, "context" to each question domain's questions
   useEffect(() => {
     for (var queType in Questions) {
       for (var count = 0; count < Questions[queType].content.length; count++) {
@@ -144,14 +149,11 @@ function Layout() {
 
     //now we peform different operations based on whether used selected Specific question domain or Mixed
 
-    //variable which will serve as a ballot containing the questions which we'd pick a random from
-    let questionsBallot = [];
-
     // console.log(checkedQueTypesPos2.current);
 
     //if Question Domain: Mixed
     if (questionDomainType == true) {
-      if (checkedQueTypesPos2.current.length == 0) {
+      if (checkedQueTypesPos.current.length == 0) {
         alert("Select at least 1 question type");
         return;
       }
@@ -161,9 +163,9 @@ function Layout() {
       // mixedDomainQuesArr, setMixQues
       // var x = [];
 
-      for (var positions in checkedQueTypesPos2.current) {
-        questionsBallot = questionsBallot.concat(
-          Questions[checkedQueTypesPos2.current[positions]].content
+      for (var positions in checkedQueTypesPos.current) {
+        questionsBallot.current = questionsBallot.current.concat(
+          Questions[checkedQueTypesPos.current[positions]].content
         );
       }
       // console.log(x);
@@ -176,57 +178,78 @@ function Layout() {
         alert("Select Question Type");
         return;
       }
-      //before we generate question we find index of that question type in the questions array
-      var queTypIdx = Questions.findIndex((item) => item.title === queTyp);
 
-      //save the questions to the ballot
-      questionsBallot = Questions[queTypIdx].content;
-    }
+      //if we're still generating from the same specific question topic, we dont need to fetch the questions from the Question array again since they're already in the questionsBallot
+      if (queTyp == prevSelQueTopic.current) {
+        //check if all questions have been drawn from ballot
 
-    console.log(questionsBallot);
+        if (questionsBallot.current.length == 0) {
+          alert("No more questions");
+          //reset the prevSelQueTopic
+          prevSelQueTopic.current = "";
+          return;
+        }
+      } else {
+        //if new question topic we empty ballot to generate new set of questions
+        questionsBallot.current = [];
 
-    //if all questions of that type have been generated from the ballot we prompt user
-    if (questionsBallot.length === 0) {
-      alert("No more questions");
-      return;
+        prevSelQueTopic.current = queTyp; //we store the current question topic whose questions are being generated
+
+        //before we generate question we find index of that question type in the questions array
+        var queTypIdx = Questions.findIndex((item) => item.title === queTyp);
+
+        //save the questions to the ballot.
+        //NB: we had to copy one array into another using slice because the usual array2=array1 modifies the content of array1
+        //https://www.youtube.com/watch?v=EeZBKv34mm4
+        questionsBallot.current = Questions[queTypIdx].content.slice(0);
+
+        // console.log("before coming out", queTypIdx);
+        // console.log("before coming out", prevSelQueTopic.current);
+        // console.log("before coming out", questionsBallot.current);
+      }
     }
 
     //after knowing which question type we want to generate questions from, we calc the length of that questions array to generate a random number
-    var _queNumGen = genRanQueNum(questionsBallot.length); //this new variable was created to be used as the original generated question number else the default of 0 in the state would be used when the user generates question for the first time. The state version of this variable was created to hold as the key property for the queTxt variable
+    var _queNumGen = genRanQueNum(questionsBallot.current.length); //this new variable was created to be used as the original generated question number else the default of 0 in the state would be used when the user generates question for the first time. The state version of this variable was created to hold as the key property for the queTxt variable
     console.log("question number generated: ", _queNumGen);
-    setQueNumGen(_queNumGen);
+    // setQueNumGen(_queNumGen);
 
     //set the question of the generated question number
-    setQueTxt(questionsBallot[_queNumGen].que);
+    setQueTxt(questionsBallot.current[_queNumGen].que);
 
     //set the question context of the generated question number
-    setQueCntxt(questionsBallot[_queNumGen].context);
+    setQueCntxt(questionsBallot.current[_queNumGen].context);
 
     //set the answer of the generated question number
-    setAnsTxt(questionsBallot[_queNumGen].ans);
+    setAnsTxt(questionsBallot.current[_queNumGen].ans);
 
     //if the question has an answer included we display the View Answer button
-    if (questionsBallot[_queNumGen].ans != null) {
+    if (questionsBallot.current[_queNumGen].ans != null) {
       setDispAnsBtn(true);
     }
 
     //if the enable speech option is on, we play the question
     if (speechEnabled) {
       speak({
-        text: questionsBallot[_queNumGen].que,
+        text: questionsBallot.current[_queNumGen].que,
         voice: voices[3],
       });
     }
 
     //finally remove that question from the questions array to avoid being asked again
-    questionsBallot.splice(_queNumGen, 1);
-
-    console.log("questions remaining: ", questionsBallot);
+    questionsBallot.current.splice(_queNumGen, 1);
   };
 
   //fetches the index of the selected question type from the dropdown
   const dropDownItemSelected = (e) => {
     setQueTyp(e.target.value); //store the selected dropdown question type
+
+    //clear variables
+    setQueTxt("");
+    setQueCntxt("");
+    setAnsTxt("");
+    setDispAnsBtn(false);
+    setDispAnsTxt(false);
   };
 
   //update speech enabled radio button when selected
@@ -247,24 +270,22 @@ function Layout() {
     setAnsTxt("");
     setDispAnsBtn(false);
     setDispAnsTxt(false);
-    checkedQueTypesPos2.current = [];
+    checkedQueTypesPos.current = [];
   };
 
   //update checkedQueTypesPos when a question type is checked or unchecked in the mixed question domain
   const updateCheckedQueTypesPos = (e, pos) => {
     //if the checkbox for the question type is checked, add its position number to checkedQueTypesPos
     if (e.target.checked == true) {
-      checkedQueTypesPos = checkedQueTypesPos.concat(pos);
-      checkedQueTypesPos2.current = checkedQueTypesPos2.current.concat(pos);
+      checkedQueTypesPos.current = checkedQueTypesPos.current.concat(pos);
 
       // mixedDomainQuesArr, setMixQues
       // setMixQues(...mixedDomainQuesArr, ...Questions[pos]);
     }
     //remove the position number from checkedQueTypesPos
     else {
-      checkedQueTypesPos.splice(checkedQueTypesPos.indexOf(pos), 1);
-      checkedQueTypesPos2.current.splice(
-        checkedQueTypesPos2.current.indexOf(pos),
+      checkedQueTypesPos.current.splice(
+        checkedQueTypesPos.current.indexOf(pos),
         1
       );
     }
@@ -342,14 +363,14 @@ function Layout() {
               {Questions.map((item, pos) => {
                 return (
                   <div
-                    key={pos}
+                    key={Math.random()}
                     style={{
                       display: "flex",
                       flexDirection: "row",
                     }}
                   >
                     <input
-                      key={pos + 1.42}
+                      key={Math.random()}
                       type="checkbox"
                       value={item}
                       onChange={(e) => {
@@ -358,7 +379,7 @@ function Layout() {
                     />
                     <label
                       style={{ fontSize: 10, paddingTop: 3 }}
-                      key={pos * 1.25}
+                      key={Math.random()}
                     >
                       {item.title}
                     </label>
@@ -383,7 +404,7 @@ function Layout() {
                 <option>Select Area</option>
                 {Questions.map((item, pos) => {
                   return (
-                    <option key={pos} value={item.title}>
+                    <option key={Math.random()} value={item.title}>
                       {item.title}
                     </option>
                   );
@@ -451,20 +472,23 @@ function Layout() {
           </div>
 
           <div>
+            {/* question context */}
             <p
               style={{ color: "green" }}
-              key={queNumGen}
+              key={Math.random()}
               className={queTxt === "" ? null : LayoutCSS.queTxt}
             >
               {queCntxt}
             </p>
-            <p
+
+            {/* question */}
+            <div
               style={{ color: "red" }}
-              key={genRanQueNum(10 * 1.25)}
+              key={Math.random()}
               className={queTxt === "" ? null : LayoutCSS.queTxt}
             >
               {queTxt}
-            </p>
+            </div>
           </div>
 
           <div style={{ display: "flex", marginTop: 10 }}>
@@ -481,8 +505,9 @@ function Layout() {
           </div>
 
           {dispAnsTxt ? (
+            // answer
             <div
-              key={genRanQueNum(100)}
+              key={Math.random()}
               className={ansTxt === "" ? null : LayoutCSS.ansDiv}
             >
               {ansTxt}
