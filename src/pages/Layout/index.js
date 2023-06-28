@@ -36,9 +36,10 @@ function Layout() {
   // const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
 
   const [mixedDomainQuesArr, setMixQues] = useState([]); //if the user selects mixed question domain, this array stores the questions for the areas selected
-  let checkedQueTypesPos = useRef([]); //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
+  const checkedQueTypesPos = useRef([]); //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
 
   const prevSelQueTopic = useRef(""); //this variable will track the current specific question topic whenever a user generates a new question
+  const prevSelChecQueTypes = useRef([]); //for the Mixed Domain quesitons, this array will track the checkboxes
 
   const questionsBallot = useRef([]); //variable which will serve as a ballot containing the questions which we'd pick a random from
 
@@ -49,7 +50,6 @@ function Layout() {
     let rand = Math.random(); // generate random number
     rand = Math.floor(rand * difference); // multiply with difference
     rand = rand + min; // add with min value
-    console.log(rand);
     return rand;
   }
 
@@ -149,27 +149,64 @@ function Layout() {
 
     //now we peform different operations based on whether used selected Specific question domain or Mixed
 
-    // console.log(checkedQueTypesPos2.current);
-
     //if Question Domain: Mixed
     if (questionDomainType == true) {
+      //if user hasnt checked any questions
       if (checkedQueTypesPos.current.length == 0) {
         alert("Select at least 1 question type");
         return;
       }
 
-      // console.log("checked questions array", checkedQueTypesPos);
-      //[1,10]
-      // mixedDomainQuesArr, setMixQues
-      // var x = [];
-
-      for (var positions in checkedQueTypesPos.current) {
-        questionsBallot.current = questionsBallot.current.concat(
-          Questions[checkedQueTypesPos.current[positions]].content
-        );
+      //we check if all the checkboxes in prevSelChecQueTypes are in checkedQueTypesPos and also if all the checkboxes in checkedQueTypesPos are in prevSelChecQueTypes
+      let check1 = undefined;
+      for (var count = 0; count < checkedQueTypesPos.current.length; count++) {
+        //if checkedQueTypesPos values are in prevSelChecQueTypes
+        if (
+          prevSelChecQueTypes.current.includes(
+            checkedQueTypesPos.current[count]
+          )
+        ) {
+          check1 = true;
+        } else {
+          check1 = false;
+        }
       }
-      // console.log(x);
-      // questionsBallot = x;
+
+      let check2 = undefined;
+      for (var count = 0; count < prevSelChecQueTypes.current.length; count++) {
+        //if checkedQueTypesPos values are in prevSelChecQueTypes
+        if (
+          checkedQueTypesPos.current.includes(
+            prevSelChecQueTypes.current[count]
+          )
+        ) {
+          check2 = true;
+        } else {
+          check2 = false;
+        }
+      }
+
+      //final comparison between checkedQueTypesPos and prevSelChecQueTypes
+      if (check1 == check2) {
+        //if we are still generating for the same checkboxes
+        // console.log("generating questions for the same checkboxes");
+        if (questionsBallot.current.length == 0) {
+          alert("no more questions");
+          //reset the prevcheckboxes
+          prevSelChecQueTypes.current = [];
+          return;
+        }
+      } else {
+        // console.log("generating questions for new checkboxes");
+        //if user added new checkbox or unchecked existing one, we generate new ballot boxes
+        questionsBallot.current = []; //first empty exisitng ballot
+        for (var positions in checkedQueTypesPos.current) {
+          questionsBallot.current = questionsBallot.current.concat(
+            Questions[checkedQueTypesPos.current[positions]].content
+          );
+        }
+        prevSelChecQueTypes.current = checkedQueTypesPos.current.slice(0);
+      }
     }
 
     //if Question Domain: Specific
@@ -201,6 +238,7 @@ function Layout() {
         //save the questions to the ballot.
         //NB: we had to copy one array into another using slice because the usual array2=array1 modifies the content of array1
         //https://www.youtube.com/watch?v=EeZBKv34mm4
+        // https://www.youtube.com/watch?v=5xenz2mZ0gY
         questionsBallot.current = Questions[queTypIdx].content.slice(0);
 
         // console.log("before coming out", queTypIdx);
@@ -211,7 +249,7 @@ function Layout() {
 
     //after knowing which question type we want to generate questions from, we calc the length of that questions array to generate a random number
     var _queNumGen = genRanQueNum(questionsBallot.current.length); //this new variable was created to be used as the original generated question number else the default of 0 in the state would be used when the user generates question for the first time. The state version of this variable was created to hold as the key property for the queTxt variable
-    console.log("question number generated: ", _queNumGen);
+    // console.log("question number generated: ", _queNumGen);
     // setQueNumGen(_queNumGen);
 
     //set the question of the generated question number
