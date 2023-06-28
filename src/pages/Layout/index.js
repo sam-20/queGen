@@ -326,17 +326,17 @@ function Layout() {
 
   //update checkedQueTypesPos when a question type is checked or unchecked in the mixed question domain
   const updateCheckedQueTypesPos = (e, pos) => {
-    console.log(e.target.checked);
-    console.log(checkboxList);
+    // console.log(e.target.checked);
+    // console.log(checkboxList);
     var temp = checkboxList.slice(0);
-    console.log(temp);
+    // console.log(temp);
     temp[pos] = e.target.checked;
     setCheckboxList(temp);
 
     //if the checkbox for the question type is checked, add its position number to checkedQueTypesPos
     if (e.target.checked == true) {
       checkedQueTypesPos.current = checkedQueTypesPos.current.concat(pos);
-      console.log(checkboxList);
+      // console.log(checkboxList);
     }
     //remove the position number from checkedQueTypesPos
     else {
@@ -344,8 +344,14 @@ function Layout() {
         checkedQueTypesPos.current.indexOf(pos),
         1
       );
-      console.log(checkboxList);
+      // console.log(checkboxList);
     }
+
+    setQueTxt("");
+    setQueCntxt("");
+    setAnsTxt("");
+    setDispAnsBtn(false);
+    setDispAnsTxt(false);
   };
 
   return (
