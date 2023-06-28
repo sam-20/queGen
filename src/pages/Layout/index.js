@@ -35,13 +35,15 @@ function Layout() {
 
   // const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
 
-  const [mixedDomainQuesArr, setMixQues] = useState([]); //if the user selects mixed question domain, this array stores the questions for the areas selected
   const checkedQueTypesPos = useRef([]); //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
 
   const prevSelQueTopic = useRef(""); //this variable will track the current specific question topic whenever a user generates a new question
   const prevSelChecQueTypes = useRef([]); //for the Mixed Domain quesitons, this array will track the checkboxes
 
   const questionsBallot = useRef([]); //variable which will serve as a ballot containing the questions which we'd pick a random from
+
+  //if the user selects mixed question domain, this array stores the state of the checkboxes for the areas selected
+  const [checkboxList, setCheckboxList] = useState([]);
 
   //generate random question number from the given questions array
   function genRanQueNum(max) {
@@ -138,6 +140,13 @@ function Layout() {
 
     //the Mixed domain allows users to check multiple topics to generate questions from.
     //for each question type, we want to keep track of its checkbox when a user checks and unchecks it
+    //by default all the boxes are unchecked
+
+    var temp = [];
+    for (count = 0; count < Questions.length; count++) {
+      temp.push(false);
+    }
+    setCheckboxList(temp);
   }, []);
 
   //generate a question from the question type selected in the dropdown
@@ -304,7 +313,6 @@ function Layout() {
   //update question domain radio button when changed
   const changeQuesDomain = (e) => {
     setQuesDomain(e.target.value);
-    console.log(e.target.value);
 
     //clear variables since swtiching between domain should produce fresh set of questions not continue from previous doman
     setQueTxt("");
@@ -318,12 +326,17 @@ function Layout() {
 
   //update checkedQueTypesPos when a question type is checked or unchecked in the mixed question domain
   const updateCheckedQueTypesPos = (e, pos) => {
+    console.log(e.target.checked);
+    console.log(checkboxList);
+    var temp = checkboxList.slice(0);
+    console.log(temp);
+    temp[pos] = e.target.checked;
+    setCheckboxList(temp);
+
     //if the checkbox for the question type is checked, add its position number to checkedQueTypesPos
     if (e.target.checked == true) {
       checkedQueTypesPos.current = checkedQueTypesPos.current.concat(pos);
-
-      // mixedDomainQuesArr, setMixQues
-      // setMixQues(...mixedDomainQuesArr, ...Questions[pos]);
+      console.log(checkboxList);
     }
     //remove the position number from checkedQueTypesPos
     else {
@@ -331,6 +344,7 @@ function Layout() {
         checkedQueTypesPos.current.indexOf(pos),
         1
       );
+      console.log(checkboxList);
     }
   };
 
@@ -415,10 +429,14 @@ function Layout() {
                     }}
                   >
                     <input
-                      key={Math.random()}
+                      key={pos}
                       type="checkbox"
-                      value={item}
-                      checked={true}
+                      value={item.title}
+                      // checked={mixedQuesCheckboxes[pos]}
+                      // checked={mixedQuesCheckboxes[pos] === item.title}
+                      checked={
+                        checkedQueTypesPos.current.includes(pos) ? true : false
+                      }
                       onChange={(e) => {
                         updateCheckedQueTypesPos(e, pos);
                       }}
