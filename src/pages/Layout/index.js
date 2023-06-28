@@ -31,7 +31,7 @@ function Layout() {
   const { speak, voices } = useSpeechSynthesis();
   const [speechEnabled, setSpeechEnabled] = useState(); //stores the radio button value of speech enabled
 
-  const [questionDomainType, setQuesDomain] = useState(); //stores the radio button value of the question domain enabled
+  const [questionDomainType, setQuesDomain] = useState("specific"); //stores the radio button value of the question domain enabled
 
   // const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
 
@@ -127,13 +127,17 @@ function Layout() {
     },
   ];
 
-  //we assign a new property, "context" to each question domain's questions
   useEffect(() => {
+    //In the Questions array, each object has a key called "content"
+    //"content" is also an array of questions and we assign a new property, "context" object entry
     for (var queType in Questions) {
       for (var count = 0; count < Questions[queType].content.length; count++) {
         Questions[queType].content[count].context = Questions[queType].context;
       }
     }
+
+    //the Mixed domain allows users to check multiple topics to generate questions from.
+    //for each question type, we want to keep track of its checkbox when a user checks and unchecks it
   }, []);
 
   //generate a question from the question type selected in the dropdown
@@ -150,7 +154,7 @@ function Layout() {
     //now we peform different operations based on whether used selected Specific question domain or Mixed
 
     //if Question Domain: Mixed
-    if (questionDomainType == true) {
+    if (questionDomainType == "mixed") {
       //if user hasnt checked any questions
       if (checkedQueTypesPos.current.length == 0) {
         alert("Select at least 1 question type");
@@ -299,8 +303,8 @@ function Layout() {
 
   //update question domain radio button when changed
   const changeQuesDomain = (e) => {
-    var boolVal = e.target.value.toLowerCase() === "true";
-    setQuesDomain(boolVal);
+    setQuesDomain(e.target.value);
+    console.log(e.target.value);
 
     //clear variables since swtiching between domain should produce fresh set of questions not continue from previous doman
     setQueTxt("");
@@ -309,6 +313,7 @@ function Layout() {
     setDispAnsBtn(false);
     setDispAnsTxt(false);
     checkedQueTypesPos.current = [];
+    questionsBallot.current = [];
   };
 
   //update checkedQueTypesPos when a question type is checked or unchecked in the mixed question domain
@@ -327,9 +332,6 @@ function Layout() {
         1
       );
     }
-
-    // console.log("checked topics ", checkedQueTypesPos);
-    // console.log("checked topics2 ", checkedQueTypesPos2.current);
   };
 
   return (
@@ -363,7 +365,6 @@ function Layout() {
               flexDirection: "row",
               // backgroundColor: "yellow",
             }}
-            onChange={changeQuesDomain}
           >
             <label style={{ paddingRight: 10 }}>Question Domain: </label>
 
@@ -372,15 +373,21 @@ function Layout() {
               <input
                 type="radio"
                 name="quesDomain"
-                id="specific"
-                value={false}
-                defaultChecked
+                value="specific"
+                checked={questionDomainType === "specific"}
+                onChange={(e) => changeQuesDomain(e)}
               />
             </div>
 
             <div>
               <label>Mixed</label>
-              <input type="radio" name="quesDomain" id="mixed" value={true} />
+              <input
+                type="radio"
+                name="quesDomain"
+                value="mixed"
+                checked={questionDomainType === "mixed"}
+                onChange={(e) => changeQuesDomain(e)}
+              />
             </div>
           </div>
         </div>
@@ -395,7 +402,7 @@ function Layout() {
             alignItems: "center",
           }}
         >
-          {questionDomainType ? (
+          {questionDomainType == "mixed" ? (
             /* checkbox area for mixed question domain */
             <div style={{ paddingTop: 10 }}>
               {Questions.map((item, pos) => {
@@ -411,6 +418,7 @@ function Layout() {
                       key={Math.random()}
                       type="checkbox"
                       value={item}
+                      checked={true}
                       onChange={(e) => {
                         updateCheckedQueTypesPos(e, pos);
                       }}
@@ -442,7 +450,7 @@ function Layout() {
                 <option>Select Area</option>
                 {Questions.map((item, pos) => {
                   return (
-                    <option key={Math.random()} value={item.title}>
+                    <option key={pos} value={item.title}>
                       {item.title}
                     </option>
                   );
