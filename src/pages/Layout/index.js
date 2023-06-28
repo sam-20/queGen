@@ -33,8 +33,6 @@ function Layout() {
 
   const [questionDomainType, setQuesDomain] = useState("specific"); //stores the radio button value of the question domain enabled
 
-  // const [queNumGen, setQueNumGen] = useState(0); //the question number generated is stored in this variable
-
   const checkedQueTypesPos = useRef([]); //if the user selects the checkbox for a question type, this array stores the position of the question type in the Questions array
 
   const prevSelQueTopic = useRef(""); //this variable will track the current specific question topic whenever a user generates a new question
@@ -42,8 +40,7 @@ function Layout() {
 
   const questionsBallot = useRef([]); //variable which will serve as a ballot containing the questions which we'd pick a random from
 
-  //if the user selects mixed question domain, this array stores the state of the checkboxes for the areas selected
-  const [checkboxList, setCheckboxList] = useState([]);
+  const [checkboxList, setCheckboxList] = useState([]); //if the user selects mixed question domain, this array stores the state of the checkboxes for the areas selected
 
   //generate random question number from the given questions array
   function genRanQueNum(max) {
@@ -138,10 +135,7 @@ function Layout() {
       }
     }
 
-    //the Mixed domain allows users to check multiple topics to generate questions from.
-    //for each question type, we want to keep track of its checkbox when a user checks and unchecks it
-    //by default all the boxes are unchecked
-
+    //the Mixed domain allows users to check multiple topics to generate questions from. For each question type, we want to keep track of its checkbox when a user checks and unchecks it. By default all the boxes are unchecked
     var temp = [];
     for (count = 0; count < Questions.length; count++) {
       temp.push(false);
@@ -149,10 +143,8 @@ function Layout() {
     setCheckboxList(temp);
   }, []);
 
-  //generate a question from the question type selected in the dropdown
+  //generate a question from the Specific or Mixed Question Domain
   const generateQuestion = () => {
-    // console.log(checkedQueTypesPos2.current);
-
     //clear variables
     setQueTxt("");
     setQueCntxt("");
@@ -161,8 +153,6 @@ function Layout() {
     setDispAnsTxt(false);
 
     //now we peform different operations based on whether used selected Specific question domain or Mixed
-
-    //if Question Domain: Mixed
     if (questionDomainType == "mixed") {
       //if user hasnt checked any questions
       if (checkedQueTypesPos.current.length == 0) {
@@ -202,15 +192,12 @@ function Layout() {
       //final comparison between checkedQueTypesPos and prevSelChecQueTypes
       if (check1 == check2) {
         //if we are still generating for the same checkboxes
-        // console.log("generating questions for the same checkboxes");
         if (questionsBallot.current.length == 0) {
           alert("no more questions");
-          //reset the prevcheckboxes
-          prevSelChecQueTypes.current = [];
+          prevSelChecQueTypes.current = []; //reset the prevcheckboxes
           return;
         }
       } else {
-        // console.log("generating questions for new checkboxes");
         //if user added new checkbox or unchecked existing one, we generate new ballot boxes
         questionsBallot.current = []; //first empty exisitng ballot
         for (var positions in checkedQueTypesPos.current) {
@@ -232,11 +219,9 @@ function Layout() {
       //if we're still generating from the same specific question topic, we dont need to fetch the questions from the Question array again since they're already in the questionsBallot
       if (queTyp == prevSelQueTopic.current) {
         //check if all questions have been drawn from ballot
-
         if (questionsBallot.current.length == 0) {
           alert("No more questions");
-          //reset the prevSelQueTopic
-          prevSelQueTopic.current = "";
+          prevSelQueTopic.current = ""; //reset the prevSelQueTopic
           return;
         }
       } else {
@@ -253,17 +238,11 @@ function Layout() {
         //https://www.youtube.com/watch?v=EeZBKv34mm4
         // https://www.youtube.com/watch?v=5xenz2mZ0gY
         questionsBallot.current = Questions[queTypIdx].content.slice(0);
-
-        // console.log("before coming out", queTypIdx);
-        // console.log("before coming out", prevSelQueTopic.current);
-        // console.log("before coming out", questionsBallot.current);
       }
     }
 
     //after knowing which question type we want to generate questions from, we calc the length of that questions array to generate a random number
     var _queNumGen = genRanQueNum(questionsBallot.current.length); //this new variable was created to be used as the original generated question number else the default of 0 in the state would be used when the user generates question for the first time. The state version of this variable was created to hold as the key property for the queTxt variable
-    // console.log("question number generated: ", _queNumGen);
-    // setQueNumGen(_queNumGen);
 
     //set the question of the generated question number
     setQueTxt(questionsBallot.current[_queNumGen].que);
@@ -326,17 +305,13 @@ function Layout() {
 
   //update checkedQueTypesPos when a question type is checked or unchecked in the mixed question domain
   const updateCheckedQueTypesPos = (e, pos) => {
-    // console.log(e.target.checked);
-    // console.log(checkboxList);
     var temp = checkboxList.slice(0);
-    // console.log(temp);
     temp[pos] = e.target.checked;
     setCheckboxList(temp);
 
     //if the checkbox for the question type is checked, add its position number to checkedQueTypesPos
     if (e.target.checked == true) {
       checkedQueTypesPos.current = checkedQueTypesPos.current.concat(pos);
-      // console.log(checkboxList);
     }
     //remove the position number from checkedQueTypesPos
     else {
@@ -344,9 +319,7 @@ function Layout() {
         checkedQueTypesPos.current.indexOf(pos),
         1
       );
-      // console.log(checkboxList);
     }
-
     setQueTxt("");
     setQueCntxt("");
     setAnsTxt("");
@@ -362,9 +335,6 @@ function Layout() {
           height: "100vh",
           flexDirection: "column",
           paddingLeft: 20,
-          // justifyContent: "center",
-          // alignItems: "center",
-          // backgroundColor: "grey",
         }}
       >
         {/* top half of page */}
@@ -372,7 +342,6 @@ function Layout() {
           style={{
             display: "flex",
             flex: 0.1,
-            // backgroundColor: "red",
             flexDirection: "column",
             justifyContent: "flex-end",
             alignItems: "center",
@@ -383,7 +352,6 @@ function Layout() {
             style={{
               display: "flex",
               flexDirection: "row",
-              // backgroundColor: "yellow",
             }}
           >
             <label style={{ paddingRight: 10 }}>Question Domain: </label>
@@ -417,7 +385,6 @@ function Layout() {
           style={{
             display: "flex",
             flex: 0.9,
-            // backgroundColor: "dodgerblue",
             flexDirection: "column",
             alignItems: "center",
           }}
@@ -438,8 +405,6 @@ function Layout() {
                       key={pos}
                       type="checkbox"
                       value={item.title}
-                      // checked={mixedQuesCheckboxes[pos]}
-                      // checked={mixedQuesCheckboxes[pos] === item.title}
                       checked={
                         checkedQueTypesPos.current.includes(pos) ? true : false
                       }
@@ -462,7 +427,6 @@ function Layout() {
             <div
               style={{
                 display: "flex",
-                // backgroundColor: "orange",
                 marginTop: 10,
               }}
             >
@@ -489,14 +453,12 @@ function Layout() {
               display: "flex",
               flexDirection: "column",
               marginTop: 10,
-              // backgroundColor: "green",
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // backgroundColor: "pink",
               }}
             >
               <label style={{ paddingRight: 10 }}>Enable Speech:</label>
