@@ -2004,9 +2004,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: `NB: This approach creates a script in which the database is being created as well
     Right click your database -> Tasks -> Generate Scripts -> 
     Click 'Next' on the Generate and Publish Scripts Wizard Introduction screen ->
-    Click 'Next' to select all the objects in the database to be scripted or select the specific ones you need and then click 'Next' ->
+    Select the database objects to script(entire db or specific db objects) and click 'Next'
     Click on the 'Advanced' button ->
-    Scroll down and select 'Schema and Data' from the 'Types of data to script' dropdown. Update the name and location you want the script saved too ->
+    Under 'General' -> 'Types of data to script' option, select 'Schema and Data' from the dropdown. 
+    Click ok and specify how the script should be saved ie. Save as script file
     Review your choices and then click 'Next'`,
   },
   {
