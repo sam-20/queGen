@@ -1,15 +1,21 @@
+/**************IMPORTANT BEFORE INTERVIEW*************/
+//All phones on silence
+//Strong internet connection
+//Prepare book and pen to note down points
+//Have CV opened before you
+
 export const GI = [
   {
     que: `why do you want to work here?`,
-    ans: `I decided to apply here for this role at Leigh Day because i was moved 
-  by the organisation’s goal to support people who suffer 
-  human rights abuse and or discrimination.
-  I believe this aligns with my desire to support people through difficult times 
-  and this is an experience i have had coming
-  from a country where the standard of living is not as great as you'd expect it to be.
-  I believe i can contribute to this cause as a data analyst
-  by using my analytical skills to derive insights from data which can be used
-   to make good decisions that would benefit the community and the nation as a whole.
+    ans: `First and foremost I am very passionate about providing support to
+    people who go through struggles so be it health or finance because I come from Ghana
+    and i grew up in a community where the standard of living is not so great and this
+    burdened me a lot so . So after doing my research on Harrow council and some of 
+    the programmes they offer, particuarly the early support services where they deliver
+    services to parents and children, I was very excited to be part of such a team
+    because it aligns with my passion. And then also looking at the description of 
+    the role and the skills needed, it matched the expertise I had so it felt like the
+    perfect fit to work for the Harrow council.
   `,
   },
   {

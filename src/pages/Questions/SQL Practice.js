@@ -737,7 +737,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: (
       <>
         <p>**MySQL**</p>
-        <p>SELECT * from [tableName] LIMIT n,i</p>
+        <p>SELECT * from [tableName] LIMIT idx,num</p>
         <p>
           <b>NB:</b> position/row count starts from 0
         </p>
@@ -811,6 +811,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
     que: `get a random record from the table`,
     ans: (
       <>
+        <p>**MS SQL SERVER**</p>
+        <p>SELECT TOP 1 * FROM customerSales</p>
+        <p>ORDER BY NEWID()</p>
+
+        <p>**MySQL**</p>
         <p>SELECT * FROM country</p>
         <p>ORDER BY RAND()</p>
         <p>LIMIT 1</p>
