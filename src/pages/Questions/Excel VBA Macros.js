@@ -1046,7 +1046,38 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `display the variations of button options in message boxes`,
+    ans: (
+      <>
+        <p>'OK, Cancel options</p>
+        <p>MsgBox "hello", vbOKCancel</p>
+        <p>MsgBox "hello", 1</p>
+
+        <p>'Abort, Retry, Ignore options</p>
+        <p>MsgBox "hello", vbAbortRetryIgnore</p>
+        <p>MsgBox "hello", 2</p>
+
+        <p>'Yes, No, Cancel options</p>
+        <p>MsgBox "hello", vbYesNoCancel</p>
+        <p>MsgBox "hello", 3</p>
+
+        <p>'Yes, No options</p>
+        <p>MsgBox "hello", vbYesNo</p>
+        <p>MsgBox "hello", 4</p>
+
+        <p>'Retry, Cancel options</p>
+        <p>MsgBox "hello", vbRetryCancel</p>
+        <p>MsgBox "hello", 5</p>
+
+        <p>'Ok option</p>
+        <p>MsgBox "hello", vbOKOnly</p>
+        <p>MsgBox "hello", 6</p>
+        <p>MsgBox "hello", 7</p>
+        <p>MsgBox "hello", 8</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
