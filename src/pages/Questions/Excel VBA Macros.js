@@ -776,8 +776,8 @@ export const VBA = [
           optional
         </p>
         <p>
-          Set newsheet = ActiveSheet 'to assign variables to objects you need
-          the Set statement
+          Set newsheet = ActiveSheet 'to assign variables/values to objects you
+          need the Set statement
         </p>
         <p>Range("b3") = fName</p>
         <p>Range("b4") = fName & " " & age</p>
@@ -837,7 +837,7 @@ export const VBA = [
           array. The object has a key called Name, hence we call it like a
           key-pair value.
         </p>
-        <p>Next</p>
+        <p>Next count</p>
       </>
     ),
   },
@@ -976,7 +976,31 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `write a code to loop through cells in a range/col/row and 
+  perform a task based on condition. Eg loop through a range of subject scores
+  and assign grade letter for each score`,
+    ans: (
+      <>
+        <p>'for each method</p>
+        <p>Dim myRange As Range</p>
+        <p>Dim cell As Range</p>
+        <p>Set myRange = Range("b2:b5")</p>
+
+        <p>For Each cell In myRange</p>
+        <p> If cell.Value {">="} 80 Then</p>
+        <p>cell.Value = "Distinction"</p>
+        <p>
+          ElseIf cell.Value {">="} 70 And cell.Value {"<"} 80 Then
+        </p>
+        <p>cell.Value = "Pass"</p>
+        <p>Else</p>
+        <p>cell.Value = "Fail"</p>
+        <p>End If</p>
+        <p>Next cell</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
