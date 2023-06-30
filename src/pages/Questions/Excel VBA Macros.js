@@ -792,15 +792,6 @@ export const VBA = [
     ),
   },
   {
-    que: `write an example code utilizing comparison and logical operators`,
-    ans: (
-      <>
-        <p>Comparison: {"=, <>(not equal to), <, >, <=, >="} </p>
-        <p>Logical operators: AND, OR, NOT, XOR(T if exactly A or B is T)</p>
-      </>
-    ),
-  },
-  {
     que: `iterate with a for loop`,
     ans: (
       <>
@@ -938,9 +929,53 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `write a simple IF statement without Else `,
+    ans: (
+      <>
+        <p> If Range("c1") {">"} 5 Then</p>
+        <p>Range("d1") = "more"</p>
+        <p>End If</p>
+      </>
+    ),
+  },
+  {
+    que: `write an example code utilizing comparison and logical operators`,
+    ans: (
+      <>
+        <p>Comparison: {"=, <>(not equal to), <, >, <=, >="} </p>
+        <p>Logical operators: AND, OR, NOT, XOR(T if exactly A or B is T)</p>
+      </>
+    ),
+  },
+  {
+    que: `write a simple IF ELSE statement`,
+    ans: (
+      <>
+        <p>If Range("c1") {">"} 5 Then</p>
+        <p>Range("d1") = "more"</p>
+        <p>Else</p>
+        <p>Range("d1") = "less"</p>
+        <p>End If</p>
+      </>
+    ),
+  },
+  {
+    que: `write a simpe elseif statement`,
+    ans: (
+      <>
+        <p>If Range("c1") = "male" And Range("c2") {">"} 50 Then</p>
+        <p>Range("d1") = "M"</p>
+        <p>ElseIf Range("c1") = "female" Or Range("c2") {"<>"} 5 Then</p>
+        <p>Range("d1") = "F"</p>
+        <p>ElseIf Range("c1") = "non-binary" Then</p>
+        <p>Range("d1") = "Non"</p>
+        <p>Else</p>
+        <p>Range("d1") = "lgbtq"</p>
+        <p>End If</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
