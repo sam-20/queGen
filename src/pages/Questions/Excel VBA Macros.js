@@ -982,7 +982,22 @@ export const VBA = [
   and assign grade letter for each score`,
     ans: (
       <>
-        <p>'for each method</p>
+        <p>'1. for loop method</p>
+        <p>Dim i As Integer</p>
+
+        <p>For i = 2 To 5</p>
+        <p>If Cells(i, 2).Value {">="} 80 Then</p>
+        <p>Cells(i, 3).Value = "Distinction"</p>
+        <p>
+          ElseIf Cells(i, 2).Value {">="} 70 And Cells(i, 2).Value {"<"} 80 Then
+        </p>
+        <p>Cells(i, 3).Value = "Pass"</p>
+        <p>Else</p>
+        <p>Cells(i, 3).Value = "Fail"</p>
+        <p>End If</p>
+        <p>Next i</p>
+
+        <p>'2. for each method</p>
         <p>Dim myRange As Range</p>
         <p>Dim cell As Range</p>
         <p>Set myRange = Range("b2:b5")</p>
