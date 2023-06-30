@@ -1016,8 +1016,36 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `write a select case statement`,
+    ans: (
+      <>
+        <p>Dim choice As Integer</p>
+        <p>Dim count As Integer</p>
+        <p>choice = InputBox("enter option")</p>
+
+        <p>Select Case choice</p>
+        <p>Case 1: MsgBox "abcd"</p>
+        <p>Case 2: Range("f1") = "Country"</p>
+        <p>Range("f2:h6") = "UK"</p>
+        <p>Case 3: For count = 1 To 5</p>
+        <p>Cells(count, 7).Value = "USA"</p>
+        <p>Next count</p>
+        <p>Case Else: MsgBox "choice not in list"</p>
+        <p>End Select</p>
+      </>
+    ),
+  },
+  {
+    que: `use message box to display string value, number, date`,
+    ans: (
+      <>
+        <p>MsgBox "damn"</p>
+        <p>MsgBox 40</p>
+        <p>MsgBox #2/28/2001#</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
