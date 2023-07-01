@@ -1047,6 +1047,14 @@ export const VBA = [
     ),
   },
   {
+    que: `add title to message box`,
+    ans: (
+      <>
+        <p>MsgBox "hello", vbAbortRetryIgnore, "My title"</p>
+      </>
+    ),
+  },
+  {
     que: `display the variations of button options in message boxes`,
     ans: (
       <>
@@ -1132,8 +1140,23 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `obtain data from a user through an input box`,
+    ans: (
+      <>
+        <p>x = InputBox("Enter data")</p>
+        <p>Range("d2") = x</p>
+
+        <p>
+          'customizing input box: NB: '200, 200 represent the x and y position
+          of the input box prompt on the screen
+        </p>
+        <p>
+          x = InputBox("Enter data", "input box title", "placeholder", 200, 200)
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
