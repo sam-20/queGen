@@ -1157,8 +1157,37 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `what is the total number of rows and columns in the worksheet. ie. the max for each`,
+    ans: (
+      <>
+        <p>Range("h2") = Rows.count</p>
+        <p>Range("h3") = Columns.count</p>
+      </>
+    ),
+  },
+  {
+    que: `execute an excel function eg. trim, left, etc. using vba code instead`,
+    ans: (
+      <>
+        <p>'assigning sample data for test</p>
+        <p>Range("A1") = " book"</p>
+        <p>Range("A2") = 3</p>
+        <p>Range("A3") = 12</p>
+        <p>Range("A4") = "Dr. Woods"</p>
+        <p>Range("A5") = 10</p>
+
+        <p>'trim()</p>
+        <p>Range("C1") = Trim(Range("A1"))</p>
+
+        <p>'upper</p>
+        <p>Range("C2") = UCase(Range("A1"))</p>
+
+        <p>'left()</p>
+        <p>Range("C3") = Left(Range("A4"), 3)</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
