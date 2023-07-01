@@ -1075,6 +1075,60 @@ export const VBA = [
         <p>MsgBox "hello", 6</p>
         <p>MsgBox "hello", 7</p>
         <p>MsgBox "hello", 8</p>
+
+        <p>'error symbol message</p>
+        <p>MsgBox "hello", vbCritical</p>
+        <p>MsgBox "hello", 16</p>
+
+        <p>'help symbol message</p>
+        <p>MsgBox "hello", vbQuestion</p>
+        <p>MsgBox "hello", 32</p>
+
+        <p>'warning symbol message</p>
+        <p>MsgBox "hello", vbExclamation</p>
+        <p>MsgBox "hello", 48</p>
+
+        <p>'information symbol message</p>
+        <p>MsgBox "hello", vbInformation</p>
+        <p>MsgBox "hello", 64</p>
+      </>
+    ),
+  },
+  {
+    que: `how can you determine which button option a user clicks on the message box. 
+    eg. if a user clicks OK, do task A, if the user clicks Cancel, do task B`,
+    ans: (
+      <>
+        <p>
+          'this example uses the [Abort, Retry, Ignore] button options in a
+          message box
+        </p>
+        <p>
+          'step 1: fetch the result of the msgbox into a variable. NB: the
+          parenthesis is required
+        </p>
+        <p>x = MsgBox("hello", vbAbortRetryIgnore)</p>
+
+        <p>
+          'step 2: each button options of the message box is assigned a unique
+          number. We can tell the number for each by printing the value of the
+          option clicked
+        </p>
+        <p>Range("d2") = x</p>
+        <p>
+          'in this case we see that Abort is assigned 3, Retry = 4 and Ignore =
+          5
+        </p>
+
+        <p>
+          'step 3: we can then use the unique value of each button option to
+          perform a task eg.
+        </p>
+        <p>Select Case x</p>
+        <p>Case 3: Range("e2") = "abort option was clicked"</p>
+        <p>Case 4: Range("e2") = "retry option was clicked"</p>
+        <p>Case 5: Range("e2") = "ignore option was clicked"</p>
+        <p>End Select</p>
       </>
     ),
   },
@@ -1106,10 +1160,12 @@ export const VBA = [
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
-  { que: ``, ans: null },
   {
     que: `perform an action on the entire data in the worksheet. eg. change the font of the worksheet data`,
     ans: null,
+  },
+  {
+    que: `count the length of a range ie. number of cells in a range whether column range or table range`,
   },
   { que: `clear everything not inside given range/cell`, ans: null },
   { que: `create a table with headers from a given range`, ans: null },
