@@ -1191,8 +1191,32 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `create a function`,
+    ans: (
+      <>
+        <p>
+          'Syntax: Function [func_name](param1 As Dataype, param2 As Datatype)
+          As [datatype for return value]
+        </p>
+        <p>
+          'function codes come here and final result should be put into
+          func_name
+        </p>
+        <p>'End Function</p>
+
+        <p>'example</p>
+        <p>Function add2Numbers(x As Integer, y As Integer) As Integer</p>
+        <p>add2Numbers = x + y</p>
+        <p>End Function</p>
+      </>
+    ),
+  },
+  {
+    que: `create a function that can also be used inside the vba code.
+  eg. a function to perform sumif which is not inbuilt in macros`,
+    ans: null,
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
