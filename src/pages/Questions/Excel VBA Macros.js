@@ -1185,6 +1185,9 @@ export const VBA = [
 
         <p>'left()</p>
         <p>Range("C3") = Left(Range("A4"), 3)</p>
+
+        <p>'reverse NB:this inbuilt func is only present in macros</p>
+        <p>Range("C4") = StrReverse(Range("A1"))</p>
       </>
     ),
   },
