@@ -1291,8 +1291,22 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `retrieve current/today's date in vba`,
+    ans: (
+      <>
+        <p>Range("d2") = Date</p>
+      </>
+    ),
+  },
+  {
+    que: `convert date in text format to short date formate eg. 20 Dec 2020 to 20/12/2020`,
+    ans: (
+      <>
+        <p>Range("d2") = CDate("20 Dec 2020")</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
