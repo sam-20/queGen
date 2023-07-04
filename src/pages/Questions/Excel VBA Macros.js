@@ -1251,8 +1251,43 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  {
+    que: `extract day, month, year, quarter from a date`,
+    ans: (
+      <>
+        <p>mydate = #11/20/2016 12:00:00 PM#</p>
+
+        <p>'extracting day</p>
+        <p>Range("A1") = DatePart("d", mydate)</p>
+
+        <p>'extracting month</p>
+        <p>Range("A2") = DatePart("m", mydate)</p>
+
+        <p>'extracting quarter</p>
+        <p>Range("A3") = DatePart("q", mydate)</p>
+
+        <p>'extracting year</p>
+        <p>Range("A4") = DatePart("yyyy", mydate)</p>
+      </>
+    ),
+  },
+  {
+    que: `extract hours, mins, seconds from a datetime`,
+    ans: (
+      <>
+        <p>mydate = #11/20/2016 12:30:14 PM#</p>
+
+        <p>'extracting hours</p>
+        <p>Range("A1") = DatePart("h", mydate)</p>
+
+        <p>'extracting minutes</p>
+        <p>Range("A2") = DatePart("n", mydate)</p>
+
+        <p>'extracting seconds</p>
+        <p>Range("A3") = DatePart("s", mydate)</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
