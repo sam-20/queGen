@@ -549,7 +549,7 @@ export const EF = [
     que: `calculate the period between 2 times in hours. eg. hours worked between 8:30 and 4:45`,
     ans: (
       <>
-        <p>`MOD(timeOut-timeIn, 1)*24`</p>
+        <p>`MOD(laterTime-earlierTime, 1)*24`</p>
         <p>The above formula gives the hours in decimals.</p>
         <p>How to convert decimal hours to time format</p>
         <p>Convert 2.88 hours to hh:mm:ss</p>

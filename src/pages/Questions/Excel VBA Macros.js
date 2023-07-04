@@ -721,19 +721,15 @@ export const VBA = [
           'byte range: 0 to 255 (takes up 1 byte). Ideal for smaller numbers
           which you know cannot exceed 255
         </p>
-
         <p>Dim total3rdYrStuds As Integer</p>
         <p>'integer range: -32,768 to 32,768 (takes up 2 bytes)</p>
-
         <p>Dim feesPaid As Boolean</p>
         <p>'boolean range: true/false (takes up 2 bytes)</p>
-
         <p>Dim lastRow As Long</p>
         <p>
           'long range: -2,147,483,648 to 2,147,483,647 (takes up 4 bytes). Ideal
           for storing data such as the total number of rows excel can handle
         </p>
-
         <p>Dim newBook As Workbook</p>
         <p>Dim newsheet As Worksheet</p>
         <p>Dim newWorkSheet As Object</p>
@@ -741,35 +737,28 @@ export const VBA = [
           'declaring object variable. Takes up 4 bytes. Ideal for storing
           objects like ranges, sheets, workbooks
         </p>
-
         <p>Dim score As Double</p>
         <p>
           'takes up 8 bytes. Ideal for storing values with high precisions such
           as %,heights
         </p>
-
         <p>Dim dob As Date</p>
         <p>'takes up 8 bytes</p>
-
         <p>Dim itemCost As Currency</p>
         <p>'takes up 8 bytes. Holds values up to 4 decimal places</p>
-
         <p>Dim fName As String</p>
         <p>'takes up 1 byte per char</p>
-
         <p>Dim totalFollowers As Variant</p>
         <p>
           'ideal for variables whose type can change and variales which can be
           null
         </p>
-
         <p>Dim id</p>
         <p>
           'no datatype specified automatically defines it as variant which takes
           more space
         </p>
-
-        <p>'assigning vlaues</p>
+        <p>'assigning values to variables</p>
         <p>age = 26</p>
         <p>
           Let lastRow = Rows.Count 'let can also be used to assign values but is
@@ -782,12 +771,33 @@ export const VBA = [
         <p>Range("b3") = fName</p>
         <p>Range("b4") = fName & " " & age</p>
         <p>MsgBox feesPaid</p>
-
-        <p>'declaring and assigning</p>
+        <p>'declaring variable and assigning value</p>
         <p>gender = "male"</p>
-
         <p>'declaring multiple variables</p>
         <p>Dim a, b, i as Integer</p>
+      </>
+    ),
+  },
+  {
+    que: `declare an array`,
+    ans: (
+      <>
+        <p>
+          'NB: when declaring array in vb macros, size assigned to array means
+          it can store up to (size+1) values
+        </p>
+        <p>
+          Dim scores(3) As Integer 'scores(3) means array can store up to 4
+          values
+        </p>
+        <p>scores(0) = 72</p>
+        <p>scores(1) = 13</p>
+        <p>scores(2) = 11</p>
+        <p>scores(3) = 5</p>
+
+        <p>For i = 0 To 3</p>
+        <p>MsgBox scores(i)</p>
+        <p>Next i</p>
       </>
     ),
   },
