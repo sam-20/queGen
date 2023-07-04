@@ -1282,20 +1282,25 @@ export const VBA = [
 
         <p>'extracting hours</p>
         <p>Range("A1") = DatePart("h", mydate)</p>
+        <p>Range("A1") = Hour(mydate)</p>
 
         <p>'extracting minutes</p>
         <p>Range("A2") = DatePart("n", mydate)</p>
+        <p>Range("A2") = Minute(mydate)</p>
 
         <p>'extracting seconds</p>
         <p>Range("A3") = DatePart("s", mydate)</p>
+        <p>Range("A3") = Second(mydate)</p>
       </>
     ),
   },
   {
-    que: `retrieve current/today's date in vba`,
+    que: `retrieve the current date only, current time only and current datetime in vba`,
     ans: (
       <>
-        <p>Range("d2") = Date</p>
+        <p> Range("A1") = Date 'current date only</p>
+        <p>Range("A2") = Time() 'current time only</p>
+        <p>Range("A3") = Now() 'current datetime</p>
       </>
     ),
   },
@@ -1303,7 +1308,7 @@ export const VBA = [
     que: `convert date in text format to short date formate eg. 20 Dec 2020 to 20/12/2020`,
     ans: (
       <>
-        <p>Range("d2") = CDate("20 Dec 2020")</p>
+        <p>Range("A1") = CDate("20 Dec 2020")</p>
       </>
     ),
   },
