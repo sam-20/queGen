@@ -1312,7 +1312,18 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `create a time stamp`,
+    ans: (
+      <>
+        <p>Range("A1") = TimeValue("20:19") '8:19:00 PM</p>
+        <p>Range("A2") = TimeValue("3:10:12") '3:10:12 AM</p>
+        <p>Range("A3") = TimeValue("2:10:8") '2:10:08 AM</p>
+        <p>Range("A4") = TimeSerial(3, 4, 5) '3:04:05 AM</p>
+        <p>Range("A5") = TimeSerial(13, 59, 59) '1:59:59 PM</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
