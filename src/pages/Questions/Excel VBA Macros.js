@@ -1259,15 +1259,18 @@ export const VBA = [
 
         <p>'extracting day</p>
         <p>Range("A1") = DatePart("d", mydate)</p>
+        <p>Range("A1") = Day(mydate)</p>
 
         <p>'extracting month</p>
         <p>Range("A2") = DatePart("m", mydate)</p>
+        <p>Range("A2") = Month(mydate)</p>
 
         <p>'extracting quarter</p>
         <p>Range("A3") = DatePart("q", mydate)</p>
 
         <p>'extracting year</p>
         <p>Range("A4") = DatePart("yyyy", mydate)</p>
+        <p>Range("A4") = Year(mydate)</p>
       </>
     ),
   },
