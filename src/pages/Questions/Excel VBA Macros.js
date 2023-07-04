@@ -1231,7 +1231,26 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `add/subtract hours, mins and seconds to a datetime`,
+    ans: (
+      <>
+        <p>mydate = #11/20/2016 12:00:00 PM#</p>
+
+        <p>'adding and subtracting 3 hours</p>
+        <p>Range("A1") = DateAdd("h", 3, mydate)</p>
+        <p>Range("B1") = DateAdd("h", -3, mydate)</p>
+
+        <p>'adding and subtracting 3 minutes</p>
+        <p>Range("A2") = DateAdd("n", 3, mydate)</p>
+        <p>Range("B2") = DateAdd("n", -3, mydate)</p>
+
+        <p>'adding and subtracting 3 seconds</p>
+        <p>Range("A3") = DateAdd("s", 3, mydate)</p>
+        <p>Range("B3") = DateAdd("s", -3, mydate)</p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
