@@ -1167,7 +1167,8 @@ export const VBA = [
     ),
   },
   {
-    que: `execute an excel function eg. trim, left, etc. using vba code instead`,
+    que: `execute an excel function eg. trim, left, etc. using vba code instead. 
+    NB: not all excel functions are inbuilt in vba eg. sumifs, etc.`,
     ans: (
       <>
         <p>'assigning sample data for test</p>
@@ -1200,7 +1201,7 @@ export const VBA = [
           As [datatype for return value]
         </p>
         <p>
-          'function codes come here and final result should be put into
+          'NB: function codes come here and final result should be put into
           func_name
         </p>
         <p>'End Function</p>
@@ -1213,11 +1214,20 @@ export const VBA = [
     ),
   },
   {
-    que: `create a function that can also be used inside the vba code.
-  eg. a function to perform sumif which is not inbuilt in macros`,
-    ans: null,
+    que: `add days, months and years to a date`,
+    ans: (
+      <>
+        <p>mydate = #11/20/2016#</p> 'NB for macros, date is entered in US
+        format but output in worksheet is automatically converted to UK format
+        <p>'adding 3 days</p>
+        <p>Range("A1") = DateAdd("d", 3, mydate)</p>
+        <p>'adding 3 months</p>
+        <p>Range("A2") = DateAdd("m", 3, mydate)</p>
+        <p>'adding 3 years</p>
+        <p>Range("A3") = DateAdd("yyyy", 3, mydate)</p>
+      </>
+    ),
   },
-  { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
