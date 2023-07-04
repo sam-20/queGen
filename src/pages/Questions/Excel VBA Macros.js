@@ -1298,7 +1298,7 @@ export const VBA = [
     que: `retrieve the current date only, current time only and current datetime in vba`,
     ans: (
       <>
-        <p> Range("A1") = Date 'current date only</p>
+        <p>Range("A1") = Date 'current date only</p>
         <p>Range("A2") = Time() 'current time only</p>
         <p>Range("A3") = Now() 'current datetime</p>
       </>
