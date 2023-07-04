@@ -1214,17 +1214,20 @@ export const VBA = [
     ),
   },
   {
-    que: `add days, months and years to a date`,
+    que: `add/subtract days, months and years to a date`,
     ans: (
       <>
         <p>mydate = #11/20/2016#</p> 'NB for macros, date is entered in US
         format but output in worksheet is automatically converted to UK format
-        <p>'adding 3 days</p>
+        <p>'adding and subtracting 3 days</p>
         <p>Range("A1") = DateAdd("d", 3, mydate)</p>
-        <p>'adding 3 months</p>
+        <p>Range("B1") = DateAdd("d", -3, mydate)</p>
+        <p>'adding and subtracting 3 months</p>
         <p>Range("A2") = DateAdd("m", 3, mydate)</p>
-        <p>'adding 3 years</p>
+        <p>Range("B2") = DateAdd("m", -3, mydate)</p>
+        <p>'adding and subtracting 3 years</p>
         <p>Range("A3") = DateAdd("yyyy", 3, mydate)</p>
+        <p>Range("B3") = DateAdd("yyyy", -3, mydate)</p>
       </>
     ),
   },
