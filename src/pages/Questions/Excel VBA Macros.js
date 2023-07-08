@@ -1441,22 +1441,21 @@ export const VBA = [
     que: `sort a table`,
     ans: (
       <>
-        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
-        <p>https://www.youtube.com/watch?v=OC3uxMXBHSc</p>
-        <p>https://www.youtube.com/watch?v=9mgK9yiAOZs</p>
-
         <p>
-          Sheet1.Sheets("Sheet1").ListObjects("myTable1").Sort.SortFields.Add
-          Key:=Range("myTable1[[#All],[EmpName]]"), SortOn:=sortonvalues,
-          Order:=xlAscending, DataOption:=xlSortNormal
+          'NB: to sort by multiple columns simply add new SortFields methods
         </p>
-        <p>Range("myTable1[#All]").Select</p>
-        <p>With Sheet1.Worksheets("Sheet1").ListObjects("myTable1").Sort</p>
-        <p>.Header = xlYes</p>
-        <p>.MatchCase = False</p>
-        <p>.Orientation = xlTopToBottom</p>
-        <p>.SortMethod = xlPinYin</p>
-        <p>.Apply</p>
+        <p>With ActiveSheet.ListObjects("myTable1").Sort</p>
+        <p>.SortFields.Clear 'clear exisitng sorts</p>
+        <p>
+          .SortFields.Add Key:=Range("mytable1[Customer type]"),
+          SortOn:=sortonvalues, Order:=xlAscending 'first sort by customer type
+        </p>
+        <p>
+          .SortFields.Add Key:=Range("mytable1[Unit price]"),
+          SortOn:=sortonvalues, Order:=xlDescending 'then sort by unit price
+        </p>
+        <p>.Header = xlYes 'optional</p>
+        <p>.Apply 'apply sort</p>
         <p>End With</p>
       </>
     ),
@@ -1465,15 +1464,13 @@ export const VBA = [
     que: `clear a table sorts`,
     ans: (
       <>
-        <p>
-          https://learn.microsoft.com/en-us/office/vba/api/excel.sortfields.clear
-        </p>
-        <p>SortFields.Clear</p>
-        <p>
-          Sheet1.Sheets("Sheet1").ListObjects("myTable1").Sort.SortFields.Clear
-        </p>
+        <p>ActiveSheet.ListObjects("myTable1").Sort.SortFields.Clear</p>
       </>
     ),
+  },
+  {
+    que: `sort a data range with and without headers`,
+    ans: <></>,
   },
   {
     que: `filter a table`,
