@@ -131,7 +131,7 @@ export const VBA = [
     que: `access or perform an action on an entire row/column`,
     ans: (
       <>
-        <p>'you can refer to an entire column either of the following</p>
+        <p>'you can refer to an entire column using either of the following</p>
         <p>' 1. Range(columnLetter:columnLetter) eg.</p>
         <p>' Range("b:b")</p>
         <p>'2.[reference to any cell in the column].EntireColumn eg.</p>
@@ -153,7 +153,7 @@ export const VBA = [
         <p>Range("b7").EntireColumn.Clear</p>
         <p>Range("b5").EntireColumn.Delete</p>
 
-        <p>'you can refer to an entire row either of the following</p>
+        <p>'you can refer to an entire row using either of the following</p>
         <p>' 1. Range(rowNumber:rowNumber) eg.</p>
         <p>' Range("2:2")</p>
         <p>'2.[reference to any cell in the row].EntireRow eg.</p>
@@ -1351,14 +1351,164 @@ export const VBA = [
   { que: ``, ans: null },
   {
     que: `perform an action on the entire data in the worksheet. eg. change the font of the worksheet data`,
-    ans: null,
+    ans: (
+      <>
+        <p>ActiveSheet.Cells.Font.Name = "Arial"</p>
+      </>
+    ),
   },
   {
     que: `count the length of a range ie. number of cells in a range whether column range or table range`,
+    ans: (
+      <>
+        <p>'counting cells in one-dimensional range</p>
+        <p>Range("C1") = Range("A1:A6").count</p>
+        <p>Range("C2") = Range("A1:A6").CountLarge</p>
+        <p>Range("C3") = Range("A1:A6").Rows.count</p>
+        <p>Range("C4") = Range("A1:A6").Rows.CountLarge</p>
+
+        <p>'counting cells in two-dimensional range</p>
+        <p>Range("D1") = Range("A1:D4").count</p>
+        <p>Range("D2") = Range("A1:D4").CountLarge</p>
+      </>
+    ),
   },
-  { que: `clear everything not inside given range/cell`, ans: null },
-  { que: `create a table with headers from a given range`, ans: null },
-  { que: `clear the worksheet`, ans: null },
+  {
+    que: `check if cell(s) is/are empty`,
+    ans: (
+      <>
+        <p>'returns True/False</p>
+        <p>Range("B1") = IsEmpty(Range("A1"))</p>
+        <p>Range("B2") = IsEmpty(Range("A2"))</p>
+      </>
+    ),
+  },
+  {
+    que: `clear everything inside given cell, range and entire worksheet`,
+    ans: (
+      <>
+        <p>ActiveSheet.Cells.Clear 'clear content in entire worksheet</p>
+        <p>Cells.ClearContents 'clear content in entire worksheet</p>
+        <p>
+          Worksheets("Sheet1").Cells.ClearContents 'clear content in specific
+          worksheet
+        </p>
+        <p>' ----NB: clear methods -------</p>
+        <p>
+          'Range("A1:D5").ClearContents 'Clears only cell contents without
+          touching formatting{" "}
+        </p>
+        <p>'Range("A1:D5").ClearFormats 'Clears only formatting</p>
+        <p>
+          'Range("A1:D5").Clear 'Clears Everything including cell contents and
+          formatting{" "}
+        </p>
+        <p>'Range("A1:D5").ClearComments 'Clears Comments</p>
+        <p>'Range("A1:D5").ClearHyperlinks 'Clear Hyperlinks</p>
+        <p>
+          'Range("A1:D5").ClearNotes 'Clear Notes 'Range("A1:D5").ClearOutline
+          'Clears Outline
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `create a table with headers from a given range`,
+    ans: (
+      <>
+        <p>
+          ActiveSheet.ListObjects.Add(SourceType:=xlSrcRange,
+          Source:=Range("A1:D5")).Name = "myTable1"
+        </p>
+
+        <p>'omitting the parameters</p>
+        <p>
+          ActiveSheet.ListObjects.Add(xlSrcRange, Range("A1:D5")).Name =
+          "myTable1"
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `reset a table back to a normal range`,
+    ans: (
+      <>
+        <p>ActiveSheet.ListObjects("myTable1").Unlist</p>
+      </>
+    ),
+  },
+  {
+    que: `sort a table`,
+    ans: (
+      <>
+        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
+        <p>https://www.youtube.com/watch?v=OC3uxMXBHSc</p>
+        <p>https://www.youtube.com/watch?v=9mgK9yiAOZs</p>
+
+        <p>
+          Sheet1.Sheets("Sheet1").ListObjects("myTable1").Sort.SortFields.Add
+          Key:=Range("myTable1[[#All],[EmpName]]"), SortOn:=sortonvalues,
+          Order:=xlAscending, DataOption:=xlSortNormal
+        </p>
+        <p>Range("myTable1[#All]").Select</p>
+        <p>With Sheet1.Worksheets("Sheet1").ListObjects("myTable1").Sort</p>
+        <p>.Header = xlYes</p>
+        <p>.MatchCase = False</p>
+        <p>.Orientation = xlTopToBottom</p>
+        <p>.SortMethod = xlPinYin</p>
+        <p>.Apply</p>
+        <p>End With</p>
+      </>
+    ),
+  },
+  {
+    que: `clear a table sorts`,
+    ans: (
+      <>
+        <p>
+          https://learn.microsoft.com/en-us/office/vba/api/excel.sortfields.clear
+        </p>
+        <p>SortFields.Clear</p>
+        <p>
+          Sheet1.Sheets("Sheet1").ListObjects("myTable1").Sort.SortFields.Clear
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `filter a table`,
+    ans: (
+      <>
+        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
+        <p>https://www.youtube.com/watch?v=cfTOoEW8pGw</p>
+        <p>https://www.youtube.com/watch?v=a8r20T1c_JU</p>
+        <p>'Filtering a table</p>
+        <p>Sub sbFilterTable()</p>
+        <p>
+          ActiveWorkbook.Sheets("Sheet1").ListObjects("myTable1").Range.AutoFilter
+          field:=2, Criteria1:="DDD" 'matched with 4 in column c2 records will
+          be shown
+        </p>
+        <p>End Sub</p>
+      </>
+    ),
+  },
+  {
+    que: `clear all filters from a table`,
+    ans: (
+      <>
+        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
+        <p>https://www.youtube.com/watch?v=XEFlPYgnTt8</p>
+        <p>'Clear Table Filter</p>
+        <p>'Check Filter is Exists or Not</p>
+        <p>If ActiveWorkbook.Sheets("Sheet1").FilterMode = True Then</p>
+        <p>
+          ActiveWorkbook.Sheets("Sheet1").ListObjects("myTable1").Range.AutoFilter
+        </p>
+        <p> End If</p>
+      </>
+    ),
+  },
   {
     que: `assign a macro function to a button`,
     ans: ``,
