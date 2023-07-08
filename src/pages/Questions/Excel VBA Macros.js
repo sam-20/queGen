@@ -798,7 +798,7 @@ export const VBA = [
     ),
   },
   {
-    que: `create a 1D array ie. a column/row data`,
+    que: `create a 1D static(fixed-size) array ie. a column/row data`,
     ans: (
       <>
         <p>
@@ -821,7 +821,7 @@ export const VBA = [
     ),
   },
   {
-    que: `create a 2D array ie. a table/xy data range`,
+    que: `create a 2D static(fixed-size) array ie. a table/xy data range`,
     ans: (
       <>
         <p>
@@ -852,6 +852,10 @@ export const VBA = [
         <p>Next Rows_</p>
       </>
     ),
+  },
+  {
+    que: `create a 1D dynamic(unknown changeable size) 1D array`,
+    ans: null,
   },
   {
     que: `iterate with a for loop`,
