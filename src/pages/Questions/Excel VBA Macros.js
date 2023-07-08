@@ -78,6 +78,25 @@ export const VBA = [
     ),
   },
   {
+    que: `add a line break in your code`,
+    ans: (
+      <>
+        <p>
+          'If you want to break a line into two or more, you need to type a
+          space followed by an underscore.
+        </p>
+
+        <p>'long line</p>
+        <p>MsgBox "hello i am " & 26 & " " & "years"</p>
+
+        <p>'adding line breaks</p>
+        <p>MsgBox "hello i am " _</p>
+        <p>& 26 & " " & _</p>
+        <p>"years"</p>
+      </>
+    ),
+  },
+  {
     que: `make any cell/range the focus/active/selected cell/range`,
     ans: (
       <>
