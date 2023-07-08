@@ -855,7 +855,57 @@ export const VBA = [
   },
   {
     que: `create a 1D dynamic(unknown changeable size) 1D array`,
-    ans: null,
+    ans: (
+      <>
+        <p>'to declare a dynamic array you simply set no size</p>
+        <p>Dim myArray() As Integer</p>
+
+        <p>
+          'However in order to assign values, you have to make it static and to
+          do this, you have to redeclare the array
+        </p>
+        <p>ReDim myArray(4)</p>
+
+        <p>
+          'NB:Whenever the array is re-declared, data that existed before is
+          lost. Eg is shown below
+        </p>
+        <p>Dim scores() As Integer</p>
+        <p>ReDim scores(2)</p>
+        <p>scores(0) = 12</p>
+        <p>scores(1) = 14</p>
+
+        <p>
+          MsgBox "initial value in scores[1] array: " & scores(1) 'value is
+          present
+        </p>
+
+        <p>ReDim scores(3)</p>
+        <p>
+          MsgBox "value in scores[1] after redefining array: " & scores(1)
+          'value is lost
+        </p>
+
+        <p>
+          'to keep the previously existing data, we use the Preserve keyword.
+          Eg.
+        </p>
+        <p>Dim ages() As Integer</p>
+        <p>ReDim ages(2)</p>
+        <p>ages(0) = 26</p>
+        <p>ages(1) = 41</p>
+        <p>ages(2) = 23</p>
+        <p>
+          MsgBox "initial value in ages[1] array: " & ages(1) 'value is present
+        </p>
+
+        <p>ReDim Preserve ages(3)</p>
+        <p>
+          MsgBox "value in ages[1] after redefining ages array: " & ages(1)
+          'value is still present
+        </p>
+      </>
+    ),
   },
   {
     que: `iterate with a for loop`,
