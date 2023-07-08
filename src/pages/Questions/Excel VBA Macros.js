@@ -1495,17 +1495,27 @@ export const VBA = [
     que: `filter a table`,
     ans: (
       <>
-        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
-        <p>https://www.youtube.com/watch?v=cfTOoEW8pGw</p>
-        <p>https://www.youtube.com/watch?v=a8r20T1c_JU</p>
-        <p>'Filtering a table</p>
-        <p>Sub sbFilterTable()</p>
+        <p>Dim ws As Worksheet</p>
+        <p>Set ws = ActiveSheet</p>
+
+        <p>Dim tb1 As ListObject</p>
+        <p>Set tb1 = ws.ListObjects("myTable1")</p>
+
         <p>
-          ActiveWorkbook.Sheets("Sheet1").ListObjects("myTable1").Range.AutoFilter
-          field:=2, Criteria1:="DDD" 'matched with 4 in column c2 records will
-          be shown
+          'NB: field is the column position you want to filter starting at 1.
+          You can filter based on as many criteria
         </p>
-        <p>End Sub</p>
+        <p>With tb1.Range</p>
+        <p>
+          .AutoFilter field:=2, Criteria1:="Female", Operator:=xlOr,
+          Criteria2:="{"<="}300" 'filter where the col2 data = "female" and{" "}
+          {"<="} 300
+        </p>
+        <p>
+          .AutoFilter field:=4, Criteria1:="{">"}30" 'filter where col4 data{" "}
+          {">"} 30
+        </p>
+        <p>End With</p>
       </>
     ),
   },
