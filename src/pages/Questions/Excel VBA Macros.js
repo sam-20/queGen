@@ -1508,7 +1508,7 @@ export const VBA = [
         <p>With tb1.Range</p>
         <p>
           .AutoFilter field:=2, Criteria1:="Female", Operator:=xlOr,
-          Criteria2:="{"<="}300" 'filter where the col2 data = "female" and{" "}
+          Criteria2:="{"<="}300" 'filter where the col2 data = "female" or
           {"<="} 300
         </p>
         <p>
@@ -1523,15 +1523,16 @@ export const VBA = [
     que: `clear all filters from a table`,
     ans: (
       <>
-        <p>https://analysistabs.com/excel-vba/tables-examples/</p>
-        <p>https://www.youtube.com/watch?v=XEFlPYgnTt8</p>
-        <p>'Clear Table Filter</p>
+        <p>Dim ws As Worksheet</p>
+        <p>Set ws = ActiveSheet</p>
+
+        <p>Dim tb1 As ListObject</p>
+        <p>Set tb1 = ws.ListObjects("myTable1")</p>
+
         <p>'Check Filter is Exists or Not</p>
-        <p>If ActiveWorkbook.Sheets("Sheet1").FilterMode = True Then</p>
-        <p>
-          ActiveWorkbook.Sheets("Sheet1").ListObjects("myTable1").Range.AutoFilter
-        </p>
-        <p> End If</p>
+        <p>If ActiveSheet.FilterMode = True Then</p>
+        <p>tb1.Range.AutoFilter 'clear filter from specified table</p>
+        <p>End If</p>
       </>
     ),
   },
