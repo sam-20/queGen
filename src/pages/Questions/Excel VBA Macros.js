@@ -1520,21 +1520,36 @@ export const VBA = [
         <p>End Sub</p>
 
         <p>
-          '7. now you might be thinking why we cant achieve this same action
+          '7a. now you might be thinking why we cant achieve this same action
           with the following code inside a Module
         </p>
 
+        <p>If IsEmpty(ActiveCell) Then</p>
+        <p>MsgBox "cell is empty"</p>
+        <p>Else</p>
+        <p>MsgBox "cell is not empty"</p>
+        <p>End If </p>
+
         <p>
-          Further Explanation of vba events: https://trumpexcel.com/vba-events/
+          '7b. The reason is, with the module, once the code is written you have
+          to click run to execute the codes. The codes here would be 'executed
+          once and in this example, the message would be displayed for only the
+          cell which was active at the 'time at the time the program was
+          executed.
         </p>
 
         <p>
-          All Workbook level events and what triggers them:
+          '8 Further Explanation of vba events:
+          https://trumpexcel.com/vba-events/
+        </p>
+
+        <p>
+          '9 All Workbook level events and what triggers them:
           https://msdn.microsoft.com/en-us/library/microsoft.office.tools.excel.workbook_events.aspx
         </p>
 
         <p>
-          All Worksheet level events and what triggers them:
+          '10. All Worksheet level events and what triggers them:
           https://msdn.microsoft.com/en-us/library/microsoft.office.tools.excel.worksheet_events.aspx
         </p>
       </>
