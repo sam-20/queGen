@@ -854,7 +854,7 @@ export const VBA = [
     ),
   },
   {
-    que: `create a 1D dynamic(unknown changeable size) 1D array`,
+    que: `create a dynamic(unknown changeable size) 1D/2D array`,
     ans: (
       <>
         <p>'to declare a dynamic array you simply set no size</p>
