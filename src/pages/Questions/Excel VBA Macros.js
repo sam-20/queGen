@@ -1475,9 +1475,15 @@ export const VBA = [
     que: `sort a data range with and without headers`,
     ans: (
       <>
+        <p>'Syntax</p>
         <p>
-          'NB: to sort multiple by multiple columns add new keys. The key is the
-          cell whose column you want to use as a base to sort.
+          Range.Sort (Key1, Order1, Key2, Type, Order2, Key3, Order3, _ Header,
+          OrderCustom, MatchCase, Orientation, SortMethod, _ DataOption1,
+          DataOption2, DataOption3)
+        </p>
+        <p>
+          'NB: The key is the cell whose column you want to use as a base to
+          sort. To sort multiple by multiple columns add new keys.
         </p>
         <p>Range("A1:D5").Sort Header:=xlYes, _</p>
         <p>key1:=Range("A1"), order1:=xlAscending, _</p>
