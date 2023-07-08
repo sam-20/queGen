@@ -1440,7 +1440,30 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
+  {
+    que: `extract day of the week eg. monday from a date`,
+    ans: (
+      <>
+        <p>birthDay = #22/01/1999# </p>
+        <p>MsgBox Weekday(birthDay) </p>
+        <p>
+          'NB: the result is a number where 1=Sun, 2=Mon, 3=Tue, 4=Wed, 5=Thu,
+          6=Fri, 7=Sat
+        </p>
+      </>
+    ),
+  },
+  {
+    que: ``,
+    ans: (
+      <>
+        <p>
+          Workbook level events and functions:
+          https://msdn.microsoft.com/en-us/library/microsoft.office.tools.excel.workbook_events.aspx
+        </p>
+      </>
+    ),
+  },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
