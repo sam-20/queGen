@@ -1454,12 +1454,88 @@ export const VBA = [
     ),
   },
   {
-    que: ``,
+    que: `create a worksheet event and a workbook event`,
     ans: (
       <>
         <p>
-          Workbook level events and functions:
+          '1. An event is simply an action you perform in your excel application
+          'Eg. when you select a cell, when you double click the cell, when you
+          right-click the cell, 'when you create, delete or switch to a
+          different worksheet, when you create or close a 'workbook, before you
+          save a workbook, etc.
+        </p>
+
+        <p>
+          '2. With excel VBA, you can develop a code that would be executed
+          anytime each of these events is fired
+        </p>
+
+        <p>
+          '3. The events are classified into several types, some of which
+          include: 'worksheet-level event (eg. double-clicking on a cell,
+          right-clicking on a cell, etc) 'workbook-level event (eg. saving the
+          workbook, opening the workbook, etc)
+        </p>
+
+        <p>'4a. Where you write the code for the event type is important.</p>
+
+        <p>
+          '4b. For worksheet-level events, the code is written inside Project
+          Explorer pane {"->"} your VBA project {"->"} ' Microsoft Excel Objects
+          {"->"} specific worksheet eg. Sheet1 (studentsData) {"->"}' change the
+          object dropdown menu item from "(General)" to "Worksheet" and choose
+          an event from the Procedure dropdown menu.
+        </p>
+
+        <p>
+          '4c. For workbook-level events, the code is written inside Project
+          Explorer pane {"->"} your VBA project {"->"}' Microsoft Excel Objects
+          {"->"} 'ThisWorkbook' {"->"}
+          'change the object dropdown menu item from "(General)" to "Workbook"
+          and choose an event from the Procedure dropdown menu.
+        </p>
+
+        <p>
+          '5. NB: Codes for events do not require to click the run button to
+          start the program. Once 'written, they are automatically being
+          triggered and monitored in the file.
+        </p>
+
+        <p>
+          '6.Simple example of an action that is fired whenever we select a
+          different cell in the worksheet. 'NB: since this is a worksheet-level
+          event, the code was written inside a specific worksheet and not inside
+          the Module
+        </p>
+
+        <p>Private Sub Worksheet_SelectionChange(ByVal Target As Range)</p>
+        <p>
+          'the parameter 'Target' used in this event sub represents the cell
+        </p>
+        <p>If IsEmpty(Target.Value) Then</p>
+        <p>MsgBox "cell is empty"</p>
+        <p>Else</p>
+        <p>MsgBox "cell is not empty"</p>
+        <p>End If</p>
+        <p>End Sub</p>
+
+        <p>
+          '7. now you might be thinking why we cant achieve this same action
+          with the following code inside a Module
+        </p>
+
+        <p>
+          Further Explanation of vba events: https://trumpexcel.com/vba-events/
+        </p>
+
+        <p>
+          All Workbook level events and what triggers them:
           https://msdn.microsoft.com/en-us/library/microsoft.office.tools.excel.workbook_events.aspx
+        </p>
+
+        <p>
+          All Worksheet level events and what triggers them:
+          https://msdn.microsoft.com/en-us/library/microsoft.office.tools.excel.worksheet_events.aspx
         </p>
       </>
     ),
