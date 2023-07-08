@@ -12,4 +12,5 @@ import { NP } from "./NATO Phonetic Alphabet";
 import { PBI } from "./PowerBI Charts Practice";
 import { VBA } from "./Excel VBA Macros";
 import { PDX } from "./PowerBI Dax Practice";
-export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP, PBI, VBA, PDX };
+import { BO } from "./SAP Business Objects";
+export { BAQ, PQ, EI, EF, CC, SQLP, DA, GI, SQLI, OP, NP, PBI, VBA, PDX, BO };

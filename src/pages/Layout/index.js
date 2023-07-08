@@ -15,6 +15,7 @@ import {
   PBI,
   VBA,
   PDX,
+  BO,
 } from "../Questions";
 import { useState, useEffect, useRef } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -122,6 +123,11 @@ function Layout() {
     {
       title: "Nato Phonetic Alphabet Practice",
       content: NP,
+      context: "",
+    },
+    {
+      title: "SAP Business Objects Practice",
+      content: BO,
       context: "",
     },
   ];

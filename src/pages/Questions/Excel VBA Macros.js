@@ -798,7 +798,7 @@ export const VBA = [
     ),
   },
   {
-    que: `declare a 1D array ie. a column/row data`,
+    que: `create a 1D array ie. a column/row data`,
     ans: (
       <>
         <p>
@@ -821,8 +821,37 @@ export const VBA = [
     ),
   },
   {
-    que: `declare a 2D array ie. a table/xy data range`,
-    ans: <></>,
+    que: `create a 2D array ie. a table/xy data range`,
+    ans: (
+      <>
+        <p>
+          NB: 'similar to 1D array, the array can store up to (array size +1)
+          values
+        </p>
+        <p>
+          Dim myArray(3, 1) As Integer 'can store values for 4 rows and 2
+          columns
+        </p>
+
+        <p>myArray(0, 0) = 66</p>
+        <p>myArray(1, 0) = 14</p>
+        <p>myArray(2, 0) = 27</p>
+        <p>myArray(3, 0) = 82</p>
+        <p>myArray(0, 1) = 45</p>
+        <p>myArray(1, 1) = 3</p>
+        <p>myArray(2, 1) = 4</p>
+        <p>myArray(3, 1) = 12</p>
+
+        <p>For Rows_ = 0 To 3</p>
+        <p>For cols = 0 To 1</p>
+        <p>
+          Cells(Rows_ + 1, cols + 1) = myArray(Rows_, cols) 'assigning the
+          values to excel worksheet
+        </p>
+        <p>Next cols</p>
+        <p>Next Rows_</p>
+      </>
+    ),
   },
   {
     que: `iterate with a for loop`,
