@@ -1454,7 +1454,10 @@ export const VBA = [
           .SortFields.Add Key:=Range("mytable1[Unit price]"),
           SortOn:=sortonvalues, Order:=xlDescending 'then sort by unit price
         </p>
-        <p>.Header = xlYes 'optional</p>
+        <p>
+          .Header = xlYes 'optional (xlYes/xlNo/xlGuess ie. for excel to guess
+          if table has headers)
+        </p>
         <p>.Apply 'apply sort</p>
         <p>End With</p>
       </>
@@ -1470,7 +1473,17 @@ export const VBA = [
   },
   {
     que: `sort a data range with and without headers`,
-    ans: <></>,
+    ans: (
+      <>
+        <p>
+          'NB: to sort multiple by multiple columns add new keys. The key is the
+          cell whose column you want to use as a base to sort.
+        </p>
+        <p>Range("A1:D5").Sort Header:=xlYes, _</p>
+        <p>key1:=Range("A1"), order1:=xlAscending, _</p>
+        <p>key2:=Range("D1"), order2:=xlDescending</p>
+      </>
+    ),
   },
   {
     que: `filter a table`,
