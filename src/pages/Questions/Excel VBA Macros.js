@@ -731,7 +731,7 @@ export const VBA = [
     ),
   },
   {
-    que: `declare a variable`,
+    que: `create/declare a variable and assign`,
     ans: (
       <>
         <p>'declaring variables without assigning values</p>
@@ -798,7 +798,7 @@ export const VBA = [
     ),
   },
   {
-    que: `declare an array`,
+    que: `declare a 1D array ie. a column/row data`,
     ans: (
       <>
         <p>
@@ -819,6 +819,10 @@ export const VBA = [
         <p>Next i</p>
       </>
     ),
+  },
+  {
+    que: `declare a 2D array ie. a table/xy data range`,
+    ans: <></>,
   },
   {
     que: `iterate with a for loop`,
