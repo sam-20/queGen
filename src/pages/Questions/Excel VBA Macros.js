@@ -1544,11 +1544,6 @@ export const VBA = [
     que: `let each data entered be automatically fitted to the cell width`,
     ans: (
       <>
-        <p>
-          right click sheet name at bottom {"->"} select "View Code" {"->"}
-          change sheet type dropdown to "Worksheet" {"->"} Add the following
-          between the Private Sub and End Sub
-        </p>
         <p>Cells.EntireColumn.AutoFit</p>
       </>
     ),
