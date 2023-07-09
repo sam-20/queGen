@@ -181,15 +181,16 @@ export const PQ = [
     ans: `select columns -> Add Column tab -> General group -> Column From Examples -> From Selection`,
   },
   {
-    que: `use column from examples to create a new month/day/year column from a date column`,
-    ans: null,
+    que: `use column from examples to create a new column containing only the month/day/year from some date column`,
+    ans: `select date column -> Add Column tab -> General group -> Column From Examples -> From Selection`,
   },
   {
     que: `use column from examples to create a new column from an alphanumeric complex column data`,
-    ans: null,
+    ans: `select complex column -> Add Column tab -> General group -> Column From Examples -> From Selection`,
   },
   {
-    que: `create a new column which contains data based on the conditions of a single column data`,
+    que: `create a new column which contains data based on the conditions of a single column data.
+    Eg. a new column B where value = "adult" if age in colA >20 and value ="child" if age <20`,
     ans: null,
   },
   {
