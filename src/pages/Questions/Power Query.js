@@ -310,7 +310,10 @@ export const PQ = [
     que: `remove all rows whose column values are an error`,
     ans: `Home tab -> Reduce Rows group -> Remove Rows -> Remove Errors`,
   },
-  { que: `replace all errors in a column`, ans: null },
+  {
+    que: `replace all errors in a column`,
+    ans: `Transform tab -> Any Column group -> Replace Values -> Replace Errors`,
+  },
   {
     que: `replace only one column value with new value`,
     ans: null,
