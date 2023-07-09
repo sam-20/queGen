@@ -197,8 +197,21 @@ export const PQ = [
   },
   {
     que: `create a new column which contains data based on the conditions of multiple column data.
-    Eg. generating title for people based on Gender and MarriageStatus`,
-    ans: null,
+    Eg. Use married status column and Gender column to generate titles(Mr, Mrs, Miss) for people `,
+    ans: (
+      <>
+        <p>
+          Add Column tab {"->"} General group {"->"} Conditional Column
+        </p>
+        <p>---Condition Used for this example---</p>
+        <p>If gender = Male Then</p>
+        <p>colum_data = Mr</p>
+        <p>ElseIf Marriage_Status = Married then</p>
+        <p>colum_data = Mrs</p>
+        <p>Else</p>
+        <p>colum_data = Miss</p>
+      </>
+    ),
   },
   {
     que: `create a new column which contains data based on comparing 2 columns`,
