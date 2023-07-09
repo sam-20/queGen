@@ -311,6 +311,10 @@ export const PQ = [
     ans: `Home tab -> Reduce Rows group -> Remove Rows -> Remove Errors`,
   },
   {
+    que: `remove the first or last n rows from the dataset`,
+    ans: `Home tab -> Reduce Rows group -> Remove Rows -> Remove Top/Bottom Rows`,
+  },
+  {
     que: `replace all errors in a column`,
     ans: `Transform tab -> Any Column group -> Replace Values -> Replace Errors`,
   },
