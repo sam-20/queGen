@@ -580,6 +580,10 @@ export const EF = [
     ans: null,
   },
   {
+    que: `import data from multiple formats into a single table`,
+    ans: null,
+  },
+  {
     que: ``,
     ans: ``,
   },
