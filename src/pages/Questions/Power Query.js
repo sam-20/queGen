@@ -266,4 +266,12 @@ export const PQ = [
     que: `produce the list of M functions`,
     ans: `blank query -> = #shared -> convert to table`,
   },
+  {
+    que: `Convert date column in foreign country format to your country format`,
+    ans: `To convert to your local date format: 
+    Revert to original data type without errors -> 
+    Click data type icon (next to date col name) -> 
+    Using Locale … -> Change Data Type to Date -> 
+    Change Locale to the country in which the date is originally formatted. `,
+  },
 ];
