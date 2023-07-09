@@ -359,6 +359,11 @@ export const EF = [
     ans: `Click row underneath column headers -> View tab -> Window group -> Freeze Panes -> Freeze Panes`,
   },
   {
+    que: `split data (easy way of freezing column headers or portion of data so you can scroll
+      through the others)`,
+    ans: `Click row underneath column headers or where you want split to begin -> View tab -> Window group -> Split`,
+  },
+  {
     que: `Make same change across worksheets containing same data`,
     ans: `Hold Ctrl and select worksheet tabs below -> make change to one cell -> check to ensure it’s applied across other worksheets.`,
   },
