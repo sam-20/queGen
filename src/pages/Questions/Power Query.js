@@ -215,7 +215,7 @@ export const PQ = [
   },
   {
     que: `create a new column which contains data based on comparing 2 columns`,
-    ans: null,
+    ans: `Add Column tab -> General group -> Conditional Column`,
   },
   {
     que: `create a new column to produce new info based on if date is before, equal or after a certain date`,
