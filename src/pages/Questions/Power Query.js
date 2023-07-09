@@ -219,7 +219,7 @@ export const PQ = [
   },
   {
     que: `create a new column to produce new info based on if date is before, equal or after a certain date`,
-    ans: null,
+    ans: `Add Column tab -> General group -> Conditional Column`,
   },
   { que: `fill down empty values using default value given`, ans: null },
   {
@@ -233,7 +233,10 @@ export const PQ = [
   { que: `unpivot a table`, ans: null },
   { que: `remove all rows whose column values are an error`, ans: null },
   { que: `replace all errors in a column`, ans: null },
-  { que: `replace only one column value with new value`, ans: null },
+  {
+    que: `replace only one column value with new value`,
+    ans: null,
+  },
   {
     que: `replace matching values in a column with a new value.
   Eg. replace all males in columnA with boys`,
