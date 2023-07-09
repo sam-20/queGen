@@ -270,8 +270,8 @@ export const PQ = [
         <p>
           2. Assuming, we retrieved the following variables: Month, Year, Sales:
           This means our final unpivoted table should be a table that has a
-          single column for Month, single column for Year, single column for
-          Sales
+          single column for each of the variables ie. single column for Month,
+          single column for Year, single column for Sales
         </p>
         <p>
           3. Out of all the variables you retrieved, you'd notice that one of
