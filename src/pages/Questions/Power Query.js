@@ -79,7 +79,10 @@ export const PQ = [
       </>
     ),
   },
-  { que: `add, subtract, divide and multiply column data`, ans: null },
+  {
+    que: `add, subtract, divide and multiply column data`,
+    ans: `Add Column tab -> From Number group -> Standard -> Add/Multiply/Subtract/Divide`,
+  },
   {
     que: `calc the percentage, percentage of and modulo of column data`,
     ans: null,
