@@ -123,7 +123,18 @@ export const PQ = [
       </>
     ),
   },
-  { que: `calc the round off of column data`, ans: null },
+  {
+    que: `round up to the nearest whole number Eg. 74.69 -> 75`,
+    ans: `Add Column tab -> From Number group -> Rounding -> Round Up`,
+  },
+  {
+    que: `round down to the nearest whole number Eg. 74.69 -> 74`,
+    ans: `Add Column tab -> From Number group -> Rounding -> Round Down`,
+  },
+  {
+    que: `round to x decimal places Eg. 74.69 -> 74.7`,
+    ans: `Add Column tab -> From Number group -> Rounding -> Round...`,
+  },
   { que: `check if column data contains even or odd numbers`, ans: null },
   { que: `count number of duplicates in a column`, ans: null },
   { que: `count number of unique values in a column`, ans: null },
