@@ -300,11 +300,8 @@ export const PQ = [
   },
   { que: `remove all rows whose column values are an error`, ans: null },
   {
-    que: `remove all rows for a column data you dont want.
-    Eg. remove all rows where the City column value is Kumasi`,
-    ans: `select the column which you're using for the condition ie. City -> 
-    click the dropdown button next to the column header name ->
-    Text Filter -> Does Not Equal...`,
+    que: `remove all rows for a column data you dont want. Eg. remove all rows where the City column value is Kumasi`,
+    ans: `select the column which you're using for the condition ie. City -> click the dropdown button next to the column header name -> Text Filter -> Does Not Equal...`,
   },
   { que: `replace all errors in a column`, ans: null },
   {
