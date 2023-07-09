@@ -19,9 +19,18 @@ export const PQ = [
     que: `add suffix and prefix to column data`,
     ans: `Add Column tab -> From Text group -> Format -> Add Prefix/Add Suffix`,
   },
-  { que: `extract the left, right and mid of column data`, ans: null },
-  { que: `extract text with delimeter`, ans: null },
-  { que: `extract year, quarter, month, day from a date`, ans: null },
+  {
+    que: `extract the left, right and mid of column data`,
+    ans: `Add Column tab -> From Text group -> Extract -> First Characters/Last Characters/Range`,
+  },
+  {
+    que: `extract text with delimeter`,
+    ans: `Add Column tab -> From Text group -> Extract -> Text Before/After/Between delimiters`,
+  },
+  {
+    que: `extract year, quarter, month, day from a date`,
+    ans: `Add Column tab -> From Date group -> Date -> Year/Month/Quarter`,
+  },
   { que: `extract the earliest and latest dates`, ans: null },
   { que: `find the difference between dates`, ans: null },
   { que: `extract name of day and name of month`, ans: null },
