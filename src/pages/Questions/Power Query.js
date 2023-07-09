@@ -273,6 +273,11 @@ export const PQ = [
           single column for Month, single column for Year, single column for
           Sales
         </p>
+        <p>
+          3. Out of all the variables you retrieved, you'd notice that one of
+          them is correctly arranged as a single column whose values are rightly
+          entered under it
+        </p>
       </>
     ),
   },
