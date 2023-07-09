@@ -156,6 +156,20 @@ export const VBA = [
     ),
   },
   {
+    que: `assign a name to a cell/range reference in the worksheet`,
+    ans: (
+      <>
+        <p>Range("C4").Name = "taxRate"</p>
+        <p>Range("A1:B3").Name = "Rates"</p>
+
+        <p>
+          'NB: naming the cell/range takes effect in the actual worksheet as
+          well not just inside the vba code
+        </p>
+      </>
+    ),
+  },
+  {
     que: `access or perform an action on an entire row/column`,
     ans: (
       <>
