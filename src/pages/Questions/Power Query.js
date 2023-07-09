@@ -242,9 +242,38 @@ export const PQ = [
   },
   {
     que: `transpose a table (ie. reverse the columns and rows of that table)`,
-    ans: null,
+    ans: `Transform tab -> Table group -> Transpose`,
   },
-  { que: `unpivot a table`, ans: null },
+  {
+    que: `unpivot a table`,
+    ans: (
+      <>
+        <p>
+          Transform tab {"->"} Any Column group {"->"} Unpivot Columns
+        </p>
+
+        <p>Unpivoting explained</p>
+        <p>
+          1. To identify a table that needs unpivoting, you would notice that
+          some of the table's column headers are the unique values of a
+          categorical variable. Eg. The column headers could be something like
+          January, February, March, instead of a single column like Month
+        </p>
+        <p>
+          2. Before you start unpivoting, first ignore how confusing the data is
+          arranged and take note of all the variables in the messed up table
+          (not just the variable of the column and row headers but also the
+          variable of the values recorded under the row and column headers).
+        </p>
+        <p>
+          2. Assuming, we retrieved the following variables: Year, Month, Sales:
+          This means our final unpivoted table should be a table that has a
+          single column for Year, single column for Month, single column for
+          Sales
+        </p>
+      </>
+    ),
+  },
   { que: `remove all rows whose column values are an error`, ans: null },
   { que: `replace all errors in a column`, ans: null },
   {
