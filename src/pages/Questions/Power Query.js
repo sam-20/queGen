@@ -263,12 +263,14 @@ export const PQ = [
           2. Before you start unpivoting, first ignore how confusing the data is
           arranged and take note of all the variables in the messed up table
           (not just the variable of the column and row headers but also the
-          variable of the values recorded under the row and column headers).
+          variable of the values recorded under the row and column headers). Eg.
+          In this case where the Jan,Feb,Mar were used as the column headers, we
+          can say its variable is Month
         </p>
         <p>
-          2. Assuming, we retrieved the following variables: Year, Month, Sales:
+          2. Assuming, we retrieved the following variables: Month, Year, Sales:
           This means our final unpivoted table should be a table that has a
-          single column for Year, single column for Month, single column for
+          single column for Month, single column for Year, single column for
           Sales
         </p>
       </>
