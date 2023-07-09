@@ -88,11 +88,12 @@ export const PQ = [
     ans: ``,
   },
   {
-    que: ``,
+    que: `calcuate the 100% value of a column data whose values are in another % equivalent. 
+    Eg. 100% of sales data represented in their 15% form`,
     ans: ``,
   },
   {
-    que: `calc the percentage of and percentage of and modulo of column data`,
+    que: `calc the modulo of a column data`,
     ans: null,
   },
   { que: `calc the round off of column data`, ans: null },
