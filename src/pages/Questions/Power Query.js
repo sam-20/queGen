@@ -221,7 +221,17 @@ export const PQ = [
     que: `create a new column to produce new info based on if date is before, equal or after a certain date`,
     ans: `Add Column tab -> General group -> Conditional Column`,
   },
-  { que: `fill down empty values using default value given`, ans: null },
+  {
+    que: `fill down empty values using default value given`,
+    ans: (
+      <>
+        <p>
+          NB: the cells that you want to see filled should have their values as
+          null. An empty string inside the cell wouldnt work
+        </p>
+      </>
+    ),
+  },
   {
     que: `create multiple groupings of a column(s) into one table (eg. for each branch, group the total income, average rating and minimum unit payment)`,
     ans: null,
