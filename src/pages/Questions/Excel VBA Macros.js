@@ -147,6 +147,15 @@ export const VBA = [
     ),
   },
   {
+    que: `access or perform an action on any cell or range which has been named`,
+    ans: (
+      <>
+        <p>'assuming a cell or range has been named as taxRate</p>
+        <p>Range("taxRate") = 0.05</p>
+      </>
+    ),
+  },
+  {
     que: `access or perform an action on an entire row/column`,
     ans: (
       <>
@@ -1555,9 +1564,9 @@ export const VBA = [
       </>
     ),
   },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
-  { que: ``, ans: null },
+  { que: `create a userform with a functioning button`, ans: null },
+  { que: `create a userform with functioning radio buttons`, ans: null },
+  { que: `create a userform with a functioning checkboxes`, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
   { que: ``, ans: null },
