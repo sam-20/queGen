@@ -84,7 +84,15 @@ export const PQ = [
     ans: `Add Column tab -> From Number group -> Standard -> Add/Multiply/Subtract/Divide`,
   },
   {
-    que: `calc the percentage, percentage of and modulo of column data`,
+    que: `calculate the percentage value of a column data. Eg. 12% value of £200`,
+    ans: ``,
+  },
+  {
+    que: ``,
+    ans: ``,
+  },
+  {
+    que: `calc the percentage of and percentage of and modulo of column data`,
     ans: null,
   },
   { que: `calc the round off of column data`, ans: null },
