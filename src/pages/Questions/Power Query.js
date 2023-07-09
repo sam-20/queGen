@@ -236,8 +236,9 @@ export const PQ = [
     ),
   },
   {
-    que: `create multiple groupings of a column(s) into one table (eg. for each branch, group the total income, average rating and minimum unit payment)`,
-    ans: null,
+    que: `create multiple groupings of a column(s) into one table 
+    Eg. For each branch, group the total income, average rating and minimum unit payment)`,
+    ans: `Transform tab -> Table group -> Group By`,
   },
   {
     que: `transpose a table (ie. reverse the columns and rows of that table)`,
