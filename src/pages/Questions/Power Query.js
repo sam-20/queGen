@@ -85,12 +85,24 @@ export const PQ = [
   },
   {
     que: `calculate the percentage value of a column data. Eg. 12% value of £200`,
-    ans: ``,
+    ans: (
+      <>
+        <p>Intepretation: Give me x% value of the column I have selected</p>
+        <p>
+          Add Column tab {"->"} From Number group {"->"} Standard {"->"}
+          Percentage: (x is what you put into the field)
+        </p>
+      </>
+    ),
   },
   {
     que: `calcuate the 100% value of a column data whose values are in another % equivalent. 
-    Eg. 100% of sales data represented in their 15% form`,
-    ans: ``,
+    Eg. find the 100% value of sales data represented in their 50% form`,
+    ans: (
+      <>
+        <p></p>
+      </>
+    ),
   },
   {
     que: `calc the modulo of a column data`,
