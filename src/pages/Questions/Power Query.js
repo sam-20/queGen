@@ -294,7 +294,7 @@ export const PQ = [
           4. Inside the power query editor, select ColA {"->"} right-click
           {"->"} Unpivot Other Columns
         </p>
-        <p>5.</p>
+        <p>5. Assign appropriate name to columns created</p>
       </>
     ),
   },
