@@ -226,6 +226,9 @@ export const PQ = [
     ans: (
       <>
         <p>
+          Transform tab {"->"} Any Column group {"->"} Fil {"->"} Up/Down
+        </p>
+        <p>
           NB: the cells that you want to see filled should have their values as
           null. An empty string inside the cell wouldnt work
         </p>
