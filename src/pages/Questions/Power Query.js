@@ -191,10 +191,11 @@ export const PQ = [
   {
     que: `create a new column which contains data based on the conditions of a single column data.
     Eg. a new column B where value = "adult" if age in colA >20 and value ="child" if age <20`,
-    ans: null,
+    ans: `Add Column tab -> General group -> Conditional Column`,
   },
   {
-    que: `create a new column which contains data based on the conditions of multiple column data. (eg. generating title for people based on Gender and MarriageStatus)`,
+    que: `create a new column which contains data based on the conditions of multiple column data.
+    Eg. generating title for people based on Gender and MarriageStatus`,
     ans: null,
   },
   {
