@@ -100,7 +100,14 @@ export const PQ = [
     Eg. find the 100% value of sales data represented in their 50% form`,
     ans: (
       <>
-        <p></p>
+        <p>
+          Intepretation: The col I have selected is the x% value, now give me
+          its 100% value
+        </p>
+        <p>
+          Add Column tab {"->"} From Number group {"->"} Standard {"->"}
+          Percentage of: (x is what you put into the field)
+        </p>
       </>
     ),
   },
