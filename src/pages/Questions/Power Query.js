@@ -157,7 +157,11 @@ export const PQ = [
   { que: `count number of unique values in a column`, ans: null },
   {
     que: `filter out the rows of the column who has duplicate values`,
-    ans: `select column whose duplicate rows you want to filter -> Home tab -> Reduce Rows group -> Keep Rows -> Keep Duplicates`,
+    ans: `select column or columns whose duplicate rows you want to filter -> Home tab -> Reduce Rows group -> Keep Rows -> Keep Duplicates`,
+  },
+  {
+    que: `remove duplicate rows`,
+    ans: `select column or columns whose duplicate rows you want to remove -> Home tab -> Reduce Rows group -> Remove Rows -> Remove Duplicates`,
   },
   {
     que: `check the sign of numbers in column data`,
@@ -298,10 +302,13 @@ export const PQ = [
       </>
     ),
   },
-  { que: `remove all rows whose column values are an error`, ans: null },
   {
     que: `remove all rows for a column data you dont want. Eg. remove all rows where the City column value is Kumasi`,
     ans: `select the column which you're using for the condition ie. City -> click the dropdown button next to the column header name -> Text Filter -> Does Not Equal...`,
+  },
+  {
+    que: `remove all rows whose column values are an error`,
+    ans: `Home tab -> Reduce Rows group -> Remove Rows -> Remove Errors`,
   },
   { que: `replace all errors in a column`, ans: null },
   {
