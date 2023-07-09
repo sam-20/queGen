@@ -51,8 +51,14 @@ export const PQ = [
     que: `extract the day of the month(eg. 10th), day of the week(eg. 0-Mon, 1-Tue) or day of the year(eg. 364)`,
     ans: `Add Column tab -> From Date &Time group -> Date -> Day -> Day/Day of Week/Day of Year`,
   },
-  { que: `extract the week of the month or week of the year`, ans: null },
-  { que: `extract the date from a datetime`, ans: null },
+  {
+    que: `extract the week of the month(1-4) or week of the year (eg.52)`,
+    ans: `Add Column tab -> From Date &Time group -> Date -> Week -> Week of Month/Week of Year`,
+  },
+  {
+    que: `extract the date from a datetime`,
+    ans: `Add Column tab -> From Date &Time group -> Date -> Date Only`,
+  },
   { que: `calculate age from a date`, ans: null },
   { que: `add, subtract, divide and multiply column data`, ans: null },
   {
