@@ -7,7 +7,19 @@ export const PQ = [
   },
   {
     que: `merge data in multiple columns`,
-    ans: ` Add Column tab -> From Text group -> Merge Columns`,
+    ans: (
+      <>
+        <p>
+          Add Column tab {"->"} From Text group {"->"} Merge Columns
+        </p>
+        <p>
+          NB: when merging do not use a separator that already exists in either
+          of the columns to be merged. Eg. If colA has values like 023-23-45 and
+          colB has values like male, do not merge the 2 columns using "-" as the
+          separator since it exists in colA
+        </p>
+      </>
+    ),
   },
   {
     que: `split column data into multiple columns`,
@@ -282,6 +294,7 @@ export const PQ = [
           4. Inside the power query editor, select ColA {"->"} right-click
           {"->"} Unpivot Other Columns
         </p>
+        <p>5.</p>
       </>
     ),
   },
