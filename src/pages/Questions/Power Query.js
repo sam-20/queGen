@@ -59,7 +59,26 @@ export const PQ = [
     que: `extract the date from a datetime`,
     ans: `Add Column tab -> From Date &Time group -> Date -> Date Only`,
   },
-  { que: `calculate age from a date`, ans: null },
+  {
+    que: `calculate age from a date`,
+    ans: (
+      <>
+        <p>1. extract the age represented as number of days from the date:</p>
+        <p>
+          Add Column tab {"->"} From Date &Time group {"->"} Date {"->"} Age
+        </p>
+        <p>2. Convert age displayed as number of days to years</p>
+        <p>
+          Add Column tab {"->"} From Date &Time group {"->"} Duration {"->"}
+          Total Years
+        </p>
+        <p>
+          3. Convert age in years from decimal to whole number by changing the
+          data type
+        </p>
+      </>
+    ),
+  },
   { que: `add, subtract, divide and multiply column data`, ans: null },
   {
     que: `calc the percentage, percentage of and modulo of column data`,
