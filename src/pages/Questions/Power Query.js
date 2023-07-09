@@ -276,7 +276,11 @@ export const PQ = [
         <p>
           3. Out of all the variables you retrieved, you'd notice that one of
           them is correctly arranged as a single column whose values are rightly
-          entered under it
+          entered under it. Take note of that column (we call it ColA)
+        </p>
+        <p>
+          4. Inside the power query editor, select ColA {"->"} right-click
+          {"->"} Unpivot Other Columns
         </p>
       </>
     ),
