@@ -1,3 +1,5 @@
+//NB: Questions and Answers were practiced on Excel's Power Query.
+//Power BI's power query has slightly different interface and positioning of groups and tabs so some answers may vary for Power BI
 export const PQ = [
   {
     que: `close and reopen the query settings pane (where you applied steps are listed)`,
@@ -219,7 +221,11 @@ export const PQ = [
   { que: `remove all rows whose column values are an error`, ans: null },
   { que: `replace all errors in a column`, ans: null },
   { que: `replace only one column value with new value`, ans: null },
-  { que: `replace matching values in a column with a new value`, ans: null },
+  {
+    que: `replace matching values in a column with a new value.
+  Eg. replace all males in columnA with boys`,
+    ans: `Transform tab -> Any Column group -> Replace Values -> Replace Values`,
+  },
   { que: `choose only the columns you want to keep`, ans: null },
   { que: `what are the total number of rows in the dataset`, ans: null },
   { que: `go to a specific column without scrolling`, ans: null },
