@@ -135,14 +135,27 @@ export const PQ = [
     que: `round to x decimal places Eg. 74.69 -> 74.7`,
     ans: `Add Column tab -> From Number group -> Rounding -> Round...`,
   },
-  { que: `check if column data contains even or odd numbers`, ans: null },
+  {
+    que: `check if column data contains even or odd numbers`,
+    ans: `Add Column tab -> From Number group -> Information -> Is Even/Is Odd`,
+  },
   { que: `count number of duplicates in a column`, ans: null },
   { que: `count number of unique values in a column`, ans: null },
   {
     que: `filter out the rows of the column who has duplicate values`,
     ans: null,
   },
-  { que: `check the sign of numbers in column data`, ans: null },
+  {
+    que: `check the sign of numbers in column data`,
+    ans: (
+      <>
+        <p>
+          Add Column tab {"->"} From Number group {"->"} Information {"->"} Sign
+        </p>
+        <p>NB: +ve value = 1, -ve value = -1, 0 value = 0</p>
+      </>
+    ),
+  },
   {
     que: `append multiple excel tables with different number of colums`,
     ans: null,
