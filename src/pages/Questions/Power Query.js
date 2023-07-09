@@ -1,5 +1,9 @@
 export const PQ = [
   {
+    que: `close and reopen the query settings pane (where you applied steps are listed)`,
+    ans: `View tab -> Layout group -> Query Settings`,
+  },
+  {
     que: `merge data in multiple columns`,
     ans: ` Add Column tab -> From Text group -> Merge Columns`,
   },
@@ -29,12 +33,24 @@ export const PQ = [
   },
   {
     que: `extract year, quarter, month, day from a date`,
-    ans: `Add Column tab -> From Date group -> Date -> Year/Month/Quarter`,
+    ans: `Add Column tab -> From Date &Time group -> Date -> Year/Month/Quarter`,
   },
-  { que: `extract the earliest and latest dates`, ans: null },
-  { que: `find the difference between dates`, ans: null },
-  { que: `extract name of day and name of month`, ans: null },
-  { que: `extract the day of the week or month`, ans: null },
+  {
+    que: `extract the earliest and latest dates between a group of date columns`,
+    ans: `select date columns -> Add Column tab -> From Date &Time group -> Date -> Earliest/Latest`,
+  },
+  {
+    que: `find the difference between dates`,
+    ans: `select date columns -> Add Column tab -> From Date &Time group -> Date -> Subtract Days`,
+  },
+  {
+    que: `extract name of day(eg. Monday) and name of month(eg. February)`,
+    ans: `Add Column tab -> From Date &Time group -> Date -> Day/Month -> Name of Day/Name of Month`,
+  },
+  {
+    que: `extract the day of the month(eg. 10th), day of the week(eg. 0-Mon, 1-Tue) or day of the year(eg. 364)`,
+    ans: `Add Column tab -> From Date &Time group -> Date -> Day -> Day/Day of Week/Day of Year`,
+  },
   { que: `extract the week of the month or week of the year`, ans: null },
   { que: `extract the date from a datetime`, ans: null },
   { que: `calculate age from a date`, ans: null },
