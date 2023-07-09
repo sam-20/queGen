@@ -87,7 +87,7 @@ export const PQ = [
     que: `calculate the percentage value of a column data. Eg. 12% value of £200`,
     ans: (
       <>
-        <p>Intepretation: Give me x% value of the column I have selected</p>
+        <p>Interpretation: Give me x% value of the column I have selected</p>
         <p>
           Add Column tab {"->"} From Number group {"->"} Standard {"->"}
           Percentage: (x is what you put into the field)
@@ -101,7 +101,7 @@ export const PQ = [
     ans: (
       <>
         <p>
-          Intepretation: The col I have selected is the x% value, now give me
+          Interpretation: The col I have selected is the x% value, now give me
           its 100% value
         </p>
         <p>
@@ -113,7 +113,15 @@ export const PQ = [
   },
   {
     que: `calc the modulo of a column data`,
-    ans: null,
+    ans: (
+      <>
+        <p>Interpretation: Give me the value of the selected column modulo x</p>
+        <p>
+          Add Column tab {"->"} From Number group {"->"} Standard {"->"} Modulo:
+          (x is what you put into the field)
+        </p>
+      </>
+    ),
   },
   { que: `calc the round off of column data`, ans: null },
   { que: `check if column data contains even or odd numbers`, ans: null },
