@@ -498,7 +498,7 @@ export const EF = [
         </p>
         <p>
           Step 2: using countif: count number of times colB first item is in
-          colA. Then drag down the countif result find the counts of the
+          colA. Then drag down the countif result to find the counts of the
           remaining items
         </p>
       </>

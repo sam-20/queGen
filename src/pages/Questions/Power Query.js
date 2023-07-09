@@ -143,7 +143,7 @@ export const PQ = [
   { que: `count number of unique values in a column`, ans: null },
   {
     que: `filter out the rows of the column who has duplicate values`,
-    ans: null,
+    ans: `select column whose duplicate rows you want to filter -> Home tab -> Reduce Rows group -> Keep Rows -> Keep Duplicates`,
   },
   {
     que: `check the sign of numbers in column data`,
@@ -174,11 +174,11 @@ export const PQ = [
   { que: `merge data from different data sources`, ans: null },
   {
     que: `use column from examples to extract portion of a column data`,
-    ans: null,
+    ans: `select column -> Add Column tab -> General group -> Column From Examples -> From Selection`,
   },
   {
     que: `use column from examples to create a new column from multiple column data`,
-    ans: null,
+    ans: `select columns -> Add Column tab -> General group -> Column From Examples -> From Selection`,
   },
   {
     que: `use column from examples to create a new month/day/year column from a date column`,
