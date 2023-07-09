@@ -1,9 +1,24 @@
 export const PQ = [
-  { que: `merge data in multiple columns`, ans: null },
-  { que: `split column data into multiple columns`, ans: null },
-  { que: `trim data`, ans: null },
-  { que: `convert data to upper, lower, proper case`, ans: null },
-  { que: `add suffix and prefix to column data`, ans: null },
+  {
+    que: `merge data in multiple columns`,
+    ans: ` Add Column tab -> From Text group -> Merge Columns`,
+  },
+  {
+    que: `split column data into multiple columns`,
+    ans: `Transform tab -> Text Column group -> Split Column`,
+  },
+  {
+    que: `trim data`,
+    ans: `Transform tab -> Text Column group -> Format -> Trim`,
+  },
+  {
+    que: `convert data to upper, lower, proper case`,
+    ans: `Add Column tab -> From Text group -> Format -> Uppercase/Lowercase/Capitalize each word`,
+  },
+  {
+    que: `add suffix and prefix to column data`,
+    ans: `Add Column tab -> From Text group -> Format -> Add Prefix/Add Suffix`,
+  },
   { que: `extract the left, right and mid of column data`, ans: null },
   { que: `extract text with delimeter`, ans: null },
   { que: `extract year, quarter, month, day from a date`, ans: null },
