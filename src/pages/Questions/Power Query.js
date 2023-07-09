@@ -323,9 +323,18 @@ export const PQ = [
   Eg. replace all males in columnA with boys`,
     ans: `Transform tab -> Any Column group -> Replace Values -> Replace Values`,
   },
-  { que: `choose only the columns you want to keep`, ans: null },
-  { que: `what are the total number of rows in the dataset`, ans: null },
-  { que: `go to a specific column without scrolling`, ans: null },
+  {
+    que: `choose only the columns you want to keep`,
+    ans: `Home tab -> Manage Columns group -> Choose Columns -> Choose Columns`,
+  },
+  {
+    que: `go to a specific column without scrolling`,
+    ans: `Home tab -> Manage Columns group -> Choose Columns -> Go To Column`,
+  },
+  {
+    que: `what are the total number of rows in the dataset`,
+    ans: `Transform tab -> Table group -> Count Rows`,
+  },
   {
     que: `check if a date is in the previous/current/next day/week/month/quarter/year using function`,
     ans: `Date.IsIn...`,
