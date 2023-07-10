@@ -624,8 +624,27 @@ export const EF = [
     ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Input Message tab`,
   },
   {
-    que: `customize the error message for when a user enters data which does not meet the validation rule`,
+    que: `throw an error message for when a user enters data which does not meet the validation rule`,
     ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Error Alert tab`,
+  },
+  {
+    que: `prompt a user if they enter data that does not meet the validation rule. But also give them freedom to proceed`,
+    ans: (
+      <>
+        <p>
+          For the data validation feature, the Error Alert comes in 3 options:
+        </p>
+        <p>Stop - would never allow you to enter the invalid data</p>
+        <p>
+          Warning - would ask if you still want to proceed entering invalid data
+          and allow you if you click Yes
+        </p>
+        <p>
+          Information - would notify you that your data is invalid and would
+          proceed to enter data if you click Ok
+        </p>
+      </>
+    ),
   },
   {
     que: `highlight all the data in a column which violate the valiadation rules`,
