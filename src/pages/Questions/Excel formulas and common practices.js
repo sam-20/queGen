@@ -193,7 +193,10 @@ export const EF = [
     que: `how do you reference multiple entire columns/rows without their header column/row`,
     ans: (
       <>
-        <p>eg. converting data in column A and B to upper</p>
+        <p>
+          eg. converting data in column A and B to upper without affecting
+          column headers
+        </p>
         <p>=UPPER(A:A,A1,B:B,B1)</p>
       </>
     ),
