@@ -432,7 +432,7 @@ export const EF = [
           array is the lookup value located], [the item we want to pull out,
           what is its array])
         </p>
-        <p>Shortcut for xlookup parameters: l,la,ra</p>
+        <p>Shortcut for xlookup parameters: lv,lva,fra</p>
         <p>lv- lookup value</p>
         <p>lva - lookup value array</p>
         <p>fra - final result's array</p>
