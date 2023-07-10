@@ -611,9 +611,9 @@ export const EF = [
         </p>
 
         <p>
-          NB: the source for your List can be an existing range of values eg.
+          {`NB: the source for your List can be an existing range of values eg.
           $H$1:$H$5 or you can directly enter the list items separated by comma.
-          Eg male,female,non-binary
+          Eg male,female,non-binary`}
         </p>
       </>
     ),
