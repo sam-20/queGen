@@ -581,7 +581,20 @@ export const EF = [
   },
   {
     que: `validate column data to contain only whole numbers/decimals/date/time`,
-    ans: `select the single column you want to validate(can include header. If its affected, you can later select the header cell only and clear validation for it) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose Whole Number/Decimal/Date/Time from validation criteria`,
+    ans: (
+      <>
+        <p>
+          select the single column you want to validate {"->"} Data tab {"->"}
+          Data Tools group {"->"} Data Validation {"->"} Data Validation {"->"}
+          choose Whole Number/Decimal/Date/Time from validation criteria
+        </p>
+        <p>
+          {`NB: You can select the entire column including the header for
+          validation. If its affected, you can later select the header cell only
+          and clear validation for it`}
+        </p>
+      </>
+    ),
   },
   {
     que: `validate column data to contain data of a fixed length`,
@@ -589,7 +602,21 @@ export const EF = [
   },
   {
     que: `validate column data to ensure user can enter one of a given/predefined set of values`,
-    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose List from validation criteria`,
+    ans: (
+      <>
+        <p>
+          select the single column you want to validate(can include header)
+          {"->"} Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
+          Data Validation {"->"} choose List from validation criteria
+        </p>
+
+        <p>
+          NB: the values you use for the List can be an existing range of values
+          eg. $H$1:$H$5 or you can directly enter the list items separated by
+          comma. Eg male,female,non-binary
+        </p>
+      </>
+    ),
   },
   {
     que: `make it such that when a user is entering data into a column which has validation, 
