@@ -581,7 +581,7 @@ export const EF = [
   },
   {
     que: `validate column data to contain only whole numbers/decimals/date/time`,
-    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose Whole Number/Decimal/Date/Time from validation criteria`,
+    ans: `select the single column you want to validate(can include header. If its affected, you can later select the header cell only and clear validation for it) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose Whole Number/Decimal/Date/Time from validation criteria`,
   },
   {
     que: `validate column data to contain data of a fixed length`,
