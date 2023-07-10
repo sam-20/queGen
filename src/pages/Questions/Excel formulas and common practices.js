@@ -576,6 +576,43 @@ export const EF = [
     ans: `right click sheet tab at bottom -> Protect Sheet`,
   },
   {
+    que: `access the data validation feature`,
+    ans: `Data tab -> Data Tools group -> Data Validation -> Data Validation`,
+  },
+  {
+    que: `apply data validation to your data`,
+    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation`,
+  },
+  {
+    que: `make it such that when a user is entering data into a column which has validation, 
+    a tooltip appears to provide more info on the kind of data which is accepted`,
+    ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Input Message tab`,
+  },
+  {
+    que: `customize the error message for when a user enters data which does not meet the validation rule`,
+    ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Error Alert tab`,
+  },
+  {
+    que: `highlight all the data in a column which violate the valiadation rules`,
+    ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Circle Invalid Data`,
+  },
+  {
+    que: `display rows which violate a validated column`,
+    ans: `click filter icon next to column header -> Number Filters -> select the option which can be used to meet your validation criteria`,
+  },
+  {
+    que: ``,
+    ans: null,
+  },
+  {
+    que: ``,
+    ans: null,
+  },
+  {
+    que: ``,
+    ans: null,
+  },
+  {
     que: `import data from the following formats csv, excel, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: null,
   },
