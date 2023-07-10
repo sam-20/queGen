@@ -433,9 +433,9 @@ export const EF = [
           what is its array])
         </p>
         <p>Shortcut for xlookup parameters: l,la,ra</p>
-        <p>l - lookup value</p>
-        <p>la - lookup array</p>
-        <p>ia - result/item array</p>
+        <p>lv- lookup value</p>
+        <p>lva - lookup value array</p>
+        <p>fra - final result's array</p>
       </>
     ),
   },
