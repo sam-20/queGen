@@ -580,8 +580,16 @@ export const EF = [
     ans: `Data tab -> Data Tools group -> Data Validation -> Data Validation`,
   },
   {
-    que: `apply data validation to your data`,
-    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation`,
+    que: `validate column data to contain only whole numbers/decimals/date/time`,
+    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose Whole Number/Decimal/Date/Time from validation criteria`,
+  },
+  {
+    que: `validate column data to contain data of a fixed length`,
+    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose Text Length from validation criteria`,
+  },
+  {
+    que: `validate column data to ensure user can enter one of a given/predefined set of values`,
+    ans: `select the single column you want to validate(can include header) -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> choose List from validation criteria`,
   },
   {
     que: `make it such that when a user is entering data into a column which has validation, 
