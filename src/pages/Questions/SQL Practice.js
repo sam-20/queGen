@@ -2027,7 +2027,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   {
-    que: `import data from the following formats csv, txt, pdf, xlsx, sql, etc.`,
+    que: `import data from the following file formats csv, txt, pdf, xlsx, sql, etc.`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
@@ -2051,8 +2051,20 @@ Useful when database cannot be for eg. dropped due to active connections using i
           terminator in Google Bigquery
         </p>
         )
+        <p>
+          'NB: if data being imported contains dates, the date should be in the
+          US format before importing ie. (MM/DD/YYYY)
+        </p>
       </>
     ),
+  },
+  {
+    que: `import data from an excel file which has multiple tables in different worksheets`,
+    ans: null,
+  },
+  {
+    que: `import table data into sql where the data comes from 2 separate files`,
+    ans: null,
   },
   { que: `events (MySQL)`, ans: `` },
 ];
