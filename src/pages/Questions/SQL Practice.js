@@ -2053,10 +2053,15 @@ Useful when database cannot be for eg. dropped due to active connections using i
         )
         <p>
           'NB: if data being imported contains dates, the date should be in the
-          US format before importing ie. (MM/DD/YYYY)
+          US format before importing ie. 'MM/DD/YYYY. Inside SQL, using the
+          'date' datatype produces dates in the format 'YYYY-MM-DD'
         </p>
       </>
     ),
+  },
+  {
+    que: `select a date from a table in a format you want it to appear. Eg. YYYY-DD-MM, DD/MM/YYYY, etc`,
+    ans: <></>,
   },
   {
     que: `import data from an excel file which has multiple tables in different worksheets`,
