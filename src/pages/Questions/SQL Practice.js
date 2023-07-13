@@ -2064,6 +2064,15 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: <></>,
   },
   {
+    que: `convert a value (of any type) into a specified datatype in a select statement`,
+    ans: (
+      <>
+        <p>SELECT CAST(25.65 AS varchar)</p>
+        <p>SELECT CAST('2017-08-25' AS datetime);</p>
+      </>
+    ),
+  },
+  {
     que: `import data from an excel file which has multiple tables in different worksheets`,
     ans: null,
   },
@@ -2093,5 +2102,6 @@ Useful when database cannot be for eg. dropped due to active connections using i
  https://www.nuttyabouthosting.co.uk/knowledgebase/article/how-to-generate-database-scripts-with-data-in-sql-server
  https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard?view=sql-server-ver16s
  https://www.youtube.com/watch?v=6_95vbBrrXI
+ https://www.w3schools.com/sql/sql_ref_sqlserver.asp
  https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
  */

@@ -622,6 +622,10 @@ export const EF = [
     ),
   },
   {
+    que: `validate column data to ensure user cannot leave cell null`,
+    ans: null,
+  },
+  {
     que: `make it such that when a user is entering data into a column which has validation, 
     a tooltip appears to provide more info on the kind of data which is accepted`,
     ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Input Message tab`,
