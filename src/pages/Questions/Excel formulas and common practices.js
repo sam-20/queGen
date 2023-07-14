@@ -622,7 +622,36 @@ export const EF = [
     ),
   },
   {
+    ans: `validate a column with a custom formula`,
+    ans: (
+      <>
+        <p>
+          select the single column you want to validate(can include header)
+          {"->"} Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
+          Data Validation {"->"} choose Custom from validation criteria
+        </p>
+
+        <p>
+          NB: inside the formula bar: the formula you write should have a final
+          output of true. To understand how to write the formula, reframe your
+          validation question.
+        </p>
+        <p>
+          Eg. if we want column to accept numbers. Reframed question becomes:{" "}
+        </p>
+      </>
+    ),
+  },
+  {
     que: `validate column data to ensure user cannot leave cell null`,
+    ans: null,
+  },
+  {
+    que: `validate a column to prevent entering duplicate values`,
+    ans: null,
+  },
+  {
+    que: "validate a column to ensure first character is any text, followed by 4 digits",
     ans: null,
   },
   {
@@ -662,8 +691,23 @@ export const EF = [
     ans: `click filter icon next to column header -> Number Filters -> select the option which can be used to meet your validation criteria`,
   },
   {
-    que: ``,
+    que: `apply conditional formatting to a column with a custom formula`,
     ans: null,
+  },
+  {
+    que: `nest excel functions ie. use a function as one of the arguments of another function.
+    Eg. if the sum of a range is > 10, count the cells, else find the average of the cells`,
+    ans: (
+      <>
+        <p>{`=IF(SUM(A1:A3)>10,COUNTA(A1:A3),AVERAGE(A1:A3))`}</p>
+        <p>
+          NB:!!!! When a function is used as an argument, the nested function
+          should never begin with "=". The example below is wrong and would
+          produce an error
+          {`=IF(=SUM(A1:A3)>10,=COUNTA(A1:A3),=AVERAGE(A1:A3))`}
+        </p>
+      </>
+    ),
   },
   {
     que: ``,
