@@ -636,8 +636,11 @@ export const EF = [
           output of true. To understand how to write the formula, reframe your
           validation question.
         </p>
+        <p>Eg. If we want column to accept numbers.</p>
         <p>
-          Eg. if we want column to accept numbers. Reframed question becomes:{" "}
+          Reframed question becomes:If we put the column value inside this
+          function and the function returns true, then it has passed the
+          validation
         </p>
       </>
     ),
@@ -692,7 +695,7 @@ export const EF = [
   },
   {
     que: `apply conditional formatting to a column with a custom formula`,
-    ans: null,
+    ans: `if the column value inside this formula is true, apply the formatting to it`,
   },
   {
     que: `nest excel functions ie. use a function as one of the arguments of another function.
