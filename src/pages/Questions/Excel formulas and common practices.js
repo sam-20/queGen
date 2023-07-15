@@ -828,6 +828,10 @@ export const EF = [
     ),
   },
   {
+    que: `if a column value is true for a conditional formatting formula, apply Conditional Formatting Across its Entire Row`,
+    ans: null,
+  },
+  {
     que: `How can you get the reference of an entire column without the column header?`,
     ans: (
       <>
@@ -976,11 +980,6 @@ export const EF = [
   {
     que: `display rows which violate a validated column`,
     ans: `click filter icon next to column header -> Number Filters -> select the option which can be used to meet your validation criteria`,
-  },
-  {
-    que: `if a column value is true for a conditional formatting formula, 
-    highlight not just that cell in the column but its entire row as well`,
-    ans: null,
   },
   {
     que: `nest excel functions ie. use a function as one of the arguments of another function.
