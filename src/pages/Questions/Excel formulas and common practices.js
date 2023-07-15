@@ -710,37 +710,36 @@ export const EF = [
 
         <p>Eg. We want our column to contain only numbers</p>
         <p>
-          NB: Inside the input box where you put your custom function: the
+          1. Inside the input box where you put your custom function: the
           function you write should have a final output of TRUE. To understand
-          how to develop your function, reframe your validation question.
-        </p>
-        <p>Eg.If the task is: "We want this column to accept only numbers"</p>
-        <p>
-          Reframed task becomes:"If we put the column value inside this function
-          and the function returns true, then it has passed the validation."
+          how to develop your function, reframe your validation question. Eg.If
+          the task is: "We want this column to accept only numbers" Reframed
+          task becomes:"If we put the column value inside this function and the
+          function returns true, then it has passed the validation."
         </p>
         <p>
-          The function for our task in this case would therefore be:
-          {`=ISNUMBER(VALUE(D1))`}
-        </p>
-
-        <p>
-          NB:!!! To test that our validation function works correctly, always
-          first test it inside the worksheet next to the target column. ie.
-          Produce the TRUE/FALSE answers of your function next to the target
-          column. If you are getting the correct TRUE/FALSE values next to the
-          target column, copy and paste the function of only the first cell into
-          the validation input box. So you'd notice that even though we want to
-          validate an entire column we might want to do something like
-          {`=ISNUMBER(VALUE(D:D))`} however, this doesnt work and the correct
-          function is to use the first value of the TRUE/FALSE column for the
-          validation box which is {`=ISNUMBER(VALUE(D1))`}
+          2. Before we enter our custom function into the validation input box,
+          always first test it inside the worksheet next to the target column.
+          ie. Produce the TRUE/FALSE answers of your function next to the target
+          column. Eg. Column B(the target column) is what we want to validate,
+          we therefore insert column C next to it which gives the TRUE/FALSE
+          answers of our validation function on Column B. The function for our
+          task in this case would therefore be:
+          {`=ISNUMBER(VALUE(B1))`}
         </p>
         <p>
-          Thefore inside the Formula box for validation, we enter the following
-          function
+          3. If you are getting the correct TRUE/FALSE values next to the target
+          column, copy and paste the function of only the first cell into the
+          validation input box. So you'd notice that even though we want to
+          validate an entire column B, we might want our custom function to be
+          something like {`=ISNUMBER(VALUE(B:B))`} However, this doesnt work and
+          the correct function to use is the function of the first value inside
+          column C's TRUE/FALSE data which is {`=ISNUMBER(VALUE(B1))`}
         </p>
-        <p>{``}</p>
+        <p>
+          Thefore our custom function inside the Formula box for validation
+          becomes {`=ISNUMBER(VALUE(B1))`}
+        </p>
       </>
     ),
   },
