@@ -708,6 +708,7 @@ export const EF = [
           Data Validation {"->"} choose Custom from validation criteria
         </p>
 
+        <p>Eg. We want our column to contain only numbers</p>
         <p>
           NB: inside the formula bar: the formula you write should have a final
           output of true. To understand how to write the formula, reframe your
@@ -719,11 +720,14 @@ export const EF = [
           function and the function returns true, then it has passed the
           validation.
         </p>
+        <p>The function for this would be: </p>
+
         <p>
-          To test that our formula works correctly, always test it inside the
-          worksheet on some sample data or next to the target column to see if
-          True/False values of your formula are correctly assigned next to the
-          target column.
+          NB:!!! To test that our formula works correctly, always first test it
+          inside the worksheet on some sample data or next to the target column
+          to see if True/False values of your formula are correctly assigned
+          next to the target column before you copy and paste the working
+          formula into your validation formula box
         </p>
         <p>
           Thefore inside the Formula box for validation, we enter the following
@@ -743,6 +747,10 @@ export const EF = [
   },
   {
     que: "validate a column to ensure first character is any text, followed by 4 digits",
+    ans: null,
+  },
+  {
+    que: `validate a column to ensure value contains any 2 letters and and any 2 numbers with the arrangement of characters not important`,
     ans: null,
   },
   {
