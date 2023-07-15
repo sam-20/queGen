@@ -730,6 +730,7 @@ export const EF = [
           included in the highlight.
         </p>
         <p>2. Press F9 to see its result</p>
+        <p>3. Press Ctrl+Z to go back</p>
 
         <p>
           eg. given a function like {`=IF(A3=TRUE, COUNTA(A1:A3), "errrrrrr")`}.
