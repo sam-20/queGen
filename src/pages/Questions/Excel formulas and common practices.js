@@ -919,8 +919,13 @@ export const EF = [
     ),
   },
   {
-    que: "validate a column to ensure  first character is a letter, followed by 4 digits, and ends with 2 characters",
-    ans: null,
+    que: "validate a column to ensure first character is a letter, followed by 4 digits, and ends with 2 characters",
+    ans: (
+      <>
+        <p>Use custom formula below, assuming the target col is column A</p>
+        <p>{`=AND(NOT(ISNUMBER(VALUE(LEFT(A2,1)))),LEN(VALUE(MID(A2,2,4)))=4,LEN(A2)=7 )`}</p>
+      </>
+    ),
   },
   {
     que: `validate a column to ensure value contains any 2 letters and and any 2 numbers with the arrangement of characters not important`,
