@@ -910,7 +910,6 @@ export const EF = [
       </>
     ),
   },
-
   {
     que: "validate a column to ensure first character is any text, followed by 4 digits",
     ans: null,
@@ -920,7 +919,7 @@ export const EF = [
     ans: null,
   },
   {
-    que: "write a formula to ensure a cell/column value should contain only alphabets or a specified set of characters",
+    que: "validate a colum or write a formula to ensure a cell/column value should contain only alphabets or a specified set of characters",
     ans: (
       <>
         <p>
