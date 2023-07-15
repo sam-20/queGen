@@ -734,7 +734,7 @@ export const EF = [
 
         <p>
           eg. given a function like {`=IF(A3=TRUE, COUNTA(A1:A3), "errrrrrr")`}.
-          I could highlight in the formula bar {`COUNTA(A1:A3)`} to see its
+          I could highlight {`COUNTA(A1:A3)`} in the formula bar to see its
           result
         </p>
       </>
