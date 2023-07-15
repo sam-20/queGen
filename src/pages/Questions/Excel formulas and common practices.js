@@ -748,6 +748,10 @@ export const EF = [
           Paste custom function inside the Formula box for validation ie.
           {`=ISNUMBER(VALUE(A2))`}
         </p>
+        <p>
+          4. Now you can delete the column used to generate the TRUE/FALSE
+          values
+        </p>
       </>
     ),
   },
