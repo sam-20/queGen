@@ -911,7 +911,7 @@ export const EF = [
     ),
   },
   {
-    que: "validate a column to ensure first character is any text, followed by 4 digits",
+    que: "validate a column to ensure  first character is a letter, followed by 4 digits, and ends with 2 letters",
     ans: null,
   },
   {
