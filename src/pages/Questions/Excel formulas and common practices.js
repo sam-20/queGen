@@ -878,10 +878,8 @@ export const EF = [
     que: `validate column data to ensure user cannot leave cell null`,
     ans: (
       <>
-        <p>
-          Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
-          Data Validation {"->"} Custom {"->"} =NOT(ISBLANK(A2))
-        </p>
+        <p>Use custom formula below, assuming the target col is column A</p>
+        <p>=NOT(ISBLANK(A2))</p>
       </>
     ),
   },
@@ -928,7 +926,7 @@ export const EF = [
     que: `use custom conditional formatting function to highlight unique values in a column`,
     ans: (
       <>
-        <p>Use formula below, assuming the target col is column A</p>
+        <p>Use custom formula below, assuming the target col is column A</p>
         <p>{`=NOT(COUNTIF($A$2:$A$1048576,A2) >1)`}</p>
       </>
     ),
@@ -937,7 +935,7 @@ export const EF = [
     que: `use custom conditional formatting function to highlight duplicate values in a column`,
     ans: (
       <>
-        <p>Use formula below, assuming the target col is column A</p>
+        <p>Use custom formula below, assuming the target col is column A</p>
         <p>{`=COUNTIF($A$2:$A$1048576,A2) >1`}</p>
       </>
     ),
