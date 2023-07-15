@@ -719,6 +719,27 @@ export const EF = [
     ),
   },
   {
+    que: `highlight just a portion of your function in the formula bar
+     to see the actual result that highlighted part would give`,
+    ans: (
+      <>
+        <p>
+          1. Highlight the portion of the function you want to see it's result
+          in the formula bar. When higlighting, make sure you exclude the '=',
+          also ensure the opening and closing brackets of the function is
+          included in the highlight.
+        </p>
+        <p>2. Press F9 to see its result</p>
+
+        <p>
+          eg. given a function like {`=IF(A3=TRUE, COUNTA(A1:A3), "errrrrrr")`}.
+          I could highlight in the formula bar {`COUNTA(A1:A3)`} to see its
+          result
+        </p>
+      </>
+    ),
+  },
+  {
     que: `make it such that when a user is entering data into a column which has validation, 
     a tooltip appears to provide more info on the kind of data which is accepted`,
     ans: `select the column for which validation is necessary -> Data tab -> Data Tools group -> Data Validation -> Data Validation -> Input Message tab`,
