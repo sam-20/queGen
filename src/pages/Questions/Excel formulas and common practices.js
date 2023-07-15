@@ -832,11 +832,9 @@ export const EF = [
     ans: (
       <>
         <p>
-          After, generating the custom formula for the conditional formatting
-          using the TRUE/FALSE values just like you'd do for a single column:
-        </p>
-        <p>
-          You change only 2 things to let the formatting after a value's entire
+          After generating the custom formula for the conditional formatting
+          using the TRUE/FALSE values just like you'd do for a single column,
+          you change only 2 things to let the formatting affect a value's entire
           row
         </p>
         <p>
