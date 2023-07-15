@@ -738,7 +738,7 @@ export const EF = [
         </p>
         <p>
           4. Select the single column you want to validate(NB:!! SELECT WITHOUT
-          COLUMN HEADER ELSE VALIDATION WONT WORK)
+          COLUMN HEADER ELSE VALIDATION WONT WORK).
         </p>
         <p>
           Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
@@ -812,6 +812,30 @@ export const EF = [
     ),
   },
   {
+    que: `How can you get the reference of an entire column without the column header?`,
+    ans: (
+      <>
+        <p>
+          Option1: Click the column header which should highlight the entire
+          column then while highlighted, click only the header cell to omit the
+          header value. This gives a reference like {`A:A,A1`}. However, this
+          reference does not work for all functions since it contains a comma
+          because some functions treat the value after the comma as another
+          parameter
+        </p>
+        <p>
+          Option2: Click only the first cell under the column header. Then
+          Ctrl+Shift+DownArrow which would highlight down to the bottom of the
+          column where the last value is eg. {`A2:A31`}. Press DownArrow key the
+          second time to hightlight down to the end of excel rows which gives a
+          reference like {`A2:A1048576`}. Rather than scrolling all the way to
+          the top of the sheet again, use Ctrl+Home to move all the way to the
+          first value of the column
+        </p>
+      </>
+    ),
+  },
+  {
     que: `validate column data to ensure user cannot leave cell null`,
     ans: (
       <>
@@ -858,6 +882,24 @@ export const EF = [
         <p>#VALUE - if A2 doesnt meet condition</p>
         <p>#REF - if A2 is blank</p>
         <p></p>
+      </>
+    ),
+  },
+  {
+    que: `use custom conditional formatting function to highlight unique values in a column`,
+    ans: (
+      <>
+        <p>Use formula below, assuming the target col is column A</p>
+        <p>{`=NOT(COUNTIF($A$2:$A$1048576,A2) >1)`}</p>
+      </>
+    ),
+  },
+  {
+    que: `use custom conditional formatting function to highlight duplicate values in a column`,
+    ans: (
+      <>
+        <p>Use formula below, assuming the target col is column A</p>
+        <p>{`=COUNTIF($A$2:$A$1048576,A2) >1`}</p>
       </>
     ),
   },
