@@ -932,7 +932,7 @@ export const EF = [
     ),
   },
   {
-    que: `validate a column to ensure value contains any 2 letters and and any 2 numbers with the arrangement of characters not important`,
+    que: `validate a column using password conditions. Eg.`,
     ans: null,
   },
   {
