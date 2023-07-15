@@ -884,9 +884,28 @@ export const EF = [
     ),
   },
   {
+    que: `use custom conditional formatting function to highlight unique values in a column`,
+    ans: (
+      <>
+        <p>Use custom formula below, assuming the target col is column A</p>
+        <p>{`=NOT(COUNTIF($A$2:$A$1048576,A2) >1)`}</p>
+      </>
+    ),
+  },
+  {
+    que: `use custom conditional formatting function to highlight duplicate values in a column`,
+    ans: (
+      <>
+        <p>Use custom formula below, assuming the target col is column A</p>
+        <p>{`=COUNTIF($A$2:$A$1048576,A2) >1`}</p>
+      </>
+    ),
+  },
+  {
     que: `validate a column to prevent entering duplicate values`,
     ans: null,
   },
+
   {
     que: "validate a column to ensure first character is any text, followed by 4 digits",
     ans: null,
@@ -919,24 +938,6 @@ export const EF = [
         <p>#VALUE - if A2 doesnt meet condition</p>
         <p>#REF - if A2 is blank</p>
         <p></p>
-      </>
-    ),
-  },
-  {
-    que: `use custom conditional formatting function to highlight unique values in a column`,
-    ans: (
-      <>
-        <p>Use custom formula below, assuming the target col is column A</p>
-        <p>{`=NOT(COUNTIF($A$2:$A$1048576,A2) >1)`}</p>
-      </>
-    ),
-  },
-  {
-    que: `use custom conditional formatting function to highlight duplicate values in a column`,
-    ans: (
-      <>
-        <p>Use custom formula below, assuming the target col is column A</p>
-        <p>{`=COUNTIF($A$2:$A$1048576,A2) >1`}</p>
       </>
     ),
   },
