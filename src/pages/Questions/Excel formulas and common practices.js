@@ -72,7 +72,12 @@ export const EF = [
   },
   {
     que: `generate a list of random values from a given set of cell values`,
-    ans: null,
+    ans: (
+      <>
+        <p>Assuming list of values to choose from are in Range(A1:A6)</p>
+        <p>{`=INDEX(A1:A6,RANDBETWEEN(1,COUNTA(A1:A6)))`}</p>
+      </>
+    ),
   },
   {
     que: `how many cells contain only numbers`,
