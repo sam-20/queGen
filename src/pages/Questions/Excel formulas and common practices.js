@@ -124,7 +124,6 @@ export const EF = [
       </>
     ),
   },
-
   { que: `do cell A and B contain the same values?`, ans: `=` },
   { que: `do cell A and B contain different values?`, ans: `<>` },
   { que: `is cell A greater than B?`, ans: `>` },
