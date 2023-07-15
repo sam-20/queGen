@@ -22,6 +22,10 @@ export const EF = [
     `,
   },
   {
+    que: `activate the clipboard. NB: this allows you to save a list of copied item and simply select which one you want when pasting`,
+    ans: `Home tab -> Clipboard group -> clipboard icon at bottom right corner of Clipboard group`,
+  },
+  {
     que: `display the position number of a case-sensitive character in a cell`,
     ans: `FIND(char_to_find, text_to_search_in)`,
   },
