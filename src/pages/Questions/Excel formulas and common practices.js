@@ -50,6 +50,10 @@ export const EF = [
     ans: `REPT(text, num_times)`,
   },
   {
+    que: `convert a number formatted as text to allow it to be recognised as a number`,
+    ans: `VALUE(A2)`,
+  },
+  {
     que: `generate a list of random values from a given set of texts`,
     ans: null,
   },
