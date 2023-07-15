@@ -756,6 +756,10 @@ export const EF = [
     ),
   },
   {
+    que: `apply conditional formatting to a column with a custom function`,
+    ans: `if the column value inside this formula is true, apply the formatting to it`,
+  },
+  {
     que: `validate column data to ensure user cannot leave cell null`,
     ans: null,
   },
@@ -855,10 +859,6 @@ export const EF = [
   {
     que: `display rows which violate a validated column`,
     ans: `click filter icon next to column header -> Number Filters -> select the option which can be used to meet your validation criteria`,
-  },
-  {
-    que: `apply conditional formatting to a column with a custom formula`,
-    ans: `if the column value inside this formula is true, apply the formatting to it`,
   },
   {
     que: `if a column value is true for a conditional formatting formula, 
