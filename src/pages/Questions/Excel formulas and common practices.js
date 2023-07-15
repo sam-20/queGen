@@ -810,7 +810,7 @@ export const EF = [
           Rule{"->"} under Select Rule Type choose "Use A Formula To Determine
           Which Cells To Format" {"->"}
           Paste custom function inside the formula box for formatting ie.
-          {`=VALUE(A:A)>20`} {"->"} Add the desired formatting
+          {`=VALUE(A2)>20`} {"->"} Add the desired formatting
         </p>
         <p>
           5. Now you can delete the column used to generate the TRUE/FALSE
@@ -829,7 +829,28 @@ export const EF = [
   },
   {
     que: `if a column value is true for a conditional formatting formula, apply Conditional Formatting Across its Entire Row`,
-    ans: null,
+    ans: (
+      <>
+        <p>
+          After, generating the custom formula for the conditional formatting
+          using the TRUE/FALSE values just like you'd do for a single column:
+        </p>
+        <p>
+          You change only 2 things to let the formatting after a value's entire
+          row
+        </p>
+        <p>
+          1. Rather than highlighting a column without the header, this time
+          highlight the array or table without their headers.
+        </p>
+        <p>
+          2. Rather than inputting {`=VALUE(A2)>20`} in the formula box, this
+          time you place $ before the cell reference that was used in the
+          formula ie.
+          {`=VALUE($A2)>20`}
+        </p>
+      </>
+    ),
   },
   {
     que: `How can you get the reference of an entire column without the column header?`,
