@@ -699,52 +699,54 @@ export const EF = [
     ),
   },
   {
-    ans: `validate a column with a custom formula`,
+    ans: `validate a column with a custom function`,
     ans: (
       <>
+        <p>Eg. We want our columnA ie. Age column to contain only numbers</p>
         <p>
-          select the single column you want to validate(can include header)
-          {"->"} Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
-          Data Validation {"->"} choose Custom from validation criteria
-        </p>
-
-        <p>Eg. We want our column to contain only numbers</p>
-        <p>
-          1. Inside the input box where you put your custom function: the
-          function you write should have a final output of TRUE. To understand
-          how to develop your function, reframe your validation question. Eg.If
-          the task is: "We want this column to accept only numbers" Reframed
-          task becomes:"If we put the column value inside this function and the
-          function returns true, then it has passed the validation."
+          1. The first thing to note is that our custom function should always
+          return a final boolean output of TRUE or FALSE. In order to develop a
+          function to achieve this, reframe your validation question. Eg.If the
+          task is: "We want this column to accept only numbers" Reframed task
+          becomes:"If we put the column value inside this function and the
+          function returns TRUE, then it has passed the validation else failed
+          if it returns FALSE."
         </p>
         <p>
-          2. Before we enter our custom function into the validation input box,
-          always first test it inside the worksheet next to the target column.
-          ie. Produce the TRUE/FALSE answers of your function next to the target
-          column. Eg. Column B(the target column) is what we want to validate,
-          we therefore insert column C next to it which gives the TRUE/FALSE
-          answers of our validation function on Column B. The function for our
-          task in this case would therefore be:
-          {`=ISNUMBER(VALUE(B2))`}
+          2. Produce the TRUE/FALSE answers of your custom function next to the
+          target column. Eg. ColumnA(the target column) is what we want to
+          validate, we therefore insert columnB next to it which gives the
+          TRUE/FALSE answers of our validation function applied on ColumnA. The
+          function for our task in this case would therefore be:
+          {`=ISNUMBER(VALUE(A2))`}
           Also note that for our custom function we use the actual cell
           reference of the cell. Using an assigned name such as
           {`=ISNUMBER(VALUE([@Age]))`} would generate the TRUE/FALSE values
-          correctly, however would produce an error when this name is pasted
-          into the validation input box
+          correctly, however would produce an error when this name is finally
+          pasted into the validation input box
         </p>
         <p>
           3. If you are getting the correct TRUE/FALSE values next to the target
-          column, copy and paste the function of only the first cell into the
-          validation input box. So you'd notice that even though we want to
-          validate an entire column B, we might want our custom function to be
-          something like {`=ISNUMBER(VALUE(B:B))`} However, this doesnt work and
+          column, copy the function of only the first cell to the clipboard ie.
+          {`=ISNUMBER(VALUE(A2))`}. So you'd notice that even though we want to
+          validate an entire columnA, we might want our custom function to be
+          something like {`=ISNUMBER(VALUE(A:A))`} However, this doesnt work and
           the correct function to use is the function of the first value inside
-          column C's TRUE/FALSE data which is {`=ISNUMBER(VALUE(B2))`}. Also
-          remember it is B2 and not B1 because the column header is B1
+          columnB's TRUE/FALSE values which is {`=ISNUMBER(VALUE(A2))`}. Also
+          remember we copy the function for B2 and not B1 because
+          B1=columnheader
         </p>
         <p>
-          Thefore our custom function inside the Formula box for validation
-          becomes {`=ISNUMBER(VALUE(B2))`}
+          3. Select the single column you want to validate(NB:!! WITHOUT COLUMN
+          HEADER ELSE VALIDATION WONT WORK)
+        </p>
+        <p>
+          Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
+          Data Validation {"->"} choose Custom from validation criteria
+        </p>
+        <p>
+          Paste custom function inside the Formula box for validation ie.
+          {`=ISNUMBER(VALUE(A2))`}
         </p>
       </>
     ),
