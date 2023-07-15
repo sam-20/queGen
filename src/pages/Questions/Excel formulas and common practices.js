@@ -350,8 +350,31 @@ export const EF = [
     ans: `select table -> Table Design tab -> Properties group -> Resize Table`,
   },
   {
-    que: `retrieve the column position/number of a column`,
-    ans: `COLUMN(selected column eg. B:B)`,
+    que: `retrieve the column number of a cell or entire column`,
+    ans: (
+      <>
+        <p>COLUMN(B:B)</p>
+        <p>COLUMN(C4)</p>
+      </>
+    ),
+  },
+  {
+    que: `retrieve the row number of a cell or entire row`,
+    ans: (
+      <>
+        <p>=ROW(3:3)</p>
+        <p>ROW(C4)</p>
+      </>
+    ),
+  },
+  {
+    que: `retrieve the number of rows/columns in an array or table`,
+    ans: (
+      <>
+        <p>=ROWS(A3:D6)</p>
+        <p>=COLUMNS(A3:F6)</p>
+      </>
+    ),
   },
   {
     que: `Add custom lists for autofill in excel`,
@@ -640,8 +663,19 @@ export const EF = [
         <p>
           Reframed question becomes:If we put the column value inside this
           function and the function returns true, then it has passed the
-          validation
+          validation.
         </p>
+        <p>
+          To test that our formula works correctly, always test it inside the
+          worksheet on some sample data or next to the target column to see if
+          True/False values of your formula are correctly assigned next to the
+          target column.
+        </p>
+        <p>
+          Thefore inside the Formula box for validation, we enter the following
+          function
+        </p>
+        <p>{``}</p>
       </>
     ),
   },
