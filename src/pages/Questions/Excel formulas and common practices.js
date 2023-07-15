@@ -699,10 +699,10 @@ export const EF = [
     ),
   },
   {
-    ans: `validate a column with a custom function`,
+    que: `use a custom function to validate a column`,
     ans: (
       <>
-        <p>Eg. We want our columnA ie. Age column to contain only numbers</p>
+        <p>Eg. We want our columnA(Age column) to contain only numbers</p>
         <p>
           1. The first thing to note is that our custom function should always
           return a final boolean output of TRUE or FALSE. In order to develop a
@@ -737,27 +737,79 @@ export const EF = [
           B1=columnheader
         </p>
         <p>
-          3. Select the single column you want to validate(NB:!! WITHOUT COLUMN
-          HEADER ELSE VALIDATION WONT WORK)
+          4. Select the single column you want to validate(NB:!! SELECT WITHOUT
+          COLUMN HEADER ELSE VALIDATION WONT WORK)
         </p>
         <p>
           Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
-          Data Validation {"->"} choose Custom from validation criteria
-        </p>
-        <p>
-          Paste custom function inside the Formula box for validation ie.
+          Data Validation {"->"} choose Custom from validation criteria {"->"}
+          paste custom function inside the formula box for validation ie.
           {`=ISNUMBER(VALUE(A2))`}
         </p>
         <p>
-          4. Now you can delete the column used to generate the TRUE/FALSE
+          5. Now you can delete the column used to generate the TRUE/FALSE
           values
         </p>
       </>
     ),
   },
   {
-    que: `apply conditional formatting to a column with a custom function`,
-    ans: `if the column value inside this formula is true, apply the formatting to it`,
+    que: `use a custom function to apply conditional formatting to a column`,
+    ans: (
+      <>
+        <p>
+          Eg. We want our columnA(Age column) to have bold red font if the age
+          {">"} 20
+        </p>
+        <p>
+          1. The first thing to note is that our custom function should always
+          return a final boolean output of TRUE or FALSE. In order to develop a
+          function to achieve this, reframe your validation question. Eg.If the
+          task is: "We want this column to have a bold red font for ages {">"}
+          20. Reframed task becomes:"If we put the column value inside this
+          function and the function returns TRUE, then it should be formatted
+          else no formatting if it returns FALSE."
+        </p>
+        <p>
+          2. Produce the TRUE/FALSE answers of your custom function next to the
+          target column. Eg. ColumnA(the target column) is what we want to apply
+          conditional formatting to, we therefore insert columnB next to it
+          which gives the TRUE/FALSE answers of custom function applied on
+          ColumnA. The function for our task in this case would therefore be:
+          {`=VALUE(A2)>20`}
+          Also note that for our custom function we use the actual cell
+          reference of the cell. Using an assigned name such as
+          {`=VALUE([@Age])>20`} would generate the TRUE/FALSE values correctly,
+          however would produce an error when this name is finally pasted into
+          the custom formatting formula box
+        </p>
+        <p>
+          3. If you are getting the correct TRUE/FALSE values next to the target
+          column, copy the function of only the first cell to the clipboard ie.
+          {`=VALUE(A2)>20`}. So you'd notice that even though we want to apply
+          formatting to entire columnA, we might want our custom function to be
+          something like {`=VALUE(A:A)>20`} However, this doesnt work and the
+          correct function to use is the function of the first value inside
+          columnB's TRUE/FALSE values which is {`=VALUE(A2)>20`}. Also remember
+          we copy the function for B2 and not B1 because B1=columnheader
+        </p>
+        <p>
+          4. Select the single column you want to apply conditional formatting
+          to (NB:!! SELECT WITHOUT COLUMN HEADER ELSE VALIDATION WONT WORK)
+        </p>
+        <p>
+          Home tab {"->"} Styles group {"->"} Conditional Formatting {"->"} New
+          Rule{"->"} under Select Rule Type choose "Use A Formula To Determine
+          Which Cells To Format" {"->"}
+          Paste custom function inside the formula box for formatting ie.
+          {`=VALUE(A:A)>20`} {"->"} Add the desired formatting
+        </p>
+        <p>
+          5. Now you can delete the column used to generate the TRUE/FALSE
+          values
+        </p>
+      </>
+    ),
   },
   {
     que: `validate column data to ensure user cannot leave cell null`,
