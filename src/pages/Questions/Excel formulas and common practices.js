@@ -58,7 +58,20 @@ export const EF = [
     ans: `VALUE(A2)`,
   },
   {
-    que: `generate a list of random values from a given set of texts`,
+    que: `generate random whole numbers`,
+    ans: `ROUND(RAND()*35,0) where 35 can be replaced with any number`,
+  },
+  {
+    que: `generate random whole numbers within a range`,
+    ans: `RANDBEETWEEN()`,
+  },
+  { que: `generate random decimal number`, ans: `RAND()` },
+  {
+    que: `generate random decimals within a range`,
+    ans: `RAND()*[diff btn lower and upper bound value]+[lowerboundvalue]`,
+  },
+  {
+    que: `generate a list of random values from a given set of cell values`,
     ans: null,
   },
   {
@@ -328,19 +341,6 @@ export const EF = [
   { que: `flash fill a range`, ans: `Ctrl+e` },
   { que: `View the endpoints of your data range/table`, ans: `Ctrl+.` },
   {
-    que: `generate random whole numbers`,
-    ans: `ROUND(RAND()*35,0) where 35 can be replaced with any number`,
-  },
-  {
-    que: `generate random whole numbers within a range`,
-    ans: `RANDBEETWEEN()`,
-  },
-  { que: `generate random decimal number`, ans: `RAND()` },
-  {
-    que: `generate random decimals within a range`,
-    ans: `RAND()*[diff btn lower and upper bound value]+[lowerboundvalue]`,
-  },
-  {
     que: `Undo a cell range formatted as table. In other words, convert a table into an array/range`,
     ans: `Right click any cell -> Table -> Convert to Range`,
   },
@@ -492,12 +492,14 @@ export const EF = [
     eg. What value is inside the 20th position of the name column`,
     ans: (
       <>
-        <p>INDEX(column range, row number)</p>
+        <p>INDEX(column/row range, nth item)</p>
         <p>
           NB: when specifying the column range, including or excluding the
           column header produce the same results. Because at the end of the day,
           the row number is always constant
         </p>
+        <p>Eg. To find the 3rd item in a column range: {`=INDEX(A1:A6,3)`}</p>
+        <p>To find the 3rd item in a row range: {`=INDEX(D6:H6,3)`}</p>
       </>
     ),
   },
