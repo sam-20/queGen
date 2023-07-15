@@ -80,11 +80,51 @@ export const EF = [
     ),
   },
   {
-    que: `how many cells contain only numbers`,
-    ans: `COUNT: used to count number of cells in a range that contain numbers ie. (date numbers, integers, double)`,
+    que: `count numerical cells in a range`,
+    ans: (
+      <>
+        <p>=COUNT(A1:A12)</p>
+        <p>
+          NB: The following are counted as numbers (dates,whole numbers,
+          decimals)
+        </p>
+      </>
+    ),
   },
-  { que: `count the number of non-empty cells`, ans: `COUNTA` },
-  { que: `what is the number of empty cells?`, ans: `COUNTBLANK` },
+  {
+    que: `count non-empty cells in a range`,
+    ans: (
+      <>
+        <p>=COUNTA(A1:A12)</p>
+        <p>
+          NB:A cell with ONLY white spaces ie. (" ") as its value is still
+          counted as non-empty. A cell is only considered empty/blank if there
+          is nothing and no white spaces.
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `count empty/blank cells in a range`,
+    ans: (
+      <>
+        <p>=COUNTBLANK(A1:A12)</p>
+        <p>
+          NB: A cell with ONLY white spaces ie. (" ") as its value is not
+          empty/blank
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `count all cells in a range incl. blank and non-blank`,
+    ans: (
+      <>
+        <p>=COUNTBLANK(A1:A12)+COUNTA(A1:A12)</p>
+      </>
+    ),
+  },
+
   { que: `do cell A and B contain the same values?`, ans: `=` },
   { que: `do cell A and B contain different values?`, ans: `<>` },
   { que: `is cell A greater than B?`, ans: `>` },
