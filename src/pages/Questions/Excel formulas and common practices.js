@@ -720,14 +720,18 @@ export const EF = [
           function and the function returns true, then it has passed the
           validation.
         </p>
-        <p>The function for this would be: </p>
+        <p>The function for this would be: {`=ISNUMBER(VALUE(D1))`} </p>
 
         <p>
           NB:!!! To test that our formula works correctly, always first test it
           inside the worksheet on some sample data or next to the target column
           to see if True/False values of your formula are correctly assigned
-          next to the target column before you copy and paste the working
-          formula into your validation formula box
+          next to the target column. Then if it works correctly, copy and paste
+          the working formula of only the first cell into the validation formula
+          box. So you'd notice that even though we want to validate an entire
+          column we should do something like {`=ISNUMBER(VALUE(D:D))`} but this
+          doesnt work and the correct formula for the validation box is{" "}
+          {`=ISNUMBER(VALUE(D1))`}
         </p>
         <p>
           Thefore inside the Formula box for validation, we enter the following
