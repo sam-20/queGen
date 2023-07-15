@@ -124,15 +124,23 @@ export const EF = [
       </>
     ),
   },
-  { que: `do cell A and B contain the same values?`, ans: `=` },
-  { que: `do cell A and B contain different values?`, ans: `<>` },
-  { que: `is cell A greater than B?`, ans: `>` },
-  { que: `is cell A less than B?`, ans: `<` },
-  { que: `is cell A greater than or equal to B?`, ans: `>=` },
-  { que: `is cell A less than or equal to B?`, ans: `<=` },
   {
-    que: `display a result based on the condition that cell A and B hold true`,
-    ans: `AND`,
+    que: `write an example code utilizing comparison and logical operators`,
+    ans: (
+      <>
+        <p>
+          Logical and comparison operators always return a TRUE/FALSE result
+        </p>
+        <p>Comparison operators: {"=, <>(not equal to), <, >, <=, >="} </p>
+        <p>eg.</p>
+        <p>=A1=B1</p>
+        <p>{`=A1<>B1`}</p>
+
+        <p>Logical operators: AND, OR, NOT, XOR(T if exactly A or B is T)</p>
+        <p>{`=AND(A1=B1, B1>B2)`}</p>
+        <p>{`=OR(A1=B1, B1>B2)`}</p>
+      </>
+    ),
   },
   { que: `find the modulo of a number`, ans: `eg. 2 mod 5 = MOD(2,5)` },
   {
