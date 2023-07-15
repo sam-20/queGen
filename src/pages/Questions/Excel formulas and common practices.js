@@ -142,6 +142,10 @@ export const EF = [
       </>
     ),
   },
+  {
+    que: `check whether two case-sensitive strings are exactly the same`,
+    ans: `=EXACT(A1,B1)`,
+  },
   { que: `find the modulo of a number`, ans: `eg. 2 mod 5 = MOD(2,5)` },
   {
     que: `give an example of IF function`,
