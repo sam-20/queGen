@@ -484,7 +484,7 @@ export const EF = [
     eg. What value is inside the 20th position of the name column`,
     ans: (
       <>
-        <p>INDEX( column range, row number)</p>
+        <p>INDEX(column range, row number)</p>
         <p>
           NB: when specifying the column range, including or excluding the
           column header produce the same results. Because at the end of the day,
@@ -690,6 +690,33 @@ export const EF = [
   {
     que: "validate a column to ensure first character is any text, followed by 4 digits",
     ans: null,
+  },
+  {
+    que: "write a formula to ensure a cell/column value should contain only alphabets or a specified set of characters",
+    ans: (
+      <>
+        <p>
+          1. In this example we created a formula that ensures the cell value
+          contains only alphabets including upper and lower case alphabets as
+          well as these 2 characters: %, 8
+        </p>
+        <p>
+          2. We create a cell value to contains all the allowable characters. In
+          this case we assign our allowable characters to cell A1. ie.
+          {`A1 = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%8`}
+        </p>
+        <p>
+          To check whether a cell's value eg. A2 meets the condition we use
+          formula {`=AND(FIND(MID(A2,ROW(INDIRECT("1:"&LEN(A2))),1),A1))`}
+          where A1 = allowed characters, A2 = cell being tested on
+        </p>
+        <p>The following results are produced</p>
+        <p>TRUE - if A2 meets condition</p>
+        <p>#VALUE - if A2 doesnt meet condition</p>
+        <p>#REF - if A2 is blank</p>
+        <p></p>
+      </>
+    ),
   },
   {
     que: `make it such that when a user is entering data into a column which has validation, 
