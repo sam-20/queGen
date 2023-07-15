@@ -725,7 +725,12 @@ export const EF = [
           we therefore insert column C next to it which gives the TRUE/FALSE
           answers of our validation function on Column B. The function for our
           task in this case would therefore be:
-          {`=ISNUMBER(VALUE(B1))`}
+          {`=ISNUMBER(VALUE(B2))`}
+          Also note that for our custom function we use the actual cell
+          reference of the cell. Using an assigned name such as
+          {`=ISNUMBER(VALUE([@Age]))`} would generate the TRUE/FALSE values
+          correctly, however would produce an error when this name is pasted
+          into the validation input box
         </p>
         <p>
           3. If you are getting the correct TRUE/FALSE values next to the target
@@ -734,11 +739,12 @@ export const EF = [
           validate an entire column B, we might want our custom function to be
           something like {`=ISNUMBER(VALUE(B:B))`} However, this doesnt work and
           the correct function to use is the function of the first value inside
-          column C's TRUE/FALSE data which is {`=ISNUMBER(VALUE(B1))`}
+          column C's TRUE/FALSE data which is {`=ISNUMBER(VALUE(B2))`}. Also
+          remember it is B2 and not B1 because the column header is B1
         </p>
         <p>
           Thefore our custom function inside the Formula box for validation
-          becomes {`=ISNUMBER(VALUE(B1))`}
+          becomes {`=ISNUMBER(VALUE(B2))`}
         </p>
       </>
     ),
