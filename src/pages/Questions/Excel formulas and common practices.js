@@ -813,7 +813,14 @@ export const EF = [
   },
   {
     que: `validate column data to ensure user cannot leave cell null`,
-    ans: null,
+    ans: (
+      <>
+        <p>
+          Data tab {"->"} Data Tools group {"->"} Data Validation {"->"}
+          Data Validation {"->"} Custom {"->"} =NOT(ISBLANK(A2))
+        </p>
+      </>
+    ),
   },
   {
     que: `validate a column to prevent entering duplicate values`,
