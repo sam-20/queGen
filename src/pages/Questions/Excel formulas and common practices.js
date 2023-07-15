@@ -903,7 +903,12 @@ export const EF = [
   },
   {
     que: `validate a column to prevent entering duplicate values`,
-    ans: null,
+    ans: (
+      <>
+        <p>Use custom formula below, assuming the target col is column A</p>
+        <p>{`=NOT(COUNTIF($A$2:$A$1048576,A2) >1)`}</p>
+      </>
+    ),
   },
 
   {
