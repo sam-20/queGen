@@ -1036,23 +1036,11 @@ export const EF = [
     ),
   },
   {
-    que: ``,
-    ans: null,
-  },
-  {
-    que: ``,
-    ans: null,
-  },
-  {
     que: `import data from the following formats csv, excel, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: null,
   },
   {
     que: `import data from multiple formats into a single table`,
     ans: null,
-  },
-  {
-    que: ``,
-    ans: ``,
   },
 ];
