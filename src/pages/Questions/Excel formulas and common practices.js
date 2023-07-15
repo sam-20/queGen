@@ -750,6 +750,14 @@ export const EF = [
           5. Now you can delete the column used to generate the TRUE/FALSE
           values
         </p>
+        <p>
+          6. Always remember that the custom formula you use for validation is
+          the same formula you'd use to apply conditional formatting provided
+          its the same column. In the end, the formula entered in the
+          validation/conditional formatting input box should always return TRUE.
+          The only difference is, one would apply formatting where TRUE, the
+          other would give a pass validation when TRUE
+        </p>
       </>
     ),
   },
@@ -807,6 +815,14 @@ export const EF = [
         <p>
           5. Now you can delete the column used to generate the TRUE/FALSE
           values
+        </p>
+        <p>
+          6. Always remember that the custom formula you use for validation is
+          the same formula you'd use to apply conditional formatting provided
+          its the same column. In the end, the formula entered in the
+          validation/conditional formatting input box should always return TRUE.
+          The only difference is, one would apply formatting where TRUE, the
+          other would give a pass validation when TRUE
         </p>
       </>
     ),
