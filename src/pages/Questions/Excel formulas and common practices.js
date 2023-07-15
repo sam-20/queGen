@@ -835,6 +835,11 @@ export const EF = [
     ans: `if the column value inside this formula is true, apply the formatting to it`,
   },
   {
+    que: `if a column value is true for a conditional formatting formula, 
+    highlight not just that cell in the column but its entire row as well`,
+    ans: null,
+  },
+  {
     que: `nest excel functions ie. use a function as one of the arguments of another function.
     Eg. if the sum of a range is > 10, count the cells, else find the average of the cells`,
     ans: (
