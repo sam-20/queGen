@@ -953,7 +953,21 @@ export const EF = [
           {`=NOT(OR(EXACT(A1,UPPER(A1)), EXACT(A1,LOWER(A1))))`}. A result of
           TRUE means it has passed the test
         </p>
-        <p>3. Password must contain 1 non-alpha character (number or symbol)</p>
+        <p>
+          3. Password must contain 1 non-alpha character (number or symbol):
+          {`=IFERROR(SUMPRODUCT(AGGREGATE(15,6,FIND({"!","£","$","*","%","^"},A1),1)),0)>0`}
+          The list of allowed symbols can also be placed into individual cells
+          to form a range.Then placed in another worksheet which is protected
+          and hidden. The function then becomes:
+          {`=IFERROR(SUMPRODUCT(AGGREGATE(15,6,FIND('Allowed chars sheet'!$A$2:$A$7,A1),1)),0)>0`}
+          A result of TRUE means it has passed the test.
+        </p>
+
+        <p>
+          All these conditions should be TRUE therefore, our password validation
+          formula becomes:
+          {`=AND(AND(LEN(A1)>=8, LEN(A1)<=20), NOT(OR(EXACT(A1,UPPER(A1)), EXACT(A1,LOWER(A1)))), IFERROR(SUMPRODUCT(AGGREGATE(15,6,FIND({"!","£","$","*","%","^"},A1),1)),0)>0 )`}
+        </p>
       </>
     ),
   },
