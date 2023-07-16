@@ -166,6 +166,24 @@ export const EF = [
     ans: "sequence",
   },
   {
+    que: `loop through number of characters in a text`,
+    ans: (
+      <>
+        <p>Assuming text is in A1</p>
+        <p>=SEQUENCE(LEN(A1),,1,1)</p>
+      </>
+    ),
+  },
+  {
+    que: `loop through the individual characters in a text`,
+    ans: (
+      <>
+        <p>Assuming text is in A1</p>
+        <p>=MID(A1,SEQUENCE(LEN(A1),,1,1),1)</p>
+      </>
+    ),
+  },
+  {
     que: `generate an auto increment of numbers in a column/row using shortcut`,
     ans: `select that cell of the first value / the current value where you want to continue from -> ALT + H, F, I, S`,
   },
@@ -1090,6 +1108,26 @@ export const EF = [
           produce an error
           {`=IF(=SUM(A1:A3)>10,=COUNTA(A1:A3),=AVERAGE(A1:A3))`}
         </p>
+      </>
+    ),
+  },
+  {
+    que: `return the ASCII code of a character`,
+    ans: (
+      <>
+        <p>eg. ascii code for letter A, %, etc</p>
+        <p>=CODE("A")</p>
+        <p>=CODE("a")</p>
+        <p>=CODE(3)</p>
+        <p>=CODE("%")</p>
+      </>
+    ),
+  },
+  {
+    que: `return the character of an ASCII code`,
+    ans: (
+      <>
+        <p>=CHAR(65)</p>
       </>
     ),
   },
