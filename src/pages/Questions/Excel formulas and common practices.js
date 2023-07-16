@@ -936,7 +936,16 @@ export const EF = [
     1. Passwords must be between 8 and 20 characters. 
     2. Must contain one lower & uppercase letter, 
     3. Must contain one non-alpha character (a number or a symbol)`,
-    ans: null,
+    ans: (
+      <>
+        <p>Breaking it down into stages</p>
+        <p>
+          1. Passwords must be between 8 and 20 characters:
+          {`=AND(LEN(A1)>=8, LEN(A1)<=20)`}
+        </p>
+        <p>2. Password must contain one lower & uppercase letter:</p>
+      </>
+    ),
   },
   {
     que: "validate a colum or write a formula to ensure a cell/column value should contain only alphabets or a specified set of characters",
