@@ -936,6 +936,24 @@ export const EF = [
     ans: null,
   },
   {
+    que: `use function to filter letters and symbols from a cell's value`,
+    ans: (
+      <>
+        <p>Assuming target cell is A1</p>
+        <p>{`=LET(txt, A1, n, SEQUENCE(LEN(txt)), sym, MID(txt,n,1), k, CODE(sym), TEXTJOIN("",1,IF( (k>57)+(k<48),sym,"") ))`}</p>
+      </>
+    ),
+  },
+  {
+    que: `use function to filter numbers only from a cell's value`,
+    ans: (
+      <>
+        <p>Assuming target cell is A1</p>
+        <p>{`=LET(txt, C4, n, SEQUENCE(LEN(txt)), sym, MID(txt,n,1), k, CODE(sym), TEXTJOIN("",1,IF( (k<58)*(k>47),sym,"") ))`}</p>
+      </>
+    ),
+  },
+  {
     que: `validate a column using password conditions. Eg. Validate the password field with the following conditions 
     1. Passwords must be between 8 and 20 characters. 
     2. Must contain at least one lower & uppercase letter, 
