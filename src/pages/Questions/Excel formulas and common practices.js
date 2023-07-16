@@ -923,13 +923,17 @@ export const EF = [
     ),
   },
   {
-    que: "validate a column to ensure first character is a letter, followed by 4 digits, and ends with 2 characters",
+    que: `validate a column to ensure first character is a letter, followed by 4 digits, and ends with 2 characters`,
     ans: (
       <>
         <p>Use custom formula below, assuming the target col is column A</p>
         <p>{`=AND(NOT(ISNUMBER(VALUE(LEFT(A2,1)))),LEN(VALUE(MID(A2,2,4)))=4,LEN(A2)=7 )`}</p>
       </>
     ),
+  },
+  {
+    que: `validate a column to ensure it contains only 2 letters, only 2 numbers and only 2 symbols`,
+    ans: null,
   },
   {
     que: `validate a column using password conditions. Eg. Validate the password field with the following conditions 
