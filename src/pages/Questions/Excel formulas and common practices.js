@@ -934,16 +934,26 @@ export const EF = [
   {
     que: `validate a column using password conditions. Eg. Validate the password field with the following conditions 
     1. Passwords must be between 8 and 20 characters. 
-    2. Must contain one lower & uppercase letter, 
+    2. Must contain at least one lower & uppercase letter, 
     3. Must contain one non-alpha character (a number or a symbol)`,
     ans: (
       <>
         <p>Breaking it down into stages</p>
         <p>
           1. Passwords must be between 8 and 20 characters:
-          {`=AND(LEN(A1)>=8, LEN(A1)<=20)`}
+          {`=AND(LEN(A1)>=8, LEN(A1)<=20)`}. A result of TRUE means it has
+          passed the test
         </p>
-        <p>2. Password must contain one lower & uppercase letter:</p>
+        <p>
+          2. Password must contain at least 1 lower & uppercase letter: At least
+          1 uppercase means if all are lowercase then its wrong. Similarly, if
+          all are uppercase then its wrong also. So we create an entire
+          uppercase and lowercase version of the password If either one of them
+          matches with the password, then it has violated the rule. ie.
+          {`=NOT(OR(EXACT(A1,UPPER(A1)), EXACT(A1,LOWER(A1))))`}. A result of
+          TRUE means it has passed the test
+        </p>
+        <p>3. Password must contain 1 non-alpha character (number or symbol)</p>
       </>
     ),
   },
