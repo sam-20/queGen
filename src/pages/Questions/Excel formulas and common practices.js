@@ -189,7 +189,11 @@ export const EF = [
   },
   {
     que: `generate an auto increment of dates given start and end dates`,
-    ans: `Excel Dictionary - How to create a date series with a start and end date`,
+    ans: (
+      <>
+        <p>=SEQUENCE(endDate-startDate+1,,startDate )</p>
+      </>
+    ),
   },
   {
     que: `calculate the sum of values in a range A which meet a certain condition in that same range A`,
