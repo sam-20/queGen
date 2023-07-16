@@ -932,7 +932,10 @@ export const EF = [
     ),
   },
   {
-    que: `validate a column using password conditions. Eg.`,
+    que: `validate a column using password conditions. Eg. Validate the password field with the following conditions 
+    1. Passwords must be between 8 and 20 characters. 
+    2. Must contain one lower & uppercase letter, 
+    3. Must contain one non-alpha character (a number or a symbol)`,
     ans: null,
   },
   {
