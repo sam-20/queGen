@@ -1043,6 +1043,15 @@ export const EF = [
     ),
   },
   {
+    que: `use custom formula to filter table. Eg Filter rows where name = "sam" and age <20`,
+    ans: (
+      <>
+        <p>=FILTER(array_or_table_without headers, condition, "")</p>
+        <p>eg.</p>
+      </>
+    ),
+  },
+  {
     que: `highlight just a portion of your function in the formula bar
      to see the actual result that highlighted part would give`,
     ans: (
