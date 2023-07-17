@@ -5,7 +5,7 @@ import {
   PQ,
   EI,
   EF,
-  CC,
+  EC,
   SQLP,
   DA,
   GI,
@@ -16,6 +16,7 @@ import {
   VBA,
   PDX,
   BO,
+  CC,
 } from "../Questions";
 import { useState, useEffect, useRef } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -86,8 +87,8 @@ function Layout() {
       context: "Excel",
     },
     {
-      title: "Excel Choosing and Designing Charts",
-      content: CC,
+      title: "Excel Charts Practice",
+      content: EC,
       context: "",
     },
     {
@@ -128,6 +129,11 @@ function Layout() {
     {
       title: "SAP Business Objects Practice",
       content: BO,
+      context: "",
+    },
+    {
+      title: "Choosing Charts Practice",
+      content: CC,
       context: "",
     },
   ];
