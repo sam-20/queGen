@@ -1043,11 +1043,34 @@ export const EF = [
     ),
   },
   {
-    que: `use custom formula to filter table. Eg Filter rows where name = "sam" and age <20`,
+    que: `use custom formula to filter table`,
     ans: (
       <>
-        <p>=FILTER(array_or_table_without headers, condition, "")</p>
-        <p>eg.</p>
+        <p>Syntax: =FILTER(array_or_table_without headers, condition, "")</p>
+        <p>
+          NB!!: Unlike the custom formulas for validation and conditional
+          formatting where the custom function takes a cell value in its formula
+          eg.{`=ISNUMBER(VALUE(A2))`}, here in the filter function, the formula
+          would take the entire column data being used rather than a single
+          value ie. the column data without its headers. Check the examples for
+          further clarification
+        </p>
+
+        <p>Simple filter. Eg. Filter rows where name = "sam"</p>
+        <p>
+          {`=FILTER(A2:D25,A2:A25="sam","")`} For validation/conditional
+          formatitng formulas, we'd have used A2 instead of A2:A25
+        </p>
+
+        <p>
+          Filtering when condition includes "AND" logic. Eg. Filter rows where
+          name = "sam" and age {"<"} 20
+        </p>
+
+        <p>
+          Filtering when condition includes "OR" logic. Eg. Filter rows where
+          name="sam" or age {"<"} 20
+        </p>
       </>
     ),
   },
