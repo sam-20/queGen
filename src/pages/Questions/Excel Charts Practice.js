@@ -1,6 +1,10 @@
 export const EC = [
-  { que: `design a pie chart from a normal excel table`, ans: null },
+  {
+    que: `design a pie chart from a normal excel table`,
+    ans: `Pie chart requires categorical data to be grouped`,
+  },
   { que: `design a pie chart from a pivot table`, ans: null },
+
   { que: `design a treemap from a normal excel table`, ans: null },
   { que: `design a bar chart from a normal excel table`, ans: null },
   {

@@ -17,6 +17,7 @@ import {
   PDX,
   BO,
   CC,
+  PP,
 } from "../Questions";
 import { useState, useEffect, useRef } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -84,6 +85,11 @@ function Layout() {
     {
       title: "Excel Formulas and Common Practices",
       content: EF,
+      context: "Excel",
+    },
+    {
+      title: "Excel Pivot Tables Practice",
+      content: PP,
       context: "Excel",
     },
     {

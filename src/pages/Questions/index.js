@@ -14,6 +14,7 @@ import { VBA } from "./Excel VBA Macros";
 import { PDX } from "./PowerBI Dax Practice";
 import { BO } from "./SAP Business Objects";
 import { CC } from "./Choosing Charts Practice";
+import { PP } from "./Pivot Tables Practice";
 export {
   BAQ,
   PQ,
@@ -31,4 +32,5 @@ export {
   PDX,
   BO,
   CC,
+  PP,
 };
