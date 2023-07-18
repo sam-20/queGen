@@ -1056,20 +1056,28 @@ export const EF = [
           further clarification
         </p>
 
-        <p>Simple filter. Eg. Filter rows where name = "sam"</p>
-        <p>
-          {`=FILTER(A2:D25,A2:A25="sam","")`} For validation/conditional
-          formatitng formulas, we'd have used A2 instead of A2:A25
-        </p>
+        <p>Simple filter. Eg. Filter rows where age value is numerical</p>
+        <p>{`=FILTER(A2:D25,ISNUMBER(B2:B25),"")`}</p>
 
         <p>
-          Filtering when condition includes "AND" logic. Eg. Filter rows where
-          name = "sam" and age {"<"} 20
+          Filtering when condition includes logical operators. NB:The logical
+          operators: "AND,OR" are replaced by "*,+" respectively. Logical
+          operators return TRUE/FALSE where TRUE = 1, FALSE = 0. This implies
         </p>
+        <p>[TRUE] AND [TRUE] = TRUE is the same as 1 * 1 = 1</p>
+        <p>[TRUE] AND [FALSE] = FALSE is the same as 1 * 0 = 0</p>
+        <p>[FALSE] AND [FALSE] = FALSE is the same as 0 * 0 = 0</p>
+        <p>[TRUE] OR [FALSE] = TRUE is the same as 1 + 0 = 1</p>
+        <p>[FALSE] OR [FALSE] = FALSE is the same as 0 * 0 = 0</p>
 
+        <p>Eg. Filter rows where name = "sam" and age {"<"} 20</p>
+        <p>{`=FILTER(A2:D25,(A2:A25="sam")*(B2:B25<20))`}</p>
+
+        <p>Eg. Filter rows where name = "sam" or "abby" and age {"<"} 20</p>
         <p>
-          Filtering when condition includes "OR" logic. Eg. Filter rows where
-          name="sam" or age {"<"} 20
+          {`=FILTER(A2:D25,((A2:A25="sam")+(A2:A25="abby"))*(B2:B25<20))`}.
+          Don't forget to correctly include brackets when using nested logical
+          operators
         </p>
       </>
     ),
