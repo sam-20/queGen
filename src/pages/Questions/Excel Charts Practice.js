@@ -55,17 +55,16 @@ export const EC = [
   },
   {
     que: `display and hide data labels on pie chart slices as their actual data contribution`,
-    ans: `highlight chart area -> Chart Elements popup icon -> (un)check Data Labels option`,
+    ans: `Chart Elements popup view -> (un)check Data Labels option`,
   },
   {
     que: `display and hide pie chart legend`,
-    ans: `highlight chart area -> Chart Elements popup icon -> (un)check Legend option`,
+    ans: `Chart Elements popup view -> (un)check Legend option`,
   },
   {
     que: `change the color of the pie chart slices`,
     ans: `highlight chart area -> Design/Chart Design tab -> Chart Styles group -> Change Colors`,
   },
-
   {
     que: `rotate pie chart`,
     ans: `Format Data Series -> Series Option icon -> Angle Of First Slice`,
@@ -80,8 +79,10 @@ export const EC = [
       <>
         <p>Do this for the slice you want to hide</p>
         <p>
-          Format Data Point {"->"} Fill & Line icon {"->"} Fill {"->"} No Fill
+          1. Format Data Point {"->"} Fill & Line icon {"->"} Fill {"->"} No
+          Fill
         </p>
+        <p>2. Chart Elements popup view {"->"} uncheck Data Labels option</p>
       </>
     ),
   },
