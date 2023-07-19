@@ -1,11 +1,27 @@
 export const EC = [
   {
+    que: `display the 'Chart Elements' popup view of your graph`,
+    ans: `click the area outside the chart data points -> click the ➕ icon that appears on the right side of the chart window`,
+  },
+  {
+    que: `display the 'Chart Styles' popup view of your graph`,
+    ans: `click the area outside the chart data points -> click the 🖌️ icon that appears on the right side of the chart window`,
+  },
+  {
+    que: `display the 'Chart Filters' popup view of your graph`,
+    ans: `click the area outside the chart data points -> click the slicer icon that appears on the right side of the chart window`,
+  },
+  {
     que: `display the 'Format Chart Area' panel of your chart`,
-    ans: `click the area outside the chart data`,
+    ans: `click the area outside the chart data points`,
   },
   {
     que: `display the 'Format Data Series' panel of your chart`,
     ans: `click any data point of your chart`,
+  },
+  {
+    que: `display the 'Format Data Point' panel of your chart`,
+    ans: `double-click any data point of your chart`,
   },
   {
     que: `display the 'Format Data Labels' panel of your chart`,
@@ -57,6 +73,17 @@ export const EC = [
   {
     que: `separate/explode pie slices`,
     ans: `Format Data Series -> Series Option icon -> Pie Explosion`,
+  },
+  {
+    que: `display only 1 slice and hide the others`,
+    ans: (
+      <>
+        <p>Do this for the slice you want to hide</p>
+        <p>
+          Format Data Point {"->"} Fill & Line icon {"->"} Fill {"->"} No Fill
+        </p>
+      </>
+    ),
   },
   /*******************Bar Chart ***************************************** */
   { que: `design a treemap from a normal excel table`, ans: null },
