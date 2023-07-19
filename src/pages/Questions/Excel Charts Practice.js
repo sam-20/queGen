@@ -86,8 +86,10 @@ export const EC = [
       </>
     ),
   },
-  /*******************Bar Chart ***************************************** */
+  /*******************Treemap Chart ***************************************** */
   { que: `design a treemap from a normal excel table`, ans: null },
+
+  /*******************Bar Chart ***************************************** */
   { que: `design a bar chart from a normal excel table`, ans: null },
   {
     que: (
