@@ -1,5 +1,22 @@
 export const EC = [
   {
+    que: `display the 'Format Chart Area' panel of your chart`,
+    ans: `click the area outside the chart data`,
+  },
+  {
+    que: `display the 'Format Data Series' panel of your chart`,
+    ans: `click any data point of your chart`,
+  },
+  {
+    que: `display the 'Format Data Labels' panel of your chart`,
+    ans: `click any data label in the chart`,
+  },
+  {
+    que: `display the 'Format Legend' panel of your chart`,
+    ans: `click the legend in the chart`,
+  },
+  /*******************Pie Chart ***************************************** */
+  {
     que: `design a pie chart from a normal excel table`,
     ans: (
       <>
@@ -33,6 +50,15 @@ export const EC = [
     ans: `highlight chart area -> Design/Chart Design tab -> Chart Styles group -> Change Colors`,
   },
 
+  {
+    que: `rotate pie chart`,
+    ans: `Format Data Series -> Series Option icon -> Angle Of First Slice`,
+  },
+  {
+    que: `separate/explode pie slices`,
+    ans: `Format Data Series -> Series Option icon -> Pie Explosion`,
+  },
+  /*******************Bar Chart ***************************************** */
   { que: `design a treemap from a normal excel table`, ans: null },
   { que: `design a bar chart from a normal excel table`, ans: null },
   {
