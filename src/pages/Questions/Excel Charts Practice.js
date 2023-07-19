@@ -1,9 +1,37 @@
 export const EC = [
   {
     que: `design a pie chart from a normal excel table`,
-    ans: `Pie chart requires categorical data to be grouped`,
+    ans: (
+      <>
+        <p>Requires categorical column values to be grouped</p>
+        <p>
+          If categorical column values are grouped: select the categorical and
+          numerical columns OR select range of data {"->"} Insert tab {"->"}
+          Charts group {"->"} pie chart icon
+        </p>
+      </>
+    ),
   },
-  { que: `design a pie chart from a pivot table`, ans: null },
+  {
+    que: `design a pie chart from a pivot table`,
+    ans: `Requires categorical column values to be grouped`,
+  },
+  {
+    que: `display and hide data labels on pie chart slices as their percentage contribution`,
+    ans: `highlight chart area -> Design/Chart Design tab -> Chart Styles group -> choose chart style showing labels as %`,
+  },
+  {
+    que: `display and hide data labels on pie chart slices as their actual data contribution`,
+    ans: `highlight chart area -> Chart Elements popup icon -> (un)check Data Labels option`,
+  },
+  {
+    que: `display and hide pie chart legend`,
+    ans: `highlight chart area -> Chart Elements popup icon -> (un)check Legend option`,
+  },
+  {
+    que: `change the color of the pie chart slices`,
+    ans: `highlight chart area -> Design/Chart Design tab -> Chart Styles group -> Change Colors`,
+  },
 
   { que: `design a treemap from a normal excel table`, ans: null },
   { que: `design a bar chart from a normal excel table`, ans: null },
