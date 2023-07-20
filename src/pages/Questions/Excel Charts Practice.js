@@ -175,6 +175,44 @@ export const EC = [
     que: `Rotate the bars to make it horizontal or vertical`,
     ans: null,
   },
+  {
+    que: `inc/dec the gap width of the bar chart thereby increasing or decreasing the bin width`,
+    ans: `Format Data Series -> Series Options icon -> Series Options dropdown -> Gap Width`,
+  },
+  {
+    que: `Switch the bar chart row/column or Change the data used as the x and y axis in your bar chart`,
+    ans: (
+      <>
+        <p>right click chart area {"->"} Select Data ...</p>
+
+        <p>
+          the 'Select Data Source' window opens with the following
+          customizations which must be understood
+        </p>
+        <p>
+          1. 'Chart Data Range' inputbox = the entire range containing the data
+          for the graph including the column headers eg. {`=Sheet1!$A$1:$B$13`}
+        </p>
+
+        <p>
+          2. 'Lengend Entries (Series)' = the datapoints which would determine
+          the bars heights. You can Add, Edit or Remove the datapoints here. If
+          you click Add or Edit to update, note that 'Series Name' = column
+          header eg. {`=Sheet1!$B$1`}
+          and 'Series Value' = data range for the column's datapoints without
+          the header eg. {`=Sheet1!$B$2:$B$13`}
+        </p>
+
+        <p>
+          3. 'Horizontal(Category) Axis Labels' = unique categorical values for
+          your x-axis labels. If you click Edit to update your
+          Horizontal(Categorical) Axis Labels, note that Axis label range =
+          range of categorical names without the header eg.
+          {`=Sheet1!$A$2:$A$13`}
+        </p>
+      </>
+    ),
+  },
 
   /*******************Stacked Bar Chart ***************************************** */
   { que: `design a stacked bar chart from a normal excel table`, ans: null },
