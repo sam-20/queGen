@@ -51,11 +51,54 @@ export const EC = [
   },
   {
     que: `display and hide data labels on pie chart slices as their percentage contribution`,
-    ans: `highlight chart area -> Design/Chart Design tab -> Chart Styles group -> choose chart style showing labels as %`,
+    ans: (
+      <>
+        <p>
+          Format Data Labels {"->"} Label Options icon {"->"} Label Options
+          dropdown {"->"} Percentage
+        </p>
+        <p>or</p>
+        <p>
+          highlight chart area {"->"} Design/Chart Design tab {"->"} Chart
+          Styles group {"->"} choose chart style showing labels as %
+        </p>
+      </>
+    ),
   },
   {
-    que: `display and hide data labels on pie chart slices as their actual data contribution`,
-    ans: `Chart Elements popup view -> (un)check Data Labels option`,
+    que: `display and hide data labels on pie chart slices as their actual datapoint contribution`,
+    ans: (
+      <>
+        <p>
+          Format Data Labels {"->"} Label Options icon {"->"} Label Options
+          dropdown {"->"} Value
+        </p>
+        <p>or</p>
+        <p>Chart Elements popup view {"->"} (un)check Data Labels option</p>
+      </>
+    ),
+  },
+  {
+    que: `display and hide category names on pie chart slices`,
+    ans: (
+      <>
+        <p>
+          Format Data Labels {"->"} Label Options icon {"->"} Label Options
+          dropdown {"->"} Category Name
+        </p>
+      </>
+    ),
+  },
+  {
+    que: `change positioning of data labels on pie chart slices`,
+    ans: (
+      <>
+        <p>
+          Format Data Labels {"->"} Label Options icon {"->"} Label Position
+          dropdown {"->"} Center/Inside End/Outside End/Best Fit
+        </p>
+      </>
+    ),
   },
   {
     que: `display and hide pie chart legend`,
