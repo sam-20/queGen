@@ -146,15 +146,20 @@ export const EC = [
       <>
         <p>Requires categorical column values to be grouped</p>
         <p>1 Categorical variable + 1 numerical variable</p>
+        <p>
+          If categorical column values are grouped: select the categorical and
+          numerical columns OR select range of data {"->"} Insert tab {"->"}
+          Charts group {"->"} bar chart icon
+        </p>
       </>
     ),
   },
   {
     que: `Design a bar chart from a pivot table`,
-
     ans: (
       <>
-        <p></p>
+        <p>Requires categorical column values to be grouped</p>
+        <p>1 Categorical variable + 1 numerical variable</p>
       </>
     ),
   },
