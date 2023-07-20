@@ -241,8 +241,19 @@ export const EC = [
       </>
     ),
   },
-  { que: `design a combo chart from a pivot table`, ans: null },
-
+  {
+    que: `design a combo chart from a pivot table`,
+    ans: (
+      <>
+        <p>1 categorical variable (date) + 2 or more numerical variables</p>
+        <p>Requires categorical column values to be grouped</p>
+      </>
+    ),
+  },
+  {
+    que: `interchange the data used for the line and bars in the combo chart`,
+    ans: `right click chart area -> Change Chart Type ... -> after selecting the combo chart, beneath the chart's preview choose what to use for the line and bars`,
+  },
   /*******************Ribbon Chart ***************************************** */
   { que: `design a ribbon chart from a normal excel table`, ans: null },
 
