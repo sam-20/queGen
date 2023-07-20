@@ -217,6 +217,10 @@ export const EC = [
       </>
     ),
   },
+  {
+    que: `add and remove the axis titles of your graph`,
+    ans: `Chart Elements popup view {"->"} Axis Titles`,
+  },
 
   /*******************Stacked Bar Chart ***************************************** */
   { que: `design a stacked bar chart from a normal excel table`, ans: null },
