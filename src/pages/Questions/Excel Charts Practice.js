@@ -37,8 +37,8 @@ export const EC = [
     que: `design a pie chart from a normal excel table`,
     ans: (
       <>
-        <p>Requires categorical column values to be grouped</p>
         <p>1 Categorical variable + 1 numerical variable</p>
+        <p>Requires categorical column values to be grouped</p>
         <p>
           If categorical column values are grouped: select the categorical and
           numerical columns OR select range of data {"->"} Insert tab {"->"}
@@ -51,8 +51,8 @@ export const EC = [
     que: `design a pie chart from a pivot table`,
     ans: (
       <>
-        <p>Requires categorical column values to be grouped</p>
         <p>1 Categorical variable + 1 numerical variable</p>
+        <p>Requires categorical column values to be grouped</p>
       </>
     ),
   },
@@ -144,8 +144,8 @@ export const EC = [
     que: `design a column/bar chart from a normal excel table`,
     ans: (
       <>
-        <p>Requires categorical column values to be grouped</p>
         <p>1 Categorical variable + 1 numerical variable</p>
+        <p>Requires categorical column values to be grouped</p>
         <p>
           If categorical column values are grouped: select the categorical and
           numerical columns OR select range of data {"->"} Insert tab {"->"}
@@ -158,8 +158,8 @@ export const EC = [
     que: `Design a column/bar chart from a pivot table`,
     ans: (
       <>
-        <p>Requires categorical column values to be grouped</p>
         <p>1 Categorical variable + 1 numerical variable</p>
+        <p>Requires categorical column values to be grouped</p>
       </>
     ),
   },
@@ -232,7 +232,15 @@ export const EC = [
   { que: `design a line chart from a pivot table`, ans: null },
 
   /*******************Combo Chart ***************************************** */
-  { que: `design a combo chart from a normal excel table`, ans: null },
+  {
+    que: `design a combo chart from a normal excel table`,
+    ans: (
+      <>
+        <p>1 categorical variable (date) + 2 or more numerical variables</p>
+        <p>Requires categorical column values to be grouped</p>
+      </>
+    ),
+  },
   { que: `design a combo chart from a pivot table`, ans: null },
 
   /*******************Ribbon Chart ***************************************** */
