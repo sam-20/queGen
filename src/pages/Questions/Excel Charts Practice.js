@@ -141,7 +141,25 @@ export const EC = [
     ),
   },
   /*******************Treemap Chart ***************************************** */
-  { que: `design a treemap from a normal excel table`, ans: null },
+  {
+    que: `design a treemap`,
+    ans: (
+      <>
+        <p>Treemaps can only be created from normal excel table</p>
+        <p>2 or more Categorical variables + 1 Numeric variable</p>
+
+        <p>Keypoints</p>
+        <p>1. Categorical column values can be grouped or scattered</p>
+        <p>
+          2. Categorical data columns should be positioned in order of hierarchy
+          with highest level as the 1st column and so on
+        </p>
+        <p>
+          3. The column with the highest hierarchy (1st column) should be sorted
+        </p>
+      </>
+    ),
+  },
 
   /*******************Column(vertical) and bar(horizontal) Chart ***************************************** */
   {
