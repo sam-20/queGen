@@ -31,6 +31,7 @@ export const EC = [
     que: `display the 'Format Legend' panel of your chart`,
     ans: `click the legend in the chart`,
   },
+
   /*******************Pie Chart ***************************************** */
   {
     que: `design a pie chart from a normal excel table`,
@@ -135,38 +136,61 @@ export const EC = [
   /*******************Bar Chart ***************************************** */
   { que: `design a bar chart from a normal excel table`, ans: null },
   {
-    que: (
-      <>
-        <p>1. Design a bar chart from a pivot table</p>
-        <p>
-          2. Sort the bars in descending order and ascending order of bar height
-        </p>
-        <p>
-          3. Sort the bars in descending order and ascending order of axis
-          labels
-        </p>
-        <p>3. Rotate the bars to make it horizontal or vertical</p>
-      </>
-    ),
+    que: `Design a bar chart from a pivot table`,
+
     ans: (
       <>
-        <p>1.</p>
+        <p></p>
       </>
     ),
   },
+  {
+    que: `Sort the bars of a barchart in descending order and ascending order of bar height`,
+    ans: null,
+  },
+  {
+    que: `Sort the bars of a barchart in descending order and ascending order of axis labels`,
+    ans: null,
+  },
+  {
+    que: `Rotate the bars to make it horizontal or vertical`,
+    ans: null,
+  },
+
+  /*******************Stacked Bar Chart ***************************************** */
   { que: `design a stacked bar chart from a normal excel table`, ans: null },
   { que: `design a stacked bar chart from a pivot table`, ans: null },
+
+  /*******************Waterfall Chart ***************************************** */
   { que: `design a waterfall chart from a normal excel table`, ans: null },
+
+  /*******************Funnel Chart ***************************************** */
   { que: `design a funnel chart from a normal excel table`, ans: null },
+
+  /*******************Histogram Chart ***************************************** */
   { que: `design a histogram from a normal excel table`, ans: null },
+
+  /*******************Line Chart ***************************************** */
   { que: `design a line chart from a normal excel table`, ans: null },
   { que: `design a line chart from a pivot table`, ans: null },
+
+  /*******************Combo Chart ***************************************** */
   { que: `design a combo chart from a normal excel table`, ans: null },
   { que: `design a combo chart from a pivot table`, ans: null },
+
+  /*******************Ribbon Chart ***************************************** */
   { que: `design a ribbon chart from a normal excel table`, ans: null },
+
+  /*******************Area Chart ***************************************** */
   { que: `design an area chart from a normal excel table`, ans: null },
   { que: `design an area chart from a pivot table`, ans: null },
+
+  /*******************Boxplot ***************************************** */
   { que: `design a boxplot from a normal excel table`, ans: null },
+
+  /*******************Scatterplot ***************************************** */
   { que: `design a scatterplot from a normal excel table`, ans: null },
+
+  /*******************Spark line Chart ***************************************** */
   { que: `design a spark line chart from a normal excel table`, ans: null },
 ];
