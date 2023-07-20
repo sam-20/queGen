@@ -38,6 +38,7 @@ export const EC = [
     ans: (
       <>
         <p>Requires categorical column values to be grouped</p>
+        <p>1 Categorical variable + 1 numerical variable</p>
         <p>
           If categorical column values are grouped: select the categorical and
           numerical columns OR select range of data {"->"} Insert tab {"->"}
@@ -48,7 +49,12 @@ export const EC = [
   },
   {
     que: `design a pie chart from a pivot table`,
-    ans: `Requires categorical column values to be grouped`,
+    ans: (
+      <>
+        <p>Requires categorical column values to be grouped</p>
+        <p>1 Categorical variable + 1 numerical variable</p>
+      </>
+    ),
   },
   {
     que: `display and hide data labels on pie chart slices as their percentage contribution`,
@@ -134,7 +140,15 @@ export const EC = [
   { que: `design a treemap from a normal excel table`, ans: null },
 
   /*******************Bar Chart ***************************************** */
-  { que: `design a bar chart from a normal excel table`, ans: null },
+  {
+    que: `design a bar chart from a normal excel table`,
+    ans: (
+      <>
+        <p>Requires categorical column values to be grouped</p>
+        <p>1 Categorical variable + 1 numerical variable</p>
+      </>
+    ),
+  },
   {
     que: `Design a bar chart from a pivot table`,
 
