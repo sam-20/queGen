@@ -207,12 +207,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `display tables from another database`,
-    ans: (
-      <>
-        <p>**MS SQL SERVER**</p>
-        <p>SHOW TABLES FROM database_name;</p>
-      </>
-    ),
+    ans: null
   },
   {
     que: `create a table`,
