@@ -139,9 +139,9 @@ export const EC = [
   /*******************Treemap Chart ***************************************** */
   { que: `design a treemap from a normal excel table`, ans: null },
 
-  /*******************Bar Chart ***************************************** */
+  /*******************Column(vertical) and bar(horizontal) Chart ***************************************** */
   {
-    que: `design a bar chart from a normal excel table`,
+    que: `design a column/bar chart from a normal excel table`,
     ans: (
       <>
         <p>Requires categorical column values to be grouped</p>
@@ -149,13 +149,13 @@ export const EC = [
         <p>
           If categorical column values are grouped: select the categorical and
           numerical columns OR select range of data {"->"} Insert tab {"->"}
-          Charts group {"->"} bar chart icon
+          Charts group {"->"} column chart icon
         </p>
       </>
     ),
   },
   {
-    que: `Design a bar chart from a pivot table`,
+    que: `Design a column/bar chart from a pivot table`,
     ans: (
       <>
         <p>Requires categorical column values to be grouped</p>
@@ -164,15 +164,15 @@ export const EC = [
     ),
   },
   {
-    que: `Sort the bars of a barchart in descending order and ascending order of bar height`,
+    que: `Sort the bars of a column/bar chart in descending order and ascending order of bar height`,
     ans: null,
   },
   {
-    que: `Sort the bars of a barchart in descending order and ascending order of axis labels`,
+    que: `Sort the bars of a column/bar chart in descending order and ascending order of axis labels`,
     ans: null,
   },
   {
-    que: `Rotate the bars to make it horizontal or vertical`,
+    que: `Switch between column and bar chart`,
     ans: null,
   },
   {
@@ -180,7 +180,7 @@ export const EC = [
     ans: `Format Data Series -> Series Options icon -> Series Options dropdown -> Gap Width`,
   },
   {
-    que: `Switch the bar chart row/column or Change the data used as the x and y axis in your bar chart`,
+    que: `Switch the column/bar chart's row and column or Change the data used as the x and y axis in your bar chart`,
     ans: (
       <>
         <p>right click chart area {"->"} Select Data ...</p>
