@@ -7,4 +7,8 @@ export const PP = [
     que: `sort a column in the pivot table which doesnt display the arrow next to column header`,
     ans: `select any datapoint in the column -> Home tab -> Editing group -> Sort & Filter`,
   },
+  {
+    que: `delete a pivot table`,
+    ans: `select any part of table -> PivotTable Analyze tab -> Actions group -> Select -> Entire PivotTable -> click delete button`,
+  },
 ];

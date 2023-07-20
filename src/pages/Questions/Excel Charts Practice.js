@@ -223,8 +223,24 @@ export const EC = [
   },
 
   /*******************Stacked Bar Chart ***************************************** */
-  { que: `design a stacked bar chart from a normal excel table`, ans: null },
-  { que: `design a stacked bar chart from a pivot table`, ans: null },
+  {
+    que: `design a stacked bar chart from a normal excel table`,
+    ans: (
+      <>
+        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>Requires categorical column values to be grouped</p>
+      </>
+    ),
+  },
+  {
+    que: `design a stacked bar chart from a pivot table`,
+    ans: (
+      <>
+        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>Requires categorical column values to be grouped</p>
+      </>
+    ),
+  },
 
   /*******************Waterfall Chart ***************************************** */
   { que: `design a waterfall chart from a normal excel table`, ans: null },
