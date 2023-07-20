@@ -165,15 +165,15 @@ export const EC = [
   },
   {
     que: `Sort the bars of a column/bar chart in descending order and ascending order of bar height`,
-    ans: null,
+    ans: `sort the datapoints inside the table of the column representing the bars. The graph automatically updates`,
   },
   {
     que: `Sort the bars of a column/bar chart in descending order and ascending order of axis labels`,
-    ans: null,
+    ans: `sort the datapoints inside the table of the column representing the axis labels. The graph automatially updates`,
   },
   {
     que: `Switch between column and bar chart`,
-    ans: null,
+    ans: `right click chart area -> Change Chart Type ...`,
   },
   {
     que: `inc/dec the gap width of the bar chart thereby increasing or decreasing the bin width`,
