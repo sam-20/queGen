@@ -28,6 +28,10 @@ export const EC = [
     ans: `click any data label in the chart`,
   },
   {
+    que: `display the 'Format Axis' panel of your chart`,
+    ans: `click any axis label in the chart`,
+  },
+  {
     que: `display the 'Format Legend' panel of your chart`,
     ans: `click the legend in the chart`,
   },
