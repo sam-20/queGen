@@ -655,6 +655,15 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `select column data in a specified datatype's format`,
+    ans: (
+      <>
+        <p>SELECT CAST(25.65 AS varchar)</p>
+        <p>SELECT CAST('2017-08-25' AS datetime);</p>
+      </>
+    ),
+  },
+  {
     que: `select multiple columns data from a table`,
     ans: `SELECT [columnName1],[columnName2],... from [tableName]`,
   },
@@ -700,6 +709,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>SELECT TOP 50 PERCENT * FROM Customers ORDER BY customer_id DESC</p>
       </>
     ),
+  },
+  {
+    que: `select a date from a table in a format you want it to appear. Eg. YYYY-DD-MM, DD/MM/YYYY, etc`,
+    ans: null,
   },
   {
     que: `delete the first n records`,
@@ -2051,19 +2064,6 @@ Useful when database cannot be for eg. dropped due to active connections using i
           US format before importing ie. 'MM/DD/YYYY. Inside SQL, using the
           'date' datatype produces dates in the format 'YYYY-MM-DD'
         </p>
-      </>
-    ),
-  },
-  {
-    que: `select a date from a table in a format you want it to appear. Eg. YYYY-DD-MM, DD/MM/YYYY, etc`,
-    ans: <></>,
-  },
-  {
-    que: `convert a value (of any type) into a specified datatype in a select statement`,
-    ans: (
-      <>
-        <p>SELECT CAST(25.65 AS varchar)</p>
-        <p>SELECT CAST('2017-08-25' AS datetime);</p>
       </>
     ),
   },
