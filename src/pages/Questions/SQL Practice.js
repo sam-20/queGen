@@ -2023,10 +2023,6 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   {
-    que: `import an sql script file containing database data`,
-    ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
-  },
-  {
     que: `Export the table from one database to another database`,
     ans: null,
   },
@@ -2035,7 +2031,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   {
-    que: `import data from the following file formats csv, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
+    que: `import data from each of the following file formats csv, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
@@ -2068,12 +2064,17 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `import data from an excel file which has multiple tables in different worksheets`,
+    que: `import multiple tables from one or more excel worksheets to sql server`,
+    ans: null,
+  },
+  { que: `import tables from multiple excel workbooks`, ans: null },
+  {
+    que: `import and append data from multiple sources into the same table in sql server`,
     ans: null,
   },
   {
-    que: `import table data into sql where the data comes from 2 separate files`,
-    ans: null,
+    que: `import an sql script file containing database data`,
+    ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
   },
   { que: `events (MySQL)`, ans: `` },
 ];
