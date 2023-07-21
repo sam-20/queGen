@@ -207,7 +207,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `display tables from another database`,
-    ans: null
+    ans: null,
   },
   {
     que: `create a table`,
@@ -2022,7 +2022,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   {
-    que: `import data from the following file formats csv, txt, pdf, xlsx, sql, etc.`,
+    que: `import data from the following file formats csv, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
