@@ -2008,11 +2008,16 @@ Useful when database cannot be for eg. dropped due to active connections using i
   { que: `data modelling in sql`, ans: `` },
   { que: `creating, calling, using, deleting schemas`, ans: `` },
   {
-    que: `import data from each of the following file formats csv, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
+    que: `import data from txt file format`,
+    ans: null,
+  },
+  {
+    que: `import data from csv file format`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>-- CSV</p>
+        <p>METHOD 1: Same approach as importing from .txt file</p>
+        <p>METHOD 2: using sql</p>
         <p>
           BULK INSERT customerSales --exisiting empty table_name whose columns
           have been designed to match incoming data
@@ -2041,10 +2046,28 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `import data from xlsx file format`,
+    ans: null,
+  },
+  {
     que: `import multiple tables from one or more excel worksheets to sql server`,
     ans: null,
   },
   { que: `import tables from multiple excel workbooks`, ans: null },
+  { que: `import data from .pdf file format`, ans: null },
+  {
+    que: `import data from .sql file format`,
+    ans: null,
+  },
+  {
+    que: `import data from ms access file`,
+    ans: null,
+  },
+  {
+    que: `import data from outlook file`,
+    ans: null,
+  },
+  { que: `import data from webpage`, ans: null },
   {
     que: `import and append data from multiple sources into the same table in sql server`,
     ans: null,
