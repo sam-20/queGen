@@ -2008,29 +2008,6 @@ Useful when database cannot be for eg. dropped due to active connections using i
   { que: `data modelling in sql`, ans: `` },
   { que: `creating, calling, using, deleting schemas`, ans: `` },
   {
-    que: `create/generate/export an sql script file from your database which contains data with or without objects and schema`,
-    ans: `NB: This approach creates a script in which the database is being created as well
-    Right click your database -> Tasks -> Generate Scripts -> 
-    Click 'Next' on the Generate and Publish Scripts Wizard Introduction screen ->
-    Select the database objects to script(entire db or specific db objects) and click 'Next'
-    Click on the 'Advanced' button ->
-    Under 'General' -> 'Types of data to script' option, select 'Schema and Data' from the dropdown. 
-    Click ok and specify how the script should be saved ie. Save as script file
-    Review your choices and then click 'Next'`,
-  },
-  {
-    que: `export a table data into excel,csv,txt,pdf format`,
-    ans: null,
-  },
-  {
-    que: `Export the table from one database to another database`,
-    ans: null,
-  },
-  {
-    que: `Copy Database From One Server to Another Server in SQL`,
-    ans: null,
-  },
-  {
     que: `import data from each of the following file formats csv, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: (
       <>
@@ -2075,6 +2052,29 @@ Useful when database cannot be for eg. dropped due to active connections using i
   {
     que: `import an sql script file containing database data`,
     ans: `File -> Open -> File -> then select SQL file OR Ctrl+O -> then select sql file`,
+  },
+  {
+    que: `create/generate/export an sql script file from your database which contains data with or without objects and schema`,
+    ans: `NB: This approach creates a script in which the database is being created as well
+    Right click your database -> Tasks -> Generate Scripts -> 
+    Click 'Next' on the Generate and Publish Scripts Wizard Introduction screen ->
+    Select the database objects to script(entire db or specific db objects) and click 'Next'
+    Click on the 'Advanced' button ->
+    Under 'General' -> 'Types of data to script' option, select 'Schema and Data' from the dropdown. 
+    Click ok and specify how the script should be saved ie. Save as script file
+    Review your choices and then click 'Next'`,
+  },
+  {
+    que: `export a table data into excel,csv,txt,pdf format`,
+    ans: null,
+  },
+  {
+    que: `Export the table from one database to another database`,
+    ans: null,
+  },
+  {
+    que: `Copy Database From One Server to Another Server in SQL`,
+    ans: null,
   },
   { que: `events (MySQL)`, ans: `` },
 ];
