@@ -400,7 +400,7 @@ export const EF = [
         </p>
         <p>
           NETWORKDAYS with 3 args ie. NETWORKDAYS(start_date, end_date, range
-          containing holiday dates) ie.
+          containing holiday dates) eg.
         </p>
         <p>=NETWORKDAYS(A1,A2,B1:B4)</p>
         <p>
@@ -412,7 +412,18 @@ export const EF = [
   },
   {
     que: `what is the number of working days when we have our own defined weekend/off-days instead of the regular Sat and Sun`,
-    ans: `NETWORKDAYS.INTL`,
+    ans: (
+      <>
+        <p>
+          Assuming start_date {`A1= 28/03/2023`},end_date{`A2= 22/07/2023`}, our
+          defined weekends/offdays = Tue,Wed, holidays = Range("B1:B4") with the
+          following dates {`06/03/2023, 25/05/2023, 01/07/2023, 25/12/2023`}
+        </p>
+        <p>=NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])</p>
+        <p>eg.</p>
+        <p>=NETWORKDAYS.INTL(A1,A2,4,B1:B4)</p>
+      </>
+    ),
   },
   {
     que: `change the format for a given date to your own custom format. eg. Monday or Mon-23, 23 Mon 2023, etc`,
