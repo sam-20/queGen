@@ -427,7 +427,7 @@ export const EF = [
   },
   {
     que: `change the format for a given date to your own custom format. eg. Monday or Mon-23, 23 Mon 2023, etc`,
-    ans: `Right click date cell -> Format cells -> Number tab -> select Custom from Category list -> enter your custom format in the Type input`,
+    ans: `Right click date cell -> Format cells -> Number tab -> select Custom from Category list -> enter your custom format in the Type inputbox`,
   },
   {
     que: `calculate someone's age (in years) from their date of birth`,
