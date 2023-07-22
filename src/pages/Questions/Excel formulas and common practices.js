@@ -394,10 +394,18 @@ export const EF = [
     ans: (
       <>
         <p>
+          Assuming start_date,A1={`28/03/2023`},end_date,A2={`22/07/2023`},
+          holidays = Range("B1:B4") with the following dates
+          {`06/03/2023, 25/05/2023, 01/07/2023, 25/12/2023`}
+        </p>
+        <p>
           NETWORKDAYS with 3 args ie. NETWORKDAYS(start_date, end_date, range
-          containing holiday dates). NB: use the range of holiday dates not the
-          number of holidays because we dont know if the holiday might fall on a
-          Sat or Sun
+          containing holiday dates) ie.
+        </p>
+        <p>=NETWORKDAYS(A1,A2,B1:B4)</p>
+        <p>
+          NB: use the range of holiday dates not the number of holidays because
+          we dont know if the holiday might fall on a Sat or Sun
         </p>
       </>
     ),
