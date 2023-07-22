@@ -381,11 +381,26 @@ export const EF = [
   },
   {
     que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates not considering holidays`,
-    ans: `NETWORKDAYS with 2 args ie. NETWORKDAYS(start_date, end_date)`,
+    ans: (
+      <>
+        <p>NETWORKDAYS with 2 args ie. NETWORKDAYS(start_date, end_date)</p>
+        <p>eg.</p>
+        <p>=NETWORKDAYS("28/03/2023","22/07/2023")</p>
+      </>
+    ),
   },
   {
     que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates and considering holidays`,
-    ans: `NETWORKDAYS with 3 args ie. NETWORKDAYS(start_date, end_date, range containing holiday dates). NB: use the range of holiday dates not the number of holidays because we dont know if the holiday might fall on a Sat or Sun`,
+    ans: (
+      <>
+        <p>
+          NETWORKDAYS with 3 args ie. NETWORKDAYS(start_date, end_date, range
+          containing holiday dates). NB: use the range of holiday dates not the
+          number of holidays because we dont know if the holiday might fall on a
+          Sat or Sun
+        </p>
+      </>
+    ),
   },
   {
     que: `what is the number of working days when we have our own defined weekend/off-days instead of the regular Sat and Sun`,
