@@ -16,8 +16,8 @@ export const PP = [
     ans: `select any datapoint in the column -> Home tab -> Editing group -> Sort & Filter`,
   },
   {
-    que: `remove the Grand Totals from the pivot table rows and/or columns`,
-    ans: `select any part of table -> Design tab -> Layout group -> Grand Totals -> Off For Rows And Columns`,
+    que: `add/remove the Grand Totals from the pivot table rows and/or columns`,
+    ans: `select any part of table -> Design tab -> Layout group -> Grand Totals -> On/Off For Rows And Columns`,
   },
   {
     que: `insert a slicer to use for your pivot table and pivot charts`,
