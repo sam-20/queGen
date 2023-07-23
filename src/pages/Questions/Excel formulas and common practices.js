@@ -462,10 +462,6 @@ export const EF = [
     ans: `select any data cell/highlight entire data -> right click -> Get Data from Table/Range`,
   },
   {
-    que: `Add filter options to a cell range not formatted as table`,
-    ans: `Data tab -> Sort & Filter group -> Filter`,
-  },
-  {
     que: `resize a table`,
     ans: `select table -> Table Design tab -> Properties group -> Resize Table`,
   },
@@ -516,6 +512,29 @@ export const EF = [
   {
     que: `sort a table by multiple criteria`,
     ans: `Select table -> Data tab -> Sort & Filter group -> Sort`,
+  },
+  {
+    que: `Add filter options to a cell range not formatted as table`,
+    ans: `Data tab -> Sort & Filter group -> Filter`,
+  },
+  {
+    que: `Add a slicer to a normal table/range data`,
+    ans: `select any part of table -> Table Design tab -> Tools group -> Insert Slicer`,
+  },
+  {
+    que: `group the data in an excel table according into subtotals without creating pivot tables`,
+    ans: (
+      <>
+        <p>NB: 1. The column to be grouped should first be sorted</p>
+        <p>
+          2. Data should be formatted as a range instead of table. Subtotal
+          feature is inactive for data formatted as table
+        </p>
+        <p>
+          Data tab {"->"} Outline group {"->"} Subtotal
+        </p>
+      </>
+    ),
   },
   {
     que: `add a table to the data model`,
