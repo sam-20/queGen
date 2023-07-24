@@ -28,6 +28,7 @@ export const SQLI = [
   },
   {
     que: `what is the use of Begin/End Blocks and the Go keyword in SQL?`,
+    ans: null,
   },
   {
     que: `what is a transaction in sql with an example?`,

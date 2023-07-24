@@ -2092,6 +2092,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   {
+    que: `open power bi and import sql data into it using the "Import data from SQL Server" feature`,
+    ans: null,
+  },
+  {
     que: `Export the table from one database to another database`,
     ans: null,
   },
