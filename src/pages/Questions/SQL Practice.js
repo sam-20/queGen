@@ -2003,21 +2003,37 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
-  { que: `cursors`, ans: `` },
-  { que: `user defined functions(UDF), if and else statement`, ans: `` },
-  { que: `data modelling in sql`, ans: `` },
-  { que: `creating, calling, using, deleting schemas`, ans: `` },
+  { que: `cursors`, ans: null },
+  { que: `user defined functions(UDF), if and else statement`, ans: null },
+  { que: `data modelling in sql`, ans: null },
+  { que: `creating, calling, using, deleting schemas`, ans: null },
   {
     que: `import data from txt file format`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>Does not require the table to be created before import</p>
+        <p>
+          right click the database name from the object explorer {"->"} Tasks
+          {"->"} Import Flat File ... {"->"} Run through the wizard to import
+          the data
+        </p>
+      </>
+    ),
   },
   {
     que: `import data from csv file format`,
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>METHOD 1: Same approach as importing from .txt file</p>
-        <p>METHOD 2: using sql</p>
+        <p>METHOD 1</p>
+        <p>
+          Does not require the table to be created before import. Same approach
+          as importing from .txt file
+        </p>
+        <p>--------------</p>
+        <p>METHOD 2</p>
+        <p>Using sql(requires existing table to be created)</p>
         <p>
           BULK INSERT customerSales --exisiting empty table_name whose columns
           have been designed to match incoming data
