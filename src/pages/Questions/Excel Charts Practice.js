@@ -36,7 +36,7 @@ export const EC = [
     ans: `click the legend in the chart`,
   },
 
-  /*******************Pie Chart **************************************** */
+  /*******************Pie Chart ***************************************** */
   {
     que: `design a pie chart from a normal excel table`,
     ans: (
