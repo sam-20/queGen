@@ -1229,6 +1229,14 @@ export const EF = [
     ),
   },
   {
+    que: `add a comment to a cell's data, update and delete the comment`,
+    ans: `select the cell -> Review tab -> Comments group -> New Comment/Edit Comment/Delete`,
+  },
+  {
+    que: `show all comments in the worksheet`,
+    ans: `Review tab -> Comments group -> Show All Comments`,
+  },
+  {
     que: `import data from the following formats csv, excel, txt, pdf, xlsx, sql, ms access, outlook, webpage`,
     ans: null,
   },
