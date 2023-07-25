@@ -538,7 +538,25 @@ export const EF = [
   },
   {
     que: `add a table to the data model`,
-    ans: `select cell in the table -> Power Pivot tab -> Tables group -> Add to Data Model`,
+    ans: (
+      <>
+        <p>
+          select cell in the table {"->"} Power Pivot tab {"->"} Tables group
+          {"->"} Add to Data Model
+        </p>
+        <p>
+          NB: Power Pivot's tab items are greyed out in excel if the file is not
+          saved as an excel worksheet (xlsx). Formats like csv and others won’t
+          work. Even if you opened a csv file and accessed power query from
+          there... after loading the data back into the worksheet, its still
+          greyed out as long as the file the data is being loaded into is saved
+          as a csv. To be on the safer side, always open a blank excel workbook
+          (which is by default opened as an xlsx file) and use power query’s
+          ‘Get Data’ to load the csv/xlsx files into the blank workbook. That
+          way the power pivot features don’t get greyed out
+        </p>
+      </>
+    ),
   },
   {
     que: `import pivot table from the data model`,

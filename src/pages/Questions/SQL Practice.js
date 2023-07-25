@@ -2063,7 +2063,12 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `import data from xlsx file format`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>Does not require the table to be created before import</p>
+      </>
+    ),
   },
   {
     que: `import multiple tables from one or more excel worksheets to sql server`,
