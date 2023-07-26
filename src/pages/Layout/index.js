@@ -18,6 +18,7 @@ import {
   BO,
   CC,
   PP,
+  SSIS,
 } from "../Questions";
 import { useState, useEffect, useRef } from "react";
 import LayoutCSS from "./layout.module.css";
@@ -67,16 +68,8 @@ function Layout() {
       content: DA,
       context: "Personal",
     },
-    {
-      title: "Excel Interview Questions",
-      content: EI,
-      context: "",
-    },
-    {
-      title: "SQL Interview Questions",
-      content: SQLI,
-      context: "",
-    },
+    { title: "Excel Interview Questions", content: EI, context: "" },
+    { title: "SQL Interview Questions", content: SQLI, context: "" },
     {
       title: "Business Analyst Interview Questions",
       content: BAQ,
@@ -87,61 +80,18 @@ function Layout() {
       content: EF,
       context: "Excel",
     },
-    {
-      title: "Excel Pivot Tables Practice",
-      content: PP,
-      context: "Excel",
-    },
-    {
-      title: "Excel Charts Practice",
-      content: EC,
-      context: "",
-    },
-    {
-      title: "Excel Macros",
-      content: VBA,
-      context: "Excel",
-    },
-    {
-      title: "Power Query Practice",
-      content: PQ,
-      context: "Power Query",
-    },
-    {
-      title: "Power BI Charts Practice",
-      content: PBI,
-      context: "Power BI",
-    },
-    {
-      title: "Power BI Dax Practice",
-      content: PDX,
-      context: "Power BI",
-    },
-    {
-      title: "SQL Practice",
-      content: SQLP,
-      context: "SQL",
-    },
-    {
-      title: "Outlook Common Practices",
-      content: OP,
-      context: "Outlook",
-    },
-    {
-      title: "Nato Phonetic Alphabet Practice",
-      content: NP,
-      context: "",
-    },
-    {
-      title: "SAP Business Objects Practice",
-      content: BO,
-      context: "",
-    },
-    {
-      title: "Choosing Charts Practice",
-      content: CC,
-      context: "",
-    },
+    { title: "Excel Pivot Tables Practice", content: PP, context: "Excel" },
+    { title: "Excel Charts Practice", content: EC, context: "" },
+    { title: "Excel Macros", content: VBA, context: "Excel" },
+    { title: "Power Query Practice", content: PQ, context: "Power Query" },
+    { title: "Power BI Charts Practice", content: PBI, context: "Power BI" },
+    { title: "Power BI Dax Practice", content: PDX, context: "Power BI" },
+    { title: "SQL Practice", content: SQLP, context: "SQL" },
+    { title: "SSIS Practice", content: SSIS, context: "SQL" },
+    { title: "Outlook Common Practices", content: OP, context: "Outlook" },
+    { title: "Nato Phonetic Alphabet Practice", content: NP, context: "" },
+    { title: "SAP Business Objects Practice", content: BO, context: "" },
+    { title: "Choosing Charts Practice", content: CC, context: "" },
   ];
 
   useEffect(() => {
