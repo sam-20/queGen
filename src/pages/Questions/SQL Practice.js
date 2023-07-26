@@ -2079,12 +2079,19 @@ Useful when database cannot be for eg. dropped due to active connections using i
           {"->"} Import Data ... {"->"} Run through the wizard to import the
           data
         </p>
-        <p>P.S: From the import wizard:</p>
-        <p>select "Microsoft Excel"when asked for the Data Source</p>
+        <p>From the import wizard:</p>
         <p>
-          choose excel version that matches your imported workbook version. use
-          the latest version from the list if your workbook is more recent and
-          cannot be found in the list
+          Data Source: select "Microsoft Excel" and choose excel version that
+          matches your imported workbook version. use the latest version from
+          the list if your workbook is more recent and cannot be found in the
+          list
+        </p>
+        <p>
+          Data Destination: select "Microsoft OLE DB Driver for SQL Server".
+          Then go to Properties to choose the type of connection (Windows
+          Authentication/SQL Server Authentiation) to use. To know your current
+          connection type, go to the SSMS Object Explorer menu {"->"} Connect
+          {"->"} Database Engine...
         </p>
         <p></p>
       </>
