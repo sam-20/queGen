@@ -2098,8 +2098,17 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `import multiple tables from one or more excel worksheets to sql server`,
-    ans: null,
+    que: `import multiple tables from a single excel worksheet to sql server`,
+    ans: (
+      <>
+        <p>
+          using the import wizard, import the xlsx worksheet then at the
+          "Specify Table Copy or Query" section of the import wizard, use the
+          "Copy data from one or more tables or views" option to allow you to
+          select the tables you want from the worksheet
+        </p>
+      </>
+    ),
   },
   { que: `import tables from multiple excel workbooks`, ans: null },
   { que: `import data from .pdf file format`, ans: null },
