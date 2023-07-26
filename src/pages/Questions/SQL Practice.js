@@ -2110,14 +2110,23 @@ Useful when database cannot be for eg. dropped due to active connections using i
       </>
     ),
   },
-  { que: `import tables from multiple excel workbooks`, ans: null },
-  { que: `import data from .pdf file format`, ans: null },
   {
-    que: `import data from .sql file format`,
+    que: `import data from ms access file`,
     ans: null,
   },
   {
-    que: `import data from ms access file`,
+    que: `import tables from multiple excel workbooks`,
+    ans: (
+      <>
+        <p>Using SSIS</p>
+        <p>https://www.youtube.com/watch?v=TH9ptAkCHNA</p>
+        <p>https://www.youtube.com/watch?v=GAvlUX1Vb14</p>
+      </>
+    ),
+  },
+  { que: `import data from .pdf file format`, ans: null },
+  {
+    que: `import data from .sql file format`,
     ans: null,
   },
   {
