@@ -2093,7 +2093,6 @@ Useful when database cannot be for eg. dropped due to active connections using i
           connection type, go to the SSMS Object Explorer menu {"->"} Connect
           {"->"} Database Engine...
         </p>
-        <p></p>
       </>
     ),
   },
@@ -2112,7 +2111,38 @@ Useful when database cannot be for eg. dropped due to active connections using i
   },
   {
     que: `import data from ms access file`,
-    ans: null,
+    ans: (
+      <>
+        <p>**MS SQL SERVER**</p>
+        <p>Does not require the table to be created before import</p>
+        <p>
+          Install the 32 and 64bit version of Microsoft Access Database Engine
+          2016 Redistributable. NB: Windows won't allow you to install the 32bit
+          version saying you already have the 64 bit version installed, so to
+          workaround this run the installer with the /quiet flag ie.
+          accessdatabaseengine.exe /quiet
+        </p>
+        <p>
+          right click the database name from the object explorer {"->"} Tasks
+          {"->"} Import Data ... {"->"} Run through the wizard to import the
+          data
+        </p>
+        <p>From the import wizard:</p>
+        <p>
+          Data Source: select "Microsoft Excel" and choose excel version that
+          matches your imported workbook version. use the latest version from
+          the list if your workbook is more recent and cannot be found in the
+          list
+        </p>
+        <p>
+          Data Destination: select "Microsoft OLE DB Driver for SQL Server".
+          Then go to Properties to choose the type of connection (Windows
+          Authentication/SQL Server Authentiation) to use. To know your current
+          connection type, go to the SSMS Object Explorer menu {"->"} Connect
+          {"->"} Database Engine...
+        </p>
+      </>
+    ),
   },
   {
     que: `import tables from multiple excel workbooks`,
