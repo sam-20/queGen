@@ -23,7 +23,7 @@ import {
 import { useState, useEffect, useRef } from "react";
 import LayoutCSS from "./layout.module.css";
 
-function Layout() {
+function QuestionGenerator() {
   const [queTyp, setQueTyp] = useState(null); //stores the question type the user selected from the dropdown list
   const [queTxt, setQueTxt] = useState(""); //stores the question text of the randomly generated question number
   const [queCntxt, setQueCntxt] = useState(""); //stores the context of the question. This is useful for Mixed question domain
@@ -519,4 +519,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default QuestionGenerator;
