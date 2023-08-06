@@ -187,11 +187,11 @@ export const PBI = [
     ans: `highlight chart and choose Clustered for sidebyside or Stacked for vertical stacks`,
   },
   {
-    que: `pick/filter out only 2 bars out of a column chart and compare them. Or only 2 slices out of a pie chart and compare them`,
+    que: `pick/filter out only some specific bars out of a column chart for display and compare them. Or only 2 slices out of a pie chart and compare them`,
     ans: (
       <>
         <p>
-          hold ctrl and select the 2 or more bars/slices of the chart {"->"}{" "}
+          hold ctrl and select the 2 or more bars/slices of the chart {"->"}
           right click any of the bars/slices {"->"} Include
         </p>
         <p>
@@ -217,30 +217,6 @@ export const PBI = [
     ),
   },
 
-  /**************waterfall chart****************/
-  {
-    que: `create a waterfall chart`,
-    ans: (
-      <>
-        <p>1 categorical variable + 1 numerical variable</p>
-        <p>Catg1(Date) {"->"} Category</p>
-        <p>Num1 {"->"} Y-axis </p>
-      </>
-    ),
-  },
-
-  /**************funnel chart****************/
-  {
-    que: `create a funnel chart`,
-    ans: (
-      <>
-        <p>1 categorical variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Category</p>
-        <p>Num1 {"->"} Values </p>
-      </>
-    ),
-  },
-
   /**************histogram****************/
 
   /**************line chart****************/
@@ -250,16 +226,20 @@ export const PBI = [
       <>
         <p>1 or 2 categorical variable + 1 or more numerical variables</p>
 
+        <p>The line chart can be created into two ways.</p>
+
+        <p>
+          Option 1: XYSecondary which stands for x-axis, y-axis, secondary
+          y-axis
+        </p>
         <p>Catg1(date) {"->"} X-axis</p>
         <p>Num1 {"->"} Y-axis</p>
         <p>Num2,3,4, etc {"->"} Secondary y-axis</p>
 
-        <p>or</p>
+        <p>Option 2: XYlegend which stands for x-axis, y-axis, legend</p>
         <p>Catg1(date) {"->"} X-axis</p>
         <p>Num1 {"->"} Y-axis</p>
         <p>Catg2 {"->"} Legend</p>
-
-        <p>NB: to easily remember use: XYSecondaries, XYlegend</p>
       </>
     ),
   },
@@ -333,6 +313,30 @@ export const PBI = [
         <p>Catg1 {"->"} X-axis</p>
         <p>Catg2 {"->"} Legend</p>
         <p>Num1 {"->"} Y-axis</p>
+      </>
+    ),
+  },
+
+  /**************waterfall chart****************/
+  {
+    que: `create a waterfall chart`,
+    ans: (
+      <>
+        <p>1 categorical variable + 1 numerical variable</p>
+        <p>Catg1(Date) {"->"} Category</p>
+        <p>Num1 {"->"} Y-axis </p>
+      </>
+    ),
+  },
+
+  /**************funnel chart****************/
+  {
+    que: `create a funnel chart`,
+    ans: (
+      <>
+        <p>1 categorical variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Category</p>
+        <p>Num1 {"->"} Values </p>
       </>
     ),
   },
