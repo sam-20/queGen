@@ -57,13 +57,47 @@ export const PBI = [
     ),
   },
 
-  /**************column/bar chart****************/
+  /**************pie chart****************/
+  {
+    que: `create a pie chart`,
+    ans: (
+      <>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
+    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
+  },
+
+  /**************treemap****************/
+  {
+    que: `create a treemap`,
+    ans: (
+      <>
+        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>Catg1 {"->"} Category</p>
+        <p>Catg2 {"->"} Details</p>
+        <p>Num1 {"->"} Values</p>
+
+        <p>
+          NB: in a treemap the group at the top left corner has the largest
+          value and the right bottom corner has the lowest value
+        </p>
+      </>
+    ),
+  },
+
+  /**************column(vertical)/bar(horizontal) and stacked chart****************/
   {
     que: `create a bar/column chart`,
     ans: (
       <>
         <p>1 Categorical variable + 1 numerical variable</p>
-        <p>Use Stacked Column Chart:</p>
+        <p>Use Stacked Column Chart/ Stacked Bar Chart:</p>
         <p>Catg1 {"->"} X-axis</p>
         <p>Num1 {"->"} Y-axis</p>
       </>
@@ -72,6 +106,22 @@ export const PBI = [
   {
     que: `add labels to column(Bar)/stacked/ribbon chart`,
     ans: `Visualizations pane -> Format Visual tab -> Data Labels`,
+  },
+  {
+    que: `Sort the bars of a column/bar chart in descending order and ascending order of bar height`,
+    ans: null,
+  },
+  {
+    que: `Sort the bars of a column/bar chart in descending order and ascending order of axis labels`,
+    ans: null,
+  },
+  {
+    que: `sort the bars of the column/bar chart according to custom order of axis names`,
+    ans: null,
+  },
+  {
+    que: `Switch between column and bar chart`,
+    ans: null,
   },
   {
     que: `create a stacked column/bar chart`,
@@ -91,6 +141,10 @@ export const PBI = [
         <p>Num1 {"->"} Y-axis</p>
       </>
     ),
+  },
+  {
+    que: `switch the stacks of a stacked bar chart from vertical stacks to sidebyside stack and vice versa`,
+    ans: null,
   },
   {
     que: `pick/filter out only 2 bars out of a column chart and compare them. Or only 2 slices out of a pie chart and compare them`,
@@ -123,64 +177,31 @@ export const PBI = [
     ),
   },
 
-  /**************ribbon chart****************/
+  /**************waterfall chart****************/
   {
-    que: `create a ribbon chart`,
+    que: `create a waterfall chart`,
     ans: (
       <>
-        <p>2 or more categorical variables + 1 numerical variable</p>
-        <p>Catg1 {"->"} X-axis</p>
-        <p>Catg2 {"->"} Legend</p>
-        <p>Num1 {"->"} Y-axis</p>
+        <p>1 categorical variable + 1 numerical variable</p>
+        <p>Catg1(Date) {"->"} Category</p>
+        <p>Num1 {"->"} Y-axis </p>
       </>
     ),
   },
 
-  /**************pie chart****************/
+  /**************funnel chart****************/
   {
-    que: `create a pie chart`,
+    que: `create a funnel chart`,
     ans: (
       <>
-        <p>1 Categorical Variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Legend</p>
-        <p>Num1 {"->"} Values </p>
-      </>
-    ),
-  },
-  {
-    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
-    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
-  },
-
-  /**************donut chart****************/
-  {
-    que: `create a donut chart`,
-    ans: (
-      <>
-        <p>1 Categorical Variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Legend</p>
-        <p>Num1 {"->"} Values </p>
-      </>
-    ),
-  },
-
-  /**************treemap****************/
-  {
-    que: `create a treemap`,
-    ans: (
-      <>
-        <p>2 or more Categorical variables + 1 Numeric variable</p>
+        <p>1 categorical variable + 1 numerical variable</p>
         <p>Catg1 {"->"} Category</p>
-        <p>Catg2 {"->"} Details</p>
-        <p>Num1 {"->"} Values</p>
-
-        <p>
-          NB: in a treemap the group at the top left corner has the largest
-          value and the right bottom corner has the lowest value
-        </p>
+        <p>Num1 {"->"} Values </p>
       </>
     ),
   },
+
+  /**************histogram****************/
 
   /**************line chart****************/
   {
@@ -228,6 +249,20 @@ export const PBI = [
     ),
   },
 
+  /**************combo chart****************/
+  {
+    que: `create a combo chart`,
+    ans: (
+      <>
+        <p>1 or 2 categorical variable + 2 or more numerical variables</p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Column y-axis</p> : for the bars in the combo chart
+        <p>Num2 {"->"} Line y-axis</p> : for the lines in the combo chart
+        <p>Catg2 {"->"} Column legend</p> : to make the bars into stacked bars
+      </>
+    ),
+  },
+
   /**************area chart****************/
   {
     que: `create an area chart`,
@@ -249,39 +284,26 @@ export const PBI = [
     ),
   },
 
-  /**************combo chart****************/
+  /**************ribbon chart****************/
   {
-    que: `create a combo chart`,
+    que: `create a ribbon chart`,
     ans: (
       <>
-        <p>1 or 2 categorical variable + 2 or more numerical variables</p>
-        <p>Catg1(date) {"->"} X-axis</p>
-        <p>Num1 {"->"} Column y-axis</p> : for the bars in the combo chart
-        <p>Num2 {"->"} Line y-axis</p> : for the lines in the combo chart
-        <p>Catg2 {"->"} Column legend</p> : to make the bars into stacked bars
+        <p>2 or more categorical variables + 1 numerical variable</p>
+        <p>Catg1 {"->"} X-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+        <p>Num1 {"->"} Y-axis</p>
       </>
     ),
   },
 
-  /**************waterfall chart****************/
+  /**************donut chart****************/
   {
-    que: `create a waterfall chart`,
+    que: `create a donut chart`,
     ans: (
       <>
-        <p>1 categorical variable + 1 numerical variable</p>
-        <p>Catg1(Date) {"->"} Category</p>
-        <p>Num1 {"->"} Y-axis </p>
-      </>
-    ),
-  },
-
-  /**************funnel chart****************/
-  {
-    que: `create a funnel chart`,
-    ans: (
-      <>
-        <p>1 categorical variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Category</p>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
         <p>Num1 {"->"} Values </p>
       </>
     ),
