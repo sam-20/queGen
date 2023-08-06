@@ -226,8 +226,6 @@ export const PBI = [
       <>
         <p>1 or 2 categorical variable + 1 or more numerical variables</p>
 
-        <p>The line chart can be created into two ways.</p>
-
         <p>
           Option 1: XYSecondary which stands for x-axis, y-axis, secondary
           y-axis
@@ -269,6 +267,29 @@ export const PBI = [
     ),
   },
 
+  /**************area chart****************/
+  {
+    que: `create an area chart`,
+    ans: (
+      <>
+        <p>1 or 2 categorical variable + 1 or more numerical variables</p>
+
+        <p>
+          Option 1: XYSecondary which stands for x-axis, y-axis, secondary
+          y-axis
+        </p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Num2,3,4, etc {"->"} Secondary y-axis</p>
+
+        <p>Option 2: XYlegend which stands for x-axis, y-axis, legend</p>
+        <p>Catg1(date) {"->"} X-axis</p>
+        <p>Num1 {"->"} Y-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+      </>
+    ),
+  },
+
   /**************combo chart****************/
   {
     que: `create a combo chart`,
@@ -279,27 +300,6 @@ export const PBI = [
         <p>Num1 {"->"} Column y-axis</p> : for the bars in the combo chart
         <p>Num2 {"->"} Line y-axis</p> : for the lines in the combo chart
         <p>Catg2 {"->"} Column legend</p> : to make the bars into stacked bars
-      </>
-    ),
-  },
-
-  /**************area chart****************/
-  {
-    que: `create an area chart`,
-    ans: (
-      <>
-        <p>1 or 2 categorical variable + 1 or more numerical variables</p>
-
-        <p>Catg1(date) {"->"} X-axis</p>
-        <p>Num1 {"->"} Y-axis</p>
-        <p>Num2,3,4, etc {"->"} Secondary y-axis</p>
-
-        <p>or</p>
-        <p>Catg1(date) {"->"} X-axis</p>
-        <p>Num1 {"->"} Y-axis</p>
-        <p>Catg2 {"->"} Legend</p>
-
-        <p>NB: to easily remember use: XYSecondaries, XYlegend</p>
       </>
     ),
   },
