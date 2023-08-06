@@ -550,8 +550,7 @@ export const PBI = [
   },
   {
     que: `add a filter option to a card's value. 
-    Eg. first create a simple card to show the total sales. 
-    Second create a dynamic card to show the state with the highest sales`,
+    Eg. create a dynamic card to show the state with the highest sales`,
     ans: (
       <>
         <p>
@@ -577,6 +576,26 @@ export const PBI = [
       </>
     ),
   },
+  {
+    que: `create a multi-row card`,
+    ans: (
+      <>
+        <p>
+          The multi-row card allows you to create a list of items in the card
+          rather than a single value like the default Card visual. The list is
+          created using the same idea of pivot table row headers in excel.
+        </p>
+        <p>Catg1 (variable for row headers) {"->"} Fields </p>
+        <p>Num1, Num2, ... (variable for values) {"->"} Fields</p>
+        <p>
+          NB: First variable dragged onto Fields would display as the row
+          headers, subsequent variables would display as the values for those
+          row headers
+        </p>
+      </>
+    ),
+  },
+
   {
     que: `append data to an existing table in power bi whose charts have been designed. Charts should automatically update after adding data`,
     ans: null,
