@@ -402,19 +402,20 @@ export const PBI = [
         <p>Use map</p>
         <p>1 or more Categorical Variable + 0 or more numerical variable</p>
         <p>
-          NB: Kinds of variables you can use to show the geographical areas on
+          NB: Types of variables you can use to show the geographical areas on
           the map chart: country,city,state,region,pincode,postal code,latitude,
           longitude.
         </p>
-        <p>Catg1</p>
-        <p>Country,City,State,Region,pincode, postalcode {"->"} Location</p>
+        <p>
+          Catg1 (Country,City,State,Region,pincode, postalcode) {"->"} Location
+        </p>
         OR
         <p>longitude {"->"} Longitude</p>
         <p>latitude {"->"} Latitude</p>
         <p>----------------</p>
-        <p>Catg2</p>
         <p>
-          Region(N,S,E,W,C) or other categorical variable which is not Catg1
+          Catg2 (Region ie. N,S,E,W,C or other categorical variable which is not
+          Catg1)
           {"->"} Legend
         </p>
         <p>----------------</p>
