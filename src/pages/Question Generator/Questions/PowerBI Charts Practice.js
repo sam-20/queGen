@@ -57,9 +57,19 @@ export const PBI = [
     ),
   },
 
-  /**************pie chart****************/
+  /**************pie and donut chart****************/
   {
     que: `create a pie chart`,
+    ans: (
+      <>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `create a donut chart`,
     ans: (
       <>
         <p>1 Categorical Variable + 1 numerical variable</p>
@@ -293,18 +303,6 @@ export const PBI = [
         <p>Catg1 {"->"} X-axis</p>
         <p>Catg2 {"->"} Legend</p>
         <p>Num1 {"->"} Y-axis</p>
-      </>
-    ),
-  },
-
-  /**************donut chart****************/
-  {
-    que: `create a donut chart`,
-    ans: (
-      <>
-        <p>1 Categorical Variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Legend</p>
-        <p>Num1 {"->"} Values </p>
       </>
     ),
   },
