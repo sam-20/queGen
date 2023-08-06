@@ -505,7 +505,7 @@ export const PBI = [
     ans: (
       <>
         <p>
-          NB: A matrix chart works similar to pivot tables ie. use the same ide
+          NB: A matrix chart works similar to pivot tables ie. use the same idea
           of pivot table row headers, column headers and values to generate
           table data
         </p>
@@ -520,10 +520,10 @@ export const PBI = [
     ans: (
       <>
         <p>
-          Visualizations pane{"->"} Visual tab {"->"} Cell elements {"->"}{" "}
-          select series/column {"->"} toggle the kind of formatting you want to
-          do eg. data bars {"->"} click the 'fx' button under it to specific
-          which value ranges should satisfy the condition
+          Visualizations pane{"->"} Format Visual tab {"->"} Cell elements
+          {"->"} select series/column {"->"} toggle the kind of formatting you
+          want to do eg. data bars {"->"} click the 'fx' button under it to
+          specific which value ranges should satisfy the condition
         </p>
       </>
     ),
