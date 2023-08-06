@@ -121,7 +121,7 @@ export const PBI = [
   },
   {
     que: `Switch between column and bar chart`,
-    ans: null,
+    ans: `highlight graph and change to Stack Column Chart for column or Stacked Bar Chart for bar`,
   },
   {
     que: `create a stacked column/bar chart`,
@@ -144,7 +144,7 @@ export const PBI = [
   },
   {
     que: `switch the stacks of a stacked bar chart from vertical stacks to sidebyside stack and vice versa`,
-    ans: null,
+    ans: `highlight chart and choose Clustered for sidebyside or Stacked for vertical stacks`,
   },
   {
     que: `pick/filter out only 2 bars out of a column chart and compare them. Or only 2 slices out of a pie chart and compare them`,
@@ -535,12 +535,8 @@ export const PBI = [
     ),
   },
   {
-    que: ``,
-    ans: (
-      <>
-        <p></p>
-      </>
-    ),
+    que: `append data to an existing table in power bi whose charts have been designed. Charts should automatically update after adding data`,
+    ans: null,
   },
   {
     que: ``,
