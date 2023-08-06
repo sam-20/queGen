@@ -393,6 +393,16 @@ export const PBI = [
       </>
     ),
   },
+  {
+    que: `add animation to your scatter plot`,
+    ans: (
+      <>
+        <p>Num1 (in summarized form not distinct values) {"->"} X-axis</p>
+        <p>Num2 (in summarized form not distinct values) {"->"} Y-axis </p>
+        <p>Catg1 (date) {"->"} Play Axis</p>
+      </>
+    ),
+  },
 
   /**************basic and filled map****************/
   {
