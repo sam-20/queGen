@@ -369,10 +369,10 @@ export const PBI = [
         </p>
         <p>---------------</p>
         <p>1 numerical variable</p>
-        <p>Num1 {"->"} Value </p> --currently attained value
-        <p>Measure3 {"->"} Target value</p>
         <p>Measure1 {"->"} Minium value</p> -- optional
         <p>Measure2 {"->"} Maximum value</p> -- optional
+        <p>Measure3 {"->"} Target value</p>
+        <p>Num1 {"->"} Value </p> --currently attained value
       </>
     ),
   },
