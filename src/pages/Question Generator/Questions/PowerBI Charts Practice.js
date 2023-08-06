@@ -481,7 +481,7 @@ export const PBI = [
 
   /**************table and matrix chart****************/
   {
-    que: `create a table chart`,
+    que: `create a table chart NB: not a data table`,
     ans: (
       <>
         <p>X Categorical Variable + X numerical variable</p>
