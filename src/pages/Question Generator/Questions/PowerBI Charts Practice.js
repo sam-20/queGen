@@ -589,8 +589,8 @@ export const PBI = [
         <p>Num1, Num2, ... (variable for values) {"->"} Fields</p>
         <p>
           NB: First variable dragged onto Fields would display as the row
-          headers, subsequent variables would display as the values for those
-          row headers
+          headers, subsequent variables dragged would display as the values for
+          those row headers
         </p>
       </>
     ),
