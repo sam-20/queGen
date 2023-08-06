@@ -38,6 +38,27 @@ export const PBI = [
     ),
   },
   {
+    que: `view the data records of a selected area in a chart`,
+    ans: (
+      <>
+        <p>select portion of chart {"->"} Show Data Point As A Table</p>
+      </>
+    ),
+  },
+  {
+    que: `you opened the data records of a selected area in a chart. Now export that data`,
+    ans: (
+      <>
+        <p>
+          select portion of chart {"->"} Show Data Point As A Table {"->"} click
+          ... at top right of the table records {"->"} Export Data
+        </p>
+      </>
+    ),
+  },
+
+  /**************column/bar chart****************/
+  {
     que: `create a bar/column chart`,
     ans: (
       <>
@@ -49,7 +70,11 @@ export const PBI = [
     ),
   },
   {
-    que: `create a stacked column chart`,
+    que: `add labels to column(Bar)/stacked/ribbon chart`,
+    ans: `Visualizations pane -> Format Visual tab -> Data Labels`,
+  },
+  {
+    que: `create a stacked column/bar chart`,
     ans: (
       <>
         <p>2 or more Categorical variables + 1 Numerical variable</p>
@@ -66,45 +91,6 @@ export const PBI = [
         <p>Num1 {"->"} Y-axis</p>
       </>
     ),
-  },
-  {
-    que: `create a ribbon chart`,
-    ans: (
-      <>
-        <p>2 or more categorical variables + 1 numerical variable</p>
-        <p>Catg1 {"->"} X-axis</p>
-        <p>Catg2 {"->"} Legend</p>
-        <p>Num1 {"->"} Y-axis</p>
-      </>
-    ),
-  },
-  {
-    que: `add labels to column(Bar)/stacked/ribbon chart`,
-    ans: `Visualizations pane -> Format Visual tab -> Data Labels`,
-  },
-  {
-    que: `create a pie chart`,
-    ans: (
-      <>
-        <p>1 Categorical Variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Legend</p>
-        <p>Num1 {"->"} Values </p>
-      </>
-    ),
-  },
-  {
-    que: `create a donut chart`,
-    ans: (
-      <>
-        <p>1 Categorical Variable + 1 numerical variable</p>
-        <p>Catg1 {"->"} Legend</p>
-        <p>Num1 {"->"} Values </p>
-      </>
-    ),
-  },
-  {
-    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
-    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
   },
   {
     que: `pick/filter out only 2 bars out of a column chart and compare them. Or only 2 slices out of a pie chart and compare them`,
@@ -136,6 +122,49 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************ribbon chart****************/
+  {
+    que: `create a ribbon chart`,
+    ans: (
+      <>
+        <p>2 or more categorical variables + 1 numerical variable</p>
+        <p>Catg1 {"->"} X-axis</p>
+        <p>Catg2 {"->"} Legend</p>
+        <p>Num1 {"->"} Y-axis</p>
+      </>
+    ),
+  },
+
+  /**************pie chart****************/
+  {
+    que: `create a pie chart`,
+    ans: (
+      <>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+  {
+    que: `update data labels of the pie/donut chart slices ie. add or remove legend names, values`,
+    ans: `Visualizations pane -> Format Visual tab -> Detail Labels -> Label Contents`,
+  },
+
+  /**************donut chart****************/
+  {
+    que: `create a donut chart`,
+    ans: (
+      <>
+        <p>1 Categorical Variable + 1 numerical variable</p>
+        <p>Catg1 {"->"} Legend</p>
+        <p>Num1 {"->"} Values </p>
+      </>
+    ),
+  },
+
+  /**************treemap****************/
   {
     que: `create a treemap`,
     ans: (
@@ -152,6 +181,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************line chart****************/
   {
     que: `create a line chart`,
     ans: (
@@ -196,6 +227,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************area chart****************/
   {
     que: `create an area chart`,
     ans: (
@@ -215,6 +248,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************combo chart****************/
   {
     que: `create a combo chart`,
     ans: (
@@ -227,6 +262,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************waterfall chart****************/
   {
     que: `create a waterfall chart`,
     ans: (
@@ -237,6 +274,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************funnel chart****************/
   {
     que: `create a funnel chart`,
     ans: (
@@ -247,6 +286,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************gauge chart****************/
   {
     que: `create a gauge chart`,
     ans: (
@@ -281,6 +322,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************scatter plot****************/
   {
     que: `create a scatter plot`,
     ans: (
@@ -296,25 +339,8 @@ export const PBI = [
       </>
     ),
   },
-  {
-    que: `view the data records of a selected area in a chart`,
-    ans: (
-      <>
-        <p>select portion of chart {"->"} Show Data Point As A Table</p>
-      </>
-    ),
-  },
-  {
-    que: `you opened the data records of a selected area in a chart. Now export that data`,
-    ans: (
-      <>
-        <p>
-          select portion of chart {"->"} Show Data Point As A Table {"->"} click
-          ... at top right of the table records {"->"} Export Data
-        </p>
-      </>
-    ),
-  },
+
+  /**************basic and filled map****************/
   {
     que: `create a basic map`,
     ans: (
@@ -398,6 +424,8 @@ export const PBI = [
       </>
     ),
   },
+
+  /**************table and matrix chart****************/
   {
     que: `create a table chart`,
     ans: (
@@ -444,6 +472,8 @@ export const PBI = [
     que: `change the number of decimal places for a numerical column data in a table or matrix chart`,
     ans: `Visualizations pane-> Format Visual tab -> Visual -> Specific Column -> choose column to apply units to -> Value Decimal Places`,
   },
+
+  /**************card****************/
   {
     que: `create a card`,
     ans: (
