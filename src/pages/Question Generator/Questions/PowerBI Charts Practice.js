@@ -119,11 +119,41 @@ export const PBI = [
   },
   {
     que: `Sort the bars of a column/bar chart in descending order and ascending order of bar height`,
-    ans: null,
+    ans: (
+      <>
+        <p>1. highlight graph</p>
+        <p>
+          2. click the ellipsis (...) icon that appears next to the highlighted
+          chart {"->"} Sort Axis
+        </p>
+        <p>3. in the Sort Axis menu: </p>
+        <p>
+          a. check the variable you want to sort (NB: to sort according to axis
+          labels choose the categorical variable. To sort accoridng to the bar
+          height choose the numerical variable)
+        </p>
+        <p>b. check the sort type ie. Sort Descending or Sort Ascending</p>
+      </>
+    ),
   },
   {
     que: `Sort the bars of a column/bar chart in descending order and ascending order of axis labels`,
-    ans: null,
+    ans: (
+      <>
+        <p>1. highlight graph</p>
+        <p>
+          2. click the ellipsis (...) icon that appears next to the highlighted
+          chart {"->"} Sort Axis
+        </p>
+        <p>3. in the Sort Axis menu: </p>
+        <p>
+          a. check the variable you want to sort (NB: to sort according to axis
+          labels choose the categorical variable. To sort accoridng to the bar
+          height choose the numerical variable)
+        </p>
+        <p>b. check the sort type ie. Sort Descending or Sort Ascending</p>
+      </>
+    ),
   },
   {
     que: `sort the bars of the column/bar chart according to custom order of axis names`,
