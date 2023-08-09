@@ -9,6 +9,7 @@ import {
   SQLP,
   DA,
   GI,
+  MA,
   SQLI,
   OP,
   NP,
@@ -92,6 +93,7 @@ function QuestionGenerator() {
     { title: "Nato Phonetic Alphabet Practice", content: NP, context: "" },
     { title: "SAP Business Objects Practice", content: BO, context: "" },
     { title: "Choosing Charts Practice", content: CC, context: "" },
+    { title: "Ms Access DB Practice", content: MA, context: "Access" },
   ];
 
   useEffect(() => {

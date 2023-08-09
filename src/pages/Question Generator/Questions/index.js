@@ -16,6 +16,7 @@ import { BO } from "./SAP Business Objects";
 import { CC } from "./Choosing Charts Practice";
 import { PP } from "./Pivot Tables Practice";
 import { SSIS } from "./SQL SSIS Practice";
+import { MA } from "./Ms Acess DB Practice";
 export {
   BAQ,
   PQ,
@@ -24,6 +25,7 @@ export {
   EC,
   SQLP,
   DA,
+  MA,
   GI,
   SQLI,
   OP,

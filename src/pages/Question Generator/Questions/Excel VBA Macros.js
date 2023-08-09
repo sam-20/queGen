@@ -1578,7 +1578,9 @@ export const VBA = [
       </>
     ),
   },
+  { que: `call a macro procedure from another proedure`, ans: null },
   { que: `create a userform with a functioning button`, ans: null },
+  { que: `use the button in a userform to open another form`, ans: null },
   { que: `create a userform with functioning radio buttons`, ans: null },
   { que: `create a userform with a functioning checkboxes`, ans: null },
   { que: `create a userform with a functioning listbox`, ans: null },
