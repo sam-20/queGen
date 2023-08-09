@@ -700,6 +700,10 @@ export const VBA = [
     ),
   },
   {
+    que: `open a closed book using a dialog`,
+    ans: `use criteria counting tool from harrow documents`,
+  },
+  {
     que: `reference or perform an action in the sheet of an opened workbook which is currently not the active one`,
     ans: (
       <>
@@ -1306,10 +1310,14 @@ export const VBA = [
     ),
   },
   {
-    que: `execute an excel function eg. trim, left, etc. using vba code instead. 
-    NB: not all excel functions are inbuilt in vba eg. sumifs, etc.`,
+    que: `execute an excel function eg. trim, left, etc. using vba code instead.`,
     ans: (
       <>
+        <p>NB: not all excel functions are inbuilt in vba eg. sumifs, etc</p>
+        <p>if the excel function is not inbuilt eg. sumif, then use </p>
+        <p>WorksheetFunction.[functionname] eg.</p>
+        <p>WorksheetFunction.SumIf</p>
+
         <p>'assigning sample data for test</p>
         <p>Range("A1") = " book"</p>
         <p>Range("A2") = 3</p>
