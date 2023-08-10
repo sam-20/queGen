@@ -1315,8 +1315,10 @@ export const VBA = [
       <>
         <p>NB: not all excel functions are inbuilt in vba eg. sumifs, etc</p>
         <p>if the excel function is not inbuilt eg. sumif, then use </p>
+        <p>Application.WorksheetFunction.[functionname]</p>
+        <p>or</p>
         <p>WorksheetFunction.[functionname] eg.</p>
-        <p>WorksheetFunction.SumIf</p>
+        <p>WorksheetFunction.CountBlank(Range("A1:A10"))</p>
 
         <p>'assigning sample data for test</p>
         <p>Range("A1") = " book"</p>
@@ -1649,7 +1651,7 @@ export const VBA = [
         <p>' ----NB: clear methods -------</p>
         <p>
           'Range("A1:D5").ClearContents 'Clears only cell contents without
-          touching formatting{" "}
+          touching formatting
         </p>
         <p>'Range("A1:D5").ClearFormats 'Clears only formatting</p>
         <p>
