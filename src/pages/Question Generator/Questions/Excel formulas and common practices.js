@@ -600,6 +600,10 @@ export const EF = [
     ),
   },
   {
+    que: `perform a vlookup on data from another workbook`,
+    ans: null,
+  },
+  {
     que: `a col A has corresponding values in col B. what will be the col B value of an item which is not in col A but falls inside the range of values in A`,
     ans: `vlookup with approximate match.`,
   },
