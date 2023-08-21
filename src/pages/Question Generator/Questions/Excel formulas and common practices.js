@@ -1,4 +1,5 @@
 export const EF = [
+  { que: "add a hyperlink to a cell value", ans: null },
   { que: `remove white spaces from data`, ans: `TRIM` },
   { que: `capitalize the first letter of every word`, ans: `PROPER` },
   { que: `capitalize every letter`, ans: `UPPER` },
