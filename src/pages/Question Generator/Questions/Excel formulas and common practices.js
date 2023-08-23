@@ -605,6 +605,14 @@ export const EF = [
     ans: null,
   },
   {
+    que: `fill down formulas without dragging or double-clicking bottom right edge of cell`,
+    ans: `select cells which you are filling including the first cell containing formula -> Ctrl+D to fill a column down/ Ctrl+R to fill the row right`,
+  },
+  {
+    que: `unhide all hidden columns`,
+    ans: `keep entire worksheet data selected -> right-click any column header(above the header text wehere you have A B C,etc.) -> Unhide`,
+  },
+  {
     que: `a col A has corresponding values in col B. what will be the col B value of an item which is not in col A but falls inside the range of values in A`,
     ans: `vlookup with approximate match.`,
   },
@@ -984,6 +992,15 @@ export const EF = [
       </>
     ),
   },
+  {
+    que: `move to cell A1 from any position in the worksheet`,
+    ans: `Ctrl+Home`,
+  },
+  {
+    que: `move to last cell in a column that contains data or formatting`,
+    ans: `Ctrl+End`,
+  },
+
   {
     que: `validate column data to ensure user cannot leave cell null`,
     ans: (
