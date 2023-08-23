@@ -597,6 +597,10 @@ export const EF = [
         <p>t - table</p>
         <p>c - column number starting from 1</p>
         <p>m - match type ie. approx or exact</p>
+        <p>
+          NB:vlookup only works when the position of the lookup array comes
+          before the position of the return array
+        </p>
       </>
     ),
   },
@@ -627,8 +631,8 @@ export const EF = [
         </p>
         <p>Shortcut for xlookup parameters: lv,lva,fra</p>
         <p>lv- lookup value</p>
-        <p>lva - lookup value array</p>
-        <p>fra - final result's array</p>
+        <p>lva - lookup value array eg. $B:$B or $B10:$B23</p>
+        <p>fra - final result's array eg. $C:$C or $C10:$C23</p>
       </>
     ),
   },

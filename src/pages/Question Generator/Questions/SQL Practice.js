@@ -257,6 +257,21 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `create a table with one column being the computation of another`,
+    ans: (
+      <>
+        <p>**MS SQL SERVER</p>
+        <p>CREATE TABLE GFG_user</p>
+        <p> (</p>
+        <p>Id INT NOT NULL,Dt DATE,</p>
+        <p>
+          Address VARCHAR(100),Dt_FORMATTED AS (convert(varchar(255), dt, 104)){" "}
+        </p>
+        <p>)</p>
+      </>
+    ),
+  },
+  {
     que: `update a table's name`,
     ans: (
       <>
@@ -1274,6 +1289,15 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>GROUP BY country </p>
         <p>HAVING population {"<"} 100</p>
         <p>ORDER BY population DESC, country ASC</p>
+
+        <p>or</p>
+        <p>
+          select student.id, student.fname, max(fees.date_paid) from student
+        </p>
+        <p>left join academic_year on academic_year.student_id = student.id</p>
+        <p>left join fees on fees.student_id = student.id</p>
+        <p>where student.age {">"} 20</p>
+        <p>group by student.id, student.fname</p>
       </>
     ),
   },
@@ -2223,4 +2247,5 @@ Useful when database cannot be for eg. dropped due to active connections using i
  https://www.youtube.com/watch?v=6_95vbBrrXI
  https://www.w3schools.com/sql/sql_ref_sqlserver.asp
  https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
+ https://www.geeksforgeeks.org/how-to-specify-a-date-format-on-creating-a-table-and-fill-it-in-sql/
  */
