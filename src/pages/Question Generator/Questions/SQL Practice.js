@@ -670,6 +670,14 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `select the first non-null value in a list`,
+    ans: (
+      <>
+        <p>SELECT COALESCE (NULL, 1, 2, 'W3Schools.com')</p>
+      </>
+    ),
+  },
+  {
     que: `select column data in a specified datatype's format`,
     ans: (
       <>
