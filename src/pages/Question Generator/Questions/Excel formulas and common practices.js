@@ -10,6 +10,7 @@ export const EF = [
   { que: `extract the n characters inside a cell content`, ans: `MID` },
   { que: `extract text from the end of a text string`, ans: `TEXTAFTER` },
   { que: `join multiple cell values`, ans: `CONCAT or &` },
+  { que: `join multiple cell values with delimeter`, ans: `TEXTJOIN` },
   {
     que: `split a column data into separate cell values. eg. split the customer name column into first name and last name colums`,
     ans: `First insert the empty columns to store the splitted values.Lets assume
@@ -587,6 +588,12 @@ export const EF = [
     ans: (
       <>
         <p>
+          NB: For the column that would contain the ginal lookup result, always
+          format that entire column as a number to avoid the column's cell
+          values returning the vlookup formula instead of the result due to the
+          column being formatted as text.
+        </p>
+        <p>
           vlookup([whose value are we searching for ie. lookup value], [in which
           table are we searching], [the item we want to pull out, what is its
           column number starting from 1?], [do we want the exact match for that
@@ -599,7 +606,7 @@ export const EF = [
         <p>m - match type ie. approx or exact</p>
         <p>
           NB:vlookup only works when the position of the lookup array comes
-          before the position of the return array
+          before the position of the return array.
         </p>
       </>
     ),

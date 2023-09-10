@@ -807,6 +807,41 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `sort data neither by asc or desc order but with a custom sort preference`,
+    ans: (
+      <>
+        <p>/*</p>
+        <p>select * from table_name</p>
+        <p>order by case</p>
+        <p>when column_field = "value1" then priority1</p>
+        <p>when column_field = "value2" then priority2</p>
+        <p>when column_field = "value3" then priority3</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>else priorityN</p>
+        <p>end asc</p>
+        <p>*/</p>
+
+        <p>eg.</p>
+        <p>SELECT * FROM sales$</p>
+        <p>-- defining order of sort</p>
+        <p>ORDER BY CASE</p>
+        <p>WHEN Branch = 'B' then 1</p>
+        <p>WHEN Branch = 'C' then 2</p>
+        <p>WHEN Branch = 'A' then 3</p>
+        <p>
+          ELSE 4 --if the column value's sort position is not defined, it falls
+          here. ie. it D, E, G, etc.
+        </p>
+        <p>
+          END ASC --sort type for remaining column values whose sort positions
+          are not defined{" "}
+        </p>
+      </>
+    ),
+  },
+  {
     que: `fetch data using all the comparison operators`,
     ans: (
       <>
