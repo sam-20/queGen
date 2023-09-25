@@ -549,6 +549,10 @@ export const PBI = [
     ),
   },
   {
+    que: `remove the field name which appears beneath the card value`,
+    ans: `Visualizations -> Visual -> Callout Value -> Category label`,
+  },
+  {
     que: `add a filter option to a card's value. 
     Eg. create a dynamic card to show the state with the highest sales`,
     ans: (

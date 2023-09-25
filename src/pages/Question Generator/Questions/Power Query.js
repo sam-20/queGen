@@ -316,7 +316,15 @@ export const PQ = [
   },
   {
     que: `replace all errors in a column`,
-    ans: `Transform tab -> Any Column group -> Replace Values -> Replace Errors`,
+    ans: (
+      <>
+        <p>
+          Transform tab {"->"} Any Column group {"->"} Replace Values {"->"}
+          Replace Errors
+        </p>
+        <p>https://learn.microsoft.com/en-us/power-query/dealing-with-errors</p>
+      </>
+    ),
   },
   {
     que: `replace only one column value with new value`,
@@ -370,5 +378,31 @@ export const PQ = [
     Click data type icon (next to date col name) -> 
     Using Locale … -> Change Data Type to Date -> 
     Change Locale to the country in which the date is originally formatted. `,
+  },
+  {
+    que: `enable the data profiling tools`,
+    ans: (
+      <>
+        <p>
+          View tab {"->"} Data Preview group {"->"} check Column Distribution,
+          Column Profile, Column Quality boxes
+        </p>
+        <p>
+          NB: From the profiling tools tab, Distinct shows how many values are
+          in the column if you remove the duplicate, while Unique shows how many
+          values appeared just once.
+        </p>
+        <p>Eg. given a column with values: Sam, Matt, Matt, John, Mary, Sam</p>
+        <p>Distinct values {"->"} Sam,Matt,John,Mary(4)</p>
+        <p>Unique values {"->"} Mary, John (2)</p>
+        <p>
+          Column Distribution graph shows the frequency of the columns values in
+          descending order of frequency
+        </p>
+        <p>
+          https://learn.microsoft.com/en-us/power-query/data-profiling-tools#column-quality
+        </p>
+      </>
+    ),
   },
 ];
