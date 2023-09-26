@@ -12,4 +12,21 @@ export const PDX = [
       </>
     ),
   },
+  {
+    que: `perform an excel vlookup equivalent in dax`,
+    ans: (
+      <>
+        <p>
+          = lookupvalue(Result_ColumnName, Search_ColumnName1, Search_Value1,
+          ....,[Alternate_Result])
+        </p>
+        <p>Result_ColumnName = the result value's col name</p>
+        <p>
+          Search_ColumnName1 = the lookup value's matching column name in the
+          result table
+        </p>
+        <p>Search_Value1 = col name of the lookup value</p>
+      </>
+    ),
+  },
 ];
