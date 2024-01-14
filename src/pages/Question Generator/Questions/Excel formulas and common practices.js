@@ -971,10 +971,11 @@ export const EF = [
           highlight the array or table without their headers.
         </p>
         <p>
-          2. Rather than inputting {`=VALUE(A2)>20`} in the formula box, this
+          2. Rather than inputting eg. {`=VALUE(A2)>20`} or{" "}
+          {"=IF(I2<>I1,IF(J1=“”,TRUE,NOT(J1)),J1)"} in the formula box, this
           time you place $ before the cell reference that was used in the
           formula ie.
-          {`=VALUE($A2)>20`}
+          {`=VALUE($A2)>20`} or {"=IF($I2<>$I1,IF($J1=“”,TRUE,NOT($J1)),$J1)"}
         </p>
       </>
     ),

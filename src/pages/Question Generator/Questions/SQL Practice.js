@@ -224,6 +224,9 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>age TINYINT NOT NULL, </p>
         <p>dob DATE,</p>
         <p>netWorth DECIMAL (10, 2), </p>
+        /*decimal([precision],[scale]) precision = the total number of digits on
+        both sides of the decimal point (10).Scale number of digits to the right
+        of the decimal (2)*/
         <p>
           employerID INT FOREIGN KEY REFERENCES employers(id) ON DELETE CASCADE
           ON UPDATE CASCADE
