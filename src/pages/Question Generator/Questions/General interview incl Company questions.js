@@ -48,7 +48,6 @@ export const GI = [
     que: `what interests you about this field or industry and why have you decided to apply for a job in this industry`,
     ans: null,
   },
-  { que: `•	` },
   {
     que: `Can you tell us what you know so far about the role.
     In other words, what are the duties of the job you are applying for?`,

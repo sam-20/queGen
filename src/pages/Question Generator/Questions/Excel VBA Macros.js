@@ -115,6 +115,32 @@ export const VBA = [
     ),
   },
   {
+    que: `get the value, cell address, row number, column number of the active cell or range`,
+    ans: (
+      <>
+        <p>MsgBox ActiveCell.Address</p>
+        <p>MsgBox ActiveCell.Value</p>
+        <p>MsgBox ActiveCell.Row</p>
+        <p>MsgBox ActiveCell.Column</p>
+      </>
+    ),
+  },
+  {
+    que: `reference/get position of other cells using the active cell`,
+    ans: (
+      <>
+        <p>
+          ActiveCell(1,1) 'NB: this is always the active cell regardless the
+          position which implies ActiveCell.Value="Hiii" can also be written as
+          ActiveCell(1,1).Value = "Hiii"
+        </p>
+        <p>
+          ActiveCell(2,1).Value = "Hello" 'move one row down the active cell
+        </p>
+      </>
+    ),
+  },
+  {
     que: `access or perform an action on the currently selected cell`,
     ans: (
       <>

@@ -2270,9 +2270,11 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ans: null,
   },
   { que: `events (MySQL)`, ans: `` },
+  { que: `commit and rollback`, ans: null },
 ];
 
 /**
+ https://www.digitalocean.com/community/tutorials/sql-commit-sql-rollback
  https://www.youtube.com/watch?v=m4RtVdluNPM
  https://www.simplilearn.com/tutorials/sql-tutorial/schema-in-sql#:~:text=DevelopmentExplore%20Program-,What%20is%20Schema%20in%20SQL%3F,user%20who%20constructs%20the%20object.
  https://learn.microsoft.com/en-us/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16

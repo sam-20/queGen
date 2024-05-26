@@ -605,10 +605,12 @@ export const PBI = [
     ans: null,
   },
   {
-    que: ``,
+    que: `prevent slicer affecting specific or all visuals`,
     ans: (
       <>
-        <p></p>
+        <p>
+          select slicer {"->"} Format Menu {"->"} Edit Interactions
+        </p>
       </>
     ),
   },
