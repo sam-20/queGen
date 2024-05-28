@@ -462,6 +462,63 @@ function QuestionGenerator() {
             >
               {"("}Recommended for interview questions{")"}
             </span>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  color: "grey",
+                  paddingTop: 5,
+                }}
+              >
+                NB: Before interview
+              </span>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  color: "grey",
+                  paddingTop: 5,
+                }}
+              >
+                All phones on silence
+              </span>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  color: "grey",
+                  paddingTop: 5,
+                }}
+              >
+                Strong internet connection
+              </span>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  color: "grey",
+                  paddingTop: 5,
+                }}
+              >
+                Prepare book and pen to note down points
+              </span>
+              <span
+                style={{
+                  fontSize: 12,
+                  fontWeight: "bold",
+                  fontStyle: "italic",
+                  color: "grey",
+                  paddingTop: 5,
+                }}
+              >
+                Have CV opened before you
+              </span>
+            </div>
           </div>
 
           <div style={{ display: "flex", marginTop: 20 }}>
