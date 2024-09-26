@@ -690,6 +690,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
+    que: `convert a value from one data type to another.`,
+    ans: `convert?`,
+  },
+  {
     que: `select multiple columns data from a table`,
     ans: `SELECT [columnName1],[columnName2],... from [tableName]`,
   },

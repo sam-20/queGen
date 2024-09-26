@@ -433,7 +433,17 @@ export const EF = [
   },
   {
     que: `calculate someone's age (in years) from their date of birth`,
-    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "Y")`,
+    ans: (
+      <>
+        <p>
+          DATEDIF(DOB/start_Date, today's date/end_Date, "Y") --returns #NUM!
+          error if person is less than a year old
+        </p>
+        <p>INT(YEARFRAC(DOB/startDate,Today()/endDate))</p> --returns 0 is
+        person is less than a year old
+        <p></p>
+      </>
+    ),
   },
   {
     que: `calculate someone's age (in months) from their date of birth`,
@@ -442,6 +452,10 @@ export const EF = [
   {
     que: `calculate someone's age (in days) from their date of birth`,
     ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "D")`,
+  },
+  {
+    que: `calculate someone's age at a certain date. eg. my age at 22/04/2016`,
+    ans: `DATEDIF(birth_date, as_of_date, "y") or ROUNDDOWN((as_of_date - birth_date)/365.25,0)`,
   },
   { que: `generate a list of random dates within a given period`, ans: null },
   {
