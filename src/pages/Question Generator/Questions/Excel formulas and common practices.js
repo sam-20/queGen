@@ -286,6 +286,14 @@ export const EF = [
     ans: `(3+ cols under consideration): AVERAGEIFS`,
   },
   {
+    que: `utilise the subtotal function`,
+    ans: null,
+  },
+  {
+    que: `utilise the sumproduct function`,
+    ans: `https://www.youtube.com/watch?v=5oge0jGYnuI`,
+  },
+  {
     que: `how do you reference an entire column/row without the header column/row`,
     ans: (
       <>
@@ -383,11 +391,11 @@ export const EF = [
   },
   {
     que: `add n years to a date`,
-    ans: `EDATE(date, no of years*12)`,
+    ans: `EDATE(date, 12*no of years)`,
   },
   {
     que: `subtract n years from a date`,
-    ans: `EDATE(negative value of the no of years*12)`,
+    ans: `EDATE(date, 12*negative value of the no of years)`,
   },
   {
     que: `calculate the days difference between 2 dates/ calculate someone's age (in days) from their date of birth`,
@@ -487,7 +495,17 @@ export const EF = [
   {
     que: `While in the current workbook, load its current table/range data directly into power query without using 'Get Data'
     and having to go browse and select the excel file`,
-    ans: `select any data cell/highlight entire data -> right click -> Get Data from Table/Range`,
+    ans: (
+      <p>
+        {
+          "select any data cell/highlight entire data -> right click -> Get Data from Table/Range"
+        }
+        or
+        {
+          "select table/range -> Data group -> Get & Transform Data group -> From Table/Range"
+        }
+      </p>
+    ),
   },
   {
     que: `resize a table`,
