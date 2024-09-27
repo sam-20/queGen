@@ -7,7 +7,12 @@
 export const GI = [
   {
     que: `****Tell me about yourself****`,
-    ans: `Yes. Thank you. I am Samuel Asare-Botwe from Ghana and I have a background in data analysis 
+    ans: `
+    1. Share your work journey, mentioning the explicit experience you built up that would help with this job.
+    2. Tell them about your passions and h obbies and what skills they built up.
+    3. Aim to keep this under 5 minutes
+
+    Yes. Thank you. I am Samuel Asare-Botwe from Ghana and I have a background in data analysis 
     with over 4 years of experience in the field. I graduated with a masters degree in Data Science and Analytics 
     and I have worked in various industries including education and government. I specialise in 
     data cleaning, analysis and visualisation using tools like excel, power bi and sql and 
@@ -127,6 +132,10 @@ export const GI = [
   {
     que: `***Do you have any questions for me?***`,
     ans: `
+    1. Use this time very wisely. It's a great way of showing your research.
+    2. Select 3-5 very precise and important questions.
+    3. Ask them politely and with respect
+
     •	Can you please tell me more about the day-to-day responsibilities of
     the role? Are there any other duties which are not included in the description?
     •	Can you please tell me more about the team I would be working with?
@@ -169,8 +178,13 @@ export const GI = [
     `,
   },
   {
-    que: `why do you want to work here?`,
-    ans: `First and foremost I am very passionate about providing support to
+    que: `why do you want to work for this company?`,
+    ans: `
+    1. Show you've done your research, mention things you really like
+    2. Relate it to the position and how you align with it.
+    3. Be passionate and excited.
+
+    First and foremost I am very passionate about providing support to
     people who go through struggles so be it health or finance because I come from Ghana
     and i grew up in a community where the standard of living was not particularly great and this
     burdened me a lot so. So reading through the job description and responsibilities of the successful candidate,
@@ -191,6 +205,14 @@ export const GI = [
     the role and the skills needed, it matched the expertise I had so it felt like the
     perfect fit to work for the NHS SCW.
   `,
+  },
+  {
+    que: `Why did you want to leave your current position?/ Why are you leaving your current position?`,
+    ans: `
+    1. Flip the question and talk positively about your current place of work
+    2. But highlight how you wanted a new challenge/improve areas of your skillset
+    3. Discuss the importance of growth and improvement with new challenges. 
+    `,
   },
   {
     que: `Why have you decided to apply here and why should we select you?`,
@@ -273,6 +295,14 @@ export const GI = [
   gives me a unique trait of establishing good working relationships while delivering solutions.`,
   },
   {
+    que: `what sets you apart from other candidates?`,
+    ans: `
+    1. Talk about your top strengths and ensure you relate them back to the role
+    2. Discuss any unique strengths and how you built them
+    3. Even bring in your extensive research about the company
+    `,
+  },
+  {
     que: `Do you have any technical skills? In other words, what are your technical skills?`,
     ans: `I have analytical skills from the use of tools 
     like excel, sql and power BI which I gained from my postgraduate studies 
@@ -289,8 +319,23 @@ export const GI = [
   to know more because I am always willing to overcome the hurdle in order to progress
   onto the next stage of my life. Another strength I'd say I possess is my humility and respect. 
   It allows me to establish good relations with people.
-  My weakness would probably be my cooking. It's terrible.
-  `,
+  My weakness would probably be my cooking. It's terrible.`,
+  },
+  {
+    que: `what are the main strengths you'd bring to us?`,
+    ans: `
+    1. Discuss your main strengths in relation to the role
+    2. Talk about any experience and how these developed over time
+    3. Share how you think these strengths will directly benefit them
+    `,
+  },
+  {
+    que: `what would you say are your weaknesses and how would you improve them?`,
+    ans: `
+    1. Be honest, share actual weaknesses not "I work too hard"
+    2. Ensure the weakness isn't a core skill of the role
+    3. Show them the action steps you have in place to improve it
+    `,
   },
   {
     que: `what would your co-workers say about you?`,
@@ -328,6 +373,29 @@ export const GI = [
   },
 
   {
+    que: `Tell me a time when you couldn't meet a deadline and how you decided to handle it`,
+    ans: `
+    1. discuss honestly how things didn't go as you expected
+    2. share how you reflected on this and learnt a lesson
+    3. explain how you would handled it with this new knowledge
+    `,
+  },
+  {
+    que: `How do you deal with pressure or stressful situations?`,
+    ans: `
+    1. Share an instance when you remained calm despite the turmoil
+    2. Discuss how it's been a continuous journey of improvement and talk about how you've learnt with every new experience
+    `,
+  },
+  {
+    que: `What is the hardest problem you've ever tackled?`,
+    ans: `
+    1. Explain the caliber of the problem and its importance
+    2. Discuss how you approached it despite the difficulty
+    3. Explain clearly how you solved it and the impact that had
+    `,
+  },
+  {
     que: ` Can you give us an example of where you have had to work across teams or departments to achieve a 
     successful outcome and tell us what you did to ensure that communication was effective? Please state challenges and outcome.`,
     ans: ``,
@@ -338,6 +406,14 @@ export const GI = [
     Generally, a stakeholder will be difficult because they are not comfortable with a few things in the project.
     So I will listen to their point of view with patience and not close them off in their conversation. If after further discussion, 
     we haven’t reached an agreement, I’d find out a way to meet them personally and have a one on one discussion`,
+  },
+  {
+    que: `Describe a situation where you had to handle multiple responsibilities. How did you manage your time`,
+    ans: `
+    1. Describe how you were organised and prepared
+    2. Discuss what techniques you used to multi task.
+    3. Use a specific example and discuss the impact of the result.
+    `,
   },
   {
     que: `How would you handle a challenging client?`,
@@ -352,6 +428,14 @@ export const GI = [
     Generally, a stakeholder will be difficult because they are not comfortable with a few things in the project.
     So I will listen to their point of view with patience and not close them off in their conversation. If after further discussion, 
     we haven’t reached an agreement, I’d find out a way to meet them personally and have a one on one discussion`,
+  },
+  {
+    que: `share an example of when you were working with someone who's difficult. How did you handle working with them?`,
+    ans: `
+    1. Explain how you communicated very clearly with them to ensure nothing was missed
+    2. Share that you went in with empathy as you never know what others are going through
+    3. Discuss the common ground you reached and what you learned from it.
+    `,
   },
   {
     que: `what are your salary expectations?`,
