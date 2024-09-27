@@ -1,5 +1,8 @@
 export const EF = [
-  { que: "add a hyperlink to a cell value", ans: null },
+  {
+    que: "add a hyperlink to a cell value",
+    ans: `select cell -> Insert group -> Links tab`,
+  },
   { que: `remove white spaces from data`, ans: `TRIM` },
   { que: `capitalize the first letter of every word`, ans: `PROPER` },
   { que: `capitalize every letter`, ans: `UPPER` },
@@ -20,7 +23,8 @@ export const EF = [
     and lastName. However, if you want to have overwrite the fullName col and only 
     have firstName and lastName, then you insert only 1 col after fullName to hold the
     lastName since firstName will overwrite the fullName col. After inserting, 
-    highlight col to split -> Data tab -> Data Tools group -> Text to Columns
+    highlight col to split -> Data tab -> Data Tools group -> Text to Columns.
+    NB: remember to select 'Next' in the dialog that appears in order to select the destination cell of your results
     `,
   },
   {
@@ -363,6 +367,10 @@ export const EF = [
   { que: `extract the day number from a given date`, ans: `DAY` },
   { que: `extract the month number from a given date`, ans: `MONTH` },
   { que: `extract the year from a given date`, ans: `YEAR` },
+  {
+    que: `convert a date formatted as text into a date datatype`,
+    ans: `DATEVALUE()`,
+  },
   { que: `create a date using a formula`, ans: `DATE` },
   { que: `add n days to today's date`, ans: `TODAY()+n` },
   { que: `subtract n days from today's date`, ans: `TODAY()-n` },
@@ -380,6 +388,22 @@ export const EF = [
   {
     que: `subtract n years from a date`,
     ans: `EDATE(negative value of the no of years*12)`,
+  },
+  {
+    que: `calculate the days difference between 2 dates/ calculate someone's age (in days) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "D")`,
+  },
+  {
+    que: `calculate the weeks difference between 2 dates/ calculate someone's age (in weeks) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "D")/7`,
+  },
+  {
+    que: `calculate the months difference between 2 dates/ calculate someone's age (in months) from their date of birth`,
+    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "M")`,
+  },
+  {
+    que: `calculate the years difference between 2 dates/ calculate someone's age at a certain date. eg. my age at 22/04/2016`,
+    ans: `DATEDIF(birth_date, as_of_date, "y") or ROUNDDOWN((as_of_date - birth_date)/365.25,0)`,
   },
   {
     que: `what is the number of working days ie.(excl. Sat & Sun) or weekdays between 2 dates not considering holidays`,
@@ -444,18 +468,6 @@ export const EF = [
         <p></p>
       </>
     ),
-  },
-  {
-    que: `calculate someone's age (in months) from their date of birth`,
-    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "M")`,
-  },
-  {
-    que: `calculate someone's age (in days) from their date of birth`,
-    ans: `DATEDIF(DOB/start_Date, today's date/end_Date, "D")`,
-  },
-  {
-    que: `calculate someone's age at a certain date. eg. my age at 22/04/2016`,
-    ans: `DATEDIF(birth_date, as_of_date, "y") or ROUNDDOWN((as_of_date - birth_date)/365.25,0)`,
   },
   { que: `generate a list of random dates within a given period`, ans: null },
   {
