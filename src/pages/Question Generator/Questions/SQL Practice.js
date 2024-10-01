@@ -4,9 +4,8 @@ export const SQLP = [
     ans: (
       <>
         <p>**MS SQL SERVER**</p>
-        <p>SELECT name FROM master.sys.databases</p>
+        <p>SELECT name FROM sys.databases</p> {"or master.sys.databases"}
         <p>WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb');</p>
-
         <p>**MySQL**</p>
         <p>SHOW DATABASES;</p>
       </>
@@ -266,10 +265,10 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>**MS SQL SERVER</p>
         <p>CREATE TABLE GFG_user</p>
         <p> (</p>
-        <p>Id INT NOT NULL,Dt DATE,</p>
-        <p>
-          Address VARCHAR(100),Dt_FORMATTED AS (convert(varchar(255), dt, 104)){" "}
-        </p>
+        <p>Id INT NOT NULL,</p>
+        <p>Dt DATE,</p>
+        <p>Address VARCHAR(100),</p>
+        <p>Dt_FORMATTED AS (convert(varchar(255), dt, 104)) </p>
         <p>)</p>
       </>
     ),
@@ -396,7 +395,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `update multiple values of a single record. eg. change the name, age and address at the same time`,
+    que: `update multiple values of a single record. eg. change the name, age and address of one person at the same time`,
     ans: (
       <>
         <p>**MS SQL Server & MySQL</p>
@@ -923,7 +922,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `filter data which begins with a given set of characters, can have any number of characters in between and then ends with a given set of characters. Eg. select countries which begin with C and end with A`,
+    que: `filter data which begins with a given set of characters, can have any number of characters in between and then ends with a given set of characters. 
+    Eg. select countries which begin with C and end with A`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -932,7 +932,7 @@ Useful when database cannot be for eg. dropped due to active connections using i
     ),
   },
   {
-    que: `filter data which contains a given set of characters anywhere. Eg. select countries which contain an`,
+    que: `filter data which contains a given set of characters anywhere. Eg. select countries which contain ama`,
     ans: (
       <>
         <p>SELECT DISTINCT country from new_sms_download</p>
@@ -1423,7 +1423,8 @@ Useful when database cannot be for eg. dropped due to active connections using i
         <p>SELECT * FROM country WHERE continent = "Asia"</p>
         <p>
           NB: whenever you use unions, your columns returned in each query has
-          to be the same. Use UNION ALL to return duplicates in both queries
+          to be the same. By default UNION removes duplicates and leaves out
+          only 1. Use UNION ALL to return duplicates in both queries
         </p>
       </>
     ),
